@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tensorflow:
+    build:
+      context: ./nn
+      dockerfile: Dockerfile
+    volumes:
+      - ./nn:/app
+    ports:
+      - "8888:8888"
+    container_name: tensorflow
