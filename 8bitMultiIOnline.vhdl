@@ -1,4 +1,4 @@
---
+-- source http://ece-research.unm.edu/pollard/classes/vhdl/multiplier/multiplier.vhdl
 --
 --  Implementation of an 8 bit by 8 bit multiplier
 --
