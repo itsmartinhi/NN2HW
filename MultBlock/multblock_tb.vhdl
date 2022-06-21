@@ -45,8 +45,16 @@ begin
 		in_inputs  <= "110101000111";
 		run_cycle;
 		assert out_val_spec = "0011100001001" report "10110001110 + 00100100111 + 00000000000 + 00001010100 should be 11100001001";
+		
+		in_weights <= "11111111111111111111111111111111";
+		in_inputs  <= "111111111111";
+		run_cycle;
+		assert out_val_spec = "1101111100100" report "11111111111111111111111111111111 multblock 111111111111  should be 1101111100100";
+		
 		report "multblock tb finished OK";
 		wait;
+		
+		
 	end process;
 
 end architecture;
