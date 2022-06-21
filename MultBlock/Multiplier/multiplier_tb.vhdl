@@ -1,17 +1,17 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-ENTITY multiplier_tb IS
-END multiplier_tb;
+ENTITY MULTIPLIER_TB IS
+END MULTIPLIER_TB;
 
-ARCHITECTURE Testbench OF multiplier_tb IS
-    COMPONENT multiplier IS
+ARCHITECTURE TESTBENCH OF MULTIPLIER_TB IS
+    COMPONENT MULTIPLIER IS
         PORT (
             A : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
             B : IN STD_LOGIC_VECTOR (2 DOWNTO 0);
             S : OUT STD_LOGIC_VECTOR (10 DOWNTO 0));
     END COMPONENT;
 
-    FOR SPEC : multiplier USE ENTITY WORK.multiplier(Behavioral);
+    FOR SPEC : MULTIPLIER USE ENTITY WORK.MULTIPLIER(BEHAVOR);
 
     SIGNAL A : STD_LOGIC_VECTOR (7 DOWNTO 0) := (OTHERS => '0');
     SIGNAL B : STD_LOGIC_VECTOR (2 DOWNTO 0) := (OTHERS => '0');
@@ -19,7 +19,7 @@ ARCHITECTURE Testbench OF multiplier_tb IS
 
 BEGIN
 
-    SPEC : multiplier PORT MAP(A => A, B => B, S => S);
+    SPEC : MULTIPLIER PORT MAP(A => A, B => B, S => S);
 
     PROCESS
         CONSTANT wait_time : TIME := 100 ns;
