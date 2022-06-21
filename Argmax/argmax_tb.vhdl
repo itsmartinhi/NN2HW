@@ -9,7 +9,7 @@ architecture TESTBENCH of ARGMAX_TB is
 
 component ARGMAX is
 	port (
-		in_neuron_val: in std_logic_vector(25 downto 0); -- needs to get decreased!	
+		in_neuron_val: in std_logic_vector(20 downto 0);
 		in_neuron_indx: in std_logic_vector(7 downto 0);
 		out_indx: out std_logic_vector(7 downto 0);			
 		c_argmax: in std_logic		
@@ -19,7 +19,7 @@ end component;
 for SPEC: ARGMAX use entity WORK.ARGMAX(RTL);
 
 signal c_argmax: std_logic;
-signal in_neuron_val: std_logic_vector(25 downto 0);	
+signal in_neuron_val: std_logic_vector(20 downto 0);	
 signal in_neuron_indx: std_logic_vector(7 downto 0);
 signal out_indx_spec: std_logic_vector(7 downto 0);
 
@@ -44,17 +44,17 @@ begin
 				wait for period;
 			end procedure;
 	begin
-		in_neuron_val <= "00000000000000000000000000";
+		in_neuron_val <= "000000000000000000000";
 		in_neuron_indx <= "00000000";
 		run_cycle;
 		assert out_indx_spec = in_neuron_indx report "Test 1 failed";
 		
-		in_neuron_val <= "00011000000000000000000000";
+		in_neuron_val <= "000110000000000000000";
 		in_neuron_indx <= "00000001";
 		run_cycle;
 		assert out_indx_spec = in_neuron_indx report "Test 2 failed";
 		
-		in_neuron_val <= "00001100000000000000000000";
+		in_neuron_val <= "000011000000000000000";
 		in_neuron_indx <= "00000011";
 		run_cycle;
 		assert out_indx_spec /= in_neuron_indx report "Test 3 failed";
