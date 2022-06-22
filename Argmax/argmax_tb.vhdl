@@ -9,55 +9,60 @@ architecture TESTBENCH of ARGMAX_TB is
 
 component ARGMAX is
 	port (
-		in_neuron_val: in std_logic_vector(20 downto 0);
-		in_neuron_indx: in std_logic_vector(7 downto 0);
-		out_indx: out std_logic_vector(7 downto 0);			
-		c_argmax: in std_logic		
+		clk: 			 in  std_logic;
+		c_argmax: 		 in  std_logic;	
+		in_argmax_val: 	 in  std_logic_vector(20 downto 0);
+		in_argmax_indx:  in  std_logic_vector(7 downto 0);
+		out_argmax_indx: out std_logic_vector(7 downto 0)		
+			
 		);
 end component;
 
 for SPEC: ARGMAX use entity WORK.ARGMAX(RTL);
 
-signal c_argmax: std_logic;
-signal in_neuron_val: std_logic_vector(20 downto 0);	
-signal in_neuron_indx: std_logic_vector(7 downto 0);
-signal out_indx_spec: std_logic_vector(7 downto 0);
+signal clk:			   std_logic;
+signal c_argmax: 	   std_logic;
+signal in_argmax_val:  std_logic_vector(20 downto 0);	
+signal in_argmax_indx: std_logic_vector(7 downto 0);
+signal out_indx_spec:  std_logic_vector(7 downto 0);
 
 begin
 
-	-- Port Mapping
-	
 	SPEC: ARGMAX port map ( 
-		c_argmax => c_argmax,
-		in_neuron_val => in_neuron_val,
-		in_neuron_indx => in_neuron_indx,
-		out_indx => out_indx_spec
+		clk 			=> clk,
+		c_argmax 		=> c_argmax,
+		in_argmax_val   => in_argmax_val,
+		in_argmax_indx  => in_argmax_indx,
+		out_argmax_indx => out_indx_spec
 	);
 
 	process 
 		constant period: time := 5 ns;
 		procedure run_cycle is
 			begin
-				c_argmax <= '0'; 
+				clk <= '0'; 
 				wait for period;
-				c_argmax <= '1';
+				clk <= '1';
 				wait for period;
 			end procedure;
 	begin
-		in_neuron_val <= "000000000000000000000";
-		in_neuron_indx <= "00000000";
+		in_argmax_val  <= "000000000000000000000";
+		in_argmax_indx <= "00000000";
+		c_argmax 	   <= '1';
 		run_cycle;
-		assert out_indx_spec = in_neuron_indx report "Test 1 failed";
+		assert out_indx_spec = in_argmax_indx report "Test 1 failed";
 		
-		in_neuron_val <= "000110000000000000000";
-		in_neuron_indx <= "00000001";
+		in_argmax_val  <= "000110000000000000000";
+		in_argmax_indx <= "00000001";
+		c_argmax 	   <= '1';
 		run_cycle;
-		assert out_indx_spec = in_neuron_indx report "Test 2 failed";
+		assert out_indx_spec = in_argmax_indx report "Test 2 failed";
 		
-		in_neuron_val <= "000011000000000000000";
-		in_neuron_indx <= "00000011";
+		in_argmax_val  <= "000011000000000000000";
+		in_argmax_indx <= "00000011";
+		c_argmax 	   <= '1';
 		run_cycle;
-		assert out_indx_spec /= in_neuron_indx report "Test 3 failed";
+		assert out_indx_spec /= in_argmax_indx report "Test 3 failed";
 		
 		report "argmax tb finished OK";
 		wait;

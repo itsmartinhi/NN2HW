@@ -4,22 +4,25 @@ use IEEE.numeric_std.all;
 
 entity ARGMAX is
 port (
-	c_argmax: 		in 	std_logic;						-- Start Argmax
-	in_neuron_val: 	in 	std_logic_vector(20 downto 0);	-- In Neuron Value
-	in_neuron_indx: in 	std_logic_vector(7 downto 0);	-- In Neuron Index
-	out_indx: 		out std_logic_vector(7 downto 0)	-- Max Output Index
+	clk:			 in 	std_logic;
+	c_argmax: 		 in 	std_logic;						
+	in_argmax_val: 	 in 	std_logic_vector(20 downto 0);	
+	in_argmax_indx:  in 	std_logic_vector(7 downto 0);
+	out_argmax_indx: out std_logic_vector(7 downto 0)	
 );
 end ARGMAX;
 
 architecture RTL of ARGMAX is
-	signal reg_max_val: std_logic_vector(20 downto 0);
+	signal reg_argmax_val: std_logic_vector(20 downto 0);
 begin
-	process(c_argmax, in_neuron_indx)
+	process(clk)
 	begin
-		if c_argmax = '1' then
-			if reg_max_val < in_neuron_val then
-				out_indx <= in_neuron_indx;
-				reg_max_val <= in_neuron_val;
+		if rising_edge(clk) then
+			if c_argmax = '1' then
+				if reg_argmax_val < in_argmax_val then
+					out_argmax_indx <= in_argmax_indx;
+					reg_argmax_val  <= in_argmax_val;
+				end if;
 			end if;
 		end if;
 	end process;
