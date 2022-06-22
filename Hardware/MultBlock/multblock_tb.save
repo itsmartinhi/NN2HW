@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Tue Jun 21 19:43:10 2022
+[*]
+[dumpfile] "/home/eeslabor/Dokumente/nnhardware/MultBlock/multblock_tb_wave.ghw"
+[dumpfile_mtime] "Tue Jun 21 19:42:16 2022"
+[dumpfile_size] 15037
+[savefile] "/home/eeslabor/Dokumente/nnhardware/MultBlock/multblock_tb.save"
+[timestart] 0
+[size] 1920 884
+[pos] 0 28
+*-22.556923 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.multblock_tb.
+[treeopen] top.multblock_tb.spec.
+[sst_width] 212
+[signals_width] 174
+[sst_expanded] 1
+[sst_vpaned_height] 251
+@28
+top.multblock_tb.c_mult
+#{top.multblock_tb.out_val_spec[12:0]} top.multblock_tb.out_val_spec[12] top.multblock_tb.out_val_spec[11] top.multblock_tb.out_val_spec[10] top.multblock_tb.out_val_spec[9] top.multblock_tb.out_val_spec[8] top.multblock_tb.out_val_spec[7] top.multblock_tb.out_val_spec[6] top.multblock_tb.out_val_spec[5] top.multblock_tb.out_val_spec[4] top.multblock_tb.out_val_spec[3] top.multblock_tb.out_val_spec[2] top.multblock_tb.out_val_spec[1] top.multblock_tb.out_val_spec[0]
+@200
+-
+@28
+#{top.multblock_tb.spec.mult_out_4[12:0]} top.multblock_tb.spec.mult_out_4[12] top.multblock_tb.spec.mult_out_4[11] top.multblock_tb.spec.mult_out_4[10] top.multblock_tb.spec.mult_out_4[9] top.multblock_tb.spec.mult_out_4[8] top.multblock_tb.spec.mult_out_4[7] top.multblock_tb.spec.mult_out_4[6] top.multblock_tb.spec.mult_out_4[5] top.multblock_tb.spec.mult_out_4[4] top.multblock_tb.spec.mult_out_4[3] top.multblock_tb.spec.mult_out_4[2] top.multblock_tb.spec.mult_out_4[1] top.multblock_tb.spec.mult_out_4[0]
+#{top.multblock_tb.spec.mult_out_3[12:0]} top.multblock_tb.spec.mult_out_3[12] top.multblock_tb.spec.mult_out_3[11] top.multblock_tb.spec.mult_out_3[10] top.multblock_tb.spec.mult_out_3[9] top.multblock_tb.spec.mult_out_3[8] top.multblock_tb.spec.mult_out_3[7] top.multblock_tb.spec.mult_out_3[6] top.multblock_tb.spec.mult_out_3[5] top.multblock_tb.spec.mult_out_3[4] top.multblock_tb.spec.mult_out_3[3] top.multblock_tb.spec.mult_out_3[2] top.multblock_tb.spec.mult_out_3[1] top.multblock_tb.spec.mult_out_3[0]
+#{top.multblock_tb.spec.mult_out_2[12:0]} top.multblock_tb.spec.mult_out_2[12] top.multblock_tb.spec.mult_out_2[11] top.multblock_tb.spec.mult_out_2[10] top.multblock_tb.spec.mult_out_2[9] top.multblock_tb.spec.mult_out_2[8] top.multblock_tb.spec.mult_out_2[7] top.multblock_tb.spec.mult_out_2[6] top.multblock_tb.spec.mult_out_2[5] top.multblock_tb.spec.mult_out_2[4] top.multblock_tb.spec.mult_out_2[3] top.multblock_tb.spec.mult_out_2[2] top.multblock_tb.spec.mult_out_2[1] top.multblock_tb.spec.mult_out_2[0]
+#{top.multblock_tb.spec.mult_out_1[12:0]} top.multblock_tb.spec.mult_out_1[12] top.multblock_tb.spec.mult_out_1[11] top.multblock_tb.spec.mult_out_1[10] top.multblock_tb.spec.mult_out_1[9] top.multblock_tb.spec.mult_out_1[8] top.multblock_tb.spec.mult_out_1[7] top.multblock_tb.spec.mult_out_1[6] top.multblock_tb.spec.mult_out_1[5] top.multblock_tb.spec.mult_out_1[4] top.multblock_tb.spec.mult_out_1[3] top.multblock_tb.spec.mult_out_1[2] top.multblock_tb.spec.mult_out_1[1] top.multblock_tb.spec.mult_out_1[0]
+@200
+-
+@28
+#{top.multblock_tb.in_inputs[11:0]} top.multblock_tb.in_inputs[11] top.multblock_tb.in_inputs[10] top.multblock_tb.in_inputs[9] top.multblock_tb.in_inputs[8] top.multblock_tb.in_inputs[7] top.multblock_tb.in_inputs[6] top.multblock_tb.in_inputs[5] top.multblock_tb.in_inputs[4] top.multblock_tb.in_inputs[3] top.multblock_tb.in_inputs[2] top.multblock_tb.in_inputs[1] top.multblock_tb.in_inputs[0]
+#{top.multblock_tb.in_weights[31:0]} top.multblock_tb.in_weights[31] top.multblock_tb.in_weights[30] top.multblock_tb.in_weights[29] top.multblock_tb.in_weights[28] top.multblock_tb.in_weights[27] top.multblock_tb.in_weights[26] top.multblock_tb.in_weights[25] top.multblock_tb.in_weights[24] top.multblock_tb.in_weights[23] top.multblock_tb.in_weights[22] top.multblock_tb.in_weights[21] top.multblock_tb.in_weights[20] top.multblock_tb.in_weights[19] top.multblock_tb.in_weights[18] top.multblock_tb.in_weights[17] top.multblock_tb.in_weights[16] top.multblock_tb.in_weights[15] top.multblock_tb.in_weights[14] top.multblock_tb.in_weights[13] top.multblock_tb.in_weights[12] top.multblock_tb.in_weights[11] top.multblock_tb.in_weights[10] top.multblock_tb.in_weights[9] top.multblock_tb.in_weights[8] top.multblock_tb.in_weights[7] top.multblock_tb.in_weights[6] top.multblock_tb.in_weights[5] top.multblock_tb.in_weights[4] top.multblock_tb.in_weights[3] top.multblock_tb.in_weights[2] top.multblock_tb.in_weights[1] top.multblock_tb.in_weights[0]
+[pattern_trace] 1
+[pattern_trace] 0
