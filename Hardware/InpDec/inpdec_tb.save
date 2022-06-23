@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Jun 22 21:54:01 2022
+[*]
+[dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/InpDec/inpdec_tb_wave.ghw"
+[dumpfile_mtime] "Wed Jun 22 21:52:15 2022"
+[dumpfile_size] 934
+[savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/InpDec/inpdec_tb.save"
+[timestart] 0
+[size] 1920 884
+[pos] -1 -31
+*-24.924374 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.inpdec_tb.
+[treeopen] top.inpdec_tb.spec.
+[sst_width] 212
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 251
+@28
+top.inpdec_tb.c_inp_dec
+top.inpdec_tb.clk
+top.inpdec_tb.spec_inp_reset
+@22
+#{top.inpdec_tb.spec.count[10:0]} top.inpdec_tb.spec.count[10] top.inpdec_tb.spec.count[9] top.inpdec_tb.spec.count[8] top.inpdec_tb.spec.count[7] top.inpdec_tb.spec.count[6] top.inpdec_tb.spec.count[5] top.inpdec_tb.spec.count[4] top.inpdec_tb.spec.count[3] top.inpdec_tb.spec.count[2] top.inpdec_tb.spec.count[1] top.inpdec_tb.spec.count[0]
+#{top.inpdec_tb.tb_count[10:0]} top.inpdec_tb.tb_count[10] top.inpdec_tb.tb_count[9] top.inpdec_tb.tb_count[8] top.inpdec_tb.tb_count[7] top.inpdec_tb.tb_count[6] top.inpdec_tb.tb_count[5] top.inpdec_tb.tb_count[4] top.inpdec_tb.tb_count[3] top.inpdec_tb.tb_count[2] top.inpdec_tb.tb_count[1] top.inpdec_tb.tb_count[0]
+@23
+#{top.inpdec_tb.spec_inp_indx[10:0]} top.inpdec_tb.spec_inp_indx[10] top.inpdec_tb.spec_inp_indx[9] top.inpdec_tb.spec_inp_indx[8] top.inpdec_tb.spec_inp_indx[7] top.inpdec_tb.spec_inp_indx[6] top.inpdec_tb.spec_inp_indx[5] top.inpdec_tb.spec_inp_indx[4] top.inpdec_tb.spec_inp_indx[3] top.inpdec_tb.spec_inp_indx[2] top.inpdec_tb.spec_inp_indx[1] top.inpdec_tb.spec_inp_indx[0]
+[pattern_trace] 1
+[pattern_trace] 0
