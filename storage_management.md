@@ -56,12 +56,5 @@ Argmax aufteilen:
 - Register das Max wert hält
 - subtrahierer der vergleicht
 
-Mögliche Themenaufteilung:
-- Design der HW
-    - Flächenverbrauch + Taktfrequenz wichtig im Report
-- Schnittstellen wie kommen welche Daten in den Speicher + Werte in den Speicher
-- Implementierung (Insgesamt + Multiplizierer)
-
-
 for generate statement zum generieren von instanzen (z.B. für Multiplizierer)
 

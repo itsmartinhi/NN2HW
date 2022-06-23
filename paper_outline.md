@@ -1,5 +1,13 @@
 # Paper Outline
 
+# Mögliche Aufteilung
+
+Mögliche Themenaufteilung:
+- Design der HW
+    - Flächenverbrauch + Taktfrequenz wichtig im Report
+- Schnittstellen wie kommen welche Daten in den Speicher + Werte in den Speicher
+- Implementierung (Insgesamt + Multiplizierer)
+
 # Demo
 
 Softwareteil: trainieren des Netzes, konvertieren der Gewichte, ablegen der Gewichte und Inputs in den Speicher.  
