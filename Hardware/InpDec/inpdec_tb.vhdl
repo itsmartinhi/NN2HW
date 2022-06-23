@@ -11,7 +11,7 @@ component INPDEC is
 	port (
 	   clk: 		  in  std_logic;
 	   c_inp_dec: 	  in  std_logic;
-       out_inp_indx:  out std_logic_vector(10 downto 0);
+       out_inp_indx:  out std_logic_vector(7 downto 0);
        out_inp_reset: out std_logic
 	);
 end component INPDEC;
@@ -20,9 +20,9 @@ for SPEC: INPDEC use entity WORK.INPDEC(RTL);
 
 signal clk: 			std_logic;
 signal c_inp_dec:  	  	std_logic;
-signal spec_inp_indx:  	std_logic_vector(10 downto 0);
+signal spec_inp_indx:  	std_logic_vector(7 downto 0);
 signal spec_inp_reset: 	std_logic;
-signal tb_count: 		std_logic_vector(10 downto 0);
+signal tb_count: 		std_logic_vector(8 downto 0);
 
 begin
 	SPEC: INPDEC port map ( 
@@ -44,18 +44,18 @@ begin
 	begin
 	
 		c_inp_dec <= '1';
-		tb_count <= "01100010000";
-		for i in 0 to 784 loop 
+		tb_count <= "011000100";
+		for i in 0 to 196 loop 
 			run_cycle;
 			tb_count <= std_logic_vector(signed(tb_count) - 1);
-			assert spec_inp_indx = tb_count report "tb failed on increment:" & integer'image(i);
+			assert spec_inp_indx = tb_count(7 downto 0) report "tb failed on increment:" & integer'image(i);
 			assert spec_inp_reset = '0' report "reset signal is not 0 while looping on increment:" & integer'image(i);
 		end loop;
 		run_cycle;
 		tb_count <= std_logic_vector(signed(tb_count) - 1);
 		assert spec_inp_reset = '1' report "reset not set";
 		run_cycle;
-		assert spec_inp_indx = "01100010000" report "count didnt reset";
+		assert spec_inp_indx = "11000100" report "count didnt reset";
 		
 		report "tb finished OK";
 		wait;
