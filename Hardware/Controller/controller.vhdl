@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity CONTROLLER is
 	port (
-		 in_ctrl_inp_indx: 	   in  std_logic_vector(9 downto 0);
+		 in_ctrl_inp_indx: 	   in  std_logic_vector(7 downto 0);
 		 in_ctrl_neuron_indx:  in  std_logic_vector(3 downto 0);
 		 c_dec_neuron: 		   out std_logic;
 		 c_dec_input: 		   out std_logic;

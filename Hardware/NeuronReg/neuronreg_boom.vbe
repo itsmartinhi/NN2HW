@@ -1,0 +1,421 @@
+-- VHDL data flow description generated from `neuronreg_boom`
+--		date : Thu Jun 23 10:08:38 2022
+
+
+-- Entity Declaration
+
+ENTITY neuronreg_boom IS
+  PORT (
+  clk : in BIT;	-- clk
+  reset : in BIT;	-- reset
+  c_nreg : in BIT;	-- c_nreg
+  in_nreg_val : in bit_vector(11 DOWNTO 0) ;	-- in_nreg_val
+  out_nreg_val : out bit_vector(20 DOWNTO 0) ;	-- out_nreg_val
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END neuronreg_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF neuronreg_boom IS
+  SIGNAL rtlalc_1 : REG_VECTOR(20 DOWNTO 0) REGISTER;	-- rtlalc_1
+  SIGNAL reg_nreg : REG_VECTOR(20 DOWNTO 0) REGISTER;	-- reg_nreg
+  SIGNAL rtlcarry_0 : BIT_VECTOR(19 DOWNTO 1);	-- rtlcarry_0
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux2 : BIT;		-- aux2
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux5 : BIT;		-- aux5
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux7 : BIT;		-- aux7
+  SIGNAL aux8 : BIT;		-- aux8
+  SIGNAL aux9 : BIT;		-- aux9
+  SIGNAL aux10 : BIT;		-- aux10
+  SIGNAL aux11 : BIT;		-- aux11
+  SIGNAL aux12 : BIT;		-- aux12
+  SIGNAL aux13 : BIT;		-- aux13
+  SIGNAL aux14 : BIT;		-- aux14
+  SIGNAL aux15 : BIT;		-- aux15
+  SIGNAL aux16 : BIT;		-- aux16
+  SIGNAL aux17 : BIT;		-- aux17
+  SIGNAL aux19 : BIT;		-- aux19
+  SIGNAL aux20 : BIT;		-- aux20
+  SIGNAL aux21 : BIT;		-- aux21
+  SIGNAL aux22 : BIT;		-- aux22
+  SIGNAL aux23 : BIT;		-- aux23
+  SIGNAL aux25 : BIT;		-- aux25
+  SIGNAL aux26 : BIT;		-- aux26
+  SIGNAL aux27 : BIT;		-- aux27
+  SIGNAL aux28 : BIT;		-- aux28
+  SIGNAL aux29 : BIT;		-- aux29
+  SIGNAL aux30 : BIT;		-- aux30
+  SIGNAL aux31 : BIT;		-- aux31
+  SIGNAL aux32 : BIT;		-- aux32
+  SIGNAL aux33 : BIT;		-- aux33
+  SIGNAL aux34 : BIT;		-- aux34
+  SIGNAL aux35 : BIT;		-- aux35
+  SIGNAL aux36 : BIT;		-- aux36
+  SIGNAL aux37 : BIT;		-- aux37
+  SIGNAL aux38 : BIT;		-- aux38
+  SIGNAL aux39 : BIT;		-- aux39
+  SIGNAL aux40 : BIT;		-- aux40
+  SIGNAL aux41 : BIT;		-- aux41
+  SIGNAL aux42 : BIT;		-- aux42
+  SIGNAL aux43 : BIT;		-- aux43
+  SIGNAL aux44 : BIT;		-- aux44
+  SIGNAL aux45 : BIT;		-- aux45
+  SIGNAL aux46 : BIT;		-- aux46
+  SIGNAL aux47 : BIT;		-- aux47
+  SIGNAL aux48 : BIT;		-- aux48
+  SIGNAL aux49 : BIT;		-- aux49
+  SIGNAL aux50 : BIT;		-- aux50
+  SIGNAL aux51 : BIT;		-- aux51
+  SIGNAL aux52 : BIT;		-- aux52
+  SIGNAL aux53 : BIT;		-- aux53
+  SIGNAL aux54 : BIT;		-- aux54
+  SIGNAL aux55 : BIT;		-- aux55
+  SIGNAL aux56 : BIT;		-- aux56
+
+BEGIN
+  aux56 <= (rtlcarry_0(10) XOR in_nreg_val(10));
+  aux55 <= (rtlcarry_0(5) XOR in_nreg_val(5));
+  aux54 <= (in_nreg_val(4) XOR rtlcarry_0(4));
+  aux53 <= (rtlcarry_0(1) XOR in_nreg_val(1));
+  aux52 <= (NOT(reset) AND reg_nreg(20));
+  aux51 <= (NOT(reset) AND NOT(reg_nreg(17)));
+  aux50 <= (NOT(reset) AND reg_nreg(17));
+  aux49 <= (NOT(reset) AND reg_nreg(16));
+  aux48 <= (NOT(reset) AND NOT(reg_nreg(14)));
+  aux47 <= (NOT(reset) AND reg_nreg(14));
+  aux46 <= (NOT(reset) AND NOT(reg_nreg(12)));
+  aux45 <= (NOT(reset) AND reg_nreg(12));
+  aux44 <= (NOT(reset) AND NOT(reg_nreg(11)));
+  aux43 <= (NOT(reset) AND reg_nreg(11));
+  aux42 <= (NOT(reset) AND NOT(reg_nreg(9)));
+  aux41 <= (NOT(reset) AND reg_nreg(9));
+  aux40 <= (NOT(reset) AND NOT(reg_nreg(8)));
+  aux39 <= (NOT(reset) AND reg_nreg(8));
+  aux38 <= (c_nreg OR rtlalc_1(19));
+  aux37 <= (c_nreg OR rtlalc_1(18));
+  aux36 <= (c_nreg OR rtlalc_1(17));
+  aux35 <= (c_nreg OR rtlalc_1(15));
+  aux34 <= (c_nreg OR rtlalc_1(14));
+  aux33 <= (c_nreg OR rtlalc_1(12));
+  aux32 <= (c_nreg OR rtlalc_1(11));
+  aux31 <= (c_nreg OR rtlalc_1(9));
+  aux30 <= (c_nreg OR rtlalc_1(8));
+  aux29 <= (c_nreg OR rtlalc_1(6));
+  aux28 <= (NOT(aux26) OR rtlalc_1(3));
+  aux27 <= (c_nreg OR rtlalc_1(2));
+  aux26 <= NOT(c_nreg AND NOT(reset));
+  aux25 <= ((aux23 AND NOT(reset)) AND NOT(reg_nreg(20)));
+  aux23 <= (aux22 AND reg_nreg(19));
+  aux22 <= (c_nreg AND rtlcarry_0(19));
+  aux21 <= NOT(rtlcarry_0(18) AND c_nreg);
+  aux20 <= NOT(c_nreg AND rtlcarry_0(17));
+  aux19 <= ((aux17 AND NOT(reset)) AND NOT(reg_nreg(16)));
+  aux17 <= (c_nreg AND rtlcarry_0(16));
+  aux16 <= NOT(rtlcarry_0(15) AND c_nreg);
+  aux15 <= NOT(c_nreg AND rtlcarry_0(14));
+  aux14 <= NOT(c_nreg AND rtlcarry_0(12));
+  aux13 <= NOT(c_nreg AND NOT(aux12));
+  aux12 <= NOT(rtlcarry_0(11) XOR in_nreg_val(11));
+  aux11 <= NOT(c_nreg AND NOT(aux10));
+  aux10 <= NOT(rtlcarry_0(9) XOR in_nreg_val(9));
+  aux9 <= NOT(c_nreg AND NOT(aux8));
+  aux8 <= NOT(rtlcarry_0(8) XOR in_nreg_val(8));
+  aux7 <= NOT(c_nreg AND NOT(aux6));
+  aux6 <= NOT(rtlcarry_0(7) XOR in_nreg_val(7));
+  aux5 <= NOT(c_nreg AND aux4);
+  aux4 <= (in_nreg_val(6) XOR rtlcarry_0(6));
+  aux3 <= NOT(c_nreg AND NOT(aux2));
+  aux2 <= NOT(rtlcarry_0(3) XOR in_nreg_val(3));
+  aux1 <= NOT(c_nreg AND aux0);
+  aux0 <= (rtlcarry_0(2) XOR in_nreg_val(2));
+  rtlcarry_0 (1) <= (in_nreg_val(0) AND reg_nreg(0));
+  rtlcarry_0 (2) <= ((rtlcarry_0(1) AND (reg_nreg(1) OR 
+in_nreg_val(1))) OR (reg_nreg(1) AND in_nreg_val(1)));
+  rtlcarry_0 (3) <= ((rtlcarry_0(2) AND (reg_nreg(2) OR 
+in_nreg_val(2))) OR (reg_nreg(2) AND in_nreg_val(2)));
+  rtlcarry_0 (4) <= ((rtlcarry_0(3) AND (reg_nreg(3) OR 
+in_nreg_val(3))) OR (reg_nreg(3) AND in_nreg_val(3)));
+  rtlcarry_0 (5) <= ((in_nreg_val(4) AND (reg_nreg(4) OR 
+rtlcarry_0(4))) OR (reg_nreg(4) AND rtlcarry_0(4)));
+  rtlcarry_0 (6) <= ((rtlcarry_0(5) AND (reg_nreg(5) OR 
+in_nreg_val(5))) OR (reg_nreg(5) AND in_nreg_val(5)));
+  rtlcarry_0 (7) <= ((in_nreg_val(6) AND (reg_nreg(6) OR 
+rtlcarry_0(6))) OR (reg_nreg(6) AND rtlcarry_0(6)));
+  rtlcarry_0 (8) <= ((rtlcarry_0(7) AND (reg_nreg(7) OR 
+in_nreg_val(7))) OR (reg_nreg(7) AND in_nreg_val(7)));
+  rtlcarry_0 (9) <= ((rtlcarry_0(8) AND (reg_nreg(8) OR 
+in_nreg_val(8))) OR (reg_nreg(8) AND in_nreg_val(8)));
+  rtlcarry_0 (10) <= ((rtlcarry_0(9) AND (reg_nreg(9) OR 
+in_nreg_val(9))) OR (reg_nreg(9) AND in_nreg_val(9)));
+  rtlcarry_0 (11) <= ((rtlcarry_0(10) AND (reg_nreg(10) OR 
+in_nreg_val(10))) OR (reg_nreg(10) AND in_nreg_val(10)));
+  rtlcarry_0 (12) <= ((rtlcarry_0(11) AND (reg_nreg(11) OR 
+in_nreg_val(11))) OR (reg_nreg(11) AND in_nreg_val(11)));
+  rtlcarry_0 (13) <= (rtlcarry_0(12) AND reg_nreg(12));
+  rtlcarry_0 (14) <= (rtlcarry_0(13) AND reg_nreg(13));
+  rtlcarry_0 (15) <= (rtlcarry_0(14) AND reg_nreg(14));
+  rtlcarry_0 (16) <= (rtlcarry_0(15) AND reg_nreg(15));
+  rtlcarry_0 (17) <= (rtlcarry_0(16) AND reg_nreg(16));
+  rtlcarry_0 (18) <= (rtlcarry_0(17) AND reg_nreg(17));
+  rtlcarry_0 (19) <= (rtlcarry_0(18) AND reg_nreg(18));
+  label0 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (0) <= GUARDED (((c_nreg AND in_nreg_val(0)) XOR reg_nreg(0)) 
+AND NOT(reset));
+  END BLOCK label0;
+  label1 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (1) <= GUARDED (((c_nreg AND aux53) XOR reg_nreg(1)) AND NOT(
+reset));
+  END BLOCK label1;
+  label2 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (2) <= GUARDED ((NOT(aux1) XOR reg_nreg(2)) AND NOT(reset));
+  END BLOCK label2;
+  label3 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (3) <= GUARDED ((aux3 AND NOT(reset) AND reg_nreg(3)) OR (NOT(
+aux3) AND NOT(reset) AND NOT(reg_nreg(3))));
+  END BLOCK label3;
+  label4 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (4) <= GUARDED (((c_nreg AND aux54) XOR reg_nreg(4)) AND NOT(
+reset));
+  END BLOCK label4;
+  label5 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (5) <= GUARDED (((c_nreg AND aux55) XOR reg_nreg(5)) AND NOT(
+reset));
+  END BLOCK label5;
+  label6 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (6) <= GUARDED ((NOT(aux5) XOR reg_nreg(6)) AND NOT(reset));
+  END BLOCK label6;
+  label7 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (7) <= GUARDED ((aux7 AND NOT(reset) AND reg_nreg(7)) OR (NOT(
+aux7) AND NOT(reset) AND NOT(reg_nreg(7))));
+  END BLOCK label7;
+  label8 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (8) <= GUARDED ((aux9 AND aux39) OR (NOT(aux9) AND aux40));
+  END BLOCK label8;
+  label9 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (9) <= GUARDED ((aux11 AND aux41) OR (NOT(aux11) AND aux42));
+  END BLOCK label9;
+  label10 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (10) <= GUARDED (((c_nreg AND aux56) XOR reg_nreg(10)) AND NOT(
+reset));
+  END BLOCK label10;
+  label11 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (11) <= GUARDED ((aux13 AND aux43) OR (NOT(aux13) AND aux44));
+  END BLOCK label11;
+  label12 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (12) <= GUARDED ((aux14 AND aux45) OR (NOT(aux14) AND aux46));
+  END BLOCK label12;
+  label13 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (13) <= GUARDED (((c_nreg AND rtlcarry_0(13)) XOR reg_nreg(13)) 
+AND NOT(reset));
+  END BLOCK label13;
+  label14 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (14) <= GUARDED ((aux15 AND aux47) OR (NOT(aux15) AND aux48));
+  END BLOCK label14;
+  label15 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (15) <= GUARDED ((NOT(aux16) XOR reg_nreg(15)) AND NOT(reset));
+  END BLOCK label15;
+  label16 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (16) <= GUARDED ((NOT(aux17) AND aux49) OR aux19);
+  END BLOCK label16;
+  label17 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (17) <= GUARDED ((aux20 AND aux50) OR (NOT(aux20) AND aux51));
+  END BLOCK label17;
+  label18 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (18) <= GUARDED ((NOT(aux21) XOR reg_nreg(18)) AND NOT(reset));
+  END BLOCK label18;
+  label19 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (19) <= GUARDED ((aux22 XOR reg_nreg(19)) AND NOT(reset));
+  END BLOCK label19;
+  label20 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    reg_nreg (20) <= GUARDED ((NOT(aux23) AND aux52) OR aux25);
+  END BLOCK label20;
+  label21 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (0) <= GUARDED ((NOT(aux26) OR rtlalc_1(0)) AND (NOT(c_nreg) OR 
+(in_nreg_val(0) XOR reg_nreg(0)) OR reset));
+  END BLOCK label21;
+  label22 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (1) <= GUARDED ((NOT(aux26) OR rtlalc_1(1)) AND (NOT(c_nreg) OR 
+(aux53 XOR reg_nreg(1)) OR reset));
+  END BLOCK label22;
+  label23 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (2) <= GUARDED ((rtlalc_1(2) AND reset) OR (((aux27 AND aux1 AND
+ reg_nreg(2)) OR (aux27 AND (NOT(c_nreg) OR aux0) 
+AND NOT(reg_nreg(2)))) AND NOT(reset)));
+  END BLOCK label23;
+  label24 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (3) <= GUARDED ((aux26 AND rtlalc_1(3)) OR (aux28 AND aux2 AND 
+reg_nreg(3)) OR (aux28 AND NOT(aux2) AND NOT(reg_nreg(3))));
+  END BLOCK label24;
+  label25 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (4) <= GUARDED ((NOT(aux26) OR rtlalc_1(4)) AND (NOT(c_nreg) OR 
+(aux54 XOR reg_nreg(4)) OR reset));
+  END BLOCK label25;
+  label26 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (5) <= GUARDED ((rtlalc_1(5) AND reset) OR ((c_nreg OR 
+rtlalc_1(5)) AND (NOT(c_nreg) OR (aux55 XOR reg_nreg(5))) 
+AND NOT(reset)));
+  END BLOCK label26;
+  label27 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (6) <= GUARDED ((rtlalc_1(6) AND reset) OR (((aux29 AND aux5 AND
+ reg_nreg(6)) OR (aux29 AND (NOT(c_nreg) OR aux4) 
+AND NOT(reg_nreg(6)))) AND NOT(reset)));
+  END BLOCK label27;
+  label28 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (7) <= GUARDED ((NOT(aux26) OR rtlalc_1(7)) AND (aux26 OR (aux6 
+AND reg_nreg(7)) OR (NOT(aux6) AND NOT(reg_nreg(7)))
+));
+  END BLOCK label28;
+  label29 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (8) <= GUARDED ((aux26 AND rtlalc_1(8)) OR (aux30 AND aux8 AND 
+aux39) OR (aux30 AND NOT(aux8) AND aux40));
+  END BLOCK label29;
+  label30 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (9) <= GUARDED ((aux26 AND rtlalc_1(9)) OR (aux31 AND aux10 AND 
+aux41) OR (aux31 AND NOT(aux10) AND aux42));
+  END BLOCK label30;
+  label31 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (10) <= GUARDED ((rtlalc_1(10) AND reset) OR ((c_nreg OR 
+rtlalc_1(10)) AND (NOT(c_nreg) OR (aux56 XOR reg_nreg(10))) 
+AND NOT(reset)));
+  END BLOCK label31;
+  label32 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (11) <= GUARDED ((aux26 AND rtlalc_1(11)) OR (aux32 AND aux12 AND
+ aux43) OR (aux32 AND NOT(aux12) AND aux44));
+  END BLOCK label32;
+  label33 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (12) <= GUARDED ((aux26 AND rtlalc_1(12)) OR (aux33 AND NOT(
+rtlcarry_0(12)) AND aux45) OR (aux33 AND rtlcarry_0(12) AND 
+aux46));
+  END BLOCK label33;
+  label34 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (13) <= GUARDED ((NOT(aux26) OR rtlalc_1(13)) AND (NOT(c_nreg) OR
+ (rtlcarry_0(13) XOR reg_nreg(13)) OR reset));
+  END BLOCK label34;
+  label35 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (14) <= GUARDED ((aux26 AND rtlalc_1(14)) OR (aux34 AND NOT(
+rtlcarry_0(14)) AND aux47) OR (aux34 AND rtlcarry_0(14) AND 
+aux48));
+  END BLOCK label35;
+  label36 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (15) <= GUARDED ((rtlalc_1(15) AND reset) OR (((aux35 AND aux16 
+AND reg_nreg(15)) OR (aux35 AND (rtlcarry_0(15) OR 
+NOT(c_nreg)) AND NOT(reg_nreg(15)))) AND NOT(reset))
+);
+  END BLOCK label36;
+  label37 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (16) <= GUARDED ((aux26 AND rtlalc_1(16)) OR (c_nreg AND NOT(
+rtlcarry_0(16)) AND aux49) OR aux19);
+  END BLOCK label37;
+  label38 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (17) <= GUARDED ((aux26 AND rtlalc_1(17)) OR (aux36 AND NOT(
+rtlcarry_0(17)) AND aux50) OR (aux36 AND rtlcarry_0(17) AND 
+aux51));
+  END BLOCK label38;
+  label39 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (18) <= GUARDED ((rtlalc_1(18) AND reset) OR (((aux37 AND aux21 
+AND reg_nreg(18)) OR (aux37 AND (rtlcarry_0(18) OR 
+NOT(c_nreg)) AND NOT(reg_nreg(18)))) AND NOT(reset))
+);
+  END BLOCK label39;
+  label40 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (19) <= GUARDED ((rtlalc_1(19) AND reset) OR (((aux38 AND NOT(
+aux22) AND reg_nreg(19)) OR (aux38 AND (NOT(c_nreg) OR
+ rtlcarry_0(19)) AND NOT(reg_nreg(19)))) AND NOT(
+reset)));
+  END BLOCK label40;
+  label41 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 (20) <= GUARDED ((aux26 AND rtlalc_1(20)) OR (c_nreg AND (NOT(
+rtlcarry_0(19)) OR NOT(reg_nreg(19))) AND aux52) OR aux25);
+  END BLOCK label41;
+
+out_nreg_val (0) <= rtlalc_1(0);
+
+out_nreg_val (1) <= rtlalc_1(1);
+
+out_nreg_val (2) <= rtlalc_1(2);
+
+out_nreg_val (3) <= rtlalc_1(3);
+
+out_nreg_val (4) <= rtlalc_1(4);
+
+out_nreg_val (5) <= rtlalc_1(5);
+
+out_nreg_val (6) <= rtlalc_1(6);
+
+out_nreg_val (7) <= rtlalc_1(7);
+
+out_nreg_val (8) <= rtlalc_1(8);
+
+out_nreg_val (9) <= rtlalc_1(9);
+
+out_nreg_val (10) <= rtlalc_1(10);
+
+out_nreg_val (11) <= rtlalc_1(11);
+
+out_nreg_val (12) <= rtlalc_1(12);
+
+out_nreg_val (13) <= rtlalc_1(13);
+
+out_nreg_val (14) <= rtlalc_1(14);
+
+out_nreg_val (15) <= rtlalc_1(15);
+
+out_nreg_val (16) <= rtlalc_1(16);
+
+out_nreg_val (17) <= rtlalc_1(17);
+
+out_nreg_val (18) <= rtlalc_1(18);
+
+out_nreg_val (19) <= rtlalc_1(19);
+
+out_nreg_val (20) <= rtlalc_1(20);
+END;

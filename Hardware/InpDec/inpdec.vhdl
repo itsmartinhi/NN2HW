@@ -4,6 +4,7 @@ use IEEE.numeric_std.all;
 
 entity INPDEC is
 	port (
+		   reset: 		  in  std_logic;
 		   clk: 		  in  std_logic;
 		   c_inp_dec:  	  in  std_logic;
 		   out_inp_indx:  out std_logic_vector(7 downto 0);
@@ -12,12 +13,14 @@ entity INPDEC is
 end INPDEC;
 
 architecture RTL of INPDEC is
-	signal count: std_logic_vector(8 downto 0):= "011000100";
+	signal count: std_logic_vector(8 downto 0);
 begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if c_inp_dec = '1' then
+			if reset = '1' then
+				count <= "011000100";
+			elsif c_inp_dec = '1' then
 				if count(8) = '1' then 
 					count <= "011000100";
 					out_inp_reset <= '1';

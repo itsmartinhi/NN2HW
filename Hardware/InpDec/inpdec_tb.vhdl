@@ -9,6 +9,7 @@ architecture TESTBENCH of INPDEC_TB is
 
 component INPDEC is
 	port (
+	   reset: 		  in  std_logic;
 	   clk: 		  in  std_logic;
 	   c_inp_dec: 	  in  std_logic;
        out_inp_indx:  out std_logic_vector(7 downto 0);
@@ -18,6 +19,7 @@ end component INPDEC;
 
 for SPEC: INPDEC use entity WORK.INPDEC(RTL);
 
+signal reset: 			std_logic;
 signal clk: 			std_logic;
 signal c_inp_dec:  	  	std_logic;
 signal spec_inp_indx:  	std_logic_vector(7 downto 0);
@@ -26,6 +28,7 @@ signal tb_count: 		std_logic_vector(8 downto 0);
 
 begin
 	SPEC: INPDEC port map ( 
+		reset 		  => reset,
 		clk 		  => clk,
 		c_inp_dec 	  => c_inp_dec,
 		out_inp_indx  => spec_inp_indx,
@@ -42,6 +45,10 @@ begin
 				wait for period;
 			end procedure;
 	begin
+	
+		reset <= '1';
+		run_cycle;
+		reset <= '0';
 	
 		c_inp_dec <= '1';
 		tb_count <= "011000100";
@@ -61,5 +68,4 @@ begin
 		wait;
 		
 	end process;
-	
 end architecture;

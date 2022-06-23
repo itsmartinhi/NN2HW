@@ -55,11 +55,10 @@ begin
 	begin
 		if c_mult = '1' then
 			out_val <= std_logic_vector(
-				"0000000000000" + -- HELP! not a beautiful padding method for dynamic vector lengths
-				unsigned(mult_out_1) + 
-				unsigned(mult_out_2) + 
-				unsigned(mult_out_3) + 
-				unsigned(mult_out_4) 
+				"00" & unsigned(mult_out_1) + 
+				"00" & unsigned(mult_out_2) + 
+				"00" & unsigned(mult_out_3) + 
+				"00" & unsigned(mult_out_4) 
 			);
 		end if;
 	end process;
