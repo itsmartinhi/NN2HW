@@ -60,23 +60,44 @@ BEGIN
     AB2(7) <= A(7) AND B(2);
 
     -- Port Mapping Full Adder 13 times and Half Adder 3 times
-    FA1 : full_adder PORT MAP(AB0(2), AB1(1), C1(0), P1(1), C1(1));
-    FA2 : full_adder PORT MAP(AB0(3), AB1(2), C1(1), P1(2), C1(2));
-    FA3 : full_adder PORT MAP(AB0(4), AB1(3), C1(2), P1(3), C1(3));
-    FA4 : full_adder PORT MAP(AB0(5), AB1(4), C1(3), P1(4), C1(4));
-    FA5 : full_adder PORT MAP(AB0(6), AB1(5), C1(4), P1(5), C1(5));
-    FA6 : full_adder PORT MAP(AB0(7), AB1(6), C1(5), P1(6), C1(6));
+    -- FA1 : full_adder PORT MAP(AB0(2), AB1(1), C1(0), P1(1), C1(1));
+    -- FA2 : full_adder PORT MAP(AB0(3), AB1(2), C1(1), P1(2), C1(2));
+    -- FA3 : full_adder PORT MAP(AB0(4), AB1(3), C1(2), P1(3), C1(3));
+    -- FA4 : full_adder PORT MAP(AB0(5), AB1(4), C1(3), P1(4), C1(4));
+    -- FA5 : full_adder PORT MAP(AB0(6), AB1(5), C1(4), P1(5), C1(5));
+    -- FA6 : full_adder PORT MAP(AB0(7), AB1(6), C1(5), P1(6), C1(6));
 
-    FA7 : full_adder PORT MAP(AB2(1), P1(2), C2(0), P2(1), C2(1));
-    FA8 : full_adder PORT MAP(AB2(2), P1(3), C2(1), P2(2), C2(2));
-    FA9 : full_adder PORT MAP(AB2(3), P1(4), C2(2), P2(3), C2(3));
-    FA10 : full_adder PORT MAP(AB2(4), P1(5), C2(3), P2(4), C2(4));
-    FA11 : full_adder PORT MAP(AB2(5), P1(6), C2(4), P2(5), C2(5));
-    FA12 : full_adder PORT MAP(AB2(6), P1(7), C2(5), P2(6), C2(6));
+    -- FA7 : full_adder PORT MAP(AB2(1), P1(2), C2(0), P2(1), C2(1));
+    -- FA8 : full_adder PORT MAP(AB2(2), P1(3), C2(1), P2(2), C2(2));
+    -- FA9 : full_adder PORT MAP(AB2(3), P1(4), C2(2), P2(3), C2(3));
+    -- FA10 : full_adder PORT MAP(AB2(4), P1(5), C2(3), P2(4), C2(4));
+    -- FA11 : full_adder PORT MAP(AB2(5), P1(6), C2(4), P2(5), C2(5));
+    -- FA12 : full_adder PORT MAP(AB2(6), P1(7), C2(5), P2(6), C2(6));
+    -- FA13 : full_adder PORT MAP(AB2(7), C1(7), C2(6), P2(7), C2(7));
+
+    -- HA1 : half_adder PORT MAP(AB0(1), AB1(0), P1(0), C1(0));
+    -- HA2 : half_adder PORT MAP(AB1(7), C1(6), P1(7), C1(7));
+
+    -- HA3 : half_adder PORT MAP(P1(1), AB2(0), P2(0), C2(0));
+
+    -- Port mapping carry safe
+    FA1 : full_adder PORT MAP(AB0(2), AB1(1), C1(0), P1(1), C1(1));
+    FA2 : full_adder PORT MAP(AB0(3), AB1(2), C2(0), P1(2), C1(2));
+    FA3 : full_adder PORT MAP(AB0(4), AB1(3), C2(1), P1(3), C1(3));
+    FA4 : full_adder PORT MAP(AB0(5), AB1(4), C2(2), P1(4), C1(4));
+    FA5 : full_adder PORT MAP(AB0(6), AB1(5), C2(3), P1(5), C1(5));
+    FA6 : full_adder PORT MAP(AB0(7), AB1(6), C2(4), P1(6), C1(6));
+
+    FA7 : full_adder PORT MAP(AB2(1), P1(2), C1(1), P2(1), C2(1));
+    FA8 : full_adder PORT MAP(AB2(2), P1(3), C1(2), P2(2), C2(2));
+    FA9 : full_adder PORT MAP(AB2(3), P1(4), C1(3), P2(3), C2(3));
+    FA10 : full_adder PORT MAP(AB2(4), P1(5), C1(4), P2(4), C2(4));
+    FA11 : full_adder PORT MAP(AB2(5), P1(6), C1(5), P2(5), C2(5));
+    FA12 : full_adder PORT MAP(AB2(6), P1(7), C1(6), P2(6), C2(6));
     FA13 : full_adder PORT MAP(AB2(7), C1(7), C2(6), P2(7), C2(7));
 
     HA1 : half_adder PORT MAP(AB0(1), AB1(0), P1(0), C1(0));
-    HA2 : half_adder PORT MAP(AB1(7), C1(6), P1(7), C1(7));
+    HA2 : half_adder PORT MAP(AB1(7), C2(5), P1(7), C1(7));
 
     HA3 : half_adder PORT MAP(P1(1), AB2(0), P2(0), C2(0));
 
