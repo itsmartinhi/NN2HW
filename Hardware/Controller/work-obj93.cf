@@ -1,7 +1,4 @@
 v 4
-file . "controller.vhdl" "6319b0ba315cb693e923cfb5c413c8cb235b8b86" "20220629143627.484":
-  entity controller at 1( 0) + 0 on 23;
-  architecture rtl of controller at 22( 603) + 0 on 24;
-file . "controller_tb.vhdl" "73f211606e6e0e6653627191070ed48faac74d45" "20220629143627.485":
-  entity controller_tb at 1( 0) + 0 on 25;
-  architecture testbench of controller_tb at 8( 115) + 0 on 26;
+file . "controller.vhdl" "e1b45f4f7f668f9ec94e1de58baa6428da6169d2" "20220629171359.612":
+  entity controller at 1( 0) + 0 on 11;
+  architecture rtl of controller at 20( 482) + 0 on 12;
