@@ -10,5 +10,3 @@ entity ROM is
         out_weights:            out std_logic_vector(11 downto 0); -- the output datastream
     );
 end ROM;
-
-
