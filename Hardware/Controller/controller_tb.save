@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Jun 29 14:39:26 2022
+[*]
+[dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/Controller/controller_tb_wave.ghw"
+[dumpfile_mtime] "Wed Jun 29 14:36:27 2022"
+[dumpfile_size] 2000810
+[savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/Controller/controller_tb.save"
+[timestart] 0
+[size] 1920 884
+[pos] -1 -31
+*-20.803551 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.controller_tb.
+[sst_width] 212
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 251
+@28
+top.controller_tb.clk
+@420
+top.controller_tb.spec.state
+top.controller_tb.spec.next_state
+@28
+top.controller_tb.spec.c_add_to_neuron
+top.controller_tb.spec.c_dec_input
+@29
+top.controller_tb.spec.c_dec_neuron
+[pattern_trace] 1
+[pattern_trace] 0

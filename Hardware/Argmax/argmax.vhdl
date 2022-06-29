@@ -7,8 +7,8 @@ port (
 	clk:			 in  std_logic;
 	c_argmax: 		 in  std_logic;						
 	in_argmax_val: 	 in  std_logic_vector(20 downto 0);	
-	in_argmax_indx:  in  std_logic_vector(3 downto 0);
-	out_argmax_indx: out std_logic_vector(3 downto 0)	
+	in_argmax_index:  in  std_logic_vector(3 downto 0);
+	out_argmax_index: out std_logic_vector(3 downto 0)	
 );
 end ARGMAX;
 
@@ -20,8 +20,8 @@ begin
 		if rising_edge(clk) then			
 			if c_argmax = '1' then
 				if reg_argmax_val < in_argmax_val then
-					out_argmax_indx <= in_argmax_indx;
-					reg_argmax_val  <= in_argmax_val;
+					out_argmax_index <= in_argmax_index;
+					reg_argmax_val   <= in_argmax_val;
 				end if;
 			end if;
 		end if;

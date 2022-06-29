@@ -2,27 +2,28 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY NEURONALESNETZ IS
-    PORT (
-
-    );
-END NEURONALESNETZ;
+entity NEURONALESNETZ is
+end NEURONALESNETZ;
 
 ARCHITECTURE RTL OF NEURONALESNETZ IS
 
     -- components
 
     COMPONENT CONTROLLER IS
-        PORT (
-            in_input_indx : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-            in_neuron_indx : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-            c_dec_neuron : OUT STD_LOGIC;
-            c_dec_input : OUT STD_LOGIC;
-            c_add_to_neuron : OUT STD_LOGIC;
-            c_mult : OUT STD_LOGIC;
-            c_argmax : OUT STD_LOGIC;
-            out_neuron_indx : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
-        );
+		port (
+			clk:				    in  std_logic;
+			reset:                 in  std_logic;
+			in_ctrl_neuron_index:  in  std_logic_vector(3 downto 0);
+			in_ctrl_neuron_reset:  in  std_logic; 
+			in_ctrl_input_reset:	in  std_logic;
+			c_dec_neuron: 		    out std_logic;
+			c_dec_input: 		    out std_logic;
+			c_mult: 			    out std_logic;
+			c_add_to_neuron:	    out std_logic;
+			c_argmax: 			    out std_logic;
+			halt: 				out std_logic;
+			out_ctrl_neuron_index: out std_logic_vector(3 downto 0)
+		);
     END COMPONENT;
 
     COMPONENT INPUTDECREMENTER IS

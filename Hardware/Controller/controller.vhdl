@@ -14,6 +14,7 @@ entity CONTROLLER is
 		 c_mult: 			    out std_logic;
 		 c_add_to_neuron:	    out std_logic;
 		 c_argmax: 			    out std_logic;
+		 halt: 				out std_logic;
 		 out_ctrl_neuron_index: out std_logic_vector(3 downto 0)
 	);
 end CONTROLLER;
@@ -43,6 +44,7 @@ begin
 				c_mult 				 <= '0';
 				c_add_to_neuron 	 <= '0';
 				c_argmax 			 <= '0';
+				halt 				 <= '0';
 				next_state 			 <= INPUT_DEC;
 			when MULT =>
 					c_dec_input  <= '0';
@@ -73,6 +75,8 @@ begin
 						then next_state <= HALT;
 						else next_state <= MULT;
 					end if;
+			when HALT =>
+					halt <= '1';
 			when others => null;		
 		end case;
 	end process;
