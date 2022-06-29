@@ -51,7 +51,7 @@ begin
 		S => mult_out_4(10 downto 0)
 	);
 		
-	process(c_mult, mult_out_1, mult_out_2, mult_out_3, mult_out_4)
+	process(mult_out_1, mult_out_2, mult_out_3, mult_out_4)
 	begin
 		if c_mult = '1' then
 			out_val <= std_logic_vector(

@@ -9,22 +9,22 @@ architecture TESTBENCH of ARGMAX_TB is
 
 component ARGMAX is
 	port (
-		clk: 			 in  std_logic;
-		c_argmax: 		 in  std_logic;	
-		in_argmax_val: 	 in  std_logic_vector(20 downto 0);
-		in_argmax_indx:  in  std_logic_vector(3 downto 0);
-		out_argmax_indx: out std_logic_vector(3 downto 0)		
+		clk: 			  in  std_logic;
+		c_argmax: 		  in  std_logic;	
+		in_argmax_val: 	  in  std_logic_vector(20 downto 0);
+		in_argmax_index:  in  std_logic_vector(3 downto 0);
+		out_argmax_index: out std_logic_vector(3 downto 0)		
 			
 		);
 end component;
 
 for SPEC: ARGMAX use entity WORK.ARGMAX(RTL);
 
-signal clk:			   std_logic;
-signal c_argmax: 	   std_logic;
-signal in_argmax_val:  std_logic_vector(20 downto 0);	
-signal in_argmax_indx: std_logic_vector(3 downto 0);
-signal out_indx_spec:  std_logic_vector(3 downto 0);
+signal clk:			    std_logic;
+signal c_argmax: 	    std_logic;
+signal in_argmax_val:   std_logic_vector(20 downto 0);	
+signal in_argmax_index: std_logic_vector(3 downto 0);
+signal out_index_spec:  std_logic_vector(3 downto 0);
 
 begin
 
@@ -32,8 +32,8 @@ begin
 		clk 			=> clk,
 		c_argmax 		=> c_argmax,
 		in_argmax_val   => in_argmax_val,
-		in_argmax_indx  => in_argmax_indx,
-		out_argmax_indx => out_indx_spec
+		in_argmax_index  => in_argmax_index,
+		out_argmax_index => out_index_spec
 	);
 
 	process 
@@ -46,23 +46,23 @@ begin
 				wait for period;
 			end procedure;
 	begin
-		in_argmax_val  <= "000000000000000000000";
-		in_argmax_indx <= "0000";
-		c_argmax 	   <= '1';
+		in_argmax_val   <= "000000000000000000000";
+		in_argmax_index <= "0000";
+		c_argmax 	    <= '1';
 		run_cycle;
-		assert out_indx_spec = in_argmax_indx report "Test 1 failed";
+		assert out_index_spec = in_argmax_index report "Test 1 failed";
 		
-		in_argmax_val  <= "000110000000000000000";
-		in_argmax_indx <= "0001";
-		c_argmax 	   <= '1';
+		in_argmax_val   <= "000110000000000000000";
+		in_argmax_index <= "0001";
+		c_argmax 	    <= '1';
 		run_cycle;
-		assert out_indx_spec = in_argmax_indx report "Test 2 failed";
+		assert out_index_spec = in_argmax_index report "Test 2 failed";
 		
-		in_argmax_val  <= "000011000000000000000";
-		in_argmax_indx <= "0011";
-		c_argmax 	   <= '1';
+		in_argmax_val   <= "000011000000000000000";
+		in_argmax_index <= "0011";
+		c_argmax 	    <= '1';
 		run_cycle;
-		assert out_indx_spec /= in_argmax_indx report "Test 3 failed";
+		assert out_index_spec /= in_argmax_index report "Test 3 failed";
 		
 		report "argmax tb finished OK";
 		wait;
