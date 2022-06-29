@@ -36,9 +36,9 @@ begin
 		procedure run_cycle is
 			begin
 				c_mult <= '0'; 
-				wait for 5 ns;
+				wait for 1 ns;
 				c_mult <= '1';
-				wait for 45 ns; -- find critical path! 
+				wait for 44 ns; -- find critical path! 
 			end procedure;
 	begin
 		in_weights <= "11101101001110110101111100001100";
