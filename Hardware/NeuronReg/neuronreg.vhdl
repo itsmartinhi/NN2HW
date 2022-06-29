@@ -7,7 +7,7 @@ entity NEURONREG is
 		clk: 			in 	std_logic;
 		reset: 			in 	std_logic;
 		c_nreg: 		in 	std_logic;						
-		in_nreg_val: 	in 	std_logic_vector(11 downto 0);
+		in_nreg_val: 	in 	std_logic_vector(12 downto 0);
 		out_nreg_val: 	out std_logic_vector(20 downto 0)
 	);
 end NEURONREG;

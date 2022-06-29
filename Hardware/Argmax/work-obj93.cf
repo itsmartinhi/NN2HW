@@ -1,7 +1,7 @@
 v 4
-file . "argmax_tb.vhdl" "acee998cd1031ec8bc4a39f9146e1a09d8138637" "20220629164203.053":
-  entity argmax_tb at 1( 0) + 0 on 361;
-  architecture testbench of argmax_tb at 8( 107) + 0 on 362;
-file . "argmax.vhdl" "8d8105525d58f84352affc8275983726c462d784" "20220629164203.051":
-  entity argmax at 1( 0) + 0 on 359;
-  architecture rtl of argmax at 15( 329) + 0 on 360;
+file . "argmax.vhdl" "8d8105525d58f84352affc8275983726c462d784" "20220629202037.351":
+  entity argmax at 1( 0) + 0 on 419;
+  architecture rtl of argmax at 15( 329) + 0 on 420;
+file . "argmax_tb.vhdl" "acee998cd1031ec8bc4a39f9146e1a09d8138637" "20220629202037.353":
+  entity argmax_tb at 1( 0) + 0 on 421;
+  architecture testbench of argmax_tb at 8( 107) + 0 on 422;
