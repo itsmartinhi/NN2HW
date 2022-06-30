@@ -15,13 +15,13 @@ architecture RTL of ROM is
     type t_rom_arr is array (0 to 2500) of std_logic_vector (31 downto 0);
     signal rom_arr: t_rom_arr;
 
-    signal rom_index: std_logic_vector (12 downto 0);
+    signal rom_index: std_logic_vector (11 downto 0);
 begin
     process(clk)
     begin
         if rising_edge(clk) and reset = '1' then
             
-            rom_index <= in_rom_neuron_index & in_rom_input_index; -- combine the neuron and input index to adress the array
+            rom_index <= (in_rom_neuron_index & in_rom_input_index); -- combine the neuron and input index to adress the array
             
             -- here follows the generated array allocation
 
