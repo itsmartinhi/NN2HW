@@ -24,7 +24,7 @@ architecture RTL of NEURONALESNETZ is
 			c_dec_neuron: 		    out std_logic;
 			c_dec_input: 		    out std_logic;
 			c_mult: 			    out std_logic;
-			c_add_to_neuron:	    out std_logic;
+			c_add_to_neuron:	    out std_logic; 
 			c_argmax: 			    out std_logic;
 			halt: 					out std_logic
 		);

@@ -18,7 +18,7 @@ entity CONTROLLER is
 end CONTROLLER;
 
 architecture RTL of CONTROLLER is
-	 type t_state is (S_RESET, S_INPUT_DEC, S_MULT, S_NEURON_REG, S_NEURON_DEC, S_ARGMAX, S_HALT);
+	 type t_state is (S_RESET, S_INPUT_DEC, S_CHECK_INPUT, S_MULT, S_NEURON_REG, S_NEURON_DEC, S_ARGMAX, S_HALT);
 	 signal state, next_state: t_state;
 begin
 
@@ -50,10 +50,9 @@ begin
 					c_mult 		 <= '1';
 					next_state   <= S_NEURON_REG;
 			when S_NEURON_REG =>
-					-- wait for multiplication
-					c_add_to_neuron <= '1' 		  after 50 ns;
-					c_mult 	   		<= '0' 		  after 50 ns;
-					next_state 		<= S_INPUT_DEC after 50 ns;
+					c_mult 	   		<= '0'; 		   
+					c_add_to_neuron <= '1';
+					next_state 		<= S_INPUT_DEC;
 			when S_INPUT_DEC =>
 					c_dec_input 	<= '1';
 					c_add_to_neuron	<= '0';

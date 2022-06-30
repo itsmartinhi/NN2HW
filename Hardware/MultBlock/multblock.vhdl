@@ -4,10 +4,9 @@ use IEEE.numeric_std.all;
 
 entity MULTBLOCK is
 port (
-	c_mult: 	in 	std_logic;
 	in_weights: in 	std_logic_vector(31 downto 0);
 	in_inputs:  in 	std_logic_vector(11 downto 0);
-	out_val:	out std_logic_vector(12 downto 0)
+	out_mult_val:	out std_logic_vector(12 downto 0)
 );
 end MULTBLOCK;
 
@@ -21,7 +20,7 @@ architecture RTL of MULTBLOCK is
 		);
 	end component;
 	
-	for all: MULTIPLIER use entity WORK.MULTIPLIER(BEHAVOR);
+	for all: MULTIPLIER use entity WORK.MULTIPLIER(STRUCTURE);
 	
 	signal mult_out_1, mult_out_2, mult_out_3, mult_out_4 : std_logic_vector(10 downto 0);
 	
@@ -50,16 +49,11 @@ begin
 		B => in_inputs(11 downto 9),
 		S => mult_out_4(10 downto 0)
 	);
-		
-	process(mult_out_1, mult_out_2, mult_out_3, mult_out_4)
-	begin
-		if c_mult = '1' then
-			out_val <= std_logic_vector(
-				("00" & unsigned(mult_out_1)) + 
-				("00" & unsigned(mult_out_2)) + 
-				("00" & unsigned(mult_out_3)) + 
-				("00" & unsigned(mult_out_4)) 
-			);
-		end if;
-	end process;
+
+	out_mult_val <= std_logic_vector(
+		("00" & unsigned(mult_out_1)) + 
+		("00" & unsigned(mult_out_2)) + 
+		("00" & unsigned(mult_out_3)) + 
+		("00" & unsigned(mult_out_4)) 
+	);
 end RTL;

@@ -1,47 +1,46 @@
 v 4
-file . "testbench.vhdl" "6119ba992590eb04d0574706bc7c0bda5ab6bf01" "20220630065423.153":
-  entity testbench at 1( 0) + 0 on 519;
-  architecture testbench of testbench at 8( 107) + 0 on 520;
-file . "../Controller/controller.vhdl" "0e4f9a3648658090f7e742f12a73502d56a0bb52" "20220630065423.139":
-  entity controller at 1( 0) + 0 on 489;
-  architecture rtl of controller at 20( 482) + 0 on 490;
-file . "../InpDec/inpdec.vhdl" "0af7b158da049417677d5e33b439da9dda5e8660" "20220630065423.140":
-  entity inpdec at 1( 0) + 0 on 491;
-  architecture rtl of inpdec at 15( 303) + 0 on 492;
-file . "../NeuronDec/neurondec.vhdl" "6e714933d72186e36acd6043105cac6b919566ba" "20220630065423.141":
-  entity neurondec at 1( 0) + 0 on 493;
-  architecture rtl of neurondec at 15( 309) + 0 on 494;
-file . "../MultBlock/Multiplier/and2.vhdl" "888b9ef13c5b9c939a8102a553eb215be2e8319b" "20220630065423.141":
-  entity and2 at 1( 0) + 0 on 495;
-  architecture dataflow of and2 at 8( 126) + 0 on 496;
-file . "../MultBlock/Multiplier/or2.vhdl" "fbec4640227108f3ba57ce98cbb7d8234e5888f1" "20220630065423.142":
-  entity or2 at 1( 0) + 0 on 497;
-  architecture dataflow of or2 at 10( 136) + 0 on 498;
-file . "../MultBlock/Multiplier/xor2.vhdl" "53a5d73d4baf287387b4ac7fec37d44a0164582f" "20220630065423.142":
-  entity xor2 at 1( 0) + 0 on 499;
-  architecture dataflow of xor2 at 8( 126) + 0 on 500;
-file . "../MultBlock/Multiplier/half_adder.vhdl" "d0f64ad6b79828ba260484166afe511c6df2e391" "20220630065423.144":
-  entity half_adder at 1( 0) + 0 on 501;
-  architecture behavior of half_adder at 13( 168) + 0 on 502;
-  architecture dataflow of half_adder at 30( 560) + 0 on 503;
-  architecture structure of half_adder at 38( 660) + 0 on 504;
-file . "../MultBlock/Multiplier/full_adder.vhdl" "e02e359505fb3a7d439be0993d1871b4ad7e234c" "20220630065423.146":
-  entity full_adder at 1( 0) + 0 on 505;
-  architecture behavior of full_adder at 14( 260) + 0 on 506;
-  architecture dataflow of full_adder at 28( 594) + 0 on 507;
-  architecture structure of full_adder at 34( 742) + 0 on 508;
-file . "../MultBlock/Multiplier/multiplier.vhdl" "e6b68fe65c82f034495f20fd533ac67713731bf6" "20220630065423.148":
-  entity multiplier at 1( 0) + 0 on 509;
-  architecture behavor of multiplier at 11( 234) + 0 on 510;
-file . "../MultBlock/multblock.vhdl" "c13544c462f51632c83a53d937ce447d919a0da3" "20220630065423.149":
-  entity multblock at 1( 0) + 0 on 511;
-  architecture rtl of multblock at 14( 286) + 0 on 512;
-file . "../Argmax/argmax.vhdl" "8d8105525d58f84352affc8275983726c462d784" "20220630065423.150":
-  entity argmax at 1( 0) + 0 on 513;
-  architecture rtl of argmax at 15( 329) + 0 on 514;
-file . "../NeuronReg/neuronreg.vhdl" "b6ee7e30c9181408a9bc8d6828b78fbc5a2d721b" "20220630065423.151":
-  entity neuronreg at 1( 0) + 0 on 515;
-  architecture rtl of neuronreg at 15( 305) + 0 on 516;
-file . "neuronalesNetz.vhdl" "5e66b8a4dbb6cf875f470ad01db6df4013f65a33" "20220630065423.152":
-  entity neuronalesnetz at 1( 0) + 0 on 517;
-  architecture rtl of neuronalesnetz at 14( 250) + 0 on 518;
+file . "neuronalesNetz.vhdl" "e640306be811e08457b2e467dc585481b0c2eb22" "20220630080413.597":
+  entity neuronalesnetz at 1( 0) + 0 on 796;
+  architecture rtl of neuronalesnetz at 14( 250) + 0 on 797;
+file . "../NeuronReg/neuronreg.vhdl" "b6ee7e30c9181408a9bc8d6828b78fbc5a2d721b" "20220630080413.595":
+  entity neuronreg at 1( 0) + 0 on 794;
+  architecture rtl of neuronreg at 15( 305) + 0 on 795;
+file . "../Argmax/argmax.vhdl" "8d8105525d58f84352affc8275983726c462d784" "20220630080413.594":
+  entity argmax at 1( 0) + 0 on 792;
+  architecture rtl of argmax at 15( 329) + 0 on 793;
+file . "../MultBlock/multblock.vhdl" "3bfe73c8771634f3ea1437e801db52ddb5761c64" "20220630080413.593":
+  entity multblock at 1( 0) + 0 on 790;
+  architecture rtl of multblock at 14( 286) + 0 on 791;
+file . "../MultBlock/Multiplier/multiplier.vhdl" "81078a196b3991ec1c6960d7a62a1a011740bbda" "20220630080413.591":
+  entity multiplier at 1( 0) + 0 on 788;
+  architecture structure of multiplier at 11( 234) + 0 on 789;
+file . "../MultBlock/Multiplier/full_adder.vhdl" "e02e359505fb3a7d439be0993d1871b4ad7e234c" "20220630080413.589":
+  entity full_adder at 1( 0) + 0 on 784;
+  architecture behavior of full_adder at 14( 260) + 0 on 785;
+  architecture dataflow of full_adder at 28( 594) + 0 on 786;
+  architecture structure of full_adder at 34( 742) + 0 on 787;
+file . "../MultBlock/Multiplier/half_adder.vhdl" "95d077d2ffcca3b0fa22343405b48e3230a73a48" "20220630080413.587":
+  entity half_adder at 1( 0) + 0 on 781;
+  architecture dataflow of half_adder at 26( 589) + 0 on 782;
+  architecture structure of half_adder at 32( 687) + 0 on 783;
+file . "../MultBlock/Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220630080413.584":
+  entity xor2 at 1( 0) + 0 on 779;
+  architecture dataflow of xor2 at 8( 126) + 0 on 780;
+file . "../MultBlock/Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220630080413.583":
+  entity or2 at 1( 0) + 0 on 777;
+  architecture dataflow of or2 at 10( 136) + 0 on 778;
+file . "../MultBlock/Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220630080413.583":
+  entity and2 at 1( 0) + 0 on 775;
+  architecture dataflow of and2 at 8( 126) + 0 on 776;
+file . "../NeuronDec/neurondec.vhdl" "6e714933d72186e36acd6043105cac6b919566ba" "20220630080413.582":
+  entity neurondec at 1( 0) + 0 on 773;
+  architecture rtl of neurondec at 15( 309) + 0 on 774;
+file . "../InpDec/inpdec.vhdl" "0af7b158da049417677d5e33b439da9dda5e8660" "20220630080413.581":
+  entity inpdec at 1( 0) + 0 on 771;
+  architecture rtl of inpdec at 15( 303) + 0 on 772;
+file . "../Controller/controller.vhdl" "6d3c824b4258d5ef1c5a18610388af64be06619a" "20220630080413.580":
+  entity controller at 1( 0) + 0 on 769;
+  architecture rtl of controller at 20( 482) + 0 on 770;
+file . "testbench.vhdl" "6119ba992590eb04d0574706bc7c0bda5ab6bf01" "20220630080413.598":
+  entity testbench at 1( 0) + 0 on 798;
+  architecture testbench of testbench at 8( 107) + 0 on 799;

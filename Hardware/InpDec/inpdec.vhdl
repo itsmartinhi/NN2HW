@@ -19,13 +19,13 @@ begin
 	begin
 		if rising_edge(clk) then
 			if reset = '1' then
-				count <= "011000011";
+				count <= "011000100";
 				out_input_index <= "11000100";
 			elsif c_input_dec = '1' then
-				if count(8) = '1' then 
-					count <= "011000011";
+				if count = "000000000" then
+					count <= "011000100";
 					out_input_reset <= '1';
-					out_input_index <= "11000100";
+					out_input_index <= "00000000";
 				else 
 					out_input_index <= count(7 downto 0);
 					out_input_reset <= '0';

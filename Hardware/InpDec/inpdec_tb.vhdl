@@ -51,7 +51,7 @@ begin
 		reset <= '0';
 	
 		c_input_dec <= '1';
-		tb_count <= "011000011";
+		tb_count <= "011000100";
 		for i in 0 to 195 loop 
 			run_cycle;
 			tb_count <= std_logic_vector(signed(tb_count) - 1);
@@ -62,7 +62,7 @@ begin
 		tb_count <= std_logic_vector(signed(tb_count) - 1);
 		assert spec_input_reset = '1' report "reset not set";
 		run_cycle;
-		assert spec_input_index = "11000011" report "count didnt reset";
+		assert spec_input_index = "11000100" report "count didnt reset";
 		
 		report "tb finished OK";
 		wait;

@@ -9,10 +9,10 @@ architecture TESTBENCH of MULTBLOCK_TB is
 
 component MULTBLOCK is
 	port (
-		c_mult: 	in 	std_logic;
-		in_weights: in 	std_logic_vector(31 downto 0);
-		in_inputs:  in 	std_logic_vector(11 downto 0);
-		out_val:	out std_logic_vector(12 downto 0)
+		c_mult: 		in 	std_logic;
+		in_weights: 	in 	std_logic_vector(31 downto 0);
+		in_inputs:  	in 	std_logic_vector(11 downto 0);
+		out_mult_val:	out std_logic_vector(12 downto 0)
 		);
 end component;
 
@@ -26,10 +26,10 @@ signal out_val_spec: std_logic_vector(12 downto 0);
 begin 
 
  	SPEC: MULTBLOCK port map ( 
-		c_mult 	   => c_mult,
-		in_weights => in_weights,
-		in_inputs  => in_inputs,
-		out_val    => out_val_spec
+		c_mult 	   		=> c_mult,
+		in_weights 		=> in_weights,
+		in_inputs  		=> in_inputs,
+		out_mult_val    => out_val_spec
 	);
 	
 	process 
@@ -38,14 +38,12 @@ begin
 				c_mult <= '0'; 
 				wait for 1 ns;
 				c_mult <= '1';
-				wait for 44 ns; -- find critical path! 
 			end procedure;
 	begin
 		in_weights <= "11101101001110110101111100001100";
 		in_inputs  <= "110101000111";
 		run_cycle;
 		assert out_val_spec = "0011100001001" report "10110001110 + 00100100111 + 00000000000 + 00001010100 should be 11100001001";
-		
 		in_weights <= "11111111111111111111111111111111";
 		in_inputs  <= "111111111111";
 		run_cycle;

@@ -34,6 +34,8 @@ begin
 
         in_rom_input_index <= "00000000";
         in_rom_neuron_index <= "0000";
+        
+        run_cycle;
 
         assert out_weights = "01100011000000000000000000000000" report "output not as expected!";
 
