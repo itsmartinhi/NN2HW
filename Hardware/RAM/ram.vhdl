@@ -214,11 +214,6 @@ architecture RTL of RAM is
     );
 
 begin
-<<<<<<< HEAD
-    out_inputs <= ram_arr(to_integer(unsigned(in_ram_input_index)));
-end RTL;
-
-=======
     out_data_ram <= ram_arr(to_integer(unsigned(in_ram_input_index)));
 end RTL;
->>>>>>> 49e34c18222379a015a6b8d823ba4a050c9f8c31
+

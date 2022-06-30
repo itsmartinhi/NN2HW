@@ -12,6 +12,7 @@ component NEURONREG is
 		reset: 		  in  std_logic;
 		clk: 		  in  std_logic;
 		c_nreg: 	  in  std_logic;
+		c_reset_reg:  in  std_logic;
 		in_nreg_val:  in  std_logic_vector(12 downto 0);
 		out_nreg_val: out std_logic_vector(20 downto 0)	
 		);
@@ -19,19 +20,21 @@ end component;
 
 for SPEC: NEURONREG use entity WORK.NEURONREG(RTL);
 
-signal reset: std_logic;
-signal clk: std_logic;
-signal c_nreg: std_logic;
-signal in_nreg_val: std_logic_vector(12 downto 0);	
-signal out_nreg_spec: std_logic_vector(20 downto 0);
+signal reset: 			std_logic;
+signal clk: 			std_logic;
+signal c_reset_reg: 	std_logic;
+signal c_nreg: 			std_logic;
+signal in_nreg_val: 	std_logic_vector(12 downto 0);	
+signal out_nreg_spec: 	std_logic_vector(20 downto 0);
 
 begin
 	
 	SPEC: NEURONREG port map ( 
-		reset => reset,
-		clk => clk,
-		c_nreg => c_nreg,
-		in_nreg_val => in_nreg_val,
+		reset 		 => reset,
+		clk 		 => clk,
+		c_nreg 		 => c_nreg,
+		c_reset_reg  => c_reset_reg,
+		in_nreg_val  => in_nreg_val,
 		out_nreg_val => out_nreg_spec
 	);
 

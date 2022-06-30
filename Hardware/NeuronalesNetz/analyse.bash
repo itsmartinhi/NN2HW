@@ -58,10 +58,11 @@ ees-ghdl -a ../Controller/controller.vhdl \
 			../MultBlock/Multiplier/and2.vhdl ../MultBlock/Multiplier/or2.vhdl ../MultBlock/Multiplier/xor2.vhdl ../MultBlock/Multiplier/half_adder.vhdl ../MultBlock/Multiplier/full_adder.vhdl ../MultBlock/Multiplier/multiplier.vhdl ../MultBlock/multblock.vhdl \
 			../Argmax/argmax.vhdl \
 			../NeuronReg/neuronreg.vhdl \
+			../RAM/ram.vhdl \
+			../ROM/rom.vhdl \
 			neuronalesNetz.vhdl testbench.vhdl
 ees-ghdl -r testbench --wave=testbench_wave.ghw
 gtkwave testbench_wave.ghw testbench.save
 
-# ../RAM/ram.vhdl \
-# ../ROM/rom.vhdl \
+
 # gtkwave multblock_tb_wave.ghw multblock_tb.save

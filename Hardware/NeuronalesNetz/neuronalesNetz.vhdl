@@ -23,7 +23,8 @@ architecture RTL of NEURONALESNETZ is
 			in_ctrl_input_reset:	in  std_logic;
 			c_dec_neuron: 		    out std_logic;
 			c_dec_input: 		    out std_logic;
-			c_add_to_neuron:	    out std_logic; 
+			c_add_to_neuron:	    out std_logic;
+			c_reset_register: 		out std_logic; 
 			c_argmax: 			    out std_logic;
 			halt: 					out std_logic
 		);
@@ -61,7 +62,8 @@ architecture RTL of NEURONALESNETZ is
         port (
 			clk: 			in 	std_logic;
 			reset: 			in 	std_logic;
-			c_nreg: 		in 	std_logic;						
+			c_nreg: 		in 	std_logic;
+			c_reset_reg: 	in 	std_logic;						
 			in_nreg_val: 	in 	std_logic_vector(12 downto 0);
 			out_nreg_val: 	out std_logic_vector(20 downto 0)
 		);
@@ -104,11 +106,12 @@ architecture RTL of NEURONALESNETZ is
     -- internal signals
     
     -- CONTROLLER
-	signal c_dec_neuron: 	std_logic;
-	signal c_dec_input:		std_logic;
-	signal c_mult: 			std_logic;
-	signal c_add_to_neuron:	std_logic;
-	signal c_argmax: 		std_logic;
+	signal c_dec_neuron: 	 std_logic;
+	signal c_dec_input:		 std_logic;
+	signal c_mult: 			 std_logic;
+	signal c_add_to_neuron:	 std_logic;
+	signal c_argmax: 		 std_logic;
+	signal c_reset_register: std_logic;
 
     -- INPUTDECREMENTER
     signal out_input_index: std_logic_vector(7 downto 0);
@@ -144,6 +147,7 @@ begin
 		c_dec_neuron 			=> c_dec_neuron,
 		c_dec_input				=> c_dec_input,
 		c_add_to_neuron			=> c_add_to_neuron,
+		c_reset_register		=> c_reset_register,
 		c_argmax				=> c_argmax,
 		halt 					=> halt
 	);
@@ -174,7 +178,8 @@ begin
     U_NEURONREGISTER : NEURONREGISTER port map (
 		clk			 	=> clk,
 		reset		 	=> reset,
-		c_nreg	 		=> c_add_to_neuron,				
+		c_nreg	 		=> c_add_to_neuron,
+		c_reset_reg  	=> c_reset_register,		
 		in_nreg_val	 	=> out_mult_val,
 		out_nreg_val 	=> out_nreg_val
     );

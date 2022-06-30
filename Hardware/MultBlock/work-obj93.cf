@@ -1,28 +1,25 @@
 v 4
-file . "multblock_tb.vhdl" "fa2768b29dc759e00bb6dfc94ffe947c35d09098" "20220630085036.235":
-  entity multblock_tb at 1( 0) + 0 on 2316;
-  architecture testbench of multblock_tb at 8( 113) + 0 on 2317;
-file . "multblock.vhdl" "32c4a7f358c3fb0a754e40baecdf1ce9c005931b" "20220630085036.233":
-  entity multblock at 1( 0) + 0 on 2314;
-  architecture rtl of multblock at 13( 266) + 0 on 2315;
-file . "Multiplier/multiplier.vhdl" "81078a196b3991ec1c6960d7a62a1a011740bbda" "20220630085036.231":
-  entity multiplier at 1( 0) + 0 on 2312;
-  architecture structure of multiplier at 11( 234) + 0 on 2313;
-file . "Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220630085036.221":
-  entity and2 at 1( 0) + 0 on 2299;
-  architecture dataflow of and2 at 8( 126) + 0 on 2300;
-file . "Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220630085036.221":
-  entity or2 at 1( 0) + 0 on 2301;
-  architecture dataflow of or2 at 10( 136) + 0 on 2302;
-file . "Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220630085036.222":
-  entity xor2 at 1( 0) + 0 on 2303;
-  architecture dataflow of xor2 at 8( 126) + 0 on 2304;
-file . "Multiplier/half_adder.vhdl" "95d077d2ffcca3b0fa22343405b48e3230a73a48" "20220630085036.226":
-  entity half_adder at 1( 0) + 0 on 2305;
-  architecture dataflow of half_adder at 26( 589) + 0 on 2306;
-  architecture structure of half_adder at 32( 687) + 0 on 2307;
-file . "Multiplier/full_adder.vhdl" "e02e359505fb3a7d439be0993d1871b4ad7e234c" "20220630085036.229":
-  entity full_adder at 1( 0) + 0 on 2308;
-  architecture behavior of full_adder at 14( 260) + 0 on 2309;
-  architecture dataflow of full_adder at 28( 594) + 0 on 2310;
-  architecture structure of full_adder at 34( 742) + 0 on 2311;
+file . "Multiplier/full_adder.vhdl" "3dfdc46c669ce47c2829d4936b0f552132159345" "20220630092957.533":
+  entity full_adder at 1( 0) + 0 on 2486;
+  architecture structure of full_adder at 34( 796) + 0 on 2487;
+file . "Multiplier/half_adder.vhdl" "48f810741079cb37ab69b8ff936c59625f1d8954" "20220630092957.531":
+  entity half_adder at 1( 0) + 0 on 2484;
+  architecture structure of half_adder at 32( 702) + 0 on 2485;
+file . "Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220630092957.525":
+  entity xor2 at 1( 0) + 0 on 2482;
+  architecture dataflow of xor2 at 8( 126) + 0 on 2483;
+file . "Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220630092957.525":
+  entity or2 at 1( 0) + 0 on 2480;
+  architecture dataflow of or2 at 10( 136) + 0 on 2481;
+file . "Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220630092957.524":
+  entity and2 at 1( 0) + 0 on 2478;
+  architecture dataflow of and2 at 8( 126) + 0 on 2479;
+file . "Multiplier/multiplier.vhdl" "f7570aa84d46d4b2097d968587435e4a399be3d9" "20220630092957.536":
+  entity multiplier at 1( 0) + 0 on 2488;
+  architecture structure of multiplier at 11( 234) + 0 on 2489;
+file . "multblock.vhdl" "32c4a7f358c3fb0a754e40baecdf1ce9c005931b" "20220630092957.538":
+  entity multblock at 1( 0) + 0 on 2490;
+  architecture rtl of multblock at 13( 266) + 0 on 2491;
+file . "multblock_tb.vhdl" "fa2768b29dc759e00bb6dfc94ffe947c35d09098" "20220630092957.540":
+  entity multblock_tb at 1( 0) + 0 on 2492;
+  architecture testbench of multblock_tb at 8( 113) + 0 on 2493;
