@@ -4,9 +4,8 @@ use ieee.numeric_std.all;
 
 entity RAM is
     port (
-        reset:              in std_logic;
         in_ram_input_index: in std_logic_vector(7 downto 0); -- this is the given memory address
-        out_inputs:         out std_logic_vector(11 downto 0) -- this is the output datastream
+        out_data_ram:       out std_logic_vector(11 downto 0) -- this is the output datastream
     );
 end RAM;
 
@@ -215,5 +214,5 @@ architecture RTL of RAM is
     );
 
 begin
-    out_inputs <= ram_arr(to_integer(unsigned(in_ram_input_index)));
+    out_data_ram <= ram_arr(to_integer(unsigned(in_ram_input_index)));
 end RTL;
