@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 entity MULTBLOCK is
 port (
-	in_weights: in 	std_logic_vector(31 downto 0);
-	in_inputs:  in 	std_logic_vector(11 downto 0);
+	in_data_rom: 	in 	std_logic_vector(31 downto 0);
+	in_data_ram:  	in 	std_logic_vector(11 downto 0);
 	out_mult_val:	out std_logic_vector(12 downto 0)
 );
 end MULTBLOCK;
@@ -27,26 +27,26 @@ architecture RTL of MULTBLOCK is
 begin
 
 	MULT_1: MULTIPLIER port map (
-		A => in_weights(7 downto 0),
-		B => in_inputs(2 downto 0),
+		A => in_data_rom(7 downto 0),
+		B => in_data_ram(2 downto 0),
 		S => mult_out_1(10 downto 0)
 	);
 	
 	MULT_2: MULTIPLIER port map (
-		A => in_weights(15 downto 8),
-		B => in_inputs(5 downto 3),
+		A => in_data_rom(15 downto 8),
+		B => in_data_ram(5 downto 3),
 		S => mult_out_2(10 downto 0)
 	);
 	
 	MULT_3: MULTIPLIER port map (
-		A => in_weights(23 downto 16),
-		B => in_inputs(8 downto 6),
+		A => in_data_rom(23 downto 16),
+		B => in_data_ram(8 downto 6),
 		S => mult_out_3(10 downto 0)
 	);
 	
 	MULT_4: MULTIPLIER port map (
-		A => in_weights(31 downto 24),
-		B => in_inputs(11 downto 9),
+		A => in_data_rom(31 downto 24),
+		B => in_data_ram(11 downto 9),
 		S => mult_out_4(10 downto 0)
 	);
 

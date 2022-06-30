@@ -17,23 +17,7 @@ ARCHITECTURE VST OF full_adder IS
 
   SIGNAL s1ha	: BIT;
   SIGNAL c1ha	: BIT;
-  SIGNAL s2ha	: BIT;
   SIGNAL c2ha	: BIT;
-  SIGNAL c1or	: BIT;
-  COMPONENT full_adder_model
-  PORT(
-  a	: IN BIT;
-  b	: IN BIT;
-  cin	: IN BIT;
-  sum	: OUT BIT;
-  carry	: OUT BIT;
-  vdd	: IN BIT;
-  vss	: IN BIT;
-  c1or	: IN BIT;
-  s2ha	: IN BIT
-  );
-  END COMPONENT;
-
   COMPONENT or2
   PORT(
   vss	: IN BIT;
@@ -57,21 +41,9 @@ ARCHITECTURE VST OF full_adder IS
 
 BEGIN
 
-  full_adder_inst : full_adder_model
-  PORT MAP (
-    a => a,
-    b => b,
-    cin => cin,
-    sum => sum,
-    carry => carry,
-    vdd => vdd,
-    vss => vss,
-    c1or => c1or,
-    s2ha => s2ha
-  );
   or1 : or2
   PORT MAP (
-    z => c1or,
+    z => carry,
     y => c2ha,
     x => c1ha,
     vdd => vdd,
@@ -80,7 +52,7 @@ BEGIN
   ha2 : half_adder
   PORT MAP (
     carry => c2ha,
-    sum => s2ha,
+    sum => sum,
     b => cin,
     a => s1ha,
     vdd => vdd,

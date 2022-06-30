@@ -23,7 +23,6 @@ architecture RTL of NEURONALESNETZ is
 			in_ctrl_input_reset:	in  std_logic;
 			c_dec_neuron: 		    out std_logic;
 			c_dec_input: 		    out std_logic;
-			c_mult: 			    out std_logic;
 			c_add_to_neuron:	    out std_logic; 
 			c_argmax: 			    out std_logic;
 			halt: 					out std_logic
@@ -52,9 +51,8 @@ architecture RTL of NEURONALESNETZ is
 
     component MULTBLOCK is
         port (
-			c_mult: 		in 	std_logic;
-			in_weights: 	in 	std_logic_vector(31 downto 0);
-			in_inputs:  	in 	std_logic_vector(11 downto 0);
+			in_data_rom: 	in 	std_logic_vector(31 downto 0);
+			in_data_ram:  	in 	std_logic_vector(11 downto 0);
 			out_mult_val:	out std_logic_vector(12 downto 0)
 		);
     end component;
@@ -82,7 +80,7 @@ architecture RTL of NEURONALESNETZ is
 	component RAM is
 		port (
 			in_ram_input_index: in  std_logic_vector(7 downto 0);
-			out_inputs: 		out std_logic_vector(11 downto 0)
+			out_data_ram: 		out std_logic_vector(11 downto 0)
 		);
 	end component;
 	
@@ -90,7 +88,7 @@ architecture RTL of NEURONALESNETZ is
 		port (
 			in_rom_input_index: 	in  std_logic_vector(7 downto 0);
 			in_rom_neuron_index: 	in  std_logic_vector(3 downto 0);
-			out_weights: 			out std_logic_vector(31 downto 0)
+			out_data_rom: 			out std_logic_vector(31 downto 0)
 		);
 	end component;
 	
@@ -130,10 +128,10 @@ architecture RTL of NEURONALESNETZ is
     signal out_argmax_index: std_logic_vector(3 downto 0);
     
     -- RAM
-    signal out_inputs: std_logic_vector(11 downto 0);
+    signal out_data_ram: std_logic_vector(11 downto 0);
     
 	-- ROM 
-	signal out_weights: std_logic_vector(31 downto 0);
+	signal out_data_rom: std_logic_vector(31 downto 0);
    
 begin
 	-- port mapping
@@ -145,7 +143,6 @@ begin
 		in_ctrl_input_reset 	=> out_input_reset,
 		c_dec_neuron 			=> c_dec_neuron,
 		c_dec_input				=> c_dec_input,
-		c_mult					=> c_mult,
 		c_add_to_neuron			=> c_add_to_neuron,
 		c_argmax				=> c_argmax,
 		halt 					=> halt
@@ -169,9 +166,8 @@ begin
 	);
 	
     U_MULTBLOCK : MULTBLOCK port map (
-        c_mult 		 => c_mult,
-        in_weights 	 => out_weights,
-        in_inputs 	 => out_inputs,
+        in_data_rom  => out_data_rom,
+        in_data_ram  => out_data_ram,
         out_mult_val => out_mult_val
     );
     
@@ -193,13 +189,12 @@ begin
     
     U_RAM : RAM port map (
 		in_ram_input_index 	=> out_input_index,
-		out_inputs			=> out_inputs
+		out_data_ram		=> out_data_ram
     );
 
 	U_ROM : ROM port map (
 		in_rom_input_index 	=> out_input_index,
 		in_rom_neuron_index => out_neuron_index,
-		out_weights 		=> out_weights
+		out_data_rom 		=> out_data_rom
 	);
-	
 end RTL;

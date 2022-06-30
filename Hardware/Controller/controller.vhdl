@@ -10,7 +10,6 @@ entity CONTROLLER is
 		 in_ctrl_input_reset:	in  std_logic;
 		 c_dec_neuron: 		    out std_logic;
 		 c_dec_input: 		    out std_logic;
-		 c_mult: 			    out std_logic;
 		 c_add_to_neuron:	    out std_logic;
 		 c_argmax: 			    out std_logic;
 		 halt: 					out std_logic
@@ -39,7 +38,6 @@ begin
 			when S_RESET => 
 				c_dec_neuron 		 <= '0';
 				c_dec_input 		 <= '0';
-				c_mult 				 <= '0';
 				c_add_to_neuron 	 <= '0';
 				c_argmax 			 <= '0';
 				halt 				 <= '0';
@@ -47,10 +45,8 @@ begin
 			when S_MULT =>
 					c_dec_input  <= '0';
 					c_dec_neuron <= '0';
-					c_mult 		 <= '1';
 					next_state   <= S_NEURON_REG;
-			when S_NEURON_REG =>
-					c_mult 	   		<= '0'; 		   
+			when S_NEURON_REG =>		   
 					c_add_to_neuron <= '1';
 					next_state 		<= S_INPUT_DEC;
 			when S_INPUT_DEC =>

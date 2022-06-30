@@ -14,17 +14,6 @@ END half_adder;
 
 ARCHITECTURE VST OF half_adder IS
 
-  COMPONENT half_adder_model
-  PORT(
-  a	: IN BIT;
-  b	: IN BIT;
-  sum	: OUT BIT;
-  carry	: OUT BIT;
-  vdd	: IN BIT;
-  vss	: IN BIT
-  );
-  END COMPONENT;
-
   COMPONENT and2
   PORT(
   vss	: IN BIT;
@@ -47,15 +36,6 @@ ARCHITECTURE VST OF half_adder IS
 
 BEGIN
 
-  half_adder_inst : half_adder_model
-  PORT MAP (
-    a => a,
-    b => b,
-    sum => sum,
-    carry => carry,
-    vdd => vdd,
-    vss => vss
-  );
   i1 : and2
   PORT MAP (
     z => carry,
