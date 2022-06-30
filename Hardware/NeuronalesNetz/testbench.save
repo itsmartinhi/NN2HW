@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Thu Jun 30 06:26:37 2022
+[*]
+[dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronalesNetz/testbench_wave.ghw"
+[dumpfile_mtime] "Thu Jun 30 06:25:16 2022"
+[dumpfile_size] 90368
+[savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronalesNetz/testbench.save"
+[timestart] 858970000
+[size] 1920 884
+[pos] -1 -1
+*-23.547550 354000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.testbench.
+[treeopen] top.testbench.spec.
+[treeopen] top.testbench.spec.u_argmax.
+[treeopen] top.testbench.spec.u_inputdecrementer.
+[treeopen] top.testbench.spec.u_neurondecrementer.
+[sst_width] 255
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 251
+@28
+top.testbench.clk
+top.testbench.halt
+@420
+top.testbench.spec.u_controller.state
+top.testbench.spec.u_controller.next_state
+@28
+top.testbench.spec.u_controller.c_argmax
+@22
+#{top.testbench.spec.u_argmax.out_argmax_index[3:0]} top.testbench.spec.u_argmax.out_argmax_index[3] top.testbench.spec.u_argmax.out_argmax_index[2] top.testbench.spec.u_argmax.out_argmax_index[1] top.testbench.spec.u_argmax.out_argmax_index[0]
+#{top.testbench.spec.u_neurondecrementer.out_neuron_index[3:0]} top.testbench.spec.u_neurondecrementer.out_neuron_index[3] top.testbench.spec.u_neurondecrementer.out_neuron_index[2] top.testbench.spec.u_neurondecrementer.out_neuron_index[1] top.testbench.spec.u_neurondecrementer.out_neuron_index[0]
+@24
+#{top.testbench.spec.u_inputdecrementer.out_input_index[7:0]} top.testbench.spec.u_inputdecrementer.out_input_index[7] top.testbench.spec.u_inputdecrementer.out_input_index[6] top.testbench.spec.u_inputdecrementer.out_input_index[5] top.testbench.spec.u_inputdecrementer.out_input_index[4] top.testbench.spec.u_inputdecrementer.out_input_index[3] top.testbench.spec.u_inputdecrementer.out_input_index[2] top.testbench.spec.u_inputdecrementer.out_input_index[1] top.testbench.spec.u_inputdecrementer.out_input_index[0]
+@29
+top.testbench.spec.u_inputdecrementer.reset
+[pattern_trace] 1
+[pattern_trace] 0

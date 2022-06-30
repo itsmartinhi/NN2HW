@@ -1,6 +1,6 @@
 LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity NEURONALESNETZ is
 	port (
