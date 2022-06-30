@@ -19,21 +19,13 @@ ARCHITECTURE VST OF multiplier_vasy IS
   SIGNAL c1	: BIT_VECTOR(7 DOWNTO 0);
   SIGNAL c2	: BIT_VECTOR(7 DOWNTO 0);
   SIGNAL p1	: BIT_VECTOR(7 DOWNTO 0);
-  SIGNAL p2	: BIT_VECTOR(7 DOWNTO 0);
-
-  COMPONENT multiplier_vasy_model
+  COMPONENT and2
   PORT(
-  a	: IN BIT_VECTOR(7 DOWNTO 0);
-  b	: IN BIT_VECTOR(2 DOWNTO 0);
-  s	: OUT BIT_VECTOR(10 DOWNTO 0);
-  vdd	: IN BIT;
   vss	: IN BIT;
-  p2	: IN BIT_VECTOR(7 DOWNTO 0);
-  p1	: IN BIT_VECTOR(7 DOWNTO 0);
-  c2	: IN BIT_VECTOR(7 DOWNTO 0);
-  ab2	: OUT BIT_VECTOR(7 DOWNTO 0);
-  ab1	: OUT BIT_VECTOR(7 DOWNTO 0);
-  ab0	: INOUT BIT_VECTOR(7 DOWNTO 0)
+  vdd	: IN BIT;
+  x	: IN BIT;
+  y	: IN BIT;
+  z	: OUT BIT
   );
   END COMPONENT;
 
@@ -62,24 +54,10 @@ ARCHITECTURE VST OF multiplier_vasy IS
 
 BEGIN
 
-  multiplier_vasy_inst : multiplier_vasy_model
-  PORT MAP (
-    a => a,
-    b => b,
-    s => s,
-    vdd => vdd,
-    vss => vss,
-    p2 => p2,
-    p1 => p1,
-    c2 => c2,
-    ab2 => ab2,
-    ab1 => ab1,
-    ab0 => ab0
-  );
   ha3 : half_adder
   PORT MAP (
     carry => c2(0),
-    sum => p2(0),
+    sum => s(2),
     b => ab2(0),
     a => p1(1),
     vdd => vdd,
@@ -97,7 +75,7 @@ BEGIN
   ha1 : half_adder
   PORT MAP (
     carry => c1(0),
-    sum => p1(0),
+    sum => s(1),
     b => ab1(0),
     a => ab0(1),
     vdd => vdd,
@@ -105,8 +83,8 @@ BEGIN
   );
   fa13 : full_adder
   PORT MAP (
-    carry => c2(7),
-    sum => p2(7),
+    carry => s(10),
+    sum => s(9),
     cin => c2(6),
     b => c1(7),
     a => ab2(7),
@@ -116,7 +94,7 @@ BEGIN
   fa12 : full_adder
   PORT MAP (
     carry => c2(6),
-    sum => p2(6),
+    sum => s(8),
     cin => c1(6),
     b => p1(7),
     a => ab2(6),
@@ -126,7 +104,7 @@ BEGIN
   fa11 : full_adder
   PORT MAP (
     carry => c2(5),
-    sum => p2(5),
+    sum => s(7),
     cin => c1(5),
     b => p1(6),
     a => ab2(5),
@@ -136,7 +114,7 @@ BEGIN
   fa10 : full_adder
   PORT MAP (
     carry => c2(4),
-    sum => p2(4),
+    sum => s(6),
     cin => c1(4),
     b => p1(5),
     a => ab2(4),
@@ -146,7 +124,7 @@ BEGIN
   fa9 : full_adder
   PORT MAP (
     carry => c2(3),
-    sum => p2(3),
+    sum => s(5),
     cin => c1(3),
     b => p1(4),
     a => ab2(3),
@@ -156,7 +134,7 @@ BEGIN
   fa8 : full_adder
   PORT MAP (
     carry => c2(2),
-    sum => p2(2),
+    sum => s(4),
     cin => c1(2),
     b => p1(3),
     a => ab2(2),
@@ -166,7 +144,7 @@ BEGIN
   fa7 : full_adder
   PORT MAP (
     carry => c2(1),
-    sum => p2(1),
+    sum => s(3),
     cin => c1(1),
     b => p1(2),
     a => ab2(1),
@@ -230,6 +208,206 @@ BEGIN
     cin => c1(0),
     b => ab1(1),
     a => ab0(2),
+    vdd => vdd,
+    vss => vss
+  );
+  and25 : and2
+  PORT MAP (
+    z => ab2(7),
+    y => b(2),
+    x => a(7),
+    vdd => vdd,
+    vss => vss
+  );
+  and24 : and2
+  PORT MAP (
+    z => ab2(6),
+    y => b(2),
+    x => a(6),
+    vdd => vdd,
+    vss => vss
+  );
+  and23 : and2
+  PORT MAP (
+    z => ab2(5),
+    y => b(2),
+    x => a(5),
+    vdd => vdd,
+    vss => vss
+  );
+  and22 : and2
+  PORT MAP (
+    z => ab2(4),
+    y => b(2),
+    x => a(4),
+    vdd => vdd,
+    vss => vss
+  );
+  and21 : and2
+  PORT MAP (
+    z => ab2(3),
+    y => b(2),
+    x => a(3),
+    vdd => vdd,
+    vss => vss
+  );
+  and20 : and2
+  PORT MAP (
+    z => ab2(2),
+    y => b(2),
+    x => a(2),
+    vdd => vdd,
+    vss => vss
+  );
+  and19 : and2
+  PORT MAP (
+    z => ab2(1),
+    y => b(2),
+    x => a(1),
+    vdd => vdd,
+    vss => vss
+  );
+  and18 : and2
+  PORT MAP (
+    z => ab2(0),
+    y => b(2),
+    x => a(0),
+    vdd => vdd,
+    vss => vss
+  );
+  and17 : and2
+  PORT MAP (
+    z => ab1(7),
+    y => b(1),
+    x => a(7),
+    vdd => vdd,
+    vss => vss
+  );
+  and16 : and2
+  PORT MAP (
+    z => ab1(6),
+    y => b(1),
+    x => a(6),
+    vdd => vdd,
+    vss => vss
+  );
+  and15 : and2
+  PORT MAP (
+    z => ab1(5),
+    y => b(1),
+    x => a(5),
+    vdd => vdd,
+    vss => vss
+  );
+  and14 : and2
+  PORT MAP (
+    z => ab1(4),
+    y => b(1),
+    x => a(4),
+    vdd => vdd,
+    vss => vss
+  );
+  and13 : and2
+  PORT MAP (
+    z => ab1(3),
+    y => b(1),
+    x => a(3),
+    vdd => vdd,
+    vss => vss
+  );
+  and12 : and2
+  PORT MAP (
+    z => ab1(2),
+    y => b(1),
+    x => a(2),
+    vdd => vdd,
+    vss => vss
+  );
+  and11 : and2
+  PORT MAP (
+    z => ab1(1),
+    y => b(1),
+    x => a(1),
+    vdd => vdd,
+    vss => vss
+  );
+  and10 : and2
+  PORT MAP (
+    z => ab1(0),
+    y => b(1),
+    x => a(0),
+    vdd => vdd,
+    vss => vss
+  );
+  and9 : and2
+  PORT MAP (
+    z => ab1(0),
+    y => b(1),
+    x => a(0),
+    vdd => vdd,
+    vss => vss
+  );
+  and8 : and2
+  PORT MAP (
+    z => ab0(7),
+    y => b(0),
+    x => a(7),
+    vdd => vdd,
+    vss => vss
+  );
+  and7 : and2
+  PORT MAP (
+    z => ab0(6),
+    y => b(0),
+    x => a(6),
+    vdd => vdd,
+    vss => vss
+  );
+  and6 : and2
+  PORT MAP (
+    z => ab0(5),
+    y => b(0),
+    x => a(5),
+    vdd => vdd,
+    vss => vss
+  );
+  and5 : and2
+  PORT MAP (
+    z => ab0(4),
+    y => b(0),
+    x => a(4),
+    vdd => vdd,
+    vss => vss
+  );
+  and4 : and2
+  PORT MAP (
+    z => ab0(3),
+    y => b(0),
+    x => a(3),
+    vdd => vdd,
+    vss => vss
+  );
+  and3 : and2
+  PORT MAP (
+    z => ab0(2),
+    y => b(0),
+    x => a(2),
+    vdd => vdd,
+    vss => vss
+  );
+  and2x : and2
+  PORT MAP (
+    z => ab0(1),
+    y => b(0),
+    x => a(1),
+    vdd => vdd,
+    vss => vss
+  );
+  and1 : and2
+  PORT MAP (
+    z => s(0),
+    y => b(0),
+    x => a(0),
     vdd => vdd,
     vss => vss
   );
