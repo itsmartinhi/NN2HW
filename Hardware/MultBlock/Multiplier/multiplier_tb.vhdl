@@ -11,7 +11,7 @@ ARCHITECTURE TESTBENCH OF MULTIPLIER_TB IS
             S : OUT STD_LOGIC_VECTOR (10 DOWNTO 0));
     END COMPONENT;
 
-    FOR SPEC : MULTIPLIER USE ENTITY WORK.MULTIPLIER(BEHAVOR);
+    FOR SPEC : MULTIPLIER USE ENTITY WORK.MULTIPLIER(STRUCTURE);
 
     SIGNAL A : STD_LOGIC_VECTOR (7 DOWNTO 0) := (OTHERS => '0');
     SIGNAL B : STD_LOGIC_VECTOR (2 DOWNTO 0) := (OTHERS => '0');
@@ -22,13 +22,18 @@ BEGIN
     SPEC : MULTIPLIER PORT MAP(A => A, B => B, S => S);
 
     PROCESS
-        CONSTANT wait_time : TIME := 22 ns;
+        CONSTANT wait_time : TIME := 400 ps;
 
     BEGIN
         A <= "00000000";
         B <= "110";
         WAIT FOR wait_time;
         ASSERT S = "00000000000" REPORT "00000000 *  110 is not 000000000000";
+
+        A <= "11111111";
+        B <= "111";
+        WAIT FOR wait_time;
+        ASSERT S = "11011111001" REPORT "11111111 *  111 is not 11011111001";
 
         A <= "10000000";
         B <= "110";
