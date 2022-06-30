@@ -4,7 +4,6 @@ use ieee.numeric_std.all;
 
 entity ROM is
     port (
-        clk, reset:             in std_logic;
         in_rom_input_index:     in std_logic_vector(7 downto 0); -- the given rom input index
         in_rom_neuron_index:    in std_logic_vector(3 downto 0); -- the given neuron index
         out_weights:            out std_logic_vector(31 downto 0) -- the output datastream
