@@ -6,7 +6,7 @@ entity ROM is
     port (
         in_rom_input_index:     in std_logic_vector(7 downto 0); -- the given rom input index
         in_rom_neuron_index:    in std_logic_vector(3 downto 0); -- the given neuron index
-        out_weights:            out std_logic_vector(31 downto 0) -- the output datastream
+        out_data_rom:           out std_logic_vector(31 downto 0) -- the output datastream
     );
 end ROM;
 
@@ -1992,5 +1992,5 @@ architecture RTL of ROM is
     signal rom_index: std_logic_vector (11 downto 0);
 begin
     rom_index <= (in_rom_neuron_index & in_rom_input_index); -- combine the neuron and input index to adress the array
-    out_weights <= rom_arr(to_integer(unsigned(rom_index)));
+    out_data_rom <= rom_arr(to_integer(unsigned(rom_index)));
 end RTL;
