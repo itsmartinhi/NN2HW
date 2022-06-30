@@ -1,0 +1,99 @@
+-- VHDL data flow description generated from `multiplier_boom`
+--		date : Thu Jun 30 06:52:16 2022
+
+
+-- Entity Declaration
+
+ENTITY multiplier_boom IS
+  PORT (
+  ab0 : inout bit_vector(7 DOWNTO 0) ;	-- ab0
+  ab1 : out bit_vector(7 DOWNTO 0) ;	-- ab1
+  ab2 : out bit_vector(7 DOWNTO 0) ;	-- ab2
+  c2 : in bit_vector(7 DOWNTO 0) ;	-- c2
+  p1 : in bit_vector(7 DOWNTO 0) ;	-- p1
+  p2 : in bit_vector(7 DOWNTO 0) ;	-- p2
+  vss : in BIT;	-- vss
+  vdd : in BIT;	-- vdd
+  s : out bit_vector(10 DOWNTO 0) ;	-- s
+  b : in bit_vector(2 DOWNTO 0) ;	-- b
+  a : in bit_vector(7 DOWNTO 0) 	-- a
+  );
+END multiplier_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF multiplier_boom IS
+
+BEGIN
+
+s (0) <= ab0(0);
+
+s (1) <= p1(0);
+
+s (2) <= p2(0);
+
+s (3) <= p2(1);
+
+s (4) <= p2(2);
+
+s (5) <= p2(3);
+
+s (6) <= p2(4);
+
+s (7) <= p2(5);
+
+s (8) <= p2(6);
+
+s (9) <= p2(7);
+
+s (10) <= c2(7);
+
+ab2 (0) <= (b(2) AND a(0));
+
+ab2 (1) <= (b(2) AND a(1));
+
+ab2 (2) <= (b(2) AND a(2));
+
+ab2 (3) <= (a(3) AND b(2));
+
+ab2 (4) <= (a(4) AND b(2));
+
+ab2 (5) <= (a(5) AND b(2));
+
+ab2 (6) <= (b(2) AND a(6));
+
+ab2 (7) <= (b(2) AND a(7));
+
+ab1 (0) <= (b(1) AND a(0));
+
+ab1 (1) <= (a(1) AND b(1));
+
+ab1 (2) <= (a(2) AND b(1));
+
+ab1 (3) <= (a(3) AND b(1));
+
+ab1 (4) <= (a(4) AND b(1));
+
+ab1 (5) <= (a(5) AND b(1));
+
+ab1 (6) <= (a(6) AND b(1));
+
+ab1 (7) <= (a(7) AND b(1));
+
+ab0 (0) <= (b(0) AND a(0));
+
+ab0 (1) <= (b(0) AND a(1));
+
+ab0 (2) <= (a(2) AND b(0));
+
+ab0 (3) <= (a(3) AND b(0));
+
+ab0 (4) <= (a(4) AND b(0));
+
+ab0 (5) <= (a(5) AND b(0));
+
+ab0 (6) <= (a(6) AND b(0));
+
+ab0 (7) <= (a(7) AND b(0));
+END;

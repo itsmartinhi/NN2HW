@@ -1,0 +1,177 @@
+N:a 0:-1:0 ps
+N:a 1:-1:0 ps
+N:a 2:-1:0 ps
+N:a 3:-1:0 ps
+N:a 4:-1:0 ps
+N:a 5:-1:0 ps
+N:a 6:-1:0 ps
+N:a 7:-1:0 ps
+N:ab0 0:-1:324 ps
+N:ab0 1:-1:324 ps
+N:ab0 2:-1:324 ps
+N:ab0 3:-1:324 ps
+N:ab0 4:-1:324 ps
+N:ab0 5:-1:324 ps
+N:ab0 6:-1:324 ps
+N:ab0 7:-1:324 ps
+N:ab1 0:-1:324 ps
+N:ab1 1:-1:324 ps
+N:ab1 2:-1:324 ps
+N:ab1 3:-1:324 ps
+N:ab1 4:-1:324 ps
+N:ab1 5:-1:324 ps
+N:ab1 6:-1:324 ps
+N:ab1 7:-1:324 ps
+N:ab2 0:-1:324 ps
+N:ab2 1:-1:324 ps
+N:ab2 2:-1:324 ps
+N:ab2 3:-1:324 ps
+N:ab2 4:-1:324 ps
+N:ab2 5:-1:324 ps
+N:ab2 6:-1:324 ps
+N:ab2 7:-1:324 ps
+N:b 0:-1:0 ps
+N:b 1:-1:0 ps
+N:b 2:-1:0 ps
+N:c2 0:-1:0 ps
+N:c2 1:-1:0 ps
+N:c2 2:-1:0 ps
+N:c2 3:-1:0 ps
+N:c2 4:-1:0 ps
+N:c2 5:-1:0 ps
+N:c2 6:-1:0 ps
+N:c2 7:-1:0 ps
+N:p1 0:-1:0 ps
+N:p1 1:-1:0 ps
+N:p1 2:-1:0 ps
+N:p1 3:-1:0 ps
+N:p1 4:-1:0 ps
+N:p1 5:-1:0 ps
+N:p1 6:-1:0 ps
+N:p1 7:-1:0 ps
+N:p2 0:-1:0 ps
+N:p2 1:-1:0 ps
+N:p2 2:-1:0 ps
+N:p2 3:-1:0 ps
+N:p2 4:-1:0 ps
+N:p2 5:-1:0 ps
+N:p2 6:-1:0 ps
+N:p2 7:-1:0 ps
+N:s 0:-1:0 ps
+N:s 1:-1:0 ps
+N:s 2:-1:0 ps
+N:s 3:-1:0 ps
+N:s 4:-1:0 ps
+N:s 5:-1:0 ps
+N:s 6:-1:0 ps
+N:s 7:-1:0 ps
+N:s 8:-1:0 ps
+N:s 9:-1:0 ps
+N:s 10:-1:0 ps
+B:ab0_7:-1:324 ps
+B:ab0_6:-1:324 ps
+B:ab0_5:-1:324 ps
+B:ab0_4:-1:324 ps
+B:ab0_3:-1:324 ps
+B:ab0_2:-1:324 ps
+B:ab0_1:-1:324 ps
+B:ab0_0:-1:324 ps
+B:ab1_7:-1:324 ps
+B:ab1_6:-1:324 ps
+B:ab1_5:-1:324 ps
+B:ab1_4:-1:324 ps
+B:ab1_3:-1:324 ps
+B:ab1_2:-1:324 ps
+B:ab1_1:-1:324 ps
+B:ab1_0:-1:324 ps
+B:ab2_7:-1:324 ps
+B:ab2_6:-1:324 ps
+B:ab2_5:-1:324 ps
+B:ab2_4:-1:324 ps
+B:ab2_3:-1:324 ps
+B:ab2_2:-1:324 ps
+B:ab2_1:-1:324 ps
+B:ab2_0:32:324 ps
+B:s_10:-1:400 ps
+B:s_9:-1:400 ps
+B:s_8:-1:400 ps
+B:s_7:-1:400 ps
+B:s_6:-1:400 ps
+B:s_5:-1:400 ps
+B:s_4:-1:400 ps
+B:s_3:-1:400 ps
+B:s_2:-1:400 ps
+B:s_1:-1:400 ps
+B:s_0:-1:400 ps
+C:a 0:-1:0 ps
+C:a 1:-1:0 ps
+C:a 2:-1:0 ps
+C:a 3:-1:0 ps
+C:a 4:-1:0 ps
+C:a 5:-1:0 ps
+C:a 6:-1:0 ps
+C:a 7:-1:0 ps
+C:b 0:-1:0 ps
+C:b 1:-1:0 ps
+C:b 2:32:0 ps
+C:s 0:-1:0 ps
+C:s 1:-1:0 ps
+C:s 2:-1:0 ps
+C:s 3:-1:0 ps
+C:s 4:-1:0 ps
+C:s 5:-1:0 ps
+C:s 6:-1:0 ps
+C:s 7:-1:0 ps
+C:s 8:-1:0 ps
+C:s 9:-1:0 ps
+C:s 10:-1:0 ps
+C:p2 0:-1:0 ps
+C:p2 1:-1:0 ps
+C:p2 2:-1:0 ps
+C:p2 3:-1:0 ps
+C:p2 4:-1:0 ps
+C:p2 5:-1:0 ps
+C:p2 6:-1:0 ps
+C:p2 7:-1:0 ps
+C:p1 0:-1:0 ps
+C:p1 1:-1:0 ps
+C:p1 2:-1:0 ps
+C:p1 3:-1:0 ps
+C:p1 4:-1:0 ps
+C:p1 5:-1:0 ps
+C:p1 6:-1:0 ps
+C:p1 7:-1:0 ps
+C:c2 0:-1:0 ps
+C:c2 1:-1:0 ps
+C:c2 2:-1:0 ps
+C:c2 3:-1:0 ps
+C:c2 4:-1:0 ps
+C:c2 5:-1:0 ps
+C:c2 6:-1:0 ps
+C:c2 7:-1:0 ps
+C:ab2 0:32:324 ps
+C:ab2 1:-1:324 ps
+C:ab2 2:-1:324 ps
+C:ab2 3:-1:324 ps
+C:ab2 4:-1:324 ps
+C:ab2 5:-1:324 ps
+C:ab2 6:-1:324 ps
+C:ab2 7:-1:324 ps
+C:ab1 0:-1:324 ps
+C:ab1 1:-1:324 ps
+C:ab1 2:-1:324 ps
+C:ab1 3:-1:324 ps
+C:ab1 4:-1:324 ps
+C:ab1 5:-1:324 ps
+C:ab1 6:-1:324 ps
+C:ab1 7:-1:324 ps
+C:ab0 0:-1:0 ps on input; 324 ps on output
+C:ab0 1:-1:0 ps on input; 324 ps on output
+C:ab0 2:-1:0 ps on input; 324 ps on output
+C:ab0 3:-1:0 ps on input; 324 ps on output
+C:ab0 4:-1:0 ps on input; 324 ps on output
+C:ab0 5:-1:0 ps on input; 324 ps on output
+C:ab0 6:-1:0 ps on input; 324 ps on output
+C:ab0 7:-1:0 ps on input; 324 ps on output
+P:b_2:b_2:ab2_0:32:0 ps
+P:ab2_0:ab2 0:ab2_0:32:0 ps
