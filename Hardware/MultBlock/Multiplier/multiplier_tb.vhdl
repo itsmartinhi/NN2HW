@@ -22,7 +22,7 @@ BEGIN
     SPEC : MULTIPLIER PORT MAP(A => A, B => B, S => S);
 
     PROCESS
-        CONSTANT wait_time : TIME := 100 ns;
+        CONSTANT wait_time : TIME := 22 ns;
 
     BEGIN
         A <= "00000000";
