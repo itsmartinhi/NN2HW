@@ -1,0 +1,339 @@
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file inpdec
+	--> Drive Alliance file inpdec_vasy
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file inpdec_vasy
+	--> Drive Standard VHDL file inpdec_vasy
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'inpdec_vasy.vhdl'...
+
+                   @@@@@@@                         @@@     @@@
+                     @@   @@                        @@     @@
+                     @@    @@                       @@@   @@@
+                     @@    @@     @@@       @@@     @@@   @@@
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@
+                     @@     @@ @@     @@ @@     @@  @  @@  @@
+                     @@     @@ @@     @@ @@     @@  @  @   @@
+                     @@    @@   @@   @@   @@   @@   @      @@
+                   @@@@@@@@       @@@       @@@    @@@    @@@@
+
+                              BOOlean Minimization
+
+                   Alliance CAD System 5.0,           boom 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Parse BEH file inpdec_vasy.vbe
+	--> Drive BEH file inpdec_boom
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file inpdec_boom
+	--> Drive Standard VHDL file inpdec_boom
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'inpdec_boom.vhdl'...
+
+                  @@@@@@@                             @@@@ @
+                    @@   @@                         @@    @@
+                    @@    @@                       @@      @
+                    @@    @@     @@@       @@@    @@
+                    @@   @@    @@   @@   @@   @@  @@
+                    @@@@@@    @@     @@ @@     @@ @@     @@@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@
+                    @@     @@ @@     @@ @@     @@ @@    @  @@
+                    @@     @@ @@     @@ @@     @@  @@      @@
+                    @@    @@   @@   @@   @@   @@    @@    @@
+                  @@@@@@@@       @@@       @@@        @@@@
+
+                         Binding and Optimizing On Gates
+
+                 Alliance CAD System 5.0, boog 5.0 [2003/01/09]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+        MBK_VDD        : vdd
+        MBK_VSS        : vss
+        MBK_IN_LO      : vst
+        MBK_OUT_LO     : vst
+        MBK_WORK_LIB   : .
+        MBK_TARGET_LIB : /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'inpdec_boom.vbe'...
+Controlling file 'inpdec_boom.vbe'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Mapping Warning: Cell 'halfadder_x4' isn't supported
+Mapping Warning: Cell 'ts_x8' isn't supported
+Mapping Warning: Cell 'nmx3_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'na3_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'ao2o22_x4' isn't supported
+Mapping Warning: Cell 'on12_x4' isn't supported
+Mapping Warning: Cell 'buf_x4' isn't supported
+Mapping Warning: Cell 'o4_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'noa3ao322_x4' isn't supported
+Mapping Warning: Cell 'nxr2_x4' isn't supported
+Mapping Warning: Cell 'nts_x2' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'na2_x4' isn't supported
+Mapping Warning: Cell 'oa22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x4' isn't supported
+Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Preparing file 'inpdec_boom.vbe'...
+Capacitances on file 'inpdec_boom.vbe'...
+Unflattening file 'inpdec_boom.vbe'...
+Mapping file 'inpdec_boom.vbe'...
+Saving file 'inpdec_boog.vst'...
+Quick estimated critical path (no warranty)...1987 ps from 'count 1' to 'count 3'
+Quick estimated area (with over-cell routing)...196000 lambda�
+Details...
+	sff1_x4: 18
+	inv_x2: 14
+	no2_x1: 12
+	na2_x1: 11
+	buf_x2: 9
+	o2_x2: 8
+	a2_x2: 8
+	na3_x1: 7
+	xr2_x1: 5
+	a3_x2: 4
+	oa2a22_x2: 3
+	oa22_x2: 3
+	ao22_x2: 2
+	nao2o22_x1: 1
+	oa2ao222_x2: 1
+	noa2ao222_x1: 1
+	ao2o22_x2: 1
+	na4_x1: 1
+	on12_x1: 1
+	an12_x1: 1
+	Total: 111
+Saving critical path in xsch color file 'inpdec_boog.xsc'...
+End of boog...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file inpdec_boog
+	--> Drive Standard VHDL file inpdec_boog
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'inpdec_boog.vhdl'...
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @
+                     @@                             @@@    @
+                     @@           @@@       @@@     @ @@   @
+                     @@         @@   @@   @@   @@   @ @@   @
+                     @@        @@     @@ @@     @@  @  @@  @
+                     @@        @@     @@ @@     @@  @   @@ @
+                     @@        @@     @@ @@     @@  @   @@ @
+                     @@      @ @@     @@ @@     @@  @    @@@
+                     @@     @   @@   @@   @@   @@   @     @@
+                   @@@@@@@@@@     @@@       @@@    @@@    @@
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'inpdec_boog.vst'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Capacitances on file 'inpdec_boog.vst'...
+Delays on file 'inpdec_boog.vst'...3718 ps
+Area on file 'inpdec_boog.vst'...196000 lamda� (with over-cell routing)
+Details...
+	sff1_x4: 18 (41%)
+	inv_x2: 14 (5%)
+	no2_x1: 12 (6%)
+	na2_x1: 11 (5%)
+	buf_x2: 9 (4%)
+	o2_x2: 8 (5%)
+	a2_x2: 8 (5%)
+	na3_x1: 7 (4%)
+	xr2_x1: 5 (5%)
+	a3_x2: 4 (3%)
+	oa2a22_x2: 3 (3%)
+	oa22_x2: 3 (2%)
+	ao22_x2: 2 (1%)
+	nao2o22_x1: 1 (0%)
+	oa2ao222_x2: 1 (1%)
+	noa2ao222_x1: 1 (0%)
+	ao2o22_x2: 1 (1%)
+	na4_x1: 1 (0%)
+	on12_x1: 1 (0%)
+	an12_x1: 1 (0%)
+	Total: 111
+Worst RC on file 'inpdec_boog.vst'...177 ps
+Inserting buffers on critical path for file 'inpdec_final.vst'...6 buffers inserted -> 3675 ps
+Improving RC on critical path for file 'inpdec_final.vst'...3635 ps
+Improving all RC for file 'inpdec_final.vst'...
+Worst RC on file 'inpdec_final.vst'...177 ps
+Area on file 'inpdec_final.vst'...202500 lamda� (with over-cell routing)
+Details...
+	sff1_x4: 18 (40%)
+	buf_x2: 15 (7%)
+	no2_x1: 12 (5%)
+	inv_x2: 12 (4%)
+	na2_x1: 11 (5%)
+	o2_x2: 8 (4%)
+	a2_x2: 8 (4%)
+	na3_x1: 7 (4%)
+	xr2_x1: 5 (5%)
+	a3_x2: 4 (2%)
+	oa2a22_x2: 3 (3%)
+	oa22_x2: 3 (2%)
+	ao22_x2: 2 (1%)
+	inv_x4: 2 (0%)
+	nao2o22_x1: 1 (0%)
+	oa2ao222_x2: 1 (1%)
+	noa2ao222_x1: 1 (0%)
+	ao2o22_x2: 1 (1%)
+	na4_x1: 1 (0%)
+	on12_x1: 1 (0%)
+	an12_x1: 1 (0%)
+	Total: 117
+Critical path (no warranty)...3635 ps from 'count 3' to 'count_7_ins'
+Saving file 'inpdec_final.vst'...
+Saving critical path in xsch color file 'inpdec_final.xsc'...
+End of loon...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file inpdec_final
+vbl_bcomp_y.y 965 : Error 19 line 1341 in file inpdec_final :label `mbk_buf_not_aux4` already used
+Note that errors might also be due to unsupported statements
+done

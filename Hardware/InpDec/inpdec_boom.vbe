@@ -1,0 +1,171 @@
+-- VHDL data flow description generated from `inpdec_boom`
+--		date : Sat Jul  2 16:28:34 2022
+
+
+-- Entity Declaration
+
+ENTITY inpdec_boom IS
+  PORT (
+  reset : in BIT;	-- reset
+  clk : in BIT;	-- clk
+  c_input_dec : in BIT;	-- c_input_dec
+  out_input_index : out bit_vector(7 DOWNTO 0) ;	-- out_input_index
+  out_input_reset : out BIT;	-- out_input_reset
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END inpdec_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF inpdec_boom IS
+  SIGNAL rtlalc_5 : REG_VECTOR(1 DOWNTO 0) REGISTER;	-- rtlalc_5
+  SIGNAL rtlalc_4 : REG_BIT REGISTER;	-- rtlalc_4
+  SIGNAL rtlalc_3 : REG_VECTOR(5 DOWNTO 3) REGISTER;	-- rtlalc_3
+  SIGNAL rtlalc_2 : REG_VECTOR(7 DOWNTO 6) REGISTER;	-- rtlalc_2
+  SIGNAL rtlalc_1 : REG_BIT REGISTER;	-- rtlalc_1
+  SIGNAL count : REG_VECTOR(8 DOWNTO 0) REGISTER;	-- count
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux2 : BIT;		-- aux2
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux5 : BIT;		-- aux5
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux8 : BIT;		-- aux8
+  SIGNAL aux9 : BIT;		-- aux9
+  SIGNAL aux12 : BIT;		-- aux12
+  SIGNAL aux13 : BIT;		-- aux13
+  SIGNAL aux15 : BIT;		-- aux15
+  SIGNAL aux16 : BIT;		-- aux16
+  SIGNAL aux19 : BIT;		-- aux19
+  SIGNAL aux20 : BIT;		-- aux20
+  SIGNAL aux22 : BIT;		-- aux22
+  SIGNAL aux23 : BIT;		-- aux23
+
+BEGIN
+  aux23 <= ((count(5) OR aux22) AND NOT(reset));
+  aux22 <= (count(2) OR (count(1) OR aux19));
+  aux20 <= (count(1) OR NOT(c_input_dec) OR count(0));
+  aux19 <= (count(6) OR (count(4) OR (NOT(c_input_dec) OR 
+aux16)));
+  aux16 <= (count(0) OR (count(7) OR count(8)));
+  aux15 <= NOT(NOT(aux13) AND NOT(count(7)));
+  aux13 <= NOT(NOT(aux4) AND NOT(aux12));
+  aux12 <= NOT((NOT(count(4)) AND c_input_dec) AND NOT(
+count(0)));
+  aux9 <= (NOT(reset) AND count(4));
+  aux8 <= ((count(3) OR count(2)) OR count(1));
+  aux6 <= (NOT(c_input_dec) OR count(0));
+  aux5 <= (aux4 OR count(4));
+  aux4 <= (aux3 OR count(6));
+  aux3 <= (aux2 OR count(1));
+  aux2 <= (aux1 OR count(2));
+  aux1 <= (count(5) OR count(3));
+  label0 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (0) <= GUARDED ((aux5 OR aux16) AND NOT(reset) AND (c_input_dec 
+XOR count(0)));
+  END BLOCK label0;
+  label1 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (1) <= GUARDED ((aux2 OR aux19) AND NOT(reset) AND NOT(count(1) 
+XOR aux6));
+  END BLOCK label1;
+  label2 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (2) <= GUARDED (reset OR NOT(count(2) XOR aux20));
+  END BLOCK label2;
+  label3 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (3) <= GUARDED (aux23 AND NOT(count(3) XOR (count(2) OR aux20)));
+  END BLOCK label3;
+  label4 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (4) <= GUARDED ((count(5) OR aux19) AND ((aux9 AND aux6) OR (((
+NOT(reset) AND aux8 AND count(4)) OR (NOT(reset) AND
+ NOT(count(3)) AND NOT(count(2)) AND NOT(count(1))
+ AND NOT(count(4)))) AND NOT(aux6))));
+  END BLOCK label4;
+  label5 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (5) <= GUARDED (aux23 AND NOT(count(5) XOR (aux8 OR count(4) OR 
+NOT(c_input_dec) OR count(0))));
+  END BLOCK label5;
+  label6 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (6) <= GUARDED ((aux3 AND count(6)) OR reset OR (count(6) AND 
+aux12) OR NOT(aux13));
+  END BLOCK label6;
+  label7 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (7) <= GUARDED (reset OR (aux13 AND count(7)) OR NOT(aux15));
+  END BLOCK label7;
+  label8 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (8) <= GUARDED (NOT(reset) AND aux15 AND count(8));
+  END BLOCK label8;
+  label9 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 <= GUARDED (((NOT(reset) OR rtlalc_1) AND NOT(aux1) AND NOT(
+aux22)) OR ((reset OR NOT(c_input_dec)) AND rtlalc_1));
+  END BLOCK label9;
+  label10 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_2 (6) <= GUARDED (reset OR (count(6) AND c_input_dec) OR (
+rtlalc_2(6) AND NOT(c_input_dec)));
+  END BLOCK label10;
+  label11 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_2 (7) <= GUARDED ((c_input_dec AND count(7)) OR reset OR (
+rtlalc_2(7) AND NOT(c_input_dec)));
+  END BLOCK label11;
+  label12 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_3 (3) <= GUARDED ((NOT(reset) AND count(3) AND c_input_dec) OR (
+NOT(reset) AND rtlalc_3(3) AND NOT(c_input_dec)));
+  END BLOCK label12;
+  label13 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_3 (4) <= GUARDED ((aux9 AND c_input_dec) OR (NOT(reset) AND 
+rtlalc_3(4) AND NOT(c_input_dec)));
+  END BLOCK label13;
+  label14 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_3 (5) <= GUARDED (((NOT(reset) AND count(5)) AND c_input_dec) OR (
+NOT(reset) AND rtlalc_3(5) AND NOT(c_input_dec)));
+  END BLOCK label14;
+  label15 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_4 <= GUARDED (reset OR (count(2) AND c_input_dec) OR (rtlalc_4
+ AND NOT(c_input_dec)));
+  END BLOCK label15;
+  label16 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_5 (0) <= GUARDED (aux6 AND NOT(reset) AND (rtlalc_5(0) OR 
+c_input_dec));
+  END BLOCK label16;
+  label17 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_5 (1) <= GUARDED ((NOT(reset) AND count(1) AND c_input_dec) OR (
+NOT(reset) AND rtlalc_5(1) AND NOT(c_input_dec)));
+  END BLOCK label17;
+
+out_input_reset <= rtlalc_1;
+
+out_input_index (0) <= rtlalc_5(0);
+
+out_input_index (1) <= rtlalc_5(1);
+
+out_input_index (2) <= rtlalc_4;
+
+out_input_index (3) <= rtlalc_3(3);
+
+out_input_index (4) <= rtlalc_3(4);
+
+out_input_index (5) <= rtlalc_3(5);
+
+out_input_index (6) <= rtlalc_2(6);
+
+out_input_index (7) <= rtlalc_2(7);
+END;
