@@ -10,8 +10,9 @@ ENTITY neuronreg_vasy IS
 PORT(
   clk	: IN STD_LOGIC;
   reset	: IN STD_LOGIC;
+  c_reset_reg	: IN STD_LOGIC;
   c_nreg	: IN STD_LOGIC;
-  in_nreg_val	: IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+  in_nreg_val	: IN STD_LOGIC_VECTOR(12 DOWNTO 0);
   out_nreg_val	: OUT STD_LOGIC_VECTOR(20 DOWNTO 0)
 );
 END neuronreg_vasy;
@@ -25,13 +26,13 @@ ARCHITECTURE RTL OF neuronreg_vasy IS
   SIGNAL reg_nreg	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL sum	: STD_LOGIC_VECTOR(20 DOWNTO 0);
 BEGIN
-  rtl_std_logic_vector_0 <= ("000000000" & in_nreg_val);
+  rtl_std_logic_vector_0 <= ("00000000" & in_nreg_val);
   sum <= rtlsum_0;
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(reset) AND c_nreg) = '1')
+    IF ((c_nreg AND (NOT(reset) AND NOT(c_reset_reg))) = '1')
     THEN rtlalc_1 <= sum;
     END IF;
     END IF;
@@ -40,9 +41,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (reset = '1')
+    IF ((reset OR c_reset_reg) = '1')
     THEN reg_nreg <= (OTHERS => '0');
-    ELSIF ((NOT(reset) AND c_nreg) = '1')
+    ELSIF ((NOT(reset) AND (NOT(c_reset_reg) AND c_nreg)) = '1')
     THEN reg_nreg <= sum;
     END IF;
     END IF;

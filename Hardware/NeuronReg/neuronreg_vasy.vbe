@@ -5,8 +5,9 @@ ENTITY neuronreg_vasy IS
 PORT(
   clk	: IN BIT;
   reset	: IN BIT;
+  c_reset_reg	: IN BIT;
   c_nreg	: IN BIT;
-  in_nreg_val	: IN BIT_VECTOR(11 DOWNTO 0);
+  in_nreg_val	: IN BIT_VECTOR(12 DOWNTO 0);
   out_nreg_val	: OUT BIT_VECTOR(20 DOWNTO 0);
   vdd	: IN BIT;
   vss	: IN BIT
@@ -29,15 +30,15 @@ BEGIN
   rtlcarry_0(20 downto 1) <= (((reg_nreg(19 downto 0) AND rtlexts_0(19 downto 0)) OR (reg_nreg(19 downto 0) 
 AND rtlcarry_0(19 downto 0))) OR (rtlexts_0(19 downto 0) AND rtlcarry_0(19 downto 0)
 ));
-  rtlexts_0 <= ("000000000" & in_nreg_val);
+  rtlexts_0 <= ("00000000" & in_nreg_val);
   LABEL0 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    reg_nreg <= GUARDED "000000000000000000000" WHEN reset ELSE
-     sum WHEN (NOT(reset) AND c_nreg) ELSE reg_nreg;
+    reg_nreg <= GUARDED "000000000000000000000" WHEN (c_reset_reg OR reset) ELSE
+     sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE reg_nreg;
   END BLOCK LABEL0;
   LABEL1 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    rtlalc_1 <= GUARDED sum WHEN (NOT(reset) AND c_nreg) ELSE rtlalc_1;
+    rtlalc_1 <= GUARDED sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE rtlalc_1;
   END BLOCK LABEL1;
   sum <= rtlsum_0;
 END VBE;

@@ -6,7 +6,7 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
-ENTITY neuronreg_boog IS
+ENTITY neuronreg_final IS
 PORT(
   clk	: IN STD_LOGIC;
   reset	: IN STD_LOGIC;
@@ -15,9 +15,13 @@ PORT(
   in_nreg_val	: IN STD_LOGIC_VECTOR(12 DOWNTO 0);
   out_nreg_val	: OUT STD_LOGIC_VECTOR(20 DOWNTO 0)
 );
-END neuronreg_boog;
+END neuronreg_final;
 
-ARCHITECTURE RTL OF neuronreg_boog IS
+ARCHITECTURE RTL OF neuronreg_final IS
+  SIGNAL mbk_buf_not_reg_nreg	: STD_LOGIC_VECTOR(0 DOWNTO 0);
+  SIGNAL mbk_buf_not_rtlcarry_0	: STD_LOGIC_VECTOR(18 DOWNTO 13);
+  SIGNAL mbk_buf_reg_nreg	: STD_LOGIC_VECTOR(0 DOWNTO 0);
+  SIGNAL mbk_buf_rtlcarry_0	: STD_LOGIC_VECTOR(12 DOWNTO 1);
   SIGNAL not_in_nreg_val	: STD_LOGIC_VECTOR(6 DOWNTO 6);
   SIGNAL not_reg_nreg	: STD_LOGIC_VECTOR(19 DOWNTO 0);
   SIGNAL not_rtlalc_1	: STD_LOGIC_VECTOR(18 DOWNTO 5);
@@ -200,6 +204,7 @@ ARCHITECTURE RTL OF neuronreg_boog IS
   SIGNAL na2_x1_12_sig	: STD_LOGIC;
   SIGNAL na2_x1_11_sig	: STD_LOGIC;
   SIGNAL na2_x1_10_sig	: STD_LOGIC;
+  SIGNAL mbk_buf_not_aux24	: STD_LOGIC;
   SIGNAL inv_x2_sig	: STD_LOGIC;
   SIGNAL inv_x2_9_sig	: STD_LOGIC;
   SIGNAL inv_x2_8_sig	: STD_LOGIC;
@@ -500,6 +505,13 @@ ARCHITECTURE RTL OF neuronreg_boog IS
    );
   END COMPONENT;
 
+  COMPONENT inv_x4
+  PORT(
+  i	: IN STD_LOGIC;
+  nq	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
   COMPONENT nxr2_x1
   PORT(
   i0	: IN STD_LOGIC;
@@ -520,6 +532,111 @@ ARCHITECTURE RTL OF neuronreg_boog IS
   END COMPONENT;
 
 BEGIN
+  i_mbk_buf_not_aux24 : buf_x2
+  PORT MAP (
+    i => not_aux24,
+    q => mbk_buf_not_aux24
+  );
+  mbk_buf_rtlcarry_0_8 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(8),
+    q => mbk_buf_rtlcarry_0(8)
+  );
+  mbk_buf_rtlcarry_0_3 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(3),
+    q => mbk_buf_rtlcarry_0(3)
+  );
+  mbk_buf_rtlcarry_0_1 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(1),
+    q => mbk_buf_rtlcarry_0(1)
+  );
+  mbk_buf_rtlcarry_0_9 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(9),
+    q => mbk_buf_rtlcarry_0(9)
+  );
+  mbk_buf_rtlcarry_0_7 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(7),
+    q => mbk_buf_rtlcarry_0(7)
+  );
+  dmbk_buf_rtlcarry_0_2 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(2),
+    q => mbk_buf_rtlcarry_0(2)
+  );
+  mbk_buf_reg_nreg_0 : buf_x2
+  PORT MAP (
+    i => reg_nreg(0),
+    q => mbk_buf_reg_nreg(0)
+  );
+  mbk_buf_rtlcarry_0_12 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(12),
+    q => mbk_buf_rtlcarry_0(12)
+  );
+  mbk_buf_rtlcarry_0_5 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(5),
+    q => mbk_buf_rtlcarry_0(5)
+  );
+  mbk_buf_not_reg_nreg_0 : buf_x2
+  PORT MAP (
+    i => not_reg_nreg(0),
+    q => mbk_buf_not_reg_nreg(0)
+  );
+  mbk_buf_rtlcarry_0_11 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(11),
+    q => mbk_buf_rtlcarry_0(11)
+  );
+  mbk_buf_rtlcarry_0_10 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(10),
+    q => mbk_buf_rtlcarry_0(10)
+  );
+  mbk_buf_rtlcarry_0_6 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(6),
+    q => mbk_buf_rtlcarry_0(6)
+  );
+  mbk_buf_rtlcarry_0_4 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(4),
+    q => mbk_buf_rtlcarry_0(4)
+  );
+  dmbk_buf_not_rtlcarry_0_15 : buf_x2
+  PORT MAP (
+    i => not_rtlcarry_0(15),
+    q => mbk_buf_not_rtlcarry_0(15)
+  );
+  dmbk_buf_not_rtlcarry_0_18 : buf_x2
+  PORT MAP (
+    i => not_rtlcarry_0(18),
+    q => mbk_buf_not_rtlcarry_0(18)
+  );
+  dmbk_buf_not_rtlcarry_0_17 : buf_x2
+  PORT MAP (
+    i => not_rtlcarry_0(17),
+    q => mbk_buf_not_rtlcarry_0(17)
+  );
+  dmbk_buf_not_rtlcarry_0_16 : buf_x2
+  PORT MAP (
+    i => not_rtlcarry_0(16),
+    q => mbk_buf_not_rtlcarry_0(16)
+  );
+  dmbk_buf_not_rtlcarry_0_14 : buf_x2
+  PORT MAP (
+    i => not_rtlcarry_0(14),
+    q => mbk_buf_not_rtlcarry_0(14)
+  );
+  dmbk_buf_not_rtlcarry_0_13 : buf_x2
+  PORT MAP (
+    i => not_rtlcarry_0(13),
+    q => mbk_buf_not_rtlcarry_0(13)
+  );
   out_nreg_val_20_ins : buf_x2
   PORT MAP (
     i => rtlalc_1(20),
@@ -712,13 +829,13 @@ BEGIN
   PORT MAP (
     i0 => not_aux44,
     i1 => not_aux36,
-    i2 => not_rtlcarry_0(18),
+    i2 => mbk_buf_not_rtlcarry_0(18),
     q => o3_x2_17_sig
   );
   na3_x1_27_ins : na3_x1
   PORT MAP (
     i0 => no2_x1_9_sig,
-    i1 => not_rtlcarry_0(18),
+    i1 => mbk_buf_not_rtlcarry_0(18),
     i2 => reg_nreg(18),
     nq => na3_x1_27_sig
   );
@@ -751,13 +868,13 @@ BEGIN
   PORT MAP (
     i0 => not_aux43,
     i1 => not_aux35,
-    i2 => not_rtlcarry_0(17),
+    i2 => mbk_buf_not_rtlcarry_0(17),
     q => o3_x2_16_sig
   );
   na3_x1_25_ins : na3_x1
   PORT MAP (
     i0 => no2_x1_8_sig,
-    i1 => not_rtlcarry_0(17),
+    i1 => mbk_buf_not_rtlcarry_0(17),
     i2 => reg_nreg(17),
     nq => na3_x1_25_sig
   );
@@ -795,13 +912,13 @@ BEGIN
   );
   na2_x1_13_ins : na2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(16),
+    i0 => mbk_buf_not_rtlcarry_0(16),
     i1 => reg_nreg(16),
     nq => na2_x1_13_sig
   );
   o2_x2_11_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(16),
+    i0 => mbk_buf_not_rtlcarry_0(16),
     i1 => reg_nreg(16),
     q => o2_x2_11_sig
   );
@@ -827,7 +944,7 @@ BEGIN
   a3_x2_3_ins : a3_x2
   PORT MAP (
     i0 => no3_x1_13_sig,
-    i1 => not_rtlcarry_0(15),
+    i1 => mbk_buf_not_rtlcarry_0(15),
     i2 => reg_nreg(15),
     q => a3_x2_3_sig
   );
@@ -860,13 +977,13 @@ BEGIN
   );
   na2_x1_12_ins : na2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(14),
+    i0 => mbk_buf_not_rtlcarry_0(14),
     i1 => reg_nreg(14),
     nq => na2_x1_12_sig
   );
   o2_x2_10_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(14),
+    i0 => mbk_buf_not_rtlcarry_0(14),
     i1 => reg_nreg(14),
     q => o2_x2_10_sig
   );
@@ -892,13 +1009,13 @@ BEGIN
   );
   na2_x1_11_ins : na2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(13),
+    i0 => mbk_buf_not_rtlcarry_0(13),
     i1 => reg_nreg(13),
     nq => na2_x1_11_sig
   );
   o2_x2_9_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(13),
+    i0 => mbk_buf_not_rtlcarry_0(13),
     i1 => reg_nreg(13),
     q => o2_x2_9_sig
   );
@@ -1350,7 +1467,7 @@ BEGIN
   );
   xr2_x1_2_ins : xr2_x1
   PORT MAP (
-    i0 => reg_nreg(0),
+    i0 => mbk_buf_reg_nreg(0),
     i1 => in_nreg_val(0),
     q => xr2_x1_2_sig
   );
@@ -1393,7 +1510,7 @@ BEGIN
   nao22_x1_5_ins : nao22_x1
   PORT MAP (
     i0 => reg_nreg(19),
-    i1 => not_aux24,
+    i1 => mbk_buf_not_aux24,
     i2 => o3_x2_10_sig,
     nq => nao22_x1_5_sig
   );
@@ -1421,7 +1538,7 @@ BEGIN
     i0 => c_reset_reg,
     i1 => reset,
     i2 => not_aux44,
-    i3 => not_rtlcarry_0(18),
+    i3 => mbk_buf_not_rtlcarry_0(18),
     q => o4_x2_5_sig
   );
   no3_x1_10_ins : no3_x1
@@ -1433,7 +1550,7 @@ BEGIN
   );
   no2_x1_6_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(18),
+    i0 => mbk_buf_not_rtlcarry_0(18),
     i1 => not_c_nreg,
     nq => no2_x1_6_sig
   );
@@ -1454,7 +1571,7 @@ BEGIN
     i0 => c_reset_reg,
     i1 => reset,
     i2 => not_aux43,
-    i3 => not_rtlcarry_0(17),
+    i3 => mbk_buf_not_rtlcarry_0(17),
     q => o4_x2_4_sig
   );
   no3_x1_9_ins : no3_x1
@@ -1466,7 +1583,7 @@ BEGIN
   );
   no2_x1_5_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(17),
+    i0 => mbk_buf_not_rtlcarry_0(17),
     i1 => not_c_nreg,
     nq => no2_x1_5_sig
   );
@@ -1485,7 +1602,7 @@ BEGIN
   o3_x2_9_ins : o3_x2
   PORT MAP (
     i0 => na3_x1_6_sig,
-    i1 => not_rtlcarry_0(16),
+    i1 => mbk_buf_not_rtlcarry_0(16),
     i2 => reg_nreg(16),
     q => o3_x2_9_sig
   );
@@ -1505,7 +1622,7 @@ BEGIN
   );
   no2_x1_4_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(16),
+    i0 => mbk_buf_not_rtlcarry_0(16),
     i1 => not_c_nreg,
     nq => no2_x1_4_sig
   );
@@ -1530,7 +1647,7 @@ BEGIN
   );
   no2_x1_3_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(15),
+    i0 => mbk_buf_not_rtlcarry_0(15),
     i1 => not_c_nreg,
     nq => no2_x1_3_sig
   );
@@ -1549,7 +1666,7 @@ BEGIN
   o3_x2_7_ins : o3_x2
   PORT MAP (
     i0 => na3_x1_5_sig,
-    i1 => not_rtlcarry_0(14),
+    i1 => mbk_buf_not_rtlcarry_0(14),
     i2 => reg_nreg(14),
     q => o3_x2_7_sig
   );
@@ -1569,7 +1686,7 @@ BEGIN
   );
   no2_x1_2_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(14),
+    i0 => mbk_buf_not_rtlcarry_0(14),
     i1 => not_c_nreg,
     nq => no2_x1_2_sig
   );
@@ -1581,7 +1698,7 @@ BEGIN
   );
   nao22_x1_4_ins : nao22_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(13),
+    i0 => mbk_buf_not_rtlcarry_0(13),
     i1 => na4_x1_7_sig,
     i2 => o3_x2_6_sig,
     nq => nao22_x1_4_sig
@@ -1603,7 +1720,7 @@ BEGIN
   );
   no2_x1_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_0(13),
+    i0 => mbk_buf_not_rtlcarry_0(13),
     i1 => not_c_nreg,
     nq => no2_x1_sig
   );
@@ -1892,7 +2009,7 @@ BEGIN
   );
   oa2ao222_x2_ins : oa2ao222_x2
   PORT MAP (
-    i0 => rtlcarry_0(5),
+    i0 => mbk_buf_rtlcarry_0(5),
     i1 => aux41,
     i2 => not_rtlcarry_0(5),
     i3 => not_c_nreg,
@@ -2094,12 +2211,12 @@ BEGIN
   PORT MAP (
     i0 => in_nreg_val(0),
     i1 => not_aux1,
-    i2 => not_reg_nreg(0),
+    i2 => mbk_buf_not_reg_nreg(0),
     nq => na3_x1_3_sig
   );
   no3_x1_ins : no3_x1
   PORT MAP (
-    i0 => not_reg_nreg(0),
+    i0 => mbk_buf_not_reg_nreg(0),
     i1 => not_aux0,
     i2 => a2_x2_4_sig,
     nq => no3_x1_sig
@@ -2143,8 +2260,8 @@ BEGIN
   );
   a2_x2_3_ins : a2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(9),
-    i1 => not_reg_nreg(9),
+    i1 => not_rtlcarry_0(9),
+    i0 => not_reg_nreg(9),
     q => a2_x2_3_sig
   );
   rtlcarry_0_9_ins : oa2ao222_x2
@@ -2171,8 +2288,8 @@ BEGIN
   );
   a2_x2_2_ins : a2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(7),
-    i1 => not_reg_nreg(7),
+    i1 => not_rtlcarry_0(7),
+    i0 => not_reg_nreg(7),
     q => a2_x2_2_sig
   );
   rtlcarry_0_7_ins : oa2ao222_x2
@@ -2226,8 +2343,8 @@ BEGIN
   );
   a2_x2_ins : a2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(2),
-    i1 => not_reg_nreg(2),
+    i1 => not_rtlcarry_0(2),
+    i0 => not_reg_nreg(2),
     q => a2_x2_sig
   );
   rtlcarry_0_2_ins : oa2ao222_x2
@@ -2261,7 +2378,7 @@ BEGIN
   PORT MAP (
     i0 => na3_x1_2_sig,
     i1 => reg_nreg(15),
-    i2 => not_rtlcarry_0(15),
+    i2 => mbk_buf_not_rtlcarry_0(15),
     nq => aux21
   );
   na3_x1_2_ins : na3_x1
@@ -2363,7 +2480,7 @@ BEGIN
     i => aux0,
     nq => not_aux0
   );
-  not_reg_nreg_0_ins : inv_x2
+  not_reg_nreg_0_ins : inv_x4
   PORT MAP (
     i => reg_nreg(0),
     nq => not_reg_nreg(0)
@@ -2376,7 +2493,7 @@ BEGIN
   );
   not_aux2_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(1),
+    i0 => mbk_buf_rtlcarry_0(1),
     i1 => in_nreg_val(1),
     q => not_aux2
   );
@@ -2385,14 +2502,14 @@ BEGIN
     i => reg_nreg(1),
     nq => not_reg_nreg(1)
   );
-  not_rtlcarry_0_2_ins : inv_x2
+  not_rtlcarry_0_2_ins : inv_x4
   PORT MAP (
     i => rtlcarry_0(2),
     nq => not_rtlcarry_0(2)
   );
   not_aux3_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(2),
+    i0 => mbk_buf_rtlcarry_0(2),
     i1 => in_nreg_val(2),
     q => not_aux3
   );
@@ -2403,7 +2520,7 @@ BEGIN
   );
   not_aux4_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(3),
+    i0 => mbk_buf_rtlcarry_0(3),
     i1 => in_nreg_val(3),
     q => not_aux4
   );
@@ -2414,12 +2531,12 @@ BEGIN
   );
   not_rtlcarry_0_4_ins : inv_x2
   PORT MAP (
-    i => rtlcarry_0(4),
+    i => mbk_buf_rtlcarry_0(4),
     nq => not_rtlcarry_0(4)
   );
   not_aux5_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(4),
+    i0 => mbk_buf_rtlcarry_0(4),
     i1 => in_nreg_val(4),
     q => not_aux5
   );
@@ -2430,7 +2547,7 @@ BEGIN
   );
   not_rtlcarry_0_5_ins : inv_x2
   PORT MAP (
-    i => rtlcarry_0(5),
+    i => mbk_buf_rtlcarry_0(5),
     nq => not_rtlcarry_0(5)
   );
   not_aux38_ins : on12_x1
@@ -2441,17 +2558,17 @@ BEGIN
   );
   not_rtlcarry_0_6_ins : inv_x2
   PORT MAP (
-    i => rtlcarry_0(6),
+    i => mbk_buf_rtlcarry_0(6),
     nq => not_rtlcarry_0(6)
   );
-  not_rtlcarry_0_7_ins : inv_x2
+  not_rtlcarry_0_7_ins : inv_x4
   PORT MAP (
     i => rtlcarry_0(7),
     nq => not_rtlcarry_0(7)
   );
   not_aux7_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(7),
+    i0 => mbk_buf_rtlcarry_0(7),
     i1 => in_nreg_val(7),
     q => not_aux7
   );
@@ -2462,7 +2579,7 @@ BEGIN
   );
   not_aux9_ins : nxr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(8),
+    i0 => mbk_buf_rtlcarry_0(8),
     i1 => xr2_x1_sig,
     nq => not_aux9
   );
@@ -2472,14 +2589,14 @@ BEGIN
     i1 => in_nreg_val(8),
     q => xr2_x1_sig
   );
-  not_rtlcarry_0_9_ins : inv_x2
+  not_rtlcarry_0_9_ins : inv_x4
   PORT MAP (
     i => rtlcarry_0(9),
     nq => not_rtlcarry_0(9)
   );
   not_aux10_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(9),
+    i0 => mbk_buf_rtlcarry_0(9),
     i1 => in_nreg_val(9),
     q => not_aux10
   );
@@ -2490,12 +2607,12 @@ BEGIN
   );
   not_rtlcarry_0_10_ins : inv_x2
   PORT MAP (
-    i => rtlcarry_0(10),
+    i => mbk_buf_rtlcarry_0(10),
     nq => not_rtlcarry_0(10)
   );
   not_aux11_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(10),
+    i0 => mbk_buf_rtlcarry_0(10),
     i1 => in_nreg_val(10),
     q => not_aux11
   );
@@ -2506,12 +2623,12 @@ BEGIN
   );
   not_rtlcarry_0_11_ins : inv_x2
   PORT MAP (
-    i => rtlcarry_0(11),
+    i => mbk_buf_rtlcarry_0(11),
     nq => not_rtlcarry_0(11)
   );
   not_aux12_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(11),
+    i0 => mbk_buf_rtlcarry_0(11),
     i1 => in_nreg_val(11),
     q => not_aux12
   );
@@ -2522,7 +2639,7 @@ BEGIN
   );
   not_aux13_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(12),
+    i0 => mbk_buf_rtlcarry_0(12),
     i1 => in_nreg_val(12),
     q => not_aux13
   );
@@ -2556,8 +2673,8 @@ BEGIN
   );
   not_rtlcarry_0_14_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(13),
-    i1 => not_reg_nreg(13),
+    i1 => not_rtlcarry_0(13),
+    i0 => not_reg_nreg(13),
     q => not_rtlcarry_0(14)
   );
   not_reg_nreg_14_ins : inv_x2
@@ -2567,8 +2684,8 @@ BEGIN
   );
   not_rtlcarry_0_15_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(14),
-    i1 => not_reg_nreg(14),
+    i1 => not_rtlcarry_0(14),
+    i0 => not_reg_nreg(14),
     q => not_rtlcarry_0(15)
   );
   not_reg_nreg_15_ins : inv_x2
@@ -2578,8 +2695,8 @@ BEGIN
   );
   not_rtlcarry_0_16_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(15),
-    i1 => not_reg_nreg(15),
+    i1 => not_rtlcarry_0(15),
+    i0 => not_reg_nreg(15),
     q => not_rtlcarry_0(16)
   );
   not_reg_nreg_16_ins : inv_x2
@@ -2589,8 +2706,8 @@ BEGIN
   );
   not_rtlcarry_0_17_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(16),
-    i1 => not_reg_nreg(16),
+    i1 => not_rtlcarry_0(16),
+    i0 => not_reg_nreg(16),
     q => not_rtlcarry_0(17)
   );
   not_reg_nreg_17_ins : inv_x2
@@ -2606,8 +2723,8 @@ BEGIN
   );
   not_rtlcarry_0_18_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(17),
-    i1 => not_reg_nreg(17),
+    i1 => not_rtlcarry_0(17),
+    i0 => not_reg_nreg(17),
     q => not_rtlcarry_0(18)
   );
   not_reg_nreg_18_ins : inv_x2
@@ -2623,8 +2740,8 @@ BEGIN
   );
   not_rtlcarry_0_19_ins : o2_x2
   PORT MAP (
-    i0 => not_rtlcarry_0(18),
-    i1 => not_reg_nreg(18),
+    i1 => not_rtlcarry_0(18),
+    i0 => not_reg_nreg(18),
     q => not_rtlcarry_0(19)
   );
   not_aux45_ins : no2_x1
@@ -2642,15 +2759,15 @@ BEGIN
   PORT MAP (
     i0 => c_reset_reg,
     i1 => reset,
-    i2 => not_rtlcarry_0(19),
-    i3 => not_c_nreg,
+    i3 => not_rtlcarry_0(19),
+    i2 => not_c_nreg,
     q => not_aux24
   );
   not_aux26_ins : o3_x2
   PORT MAP (
-    i0 => not_aux24,
-    i1 => reg_nreg(20),
-    i2 => not_reg_nreg(19),
+    i2 => not_aux24,
+    i0 => reg_nreg(20),
+    i1 => not_reg_nreg(19),
     q => not_aux26
   );
   not_rtlalc_1_5_ins : inv_x2
@@ -2660,7 +2777,7 @@ BEGIN
   );
   not_aux31_ins : xr2_x1
   PORT MAP (
-    i0 => rtlcarry_0(6),
+    i0 => mbk_buf_rtlcarry_0(6),
     i1 => reg_nreg(6),
     q => not_aux31
   );
@@ -2699,7 +2816,7 @@ END RTL;
 library sxlib;
 use sxlib.vcomponents.all;
 
-configuration CFG_neuronreg_boog of neuronreg_boog is
+configuration CFG_neuronreg_final of neuronreg_final is
   for RTL
     for all: buf_x2 use entity sxlib.buf_x2(vital); end for;
     for all: sff1_x4 use entity sxlib.sff1_x4(vital); end for;
@@ -2728,7 +2845,8 @@ configuration CFG_neuronreg_boog of neuronreg_boog is
     for all: oa2ao222_x2 use entity sxlib.oa2ao222_x2(vital); end for;
     for all: oa2a22_x2 use entity sxlib.oa2a22_x2(vital); end for;
     for all: nao2o22_x1 use entity sxlib.nao2o22_x1(vital); end for;
+    for all: inv_x4 use entity sxlib.inv_x4(vital); end for;
     for all: nxr2_x1 use entity sxlib.nxr2_x1(vital); end for;
     for all: noa2ao222_x1 use entity sxlib.noa2ao222_x1(vital); end for;
   end for;
-end CFG_neuronreg_boog;
+end CFG_neuronreg_final;
