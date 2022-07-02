@@ -1,5 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
 ENTITY MULTIPLIER_TB IS
 END MULTIPLIER_TB;
 
@@ -16,39 +18,24 @@ ARCHITECTURE TESTBENCH OF MULTIPLIER_TB IS
     SIGNAL A : STD_LOGIC_VECTOR (7 DOWNTO 0) := (OTHERS => '0');
     SIGNAL B : STD_LOGIC_VECTOR (2 DOWNTO 0) := (OTHERS => '0');
     SIGNAL S : STD_LOGIC_VECTOR (10 DOWNTO 0) := (OTHERS => '0');
-
 BEGIN
-
     SPEC : MULTIPLIER PORT MAP(A => A, B => B, S => S);
 
     PROCESS
         CONSTANT wait_time : TIME := 11623 ps;
-
+        VARIABLE i_vec : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        VARIABLE u_vec : STD_LOGIC_VECTOR(2 DOWNTO 0);
     BEGIN
-        A <= "00000000";
-        B <= "110";
-        WAIT FOR wait_time;
-        ASSERT S = "00000000000" REPORT "00000000 *  110 is not 000000000000";
-
-        A <= "11111111";
-        B <= "111";
-        WAIT FOR wait_time;
-        ASSERT S = "11011111001" REPORT "11111111 *  111 is not 11011111001";
-
-        A <= "10000000";
-        B <= "110";
-        WAIT FOR wait_time;
-        ASSERT S = "01100000000" REPORT "10000000 *  110 is not 110000000000";
-
-        A <= "00000001";
-        B <= "110";
-        WAIT FOR wait_time;
-        ASSERT S = "00000000110" REPORT "00000001 *  110 is not 000000000110";
-
-        A <= "11111111";
-        B <= "001";
-        WAIT FOR wait_time;
-        ASSERT S = "00011111111" REPORT "111111111 *  001 is not 11111111111";
+        FOR i IN 0 TO 255 LOOP
+            i_vec := STD_LOGIC_VECTOR(to_unsigned(i, 8));
+            A <= i_vec(7 DOWNTO 0);
+            FOR u IN 0 TO 7 LOOP
+                u_vec := STD_LOGIC_VECTOR(to_unsigned(u, 3));
+                B <= u_vec(2 DOWNTO 0);
+                WAIT FOR wait_time;
+                ASSERT S = STD_LOGIC_VECTOR(to_unsigned(u * i, 11)) REPORT "calculatetion false";
+            END LOOP;
+        END LOOP;
 
         ASSERT false REPORT "Simulation finished" SEVERITY note;
         WAIT;

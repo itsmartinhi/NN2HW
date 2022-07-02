@@ -1,11 +1,11 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
 
-entity MULTBLOCK_TB is 
-end MULTBLOCK_TB;
+ENTITY MULTBLOCK_TB IS
+END MULTBLOCK_TB;
 
-architecture TESTBENCH of MULTBLOCK_TB is
+ARCHITECTURE TESTBENCH OF MULTBLOCK_TB IS
 
 component MULTBLOCK is
 	port (
@@ -13,16 +13,15 @@ component MULTBLOCK is
 		in_data_ram:  	in 	std_logic_vector(11 downto 0);
 		out_mult_val:	out std_logic_vector(12 downto 0)
 		);
-end component;
+END COMPONENT;
 
-for SPEC: MULTBLOCK use entity WORK.MULTBLOCK(RTL);
+	FOR SPEC : MULTBLOCK USE ENTITY WORK.MULTBLOCK(RTL);
 
-signal in_data_rom: 	std_logic_vector(31 downto 0);
-signal in_data_ram:    	std_logic_vector(11 downto 0);
-signal out_val_spec: 	std_logic_vector(12 downto 0);
+	signal in_data_rom: 	std_logic_vector(31 downto 0);
+	signal in_data_ram:    	std_logic_vector(11 downto 0);
+	signal out_val_spec: 	std_logic_vector(12 downto 0);
 
-begin 
-
+BEGIN
  	SPEC: MULTBLOCK port map ( 
 		in_data_rom		=> in_data_rom,
 		in_data_ram  	=> in_data_ram,
@@ -46,3 +45,4 @@ begin
 	end process;
 
 end architecture;
+
