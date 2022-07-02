@@ -1,0 +1,101 @@
+-- VHDL data flow description generated from `neurondec_boom`
+--		date : Sat Jul  2 16:38:52 2022
+
+
+-- Entity Declaration
+
+ENTITY neurondec_boom IS
+  PORT (
+  reset : in BIT;	-- reset
+  clk : in BIT;	-- clk
+  c_neuron_dec : in BIT;	-- c_neuron_dec
+  out_neuron_index : out bit_vector(3 DOWNTO 0) ;	-- out_neuron_index
+  out_neuron_reset : out BIT;	-- out_neuron_reset
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END neurondec_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF neurondec_boom IS
+  SIGNAL rtlalc_4 : REG_BIT REGISTER;	-- rtlalc_4
+  SIGNAL rtlalc_3 : REG_VECTOR(2 DOWNTO 1) REGISTER;	-- rtlalc_3
+  SIGNAL rtlalc_2 : REG_BIT REGISTER;	-- rtlalc_2
+  SIGNAL rtlalc_1 : REG_BIT REGISTER;	-- rtlalc_1
+  SIGNAL count : REG_VECTOR(4 DOWNTO 0) REGISTER;	-- count
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux2 : BIT;		-- aux2
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux5 : BIT;		-- aux5
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux8 : BIT;		-- aux8
+
+BEGIN
+  aux8 <= (NOT(count(0)) AND (NOT(reset) AND NOT(count(2)))
+);
+  aux6 <= (count(0) OR count(2));
+  aux5 <= NOT((count(3) OR count(1)) OR NOT(c_neuron_dec));
+  aux3 <= (aux2 OR count(0));
+  aux2 <= NOT(NOT(count(1)) AND c_neuron_dec);
+  aux1 <= (count(3) OR NOT(c_neuron_dec));
+  aux0 <= (NOT(c_neuron_dec) OR count(0));
+  label0 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (0) <= GUARDED ((c_neuron_dec XOR count(0)) OR reset);
+  END BLOCK label0;
+  label1 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (1) <= GUARDED ((aux1 OR count(4) OR aux6) AND NOT(count(1) XOR 
+aux0) AND NOT(reset));
+  END BLOCK label1;
+  label2 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (2) <= GUARDED ((aux3 AND NOT(reset) AND count(2)) OR ((count(3)
+ OR count(4)) AND NOT(aux2) AND aux8));
+  END BLOCK label2;
+  label3 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (3) <= GUARDED (((count(3) OR reset) AND count(2)) OR ((NOT(
+count(3) XOR aux3) OR reset) AND NOT(count(2))));
+  END BLOCK label3;
+  label4 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    count (4) <= GUARDED ((NOT(aux5) OR aux6) AND count(4) AND NOT(reset));
+  END BLOCK label4;
+  label5 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_1 <= GUARDED ((aux5 AND NOT(count(4)) AND aux8) OR (rtlalc_1 
+AND (NOT(c_neuron_dec) OR reset)));
+  END BLOCK label5;
+  label6 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_2 <= GUARDED (((c_neuron_dec OR rtlalc_2) AND aux1) OR reset);
+  END BLOCK label6;
+  label7 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_3 (1) <= GUARDED ((c_neuron_dec OR rtlalc_3(1)) AND aux2 AND NOT(
+reset));
+  END BLOCK label7;
+  label8 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_3 (2) <= GUARDED ((NOT(c_neuron_dec) OR count(2)) AND (rtlalc_3(2)
+ OR c_neuron_dec) AND NOT(reset));
+  END BLOCK label8;
+  label9 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_4 <= GUARDED ((aux0 AND (rtlalc_4 OR c_neuron_dec)) OR reset);
+  END BLOCK label9;
+
+out_neuron_reset <= rtlalc_1;
+
+out_neuron_index (0) <= rtlalc_4;
+
+out_neuron_index (1) <= rtlalc_3(1);
+
+out_neuron_index (2) <= rtlalc_3(2);
+
+out_neuron_index (3) <= rtlalc_2;
+END;
