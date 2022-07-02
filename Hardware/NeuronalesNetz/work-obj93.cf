@@ -1,49 +1,49 @@
 v 4
-file . "neuronalesNetz.vhdl" "11002c37f5aa3891c2e67f27d6e29abb78b94638" "20220630092957.987":
-  entity neuronalesnetz at 1( 0) + 0 on 1360;
-  architecture rtl of neuronalesnetz at 14( 250) + 0 on 1361;
-file . "../NeuronReg/neuronreg.vhdl" "dced9ab3ce99a40916e9c1464175bf97e9cab334" "20220630092957.966":
-  entity neuronreg at 1( 0) + 0 on 1354;
-  architecture rtl of neuronreg at 16( 338) + 0 on 1355;
-file . "../Argmax/argmax.vhdl" "8d8105525d58f84352affc8275983726c462d784" "20220630092957.965":
-  entity argmax at 1( 0) + 0 on 1352;
-  architecture rtl of argmax at 15( 329) + 0 on 1353;
-file . "../MultBlock/multblock.vhdl" "32c4a7f358c3fb0a754e40baecdf1ce9c005931b" "20220630092957.964":
-  entity multblock at 1( 0) + 0 on 1350;
-  architecture rtl of multblock at 13( 266) + 0 on 1351;
-file . "../MultBlock/Multiplier/multiplier.vhdl" "f7570aa84d46d4b2097d968587435e4a399be3d9" "20220630092957.962":
-  entity multiplier at 1( 0) + 0 on 1348;
-  architecture structure of multiplier at 11( 234) + 0 on 1349;
-file . "../MultBlock/Multiplier/full_adder.vhdl" "3dfdc46c669ce47c2829d4936b0f552132159345" "20220630092957.959":
-  entity full_adder at 1( 0) + 0 on 1346;
-  architecture structure of full_adder at 34( 796) + 0 on 1347;
-file . "../MultBlock/Multiplier/half_adder.vhdl" "48f810741079cb37ab69b8ff936c59625f1d8954" "20220630092957.957":
-  entity half_adder at 1( 0) + 0 on 1344;
-  architecture structure of half_adder at 32( 702) + 0 on 1345;
-file . "../MultBlock/Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220630092957.955":
-  entity xor2 at 1( 0) + 0 on 1342;
-  architecture dataflow of xor2 at 8( 126) + 0 on 1343;
-file . "../MultBlock/Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220630092957.954":
-  entity or2 at 1( 0) + 0 on 1340;
-  architecture dataflow of or2 at 10( 136) + 0 on 1341;
-file . "../MultBlock/Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220630092957.953":
-  entity and2 at 1( 0) + 0 on 1338;
-  architecture dataflow of and2 at 8( 126) + 0 on 1339;
-file . "../NeuronDec/neurondec.vhdl" "6e714933d72186e36acd6043105cac6b919566ba" "20220630092957.952":
-  entity neurondec at 1( 0) + 0 on 1336;
-  architecture rtl of neurondec at 15( 309) + 0 on 1337;
-file . "../InpDec/inpdec.vhdl" "0af7b158da049417677d5e33b439da9dda5e8660" "20220630092957.949":
-  entity inpdec at 1( 0) + 0 on 1334;
-  architecture rtl of inpdec at 15( 303) + 0 on 1335;
-file . "../Controller/controller.vhdl" "71d3f144e9b113d6f031f7747181879dfea6f57b" "20220630092957.947":
-  entity controller at 1( 0) + 0 on 1332;
-  architecture rtl of controller at 20( 486) + 0 on 1333;
-file . "testbench.vhdl" "6119ba992590eb04d0574706bc7c0bda5ab6bf01" "20220630092957.988":
-  entity testbench at 1( 0) + 0 on 1362;
-  architecture testbench of testbench at 8( 107) + 0 on 1363;
-file . "../RAM/ram.vhdl" "825c150249e1fb4db22de68b686b5c3d110f78db" "20220630092957.969":
-  entity ram at 1( 0) + 0 on 1356;
-  architecture rtl of ram at 12( 304) + 0 on 1357;
-file . "../ROM/rom.vhdl" "64e6da527b48cb08ad0ac1b62e90a5fc93991285" "20220630092957.986":
-  entity rom at 1( 0) + 0 on 1358;
-  architecture rtl of rom at 13( 388) + 0 on 1359;
+file . "neuronalesNetz.vhdl" "11002c37f5aa3891c2e67f27d6e29abb78b94638" "20220702152628.992":
+  entity neuronalesnetz at 1( 0) + 0 on 1680;
+  architecture rtl of neuronalesnetz at 14( 250) + 0 on 1681;
+file . "../NeuronReg/neuronreg.vhdl" "dced9ab3ce99a40916e9c1464175bf97e9cab334" "20220702152628.963":
+  entity neuronreg at 1( 0) + 0 on 1674;
+  architecture rtl of neuronreg at 16( 338) + 0 on 1675;
+file . "../Argmax/argmax.vhdl" "8d8105525d58f84352affc8275983726c462d784" "20220702152628.961":
+  entity argmax at 1( 0) + 0 on 1672;
+  architecture rtl of argmax at 15( 329) + 0 on 1673;
+file . "../MultBlock/multblock.vhdl" "32c4a7f358c3fb0a754e40baecdf1ce9c005931b" "20220702152628.958":
+  entity multblock at 1( 0) + 0 on 1670;
+  architecture rtl of multblock at 13( 266) + 0 on 1671;
+file . "../MultBlock/Multiplier/multiplier.vhdl" "f7570aa84d46d4b2097d968587435e4a399be3d9" "20220702152628.956":
+  entity multiplier at 1( 0) + 0 on 1668;
+  architecture structure of multiplier at 11( 234) + 0 on 1669;
+file . "../MultBlock/Multiplier/full_adder.vhdl" "3dfdc46c669ce47c2829d4936b0f552132159345" "20220702152628.953":
+  entity full_adder at 1( 0) + 0 on 1666;
+  architecture structure of full_adder at 34( 796) + 0 on 1667;
+file . "../MultBlock/Multiplier/half_adder.vhdl" "48f810741079cb37ab69b8ff936c59625f1d8954" "20220702152628.951":
+  entity half_adder at 1( 0) + 0 on 1664;
+  architecture structure of half_adder at 32( 702) + 0 on 1665;
+file . "../MultBlock/Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220702152628.950":
+  entity xor2 at 1( 0) + 0 on 1662;
+  architecture dataflow of xor2 at 8( 126) + 0 on 1663;
+file . "../MultBlock/Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220702152628.949":
+  entity or2 at 1( 0) + 0 on 1660;
+  architecture dataflow of or2 at 10( 136) + 0 on 1661;
+file . "../MultBlock/Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220702152628.948":
+  entity and2 at 1( 0) + 0 on 1658;
+  architecture dataflow of and2 at 8( 126) + 0 on 1659;
+file . "../NeuronDec/neurondec.vhdl" "6e714933d72186e36acd6043105cac6b919566ba" "20220702152628.947":
+  entity neurondec at 1( 0) + 0 on 1656;
+  architecture rtl of neurondec at 15( 309) + 0 on 1657;
+file . "../InpDec/inpdec.vhdl" "0af7b158da049417677d5e33b439da9dda5e8660" "20220702152628.945":
+  entity inpdec at 1( 0) + 0 on 1654;
+  architecture rtl of inpdec at 15( 303) + 0 on 1655;
+file . "../Controller/controller.vhdl" "71d3f144e9b113d6f031f7747181879dfea6f57b" "20220702152628.943":
+  entity controller at 1( 0) + 0 on 1652;
+  architecture rtl of controller at 20( 486) + 0 on 1653;
+file . "testbench.vhdl" "d019b410ca277ec99617f513e9c4192ac7bb3545" "20220702152628.993":
+  entity testbench at 1( 0) + 0 on 1682;
+  architecture testbench of testbench at 8( 107) + 0 on 1683;
+file . "../RAM/ram.vhdl" "4625c0111e16a4f746c045863bd1b655e1980d3a" "20220702152628.969":
+  entity ram at 1( 0) + 0 on 1676;
+  architecture rtl of ram at 12( 304) + 0 on 1677;
+file . "../ROM/rom.vhdl" "08b79b86cd6149c5ce36f26ea22e6d59103177a5" "20220702152628.990":
+  entity rom at 1( 0) + 0 on 1678;
+  architecture rtl of rom at 13( 388) + 0 on 1679;
