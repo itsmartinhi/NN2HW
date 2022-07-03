@@ -1,0 +1,320 @@
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file controller
+	--> Drive Alliance file controller_vasy
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file controller_vasy
+	--> Drive Standard VHDL file controller_vasy
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'controller_vasy.vhdl'...
+
+                   @@@@@@@                         @@@     @@@
+                     @@   @@                        @@     @@ 
+                     @@    @@                       @@@   @@@ 
+                     @@    @@     @@@       @@@     @@@   @@@ 
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@ 
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@ 
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @   @@ 
+                     @@    @@   @@   @@   @@   @@   @      @@ 
+                   @@@@@@@@       @@@       @@@    @@@    @@@@
+
+                              BOOlean Minimization
+
+                   Alliance CAD System 5.0,           boom 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Parse BEH file controller_vasy.vbe
+	--> Drive BEH file controller_boom
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file controller_boom
+	--> Drive Standard VHDL file controller_boom
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'controller_boom.vhdl'...
+
+                  @@@@@@@                             @@@@ @  
+                    @@   @@                         @@    @@  
+                    @@    @@                       @@      @  
+                    @@    @@     @@@       @@@    @@          
+                    @@   @@    @@   @@   @@   @@  @@          
+                    @@@@@@    @@     @@ @@     @@ @@     @@@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@ 
+                    @@     @@ @@     @@ @@     @@ @@    @  @@ 
+                    @@     @@ @@     @@ @@     @@  @@      @@ 
+                    @@    @@   @@   @@   @@   @@    @@    @@  
+                  @@@@@@@@       @@@       @@@        @@@@    
+
+                         Binding and Optimizing On Gates
+
+                 Alliance CAD System 5.0, boog 5.0 [2003/01/09]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+        MBK_VDD        : vdd
+        MBK_VSS        : vss
+        MBK_IN_LO      : vst
+        MBK_OUT_LO     : vst
+        MBK_WORK_LIB   : .
+        MBK_TARGET_LIB : /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'controller_boom.vbe'...
+Controlling file 'controller_boom.vbe'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Mapping Warning: Cell 'halfadder_x4' isn't supported
+Mapping Warning: Cell 'nmx2_x4' isn't supported
+Mapping Warning: Cell 'nxr2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'oa3ao322_x4' isn't supported
+Mapping Warning: Cell 'na2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x4' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'a3_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a23_x4' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'mx3_x4' isn't supported
+Mapping Warning: Cell 'na4_x4' isn't supported
+Mapping Warning: Cell 'an12_x4' isn't supported
+Mapping Warning: Cell 'ao22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'noa2a22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'no4_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'nao2o22_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
+Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Preparing file 'controller_boom.vbe'...
+Capacitances on file 'controller_boom.vbe'...
+Unflattening file 'controller_boom.vbe'...
+Mapping file 'controller_boom.vbe'...
+Saving file 'controller_boog.vst'...
+Quick estimated critical path (no warranty)...1787 ps from 'state 1' to 'state 1'
+Quick estimated area (with over-cell routing)...41250 lambda�
+Details...
+	no2_x1: 4
+	inv_x2: 4
+	no3_x1: 3
+	sff1_x4: 3
+	o2_x2: 3
+	buf_x2: 2
+	a2_x2: 2
+	na3_x1: 2
+	na2_x1: 2
+	on12_x1: 1
+	noa22_x1: 1
+	o3_x2: 1
+	Total: 28
+Saving critical path in xsch color file 'controller_boog.xsc'...
+End of boog...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file controller_boog
+	--> Drive Standard VHDL file controller_boog
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'controller_boog.vhdl'...
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'controller_boog.vst'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Capacitances on file 'controller_boog.vst'...
+Delays on file 'controller_boog.vst'...2189 ps
+Area on file 'controller_boog.vst'...41250 lamda� (with over-cell routing)
+Details...
+	no2_x1: 4 (9%)
+	inv_x2: 4 (7%)
+	no3_x1: 3 (9%)
+	sff1_x4: 3 (32%)
+	o2_x2: 3 (9%)
+	buf_x2: 2 (4%)
+	a2_x2: 2 (6%)
+	na3_x1: 2 (6%)
+	na2_x1: 2 (4%)
+	on12_x1: 1 (3%)
+	noa22_x1: 1 (3%)
+	o3_x2: 1 (3%)
+	Total: 28
+Worst RC on file 'controller_boog.vst'...78 ps
+Inserting buffers on critical path for file 'controller_final.vst'...4 buffers inserted -> 2131 ps
+Improving RC on critical path for file 'controller_final.vst'...2084 ps
+Improving all RC for file 'controller_final.vst'...
+Worst RC on file 'controller_final.vst'...70 ps
+Area on file 'controller_final.vst'...45500 lamda� (with over-cell routing)
+Details...
+	buf_x2: 6 (13%)
+	no2_x1: 4 (8%)
+	no3_x1: 3 (8%)
+	sff1_x4: 3 (29%)
+	inv_x2: 3 (4%)
+	o2_x2: 3 (8%)
+	a2_x2: 2 (5%)
+	na3_x1: 2 (5%)
+	na2_x1: 2 (4%)
+	on12_x1: 1 (2%)
+	noa22_x1: 1 (3%)
+	o3_x2: 1 (3%)
+	inv_x4: 1 (2%)
+	Total: 32
+Critical path (no warranty)...2084 ps from 'state 0' to 'c_reset_register'
+Saving file 'controller_final.vst'...
+Saving critical path in xsch color file 'controller_final.xsc'...
+End of loon...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file controller_final
+	--> Drive Standard VHDL file controller_final
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'controller_final.vhdl'...
+done
