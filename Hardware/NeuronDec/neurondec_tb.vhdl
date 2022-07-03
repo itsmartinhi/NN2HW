@@ -51,7 +51,7 @@ begin
 		reset <= '0';
 	
 		c_neuron_dec <= '1';
-		tb_count <= "01000";
+		tb_count <= "01001";
 		for i in 0 to 8 loop 
 			run_cycle;
 			tb_count <= std_logic_vector(signed(tb_count) - 1);
@@ -62,7 +62,7 @@ begin
 		tb_count <= std_logic_vector(signed(tb_count) - 1);
 		assert spec_neuron_reset = '1' report "reset not set";
 		run_cycle;
-		assert spec_neuron_index = "1000" report "count didnt got reseted";
+		assert spec_neuron_index = "1001" report "count didnt got reseted";
 		
 		
 		report "tb finished OK";

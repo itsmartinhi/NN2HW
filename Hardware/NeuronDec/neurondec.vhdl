@@ -19,13 +19,13 @@ begin
 	begin
 		if rising_edge(clk) then
 			if reset = '1' then
-				count <= "01000";
+				count <= "01001";
 				out_neuron_index <= "1001";
 			elsif c_neuron_dec = '1' then
-				if count(4) = '1' then 
-					count <= "01000";
+				if count = "00000" then 
+					count <= "01001";
 					out_neuron_reset <= '1';
-					out_neuron_index <= "1001";
+					out_neuron_index <= "0000";
 				else 
 					out_neuron_index <= count(3 downto 0);
 					out_neuron_reset <= '0';

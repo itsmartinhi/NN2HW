@@ -1,61 +1,49 @@
-N:a2_x2_2_sig:-1:4300 ps
-N:a2_x2_3_sig:-1:362 ps
-N:a2_x2_4_sig:-1:2574 ps
-N:a2_x2_5_sig:-1:5006 ps
-N:a2_x2_6_sig:-1:5812 ps
-N:a2_x2_7_sig:-1:8976 ps
-N:a2_x2_8_sig:-1:10083 ps
-N:a2_x2_9_sig:-1:10448 ps
-N:a2_x2_sig:-1:2963 ps
-N:a3_x2_2_sig:-1:6971 ps
-N:a3_x2_3_sig:-1:8043 ps
-N:a3_x2_4_sig:-1:7967 ps
-N:a3_x2_sig:-1:6436 ps
-N:an12_x1_2_sig:-1:3409 ps
-N:an12_x1_3_sig:-1:3769 ps
-N:an12_x1_4_sig:-1:4546 ps
-N:an12_x1_5_sig:-1:6082 ps
-N:an12_x1_6_sig:-1:7486 ps
-N:an12_x1_7_sig:-1:1315 ps
-N:an12_x1_sig:-1:2140 ps
-N:ao22_x2_2_sig:-1:6696 ps
-N:ao22_x2_3_sig:-1:1042 ps
-N:ao22_x2_sig:-1:1042 ps
-N:ao2o22_x2_2_sig:-1:2621 ps
-N:ao2o22_x2_3_sig:-1:4250 ps
-N:ao2o22_x2_4_sig:-1:8655 ps
-N:ao2o22_x2_sig:-1:1883 ps
-N:aux11:-1:6763 ps
-N:aux13:-1:7835 ps
-N:aux14:-1:7910 ps
-N:aux15:-1:8652 ps
-N:aux17:-1:9254 ps
-N:aux20:-1:9759 ps
-N:aux22:-1:9901 ps
-N:aux26:-1:800 ps
-N:aux28:-1:1564 ps
-N:aux3:-1:3040 ps
-N:aux30:-1:981 ps
-N:aux31:-1:981 ps
-N:aux32:-1:981 ps
-N:aux33:-1:981 ps
-N:aux34:-1:984 ps
-N:aux36:-1:984 ps
-N:aux40:-1:776 ps
-N:aux42:-1:776 ps
-N:aux44:-1:778 ps
-N:aux45:-1:918 ps
-N:aux47:-1:917 ps
-N:aux49:-1:934 ps
-N:aux50:-1:917 ps
-N:aux52:-1:919 ps
-N:aux53:-1:1723 ps
-N:aux54:-1:3352 ps
-N:aux55:-1:4129 ps
-N:aux56:-1:7069 ps
-N:aux7:-1:5713 ps
-N:aux9:-1:6228 ps
+N:a2_x2_10_sig:-1:5633 ps
+N:a2_x2_11_sig:-1:6961 ps
+N:a2_x2_12_sig:-1:7730 ps
+N:a2_x2_13_sig:-1:7982 ps
+N:a2_x2_14_sig:-1:8265 ps
+N:a2_x2_15_sig:-1:8517 ps
+N:a2_x2_16_sig:-1:10861 ps
+N:a2_x2_17_sig:-1:2700 ps
+N:a2_x2_2_sig:-1:4866 ps
+N:a2_x2_3_sig:-1:6202 ps
+N:a2_x2_4_sig:-1:344 ps
+N:a2_x2_5_sig:-1:2129 ps
+N:a2_x2_6_sig:-1:2684 ps
+N:a2_x2_7_sig:-1:3460 ps
+N:a2_x2_8_sig:-1:3988 ps
+N:a2_x2_9_sig:-1:4240 ps
+N:a2_x2_sig:-1:1925 ps
+N:a3_x2_2_sig:-1:6723 ps
+N:a3_x2_3_sig:-1:9552 ps
+N:a3_x2_sig:-1:5730 ps
+N:a4_x2_sig:-1:1042 ps
+N:an12_x1_2_sig:-1:10463 ps
+N:an12_x1_sig:-1:2569 ps
+N:ao22_x2_2_sig:-1:4729 ps
+N:ao22_x2_3_sig:-1:7699 ps
+N:ao22_x2_4_sig:-1:9006 ps
+N:ao22_x2_5_sig:-1:9466 ps
+N:ao22_x2_6_sig:-1:9836 ps
+N:ao22_x2_7_sig:-1:10590 ps
+N:ao22_x2_sig:-1:3063 ps
+N:ao2o22_x2_sig:-1:3008 ps
+N:aux0:-1:325 ps
+N:aux21:-1:9499 ps
+N:aux27:-1:2748 ps
+N:aux28:-1:2748 ps
+N:aux29:-1:954 ps
+N:aux30:-1:1287 ps
+N:aux32:-1:1289 ps
+N:aux33:-1:1287 ps
+N:aux34:-1:2748 ps
+N:aux37:-1:2742 ps
+N:aux41:-1:937 ps
+N:aux42:-1:1013 ps
+N:aux6:-1:969 ps
 N:c_nreg:-1:0 ps
+N:c_reset_reg:-1:0 ps
 N:clk:-1:0 ps
 N:in_nreg_val 0:-1:0 ps
 N:in_nreg_val 1:-1:0 ps
@@ -69,609 +57,731 @@ N:in_nreg_val 8:-1:0 ps
 N:in_nreg_val 9:-1:0 ps
 N:in_nreg_val 10:-1:0 ps
 N:in_nreg_val 11:-1:0 ps
-N:inv_x2_10_sig:-1:11016 ps
-N:inv_x2_11_sig:-1:1698 ps
-N:inv_x2_12_sig:-1:1116 ps
-N:inv_x2_13_sig:-1:1116 ps
-N:inv_x2_14_sig:-1:1116 ps
-N:inv_x2_15_sig:-1:1116 ps
-N:inv_x2_16_sig:-1:1118 ps
-N:inv_x2_17_sig:-1:1118 ps
+N:in_nreg_val 12:-1:0 ps
+N:inv_x2_10_sig:-1:2882 ps
+N:inv_x2_11_sig:-1:1421 ps
+N:inv_x2_12_sig:-1:1430 ps
+N:inv_x2_13_sig:-1:1427 ps
+N:inv_x2_14_sig:-1:2882 ps
 N:inv_x2_2_sig:-1:144 ps
-N:inv_x2_3_sig:-1:912 ps
-N:inv_x2_4_sig:-1:912 ps
-N:inv_x2_5_sig:-1:914 ps
-N:inv_x2_6_sig:-1:1037 ps
-N:inv_x2_7_sig:-1:1037 ps
-N:inv_x2_8_sig:-1:1079 ps
-N:inv_x2_9_sig:-1:1037 ps
+N:inv_x2_3_sig:-1:144 ps
+N:inv_x2_4_sig:-1:1555 ps
+N:inv_x2_5_sig:-1:1561 ps
+N:inv_x2_6_sig:-1:705 ps
+N:inv_x2_7_sig:-1:668 ps
+N:inv_x2_8_sig:-1:2482 ps
+N:inv_x2_9_sig:-1:2882 ps
 N:inv_x2_sig:-1:144 ps
-N:mbk_buf_aux22:-1:10359 ps
-N:mbk_buf_not_aux23:-1:10540 ps
-N:mbk_buf_not_rtlcarry_0 12:-1:7534 ps
-N:mbk_buf_not_rtlcarry_0 13:-1:7888 ps
-N:mbk_buf_not_rtlcarry_0 14:-1:8275 ps
-N:mbk_buf_not_rtlcarry_0 15:-1:8637 ps
-N:mbk_buf_not_rtlcarry_0 16:-1:8992 ps
-N:mbk_buf_not_rtlcarry_0 17:-1:9382 ps
-N:mbk_buf_not_rtlcarry_0 18:-1:9744 ps
-N:mbk_buf_not_rtlcarry_0 19:-1:10109 ps
-N:mbk_buf_reg_nreg 0:-1:985 ps
-N:mbk_buf_rtlcarry_0 1:-1:1297 ps
-N:mbk_buf_rtlcarry_0 2:-1:1832 ps
-N:mbk_buf_rtlcarry_0 3:-1:2366 ps
-N:mbk_buf_rtlcarry_0 4:-1:2926 ps
-N:mbk_buf_rtlcarry_0 5:-1:3703 ps
-N:mbk_buf_rtlcarry_0 6:-1:4263 ps
-N:mbk_buf_rtlcarry_0 7:-1:5040 ps
-N:mbk_buf_rtlcarry_0 8:-1:5574 ps
-N:mbk_buf_rtlcarry_0 9:-1:6109 ps
-N:mbk_buf_rtlcarry_0 10:-1:6643 ps
-N:mbk_buf_rtlcarry_0 11:-1:7181 ps
-N:mbk_buf_rtlcarry_0 12:-1:0 ps
-N:mbk_buf_rtlcarry_0 13:-1:7757 ps
-N:na2_x1_2_sig:-1:646 ps
-N:na2_x1_3_sig:-1:646 ps
-N:na2_x1_4_sig:-1:1009 ps
-N:na2_x1_5_sig:-1:646 ps
-N:na2_x1_6_sig:-1:646 ps
-N:na2_x1_7_sig:-1:1009 ps
-N:na2_x1_8_sig:-1:1009 ps
-N:na2_x1_sig:-1:9460 ps
-N:na3_x1_2_sig:-1:3085 ps
-N:na3_x1_3_sig:-1:9010 ps
-N:na3_x1_4_sig:-1:8562 ps
-N:na3_x1_5_sig:-1:10126 ps
-N:na3_x1_6_sig:-1:9278 ps
-N:na3_x1_7_sig:-1:10117 ps
-N:na3_x1_8_sig:-1:9669 ps
-N:na3_x1_9_sig:-1:11154 ps
-N:na3_x1_sig:-1:3533 ps
-N:nao22_x1_2_sig:-1:6709 ps
-N:nao22_x1_3_sig:-1:7244 ps
-N:nao22_x1_4_sig:-1:8316 ps
-N:nao22_x1_5_sig:-1:8240 ps
-N:nao22_x1_6_sig:-1:10395 ps
-N:nao22_x1_sig:-1:10074 ps
-N:no2_x1_10_sig:-1:8726 ps
-N:no2_x1_11_sig:-1:8140 ps
-N:no2_x1_12_sig:-1:9516 ps
-N:no2_x1_13_sig:-1:10623 ps
-N:no2_x1_14_sig:-1:10945 ps
-N:no2_x1_15_sig:-1:2733 ps
-N:no2_x1_16_sig:-1:5165 ps
-N:no2_x1_17_sig:-1:5715 ps
-N:no2_x1_18_sig:-1:9135 ps
-N:no2_x1_19_sig:-1:10242 ps
-N:no2_x1_2_sig:-1:2715 ps
-N:no2_x1_3_sig:-1:3115 ps
-N:no2_x1_4_sig:-1:3244 ps
-N:no2_x1_5_sig:-1:4344 ps
-N:no2_x1_6_sig:-1:5121 ps
-N:no2_x1_7_sig:-1:5546 ps
-N:no2_x1_8_sig:-1:5918 ps
-N:no2_x1_9_sig:-1:8061 ps
-N:no2_x1_sig:-1:1560 ps
-N:no3_x1_2_sig:-1:5325 ps
-N:no3_x1_3_sig:-1:9295 ps
-N:no3_x1_4_sig:-1:10402 ps
-N:no3_x1_5_sig:-1:10683 ps
-N:no3_x1_6_sig:-1:10771 ps
-N:no3_x1_sig:-1:2894 ps
-N:not_aux0:-1:2235 ps
-N:not_aux1:-1:2529 ps
-N:not_aux10:-1:6538 ps
-N:not_aux12:-1:7610 ps
-N:not_aux16:-1:8930 ps
-N:not_aux19:-1:9854 ps
-N:not_aux2:-1:2798 ps
-N:not_aux21:-1:10037 ps
-N:not_aux23:-1:10126 ps
-N:not_aux25:-1:10882 ps
-N:not_aux26:-1:1166 ps
-N:not_aux27:-1:1163 ps
-N:not_aux29:-1:1163 ps
-N:not_aux35:-1:1163 ps
-N:not_aux37:-1:1163 ps
-N:not_aux38:-1:1163 ps
-N:not_aux39:-1:782 ps
-N:not_aux4:-1:4667 ps
-N:not_aux41:-1:782 ps
-N:not_aux43:-1:784 ps
-N:not_aux46:-1:905 ps
-N:not_aux48:-1:905 ps
-N:not_aux5:-1:4960 ps
-N:not_aux51:-1:905 ps
-N:not_aux6:-1:5472 ps
-N:not_aux8:-1:6003 ps
-N:not_c_nreg:-1:736 ps
-N:not_reg_nreg 3:-1:700 ps
-N:not_reg_nreg 4:-1:709 ps
+N:mbk_buf_not_aux24:-1:11193 ps
+N:mbk_buf_not_reg_nreg 0:-1:1090 ps
+N:mbk_buf_not_rtlcarry_0 13:-1:8389 ps
+N:mbk_buf_not_rtlcarry_0 14:-1:8759 ps
+N:mbk_buf_not_rtlcarry_0 15:-1:9121 ps
+N:mbk_buf_not_rtlcarry_0 16:-1:9513 ps
+N:mbk_buf_not_rtlcarry_0 17:-1:9886 ps
+N:mbk_buf_not_rtlcarry_0 18:-1:10263 ps
+N:mbk_buf_reg_nreg 0:-1:962 ps
+N:mbk_buf_rtlcarry_0 1:-1:1328 ps
+N:mbk_buf_rtlcarry_0 2:-1:1888 ps
+N:mbk_buf_rtlcarry_0 3:-1:2665 ps
+N:mbk_buf_rtlcarry_0 4:-1:3220 ps
+N:mbk_buf_rtlcarry_0 5:-1:3738 ps
+N:mbk_buf_rtlcarry_0 6:-1:4289 ps
+N:mbk_buf_rtlcarry_0 7:-1:4829 ps
+N:mbk_buf_rtlcarry_0 8:-1:5605 ps
+N:mbk_buf_rtlcarry_0 9:-1:6166 ps
+N:mbk_buf_rtlcarry_0 10:-1:6963 ps
+N:mbk_buf_rtlcarry_0 11:-1:7497 ps
+N:mbk_buf_rtlcarry_0 12:-1:8015 ps
+N:na2_x1_10_sig:-1:8139 ps
+N:na2_x1_11_sig:-1:8599 ps
+N:na2_x1_12_sig:-1:8969 ps
+N:na2_x1_13_sig:-1:9722 ps
+N:na2_x1_14_sig:-1:10672 ps
+N:na2_x1_2_sig:-1:4155 ps
+N:na2_x1_3_sig:-1:6301 ps
+N:na2_x1_4_sig:-1:9135 ps
+N:na2_x1_5_sig:-1:8652 ps
+N:na2_x1_6_sig:-1:2003 ps
+N:na2_x1_7_sig:-1:3862 ps
+N:na2_x1_8_sig:-1:5437 ps
+N:na2_x1_9_sig:-1:6831 ps
+N:na2_x1_sig:-1:2798 ps
+N:na3_x1_10_sig:-1:3857 ps
+N:na3_x1_11_sig:-1:3408 ps
+N:na3_x1_12_sig:-1:4293 ps
+N:na3_x1_13_sig:-1:4785 ps
+N:na3_x1_14_sig:-1:4980 ps
+N:na3_x1_15_sig:-1:6292 ps
+N:na3_x1_16_sig:-1:7263 ps
+N:na3_x1_17_sig:-1:8130 ps
+N:na3_x1_18_sig:-1:7681 ps
+N:na3_x1_19_sig:-1:8570 ps
+N:na3_x1_20_sig:-1:9043 ps
+N:na3_x1_21_sig:-1:9030 ps
+N:na3_x1_22_sig:-1:9400 ps
+N:na3_x1_23_sig:-1:10154 ps
+N:na3_x1_24_sig:-1:10610 ps
+N:na3_x1_25_sig:-1:10173 ps
+N:na3_x1_26_sig:-1:10987 ps
+N:na3_x1_27_sig:-1:10549 ps
+N:na3_x1_28_sig:-1:10932 ps
+N:na3_x1_29_sig:-1:10525 ps
+N:na3_x1_2_sig:-1:662 ps
+N:na3_x1_30_sig:-1:11512 ps
+N:na3_x1_3_sig:-1:2637 ps
+N:na3_x1_4_sig:-1:8936 ps
+N:na3_x1_5_sig:-1:654 ps
+N:na3_x1_6_sig:-1:654 ps
+N:na3_x1_7_sig:-1:2627 ps
+N:na3_x1_8_sig:-1:3594 ps
+N:na3_x1_9_sig:-1:3020 ps
+N:na3_x1_sig:-1:662 ps
+N:na4_x1_2_sig:-1:3727 ps
+N:na4_x1_3_sig:-1:4811 ps
+N:na4_x1_4_sig:-1:5657 ps
+N:na4_x1_5_sig:-1:7470 ps
+N:na4_x1_6_sig:-1:8004 ps
+N:na4_x1_7_sig:-1:1060 ps
+N:na4_x1_8_sig:-1:4316 ps
+N:na4_x1_sig:-1:2153 ps
+N:nao22_x1_2_sig:-1:8426 ps
+N:nao22_x1_3_sig:-1:8961 ps
+N:nao22_x1_4_sig:-1:9329 ps
+N:nao22_x1_5_sig:-1:11470 ps
+N:nao22_x1_6_sig:-1:10527 ps
+N:nao22_x1_sig:-1:4684 ps
+N:no2_x1_2_sig:-1:9010 ps
+N:no2_x1_3_sig:-1:9364 ps
+N:no2_x1_4_sig:-1:9763 ps
+N:no2_x1_5_sig:-1:10137 ps
+N:no2_x1_6_sig:-1:10513 ps
+N:no2_x1_7_sig:-1:2594 ps
+N:no2_x1_8_sig:-1:1651 ps
+N:no2_x1_9_sig:-1:1651 ps
+N:no2_x1_sig:-1:8633 ps
+N:no3_x1_10_sig:-1:10850 ps
+N:no3_x1_11_sig:-1:11127 ps
+N:no3_x1_12_sig:-1:4985 ps
+N:no3_x1_13_sig:-1:1002 ps
+N:no3_x1_2_sig:-1:3021 ps
+N:no3_x1_3_sig:-1:3797 ps
+N:no3_x1_4_sig:-1:1308 ps
+N:no3_x1_5_sig:-1:332 ps
+N:no3_x1_6_sig:-1:7298 ps
+N:no3_x1_7_sig:-1:9347 ps
+N:no3_x1_8_sig:-1:10100 ps
+N:no3_x1_9_sig:-1:10474 ps
+N:no3_x1_sig:-1:1409 ps
+N:no4_x1_2_sig:-1:1156 ps
+N:no4_x1_3_sig:-1:1156 ps
+N:no4_x1_4_sig:-1:4872 ps
+N:no4_x1_5_sig:-1:6429 ps
+N:no4_x1_6_sig:-1:1156 ps
+N:no4_x1_7_sig:-1:5717 ps
+N:no4_x1_sig:-1:1171 ps
+N:noa22_x1_sig:-1:5241 ps
+N:not_aux0:-1:1041 ps
+N:not_aux1:-1:2350 ps
+N:not_aux10:-1:6622 ps
+N:not_aux11:-1:7395 ps
+N:not_aux12:-1:7929 ps
+N:not_aux13:-1:8444 ps
+N:not_aux17:-1:8689 ps
+N:not_aux2:-1:1794 ps
+N:not_aux24:-1:10769 ps
+N:not_aux26:-1:11239 ps
+N:not_aux3:-1:2345 ps
+N:not_aux31:-1:4694 ps
+N:not_aux35:-1:1403 ps
+N:not_aux36:-1:1403 ps
+N:not_aux38:-1:1423 ps
+N:not_aux4:-1:3121 ps
+N:not_aux43:-1:1124 ps
+N:not_aux44:-1:1124 ps
+N:not_aux45:-1:10516 ps
+N:not_aux5:-1:3652 ps
+N:not_aux7:-1:5297 ps
+N:not_aux9:-1:6009 ps
+N:not_c_nreg:-1:732 ps
+N:not_c_reset_reg:-1:376 ps
+N:not_in_nreg_val 6:-1:162 ps
+N:not_reg_nreg 0:-1:650 ps
+N:not_reg_nreg 1:-1:725 ps
+N:not_reg_nreg 2:-1:749 ps
+N:not_reg_nreg 3:-1:721 ps
+N:not_reg_nreg 4:-1:713 ps
 N:not_reg_nreg 5:-1:0 ps
-N:not_reg_nreg 6:-1:707 ps
-N:not_reg_nreg 7:-1:704 ps
+N:not_reg_nreg 6:-1:0 ps
+N:not_reg_nreg 7:-1:725 ps
 N:not_reg_nreg 8:-1:0 ps
-N:not_reg_nreg 9:-1:0 ps
-N:not_reg_nreg 10:-1:0 ps
-N:not_reg_nreg 11:-1:0 ps
-N:not_reg_nreg 12:-1:683 ps
-N:not_reg_nreg 13:-1:0 ps
-N:not_reg_nreg 14:-1:679 ps
-N:not_reg_nreg 15:-1:0 ps
-N:not_reg_nreg 16:-1:679 ps
-N:not_reg_nreg 17:-1:679 ps
-N:not_reg_nreg 18:-1:0 ps
-N:not_reg_nreg 19:-1:724 ps
-N:not_reset:-1:447 ps
-N:not_rtlalc_1 8:-1:681 ps
-N:not_rtlalc_1 9:-1:681 ps
+N:not_reg_nreg 9:-1:749 ps
+N:not_reg_nreg 10:-1:713 ps
+N:not_reg_nreg 11:-1:713 ps
+N:not_reg_nreg 12:-1:0 ps
+N:not_reg_nreg 13:-1:704 ps
+N:not_reg_nreg 14:-1:695 ps
+N:not_reg_nreg 15:-1:683 ps
+N:not_reg_nreg 16:-1:695 ps
+N:not_reg_nreg 17:-1:688 ps
+N:not_reg_nreg 18:-1:688 ps
+N:not_reg_nreg 19:-1:745 ps
+N:not_reset:-1:374 ps
+N:not_rtlalc_1 5:-1:673 ps
+N:not_rtlalc_1 6:-1:0 ps
+N:not_rtlalc_1 7:-1:677 ps
+N:not_rtlalc_1 8:-1:0 ps
+N:not_rtlalc_1 9:-1:0 ps
 N:not_rtlalc_1 10:-1:0 ps
-N:not_rtlalc_1 11:-1:681 ps
-N:not_rtlalc_1 12:-1:681 ps
-N:not_rtlcarry_0 4:-1:2621 ps
-N:not_rtlcarry_0 5:-1:0 ps
-N:not_rtlcarry_0 6:-1:3958 ps
-N:not_rtlcarry_0 7:-1:0 ps
+N:not_rtlalc_1 11:-1:0 ps
+N:not_rtlalc_1 12:-1:0 ps
+N:not_rtlalc_1 13:-1:0 ps
+N:not_rtlalc_1 14:-1:0 ps
+N:not_rtlalc_1 15:-1:0 ps
+N:not_rtlalc_1 16:-1:0 ps
+N:not_rtlalc_1 17:-1:673 ps
+N:not_rtlalc_1 18:-1:673 ps
+N:not_rtlcarry_0 2:-1:1583 ps
+N:not_rtlcarry_0 3:-1:0 ps
+N:not_rtlcarry_0 4:-1:3377 ps
+N:not_rtlcarry_0 5:-1:3957 ps
+N:not_rtlcarry_0 6:-1:4452 ps
+N:not_rtlcarry_0 7:-1:4523 ps
 N:not_rtlcarry_0 8:-1:0 ps
-N:not_rtlcarry_0 9:-1:0 ps
-N:not_rtlcarry_0 10:-1:0 ps
-N:not_rtlcarry_0 11:-1:0 ps
-N:not_rtlcarry_0 12:-1:7082 ps
-N:not_rtlcarry_0 13:-1:7467 ps
-N:not_rtlcarry_0 14:-1:7822 ps
-N:not_rtlcarry_0 15:-1:8198 ps
-N:not_rtlcarry_0 16:-1:8553 ps
-N:not_rtlcarry_0 17:-1:8929 ps
-N:not_rtlcarry_0 18:-1:9304 ps
-N:not_rtlcarry_0 19:-1:9666 ps
-N:nxr2_x1_10_sig:-1:10419 ps
-N:nxr2_x1_11_sig:-1:10741 ps
-N:nxr2_x1_2_sig:-1:2510 ps
-N:nxr2_x1_3_sig:-1:2910 ps
-N:nxr2_x1_4_sig:-1:4139 ps
-N:nxr2_x1_5_sig:-1:4916 ps
-N:nxr2_x1_6_sig:-1:5342 ps
-N:nxr2_x1_7_sig:-1:7856 ps
-N:nxr2_x1_8_sig:-1:8522 ps
-N:nxr2_x1_9_sig:-1:9312 ps
-N:nxr2_x1_sig:-1:1356 ps
-N:o2_x2_2_sig:-1:7073 ps
-N:o2_x2_3_sig:-1:7607 ps
-N:o2_x2_4_sig:-1:8679 ps
-N:o2_x2_5_sig:-1:8603 ps
-N:o2_x2_6_sig:-1:11141 ps
-N:o2_x2_sig:-1:10493 ps
-N:o3_x2_2_sig:-1:6260 ps
-N:o3_x2_3_sig:-1:6485 ps
-N:o3_x2_4_sig:-1:7019 ps
-N:o3_x2_5_sig:-1:8092 ps
-N:o3_x2_6_sig:-1:8015 ps
-N:o3_x2_7_sig:-1:8750 ps
-N:o3_x2_8_sig:-1:9857 ps
-N:o3_x2_sig:-1:3273 ps
-N:oa22_x2_2_sig:-1:3352 ps
-N:oa22_x2_3_sig:-1:5783 ps
-N:oa22_x2_4_sig:-1:9753 ps
-N:oa22_x2_5_sig:-1:10860 ps
-N:oa22_x2_sig:-1:11475 ps
-N:oa2ao222_x2_2_sig:-1:7985 ps
-N:oa2ao222_x2_sig:-1:5045 ps
-N:on12_x1_2_sig:-1:1505 ps
-N:on12_x1_sig:-1:1505 ps
+N:not_rtlcarry_0 9:-1:5860 ps
+N:not_rtlcarry_0 10:-1:7119 ps
+N:not_rtlcarry_0 11:-1:7654 ps
+N:not_rtlcarry_0 12:-1:0 ps
+N:not_rtlcarry_0 13:-1:7909 ps
+N:not_rtlcarry_0 14:-1:8286 ps
+N:not_rtlcarry_0 15:-1:8663 ps
+N:not_rtlcarry_0 16:-1:9039 ps
+N:not_rtlcarry_0 17:-1:9416 ps
+N:not_rtlcarry_0 18:-1:9793 ps
+N:not_rtlcarry_0 19:-1:10241 ps
+N:o2_x2_10_sig:-1:9136 ps
+N:o2_x2_11_sig:-1:9889 ps
+N:o2_x2_12_sig:-1:2727 ps
+N:o2_x2_13_sig:-1:2727 ps
+N:o2_x2_2_sig:-1:1113 ps
+N:o2_x2_3_sig:-1:1113 ps
+N:o2_x2_4_sig:-1:2170 ps
+N:o2_x2_5_sig:-1:4029 ps
+N:o2_x2_6_sig:-1:2727 ps
+N:o2_x2_7_sig:-1:6999 ps
+N:o2_x2_8_sig:-1:8306 ps
+N:o2_x2_9_sig:-1:8766 ps
+N:o2_x2_sig:-1:1113 ps
+N:o3_x2_10_sig:-1:10992 ps
+N:o3_x2_11_sig:-1:3333 ps
+N:o3_x2_12_sig:-1:3596 ps
+N:o3_x2_13_sig:-1:6200 ps
+N:o3_x2_14_sig:-1:7869 ps
+N:o3_x2_15_sig:-1:9999 ps
+N:o3_x2_16_sig:-1:10338 ps
+N:o3_x2_17_sig:-1:10715 ps
+N:o3_x2_2_sig:-1:4464 ps
+N:o3_x2_3_sig:-1:6102 ps
+N:o3_x2_4_sig:-1:8206 ps
+N:o3_x2_5_sig:-1:8741 ps
+N:o3_x2_6_sig:-1:9109 ps
+N:o3_x2_7_sig:-1:9234 ps
+N:o3_x2_8_sig:-1:9834 ps
+N:o3_x2_9_sig:-1:9987 ps
+N:o3_x2_sig:-1:2598 ps
+N:o4_x2_2_sig:-1:7640 ps
+N:o4_x2_3_sig:-1:8174 ps
+N:o4_x2_4_sig:-1:10407 ps
+N:o4_x2_5_sig:-1:10784 ps
+N:o4_x2_6_sig:-1:4524 ps
+N:o4_x2_sig:-1:3897 ps
+N:oa22_x2_2_sig:-1:4257 ps
+N:oa22_x2_3_sig:-1:5687 ps
+N:oa22_x2_4_sig:-1:6889 ps
+N:oa22_x2_5_sig:-1:7757 ps
+N:oa22_x2_6_sig:-1:7183 ps
+N:oa22_x2_sig:-1:3480 ps
+N:oa2a22_x2_sig:-1:4692 ps
+N:oa2ao222_x2_sig:-1:4504 ps
+N:on12_x1_10_sig:-1:2689 ps
+N:on12_x1_11_sig:-1:1247 ps
+N:on12_x1_12_sig:-1:2689 ps
+N:on12_x1_13_sig:-1:8782 ps
+N:on12_x1_14_sig:-1:2689 ps
+N:on12_x1_15_sig:-1:2689 ps
+N:on12_x1_16_sig:-1:2689 ps
+N:on12_x1_2_sig:-1:5201 ps
+N:on12_x1_3_sig:-1:9676 ps
+N:on12_x1_4_sig:-1:10032 ps
+N:on12_x1_5_sig:-1:10429 ps
+N:on12_x1_6_sig:-1:10802 ps
+N:on12_x1_7_sig:-1:11179 ps
+N:on12_x1_8_sig:-1:11456 ps
+N:on12_x1_9_sig:-1:2689 ps
+N:on12_x1_sig:-1:2836 ps
 N:out_nreg_val 0:-1:911 ps
 N:out_nreg_val 1:-1:911 ps
-N:out_nreg_val 2:-1:921 ps
+N:out_nreg_val 2:-1:922 ps
 N:out_nreg_val 3:-1:922 ps
 N:out_nreg_val 4:-1:911 ps
-N:out_nreg_val 5:-1:921 ps
-N:out_nreg_val 6:-1:921 ps
-N:out_nreg_val 7:-1:911 ps
-N:out_nreg_val 8:-1:915 ps
-N:out_nreg_val 9:-1:915 ps
-N:out_nreg_val 10:-1:921 ps
-N:out_nreg_val 11:-1:915 ps
-N:out_nreg_val 12:-1:915 ps
+N:out_nreg_val 5:-1:915 ps
+N:out_nreg_val 6:-1:931 ps
+N:out_nreg_val 7:-1:915 ps
+N:out_nreg_val 8:-1:919 ps
+N:out_nreg_val 9:-1:911 ps
+N:out_nreg_val 10:-1:922 ps
+N:out_nreg_val 11:-1:911 ps
+N:out_nreg_val 12:-1:914 ps
 N:out_nreg_val 13:-1:911 ps
-N:out_nreg_val 14:-1:921 ps
-N:out_nreg_val 15:-1:921 ps
-N:out_nreg_val 16:-1:914 ps
-N:out_nreg_val 17:-1:921 ps
-N:out_nreg_val 18:-1:921 ps
-N:out_nreg_val 19:-1:921 ps
+N:out_nreg_val 14:-1:911 ps
+N:out_nreg_val 15:-1:912 ps
+N:out_nreg_val 16:-1:911 ps
+N:out_nreg_val 17:-1:915 ps
+N:out_nreg_val 18:-1:915 ps
+N:out_nreg_val 19:-1:922 ps
 N:out_nreg_val 20:-1:914 ps
-N:reg_nreg 0:-1:514 ps
-N:reg_nreg 1:-1:555 ps
-N:reg_nreg 2:-1:553 ps
-N:reg_nreg 3:-1:542 ps
-N:reg_nreg 4:-1:547 ps
+N:reg_nreg 0:-1:527 ps
+N:reg_nreg 1:-1:528 ps
+N:reg_nreg 2:-1:520 ps
+N:reg_nreg 3:-1:538 ps
+N:reg_nreg 4:-1:537 ps
 N:reg_nreg 5:-1:555 ps
-N:reg_nreg 6:-1:544 ps
-N:reg_nreg 7:-1:542 ps
-N:reg_nreg 8:-1:538 ps
-N:reg_nreg 9:-1:538 ps
-N:reg_nreg 10:-1:555 ps
-N:reg_nreg 11:-1:539 ps
-N:reg_nreg 12:-1:518 ps
-N:reg_nreg 13:-1:545 ps
-N:reg_nreg 14:-1:518 ps
-N:reg_nreg 15:-1:543 ps
-N:reg_nreg 16:-1:518 ps
-N:reg_nreg 17:-1:518 ps
-N:reg_nreg 18:-1:543 ps
-N:reg_nreg 19:-1:538 ps
-N:reg_nreg 20:-1:516 ps
+N:reg_nreg 6:-1:565 ps
+N:reg_nreg 7:-1:520 ps
+N:reg_nreg 8:-1:543 ps
+N:reg_nreg 9:-1:520 ps
+N:reg_nreg 10:-1:537 ps
+N:reg_nreg 11:-1:537 ps
+N:reg_nreg 12:-1:548 ps
+N:reg_nreg 13:-1:527 ps
+N:reg_nreg 14:-1:535 ps
+N:reg_nreg 15:-1:528 ps
+N:reg_nreg 16:-1:535 ps
+N:reg_nreg 17:-1:527 ps
+N:reg_nreg 18:-1:527 ps
+N:reg_nreg 19:-1:540 ps
+N:reg_nreg 20:-1:527 ps
 N:reset:-1:0 ps
 N:rtlalc_1 0:-1:511 ps
 N:rtlalc_1 1:-1:511 ps
-N:rtlalc_1 2:-1:521 ps
+N:rtlalc_1 2:-1:522 ps
 N:rtlalc_1 3:-1:522 ps
 N:rtlalc_1 4:-1:511 ps
-N:rtlalc_1 5:-1:521 ps
-N:rtlalc_1 6:-1:521 ps
-N:rtlalc_1 7:-1:511 ps
-N:rtlalc_1 8:-1:515 ps
-N:rtlalc_1 9:-1:515 ps
-N:rtlalc_1 10:-1:521 ps
-N:rtlalc_1 11:-1:515 ps
-N:rtlalc_1 12:-1:515 ps
+N:rtlalc_1 5:-1:515 ps
+N:rtlalc_1 6:-1:531 ps
+N:rtlalc_1 7:-1:515 ps
+N:rtlalc_1 8:-1:519 ps
+N:rtlalc_1 9:-1:511 ps
+N:rtlalc_1 10:-1:522 ps
+N:rtlalc_1 11:-1:511 ps
+N:rtlalc_1 12:-1:514 ps
 N:rtlalc_1 13:-1:511 ps
-N:rtlalc_1 14:-1:521 ps
-N:rtlalc_1 15:-1:521 ps
-N:rtlalc_1 16:-1:514 ps
-N:rtlalc_1 17:-1:521 ps
-N:rtlalc_1 18:-1:521 ps
-N:rtlalc_1 19:-1:521 ps
+N:rtlalc_1 14:-1:511 ps
+N:rtlalc_1 15:-1:512 ps
+N:rtlalc_1 16:-1:511 ps
+N:rtlalc_1 17:-1:515 ps
+N:rtlalc_1 18:-1:515 ps
+N:rtlalc_1 19:-1:522 ps
 N:rtlalc_1 20:-1:514 ps
-N:rtlcarry_0 1:-1:861 ps
-N:rtlcarry_0 2:-1:1396 ps
-N:rtlcarry_0 3:-1:1930 ps
-N:rtlcarry_0 4:-1:2490 ps
-N:rtlcarry_0 5:-1:3267 ps
-N:rtlcarry_0 6:-1:3827 ps
-N:rtlcarry_0 7:-1:4604 ps
-N:rtlcarry_0 8:-1:5138 ps
-N:rtlcarry_0 9:-1:5673 ps
-N:rtlcarry_0 10:-1:6207 ps
-N:rtlcarry_0 11:-1:6745 ps
-N:rtlcarry_0 12:-1:0 ps
-N:rtlcarry_0 13:-1:7321 ps
-N:xr2_x1_2_sig:-1:2082 ps
-N:xr2_x1_3_sig:-1:3711 ps
-N:xr2_x1_4_sig:-1:4497 ps
-N:xr2_x1_5_sig:-1:7437 ps
-N:xr2_x1_6_sig:-1:8116 ps
-N:xr2_x1_sig:-1:1345 ps
-B:mbk_buf_not_aux23:-1:10540 ps
-B:mbk_buf_not_rtlcarry_0 13:-1:7888 ps
-B:mbk_buf_not_rtlcarry_0 18:-1:9744 ps
-B:mbk_buf_not_rtlcarry_0 15:-1:8637 ps
-B:mbk_buf_rtlcarry_0 10:-1:6643 ps
-B:mbk_buf_rtlcarry_0 9:-1:6109 ps
-B:mbk_buf_rtlcarry_0 8:-1:5574 ps
-B:mbk_buf_rtlcarry_0 7:-1:5040 ps
-B:mbk_buf_rtlcarry_0 5:-1:3703 ps
-B:mbk_buf_rtlcarry_0 3:-1:2366 ps
-B:mbk_buf_rtlcarry_0 2:-1:1832 ps
-B:mbk_buf_rtlcarry_0 1:-1:1297 ps
-B:mbk_buf_not_rtlcarry_0 16:-1:8992 ps
-B:mbk_buf_rtlcarry_0 13:-1:7757 ps
-B:mbk_buf_rtlcarry_0 6:-1:4263 ps
-B:mbk_buf_rtlcarry_0 4:-1:2926 ps
-B:mbk_buf_rtlcarry_0 11:-1:7181 ps
-B:mbk_buf_not_rtlcarry_0 19:-1:10109 ps
-B:mbk_buf_not_rtlcarry_0 17:-1:9382 ps
-B:mbk_buf_not_rtlcarry_0 14:-1:8275 ps
-B:mbk_buf_not_rtlcarry_0 12:-1:7534 ps
-B:mbk_buf_aux22:-1:10359 ps
-B:mbk_buf_reg_nreg 0:-1:985 ps
+N:rtlcarry_0 1:-1:893 ps
+N:rtlcarry_0 2:-1:1453 ps
+N:rtlcarry_0 3:-1:2229 ps
+N:rtlcarry_0 4:-1:2764 ps
+N:rtlcarry_0 5:-1:3298 ps
+N:rtlcarry_0 6:-1:3833 ps
+N:rtlcarry_0 7:-1:4393 ps
+N:rtlcarry_0 8:-1:5170 ps
+N:rtlcarry_0 9:-1:5730 ps
+N:rtlcarry_0 10:-1:6506 ps
+N:rtlcarry_0 11:-1:7041 ps
+N:rtlcarry_0 12:-1:7579 ps
+N:xr2_x1_2_sig:-1:1322 ps
+N:xr2_x1_sig:-1:944 ps
+B:mbk_buf_not_aux24:-1:11193 ps
+B:mbk_buf_rtlcarry_0 8:-1:5605 ps
+B:mbk_buf_rtlcarry_0 3:-1:2665 ps
+B:mbk_buf_rtlcarry_0 1:-1:1328 ps
+B:mbk_buf_rtlcarry_0 9:-1:6166 ps
+B:mbk_buf_rtlcarry_0 7:-1:4829 ps
+B:mbk_buf_rtlcarry_0 2:-1:1888 ps
+B:mbk_buf_reg_nreg 0:-1:962 ps
+B:mbk_buf_rtlcarry_0 12:-1:8015 ps
+B:mbk_buf_rtlcarry_0 5:-1:3738 ps
+B:mbk_buf_not_reg_nreg 0:-1:1090 ps
+B:mbk_buf_rtlcarry_0 11:-1:7497 ps
+B:mbk_buf_rtlcarry_0 10:-1:6963 ps
+B:mbk_buf_rtlcarry_0 6:-1:4289 ps
+B:mbk_buf_rtlcarry_0 4:-1:3220 ps
+B:mbk_buf_not_rtlcarry_0 15:-1:9121 ps
+B:mbk_buf_not_rtlcarry_0 18:-1:10263 ps
+B:mbk_buf_not_rtlcarry_0 17:-1:9886 ps
+B:mbk_buf_not_rtlcarry_0 16:-1:9513 ps
+B:mbk_buf_not_rtlcarry_0 14:-1:8759 ps
+B:mbk_buf_not_rtlcarry_0 13:-1:8389 ps
 B:out_nreg_val_20_ins:-1:914 ps
-B:out_nreg_val_19_ins:-1:921 ps
-B:out_nreg_val_18_ins:-1:921 ps
-B:out_nreg_val_17_ins:-1:921 ps
-B:out_nreg_val_16_ins:-1:914 ps
-B:out_nreg_val_15_ins:-1:921 ps
-B:out_nreg_val_14_ins:-1:921 ps
+B:out_nreg_val_19_ins:-1:922 ps
+B:out_nreg_val_18_ins:-1:915 ps
+B:out_nreg_val_17_ins:-1:915 ps
+B:out_nreg_val_16_ins:-1:911 ps
+B:out_nreg_val_15_ins:-1:912 ps
+B:out_nreg_val_14_ins:-1:911 ps
 B:out_nreg_val_13_ins:-1:911 ps
-B:out_nreg_val_12_ins:-1:915 ps
-B:out_nreg_val_11_ins:-1:915 ps
-B:out_nreg_val_10_ins:-1:921 ps
-B:out_nreg_val_9_ins:-1:915 ps
-B:out_nreg_val_8_ins:-1:915 ps
-B:out_nreg_val_7_ins:-1:911 ps
-B:out_nreg_val_6_ins:-1:921 ps
-B:out_nreg_val_5_ins:-1:921 ps
+B:out_nreg_val_12_ins:-1:914 ps
+B:out_nreg_val_11_ins:-1:911 ps
+B:out_nreg_val_10_ins:-1:922 ps
+B:out_nreg_val_9_ins:-1:911 ps
+B:out_nreg_val_8_ins:-1:919 ps
+B:out_nreg_val_7_ins:-1:915 ps
+B:out_nreg_val_6_ins:-1:931 ps
+B:out_nreg_val_5_ins:-1:915 ps
 B:out_nreg_val_4_ins:-1:911 ps
 B:out_nreg_val_3_ins:-1:922 ps
-B:out_nreg_val_2_ins:-1:921 ps
+B:out_nreg_val_2_ins:-1:922 ps
 B:out_nreg_val_1_ins:-1:911 ps
 B:out_nreg_val_0_ins:-1:911 ps
 B:rtlalc_1_20_ins:-1:514 ps
-B:na3_x1_9_ins:-1:11154 ps
-B:on12_x1_2_ins:-1:1505 ps
-B:nao22_x1_6_ins:-1:10395 ps
-B:an12_x1_7_ins:-1:1315 ps
-B:rtlalc_1_19_ins:-1:521 ps
-B:o2_x2_6_ins:-1:11141 ps
-B:no3_x1_6_ins:-1:10771 ps
-B:a2_x2_9_ins:-1:10448 ps
-B:no3_x1_5_ins:-1:10683 ps
-B:rtlalc_1_18_ins:-1:521 ps
-B:oa22_x2_5_ins:-1:10860 ps
-B:no2_x1_19_ins:-1:10242 ps
-B:no3_x1_4_ins:-1:10402 ps
-B:a2_x2_8_ins:-1:10083 ps
-B:rtlalc_1_17_ins:-1:521 ps
-B:na3_x1_7_ins:-1:10117 ps
-B:na2_x1_8_ins:-1:1009 ps
-B:na3_x1_8_ins:-1:9669 ps
-B:o3_x2_8_ins:-1:9857 ps
-B:inv_x2_17_ins:-1:1118 ps
-B:rtlalc_1_16_ins:-1:514 ps
-B:na3_x1_5_ins:-1:10126 ps
-B:on12_x1_ins:-1:1505 ps
-B:na3_x1_6_ins:-1:9278 ps
-B:rtlalc_1_15_ins:-1:521 ps
-B:oa22_x2_4_ins:-1:9753 ps
-B:no2_x1_18_ins:-1:9135 ps
-B:no3_x1_3_ins:-1:9295 ps
-B:a2_x2_7_ins:-1:8976 ps
-B:rtlalc_1_14_ins:-1:521 ps
-B:na3_x1_3_ins:-1:9010 ps
-B:na2_x1_7_ins:-1:1009 ps
-B:na3_x1_4_ins:-1:8562 ps
-B:o3_x2_7_ins:-1:8750 ps
-B:inv_x2_16_ins:-1:1118 ps
+B:na3_x1_30_ins:32:11512 ps
+B:on12_x1_16_ins:-1:2689 ps
+B:nao22_x1_6_ins:-1:10527 ps
+B:a2_x2_17_ins:-1:2700 ps
+B:rtlalc_1_19_ins:-1:522 ps
+B:na3_x1_28_ins:-1:10932 ps
+B:on12_x1_15_ins:-1:2689 ps
+B:na3_x1_29_ins:-1:10525 ps
+B:na2_x1_14_ins:-1:10672 ps
+B:an12_x1_2_ins:-1:10463 ps
+B:rtlalc_1_18_ins:-1:515 ps
+B:na3_x1_26_ins:-1:10987 ps
+B:o3_x2_17_ins:-1:10715 ps
+B:na3_x1_27_ins:-1:10549 ps
+B:no2_x1_9_ins:-1:1651 ps
+B:o2_x2_13_ins:-1:2727 ps
+B:rtlalc_1_17_ins:-1:515 ps
+B:na3_x1_24_ins:-1:10610 ps
+B:o3_x2_16_ins:-1:10338 ps
+B:na3_x1_25_ins:-1:10173 ps
+B:no2_x1_8_ins:-1:1651 ps
+B:o2_x2_12_ins:-1:2727 ps
+B:rtlalc_1_16_ins:-1:511 ps
+B:ao22_x2_7_ins:-1:10590 ps
+B:na3_x1_23_ins:-1:10154 ps
+B:na2_x1_13_ins:-1:9722 ps
+B:o2_x2_11_ins:-1:9889 ps
+B:rtlalc_1_15_ins:-1:512 ps
+B:o3_x2_15_ins:-1:9999 ps
+B:an12_x1_ins:-1:2569 ps
+B:a3_x2_3_ins:-1:9552 ps
+B:no3_x1_13_ins:-1:1002 ps
+B:rtlalc_1_14_ins:-1:511 ps
+B:ao22_x2_6_ins:-1:9836 ps
+B:na3_x1_22_ins:-1:9400 ps
+B:na2_x1_12_ins:-1:8969 ps
+B:o2_x2_10_ins:-1:9136 ps
 B:rtlalc_1_13_ins:-1:511 ps
-B:ao2o22_x2_4_ins:-1:8655 ps
-B:na2_x1_6_ins:-1:646 ps
-B:xr2_x1_6_ins:-1:8116 ps
-B:rtlalc_1_12_ins:-1:515 ps
-B:o2_x2_5_ins:-1:8603 ps
-B:a3_x2_4_ins:-1:7967 ps
-B:nao22_x1_5_ins:-1:8240 ps
-B:o3_x2_6_ins:-1:8015 ps
-B:inv_x2_15_ins:-1:1116 ps
-B:rtlalc_1_11_ins:-1:515 ps
-B:o2_x2_4_ins:-1:8679 ps
-B:a3_x2_3_ins:-1:8043 ps
-B:nao22_x1_4_ins:-1:8316 ps
-B:o3_x2_5_ins:-1:8092 ps
-B:inv_x2_14_ins:-1:1116 ps
-B:rtlalc_1_10_ins:-1:521 ps
-B:oa2ao222_x2_2_ins:-1:7985 ps
-B:xr2_x1_5_ins:-1:7437 ps
-B:ao22_x2_3_ins:-1:1042 ps
-B:rtlalc_1_9_ins:-1:515 ps
-B:o2_x2_3_ins:-1:7607 ps
-B:a3_x2_2_ins:-1:6971 ps
-B:nao22_x1_3_ins:-1:7244 ps
-B:o3_x2_4_ins:-1:7019 ps
-B:inv_x2_13_ins:-1:1116 ps
-B:rtlalc_1_8_ins:-1:515 ps
-B:o2_x2_2_ins:-1:7073 ps
-B:a3_x2_ins:-1:6436 ps
-B:nao22_x1_2_ins:-1:6709 ps
-B:o3_x2_3_ins:-1:6485 ps
-B:inv_x2_12_ins:-1:1116 ps
-B:rtlalc_1_7_ins:-1:511 ps
-B:ao22_x2_2_ins:-1:6696 ps
-B:o3_x2_2_ins:-1:6260 ps
-B:no2_x1_17_ins:-1:5715 ps
-B:a2_x2_6_ins:-1:5812 ps
-B:rtlalc_1_6_ins:-1:521 ps
-B:oa22_x2_3_ins:-1:5783 ps
-B:no2_x1_16_ins:-1:5165 ps
-B:no3_x1_2_ins:-1:5325 ps
-B:a2_x2_5_ins:-1:5006 ps
-B:rtlalc_1_5_ins:-1:521 ps
-B:oa2ao222_x2_ins:-1:5045 ps
-B:xr2_x1_4_ins:-1:4497 ps
-B:ao22_x2_ins:-1:1042 ps
+B:ao22_x2_5_ins:-1:9466 ps
+B:na3_x1_21_ins:-1:9030 ps
+B:na2_x1_11_ins:-1:8599 ps
+B:o2_x2_9_ins:-1:8766 ps
+B:rtlalc_1_12_ins:-1:514 ps
+B:na3_x1_20_ins:-1:9043 ps
+B:on12_x1_14_ins:-1:2689 ps
+B:on12_x1_13_ins:-1:8782 ps
+B:a4_x2_ins:-1:1042 ps
+B:rtlalc_1_11_ins:-1:511 ps
+B:ao22_x2_4_ins:-1:9006 ps
+B:na3_x1_19_ins:-1:8570 ps
+B:na2_x1_10_ins:-1:8139 ps
+B:o2_x2_8_ins:-1:8306 ps
+B:rtlalc_1_10_ins:-1:522 ps
+B:na3_x1_17_ins:-1:8130 ps
+B:on12_x1_12_ins:-1:2689 ps
+B:na3_x1_18_ins:-1:7681 ps
+B:o3_x2_14_ins:-1:7869 ps
+B:inv_x2_14_ins:-1:2882 ps
+B:rtlalc_1_9_ins:-1:511 ps
+B:ao22_x2_3_ins:-1:7699 ps
+B:na3_x1_16_ins:-1:7263 ps
+B:na2_x1_9_ins:-1:6831 ps
+B:o2_x2_7_ins:-1:6999 ps
+B:rtlalc_1_8_ins:-1:519 ps
+B:oa22_x2_6_ins:-1:7183 ps
+B:a3_x2_2_ins:-1:6723 ps
+B:na3_x1_15_ins:-1:6292 ps
+B:on12_x1_11_ins:-1:1247 ps
+B:rtlalc_1_7_ins:-1:515 ps
+B:o3_x2_13_ins:-1:6200 ps
+B:no2_x1_7_ins:-1:2594 ps
+B:a3_x2_ins:-1:5730 ps
+B:no4_x1_7_ins:-1:5717 ps
+B:inv_x2_13_ins:-1:1427 ps
+B:rtlalc_1_6_ins:-1:531 ps
+B:na2_x1_8_ins:-1:5437 ps
+B:na3_x1_14_ins:-1:4980 ps
+B:noa22_x1_ins:-1:5241 ps
+B:no3_x1_12_ins:-1:4985 ps
+B:inv_x2_12_ins:-1:1430 ps
+B:rtlalc_1_5_ins:-1:515 ps
+B:na3_x1_13_ins:-1:4785 ps
+B:o2_x2_6_ins:-1:2727 ps
+B:na4_x1_8_ins:-1:4316 ps
+B:o4_x2_6_ins:-1:4524 ps
+B:inv_x2_11_ins:-1:1421 ps
 B:rtlalc_1_4_ins:-1:511 ps
-B:ao2o22_x2_3_ins:-1:4250 ps
-B:na2_x1_5_ins:-1:646 ps
-B:xr2_x1_3_ins:-1:3711 ps
+B:ao22_x2_2_ins:-1:4729 ps
+B:na3_x1_12_ins:-1:4293 ps
+B:na2_x1_7_ins:-1:3862 ps
+B:o2_x2_5_ins:-1:4029 ps
 B:rtlalc_1_3_ins:-1:522 ps
-B:na3_x1_ins:-1:3533 ps
-B:na2_x1_4_ins:-1:1009 ps
-B:na3_x1_2_ins:-1:3085 ps
-B:o3_x2_ins:-1:3273 ps
-B:inv_x2_11_ins:-1:1698 ps
-B:rtlalc_1_2_ins:-1:521 ps
-B:oa22_x2_2_ins:-1:3352 ps
-B:no2_x1_15_ins:-1:2733 ps
-B:no3_x1_ins:-1:2894 ps
-B:a2_x2_4_ins:-1:2574 ps
+B:na3_x1_10_ins:-1:3857 ps
+B:on12_x1_10_ins:-1:2689 ps
+B:na3_x1_11_ins:-1:3408 ps
+B:o3_x2_12_ins:-1:3596 ps
+B:inv_x2_10_ins:-1:2882 ps
+B:rtlalc_1_2_ins:-1:522 ps
+B:na3_x1_8_ins:-1:3594 ps
+B:on12_x1_9_ins:-1:2689 ps
+B:na3_x1_9_ins:-1:3020 ps
+B:o3_x2_11_ins:-1:3333 ps
+B:inv_x2_9_ins:-1:2882 ps
 B:rtlalc_1_1_ins:-1:511 ps
-B:ao2o22_x2_2_ins:-1:2621 ps
-B:na2_x1_3_ins:-1:646 ps
-B:xr2_x1_2_ins:-1:2082 ps
+B:ao22_x2_ins:-1:3063 ps
+B:na3_x1_7_ins:-1:2627 ps
+B:na2_x1_6_ins:-1:2003 ps
+B:o2_x2_4_ins:-1:2170 ps
 B:rtlalc_1_0_ins:-1:511 ps
-B:ao2o22_x2_ins:-1:1883 ps
-B:na2_x1_2_ins:-1:646 ps
-B:xr2_x1_ins:-1:1345 ps
-B:reg_nreg_20_ins:-1:516 ps
-B:oa22_x2_ins:32:11475 ps
-B:inv_x2_10_ins:32:11016 ps
-B:reg_nreg_19_ins:-1:538 ps
-B:no2_x1_14_ins:-1:10945 ps
-B:nxr2_x1_11_ins:-1:10741 ps
-B:reg_nreg_18_ins:-1:543 ps
-B:no2_x1_13_ins:-1:10623 ps
-B:nxr2_x1_10_ins:-1:10419 ps
-B:reg_nreg_17_ins:-1:518 ps
-B:inv_x2_9_ins:-1:1037 ps
-B:reg_nreg_16_ins:-1:518 ps
-B:nao22_x1_ins:-1:10074 ps
-B:inv_x2_8_ins:-1:1079 ps
-B:reg_nreg_15_ins:-1:543 ps
-B:no2_x1_12_ins:-1:9516 ps
-B:nxr2_x1_9_ins:-1:9312 ps
-B:reg_nreg_14_ins:-1:518 ps
-B:inv_x2_7_ins:-1:1037 ps
-B:reg_nreg_13_ins:-1:545 ps
-B:no2_x1_10_ins:-1:8726 ps
-B:nxr2_x1_8_ins:-1:8522 ps
-B:no2_x1_11_ins:-1:8140 ps
-B:reg_nreg_12_ins:-1:518 ps
-B:inv_x2_6_ins:-1:1037 ps
-B:reg_nreg_11_ins:-1:539 ps
-B:inv_x2_5_ins:-1:914 ps
-B:reg_nreg_10_ins:-1:555 ps
-B:no2_x1_9_ins:-1:8061 ps
-B:nxr2_x1_7_ins:-1:7856 ps
-B:an12_x1_6_ins:-1:7486 ps
-B:reg_nreg_9_ins:-1:538 ps
-B:inv_x2_4_ins:-1:912 ps
-B:reg_nreg_8_ins:-1:538 ps
-B:inv_x2_3_ins:-1:912 ps
-B:reg_nreg_7_ins:-1:542 ps
-B:no2_x1_8_ins:-1:5918 ps
-B:an12_x1_5_ins:-1:6082 ps
-B:reg_nreg_6_ins:-1:544 ps
-B:no2_x1_7_ins:-1:5546 ps
-B:nxr2_x1_6_ins:-1:5342 ps
+B:ao2o22_x2_ins:-1:3008 ps
+B:inv_x2_8_ins:-1:2482 ps
+B:xr2_x1_2_ins:-1:1322 ps
+B:reg_nreg_20_ins:-1:527 ps
+B:on12_x1_8_ins:-1:11456 ps
+B:no3_x1_11_ins:-1:11127 ps
+B:inv_x2_7_ins:-1:668 ps
+B:a2_x2_16_ins:-1:10861 ps
+B:reg_nreg_19_ins:-1:540 ps
+B:nao22_x1_5_ins:-1:11470 ps
+B:o3_x2_10_ins:-1:10992 ps
+B:reg_nreg_18_ins:-1:527 ps
+B:on12_x1_7_ins:-1:11179 ps
+B:o4_x2_5_ins:-1:10784 ps
+B:no3_x1_10_ins:-1:10850 ps
+B:no2_x1_6_ins:-1:10513 ps
+B:reg_nreg_17_ins:-1:527 ps
+B:on12_x1_6_ins:-1:10802 ps
+B:o4_x2_4_ins:-1:10407 ps
+B:no3_x1_9_ins:-1:10474 ps
+B:no2_x1_5_ins:-1:10137 ps
+B:reg_nreg_16_ins:-1:535 ps
+B:on12_x1_5_ins:-1:10429 ps
+B:o3_x2_9_ins:-1:9987 ps
+B:na3_x1_6_ins:-1:654 ps
+B:no3_x1_8_ins:-1:10100 ps
+B:no2_x1_4_ins:-1:9763 ps
+B:reg_nreg_15_ins:-1:528 ps
+B:on12_x1_4_ins:-1:10032 ps
+B:o3_x2_8_ins:-1:9834 ps
+B:no2_x1_3_ins:-1:9364 ps
+B:reg_nreg_14_ins:-1:535 ps
+B:on12_x1_3_ins:-1:9676 ps
+B:o3_x2_7_ins:-1:9234 ps
+B:na3_x1_5_ins:-1:654 ps
+B:no3_x1_7_ins:-1:9347 ps
+B:no2_x1_2_ins:-1:9010 ps
+B:reg_nreg_13_ins:-1:527 ps
+B:nao22_x1_4_ins:-1:9329 ps
+B:na4_x1_7_ins:-1:1060 ps
+B:o3_x2_6_ins:-1:9109 ps
+B:no2_x1_ins:-1:8633 ps
+B:reg_nreg_12_ins:-1:548 ps
+B:na2_x1_4_ins:-1:9135 ps
+B:na3_x1_4_ins:-1:8936 ps
+B:na2_x1_5_ins:-1:8652 ps
+B:reg_nreg_11_ins:-1:537 ps
+B:nao22_x1_3_ins:-1:8961 ps
+B:a2_x2_15_ins:-1:8517 ps
+B:na4_x1_6_ins:-1:8004 ps
+B:o4_x2_3_ins:-1:8174 ps
+B:o2_x2_3_ins:-1:1113 ps
+B:o3_x2_5_ins:-1:8741 ps
+B:a2_x2_14_ins:-1:8265 ps
+B:reg_nreg_10_ins:-1:537 ps
+B:nao22_x1_2_ins:-1:8426 ps
+B:a2_x2_13_ins:-1:7982 ps
+B:na4_x1_5_ins:-1:7470 ps
+B:o4_x2_2_ins:-1:7640 ps
+B:o2_x2_2_ins:-1:1113 ps
+B:o3_x2_4_ins:-1:8206 ps
+B:a2_x2_12_ins:-1:7730 ps
+B:reg_nreg_9_ins:-1:520 ps
+B:oa22_x2_5_ins:-1:7757 ps
+B:no4_x1_6_ins:-1:1156 ps
+B:no3_x1_6_ins:-1:7298 ps
+B:a2_x2_11_ins:-1:6961 ps
+B:reg_nreg_8_ins:-1:543 ps
+B:oa22_x2_4_ins:-1:6889 ps
+B:no3_x1_5_ins:-1:332 ps
+B:no4_x1_5_ins:-1:6429 ps
+B:reg_nreg_7_ins:-1:520 ps
+B:na2_x1_3_ins:-1:6301 ps
+B:na4_x1_4_ins:-1:5657 ps
+B:o3_x2_3_ins:-1:6102 ps
+B:a2_x2_10_ins:-1:5633 ps
+B:reg_nreg_6_ins:-1:565 ps
+B:oa22_x2_3_ins:-1:5687 ps
+B:on12_x1_2_ins:-1:5201 ps
+B:na4_x1_3_ins:-1:4811 ps
+B:no4_x1_4_ins:-1:4872 ps
+B:no3_x1_4_ins:-1:1308 ps
+B:inv_x2_6_ins:-1:705 ps
 B:reg_nreg_5_ins:-1:555 ps
-B:no2_x1_6_ins:-1:5121 ps
-B:nxr2_x1_5_ins:-1:4916 ps
-B:an12_x1_4_ins:-1:4546 ps
-B:reg_nreg_4_ins:-1:547 ps
-B:no2_x1_5_ins:-1:4344 ps
-B:nxr2_x1_4_ins:-1:4139 ps
-B:an12_x1_3_ins:-1:3769 ps
-B:reg_nreg_3_ins:-1:542 ps
-B:no2_x1_4_ins:-1:3244 ps
-B:an12_x1_2_ins:-1:3409 ps
-B:reg_nreg_2_ins:-1:553 ps
-B:no2_x1_3_ins:-1:3115 ps
-B:nxr2_x1_3_ins:-1:2910 ps
-B:reg_nreg_1_ins:-1:555 ps
-B:no2_x1_2_ins:-1:2715 ps
-B:nxr2_x1_2_ins:-1:2510 ps
-B:an12_x1_ins:-1:2140 ps
-B:reg_nreg_0_ins:-1:514 ps
-B:no2_x1_ins:-1:1560 ps
-B:nxr2_x1_ins:-1:1356 ps
-B:a2_x2_3_ins:-1:362 ps
-B:rtlcarry_0_13_ins:32:7321 ps
-B:rtlcarry_0_11_ins:32:6745 ps
-B:rtlcarry_0_10_ins:32:6207 ps
-B:rtlcarry_0_9_ins:32:5673 ps
-B:rtlcarry_0_8_ins:32:5138 ps
-B:rtlcarry_0_7_ins:32:4604 ps
+B:oa2ao222_x2_ins:-1:4504 ps
+B:inv_x2_5_ins:-1:1561 ps
+B:oa2a22_x2_ins:-1:4692 ps
+B:inv_x2_4_ins:-1:1555 ps
+B:na2_x1_2_ins:-1:4155 ps
+B:reg_nreg_4_ins:-1:537 ps
+B:nao22_x1_ins:-1:4684 ps
+B:a2_x2_9_ins:-1:4240 ps
+B:na4_x1_2_ins:-1:3727 ps
+B:o4_x2_ins:-1:3897 ps
+B:o2_x2_ins:-1:1113 ps
+B:o3_x2_2_ins:-1:4464 ps
+B:a2_x2_8_ins:-1:3988 ps
+B:reg_nreg_3_ins:-1:538 ps
+B:oa22_x2_2_ins:-1:4257 ps
+B:no4_x1_3_ins:-1:1156 ps
+B:no3_x1_3_ins:-1:3797 ps
+B:a2_x2_7_ins:-1:3460 ps
+B:reg_nreg_2_ins:-1:520 ps
+B:oa22_x2_ins:-1:3480 ps
+B:no4_x1_2_ins:-1:1156 ps
+B:no3_x1_2_ins:-1:3021 ps
+B:a2_x2_6_ins:-1:2684 ps
+B:reg_nreg_1_ins:-1:528 ps
+B:na2_x1_ins:-1:2798 ps
+B:o3_x2_ins:-1:2598 ps
+B:a2_x2_5_ins:-1:2129 ps
+B:na4_x1_ins:-1:2153 ps
+B:reg_nreg_0_ins:-1:527 ps
+B:on12_x1_ins:-1:2836 ps
+B:na3_x1_3_ins:-1:2637 ps
+B:no3_x1_ins:-1:1409 ps
+B:a2_x2_4_ins:-1:344 ps
+B:rtlcarry_0_12_ins:32:7579 ps
+B:rtlcarry_0_11_ins:32:7041 ps
+B:rtlcarry_0_10_ins:32:6506 ps
+B:inv_x2_3_ins:-1:144 ps
+B:a2_x2_3_ins:32:6202 ps
+B:rtlcarry_0_9_ins:32:5730 ps
+B:rtlcarry_0_8_ins:32:5170 ps
 B:inv_x2_2_ins:-1:144 ps
-B:a2_x2_2_ins:32:4300 ps
-B:rtlcarry_0_6_ins:32:3827 ps
-B:rtlcarry_0_5_ins:32:3267 ps
+B:a2_x2_2_ins:32:4866 ps
+B:rtlcarry_0_7_ins:32:4393 ps
+B:rtlcarry_0_6_ins:32:3833 ps
+B:rtlcarry_0_5_ins:32:3298 ps
+B:rtlcarry_0_4_ins:32:2764 ps
+B:rtlcarry_0_3_ins:32:2229 ps
 B:inv_x2_ins:-1:144 ps
-B:a2_x2_ins:32:2963 ps
-B:rtlcarry_0_4_ins:32:2490 ps
-B:rtlcarry_0_3_ins:32:1930 ps
-B:rtlcarry_0_2_ins:32:1396 ps
-B:rtlcarry_0_1_ins:32:861 ps
-B:aux3_ins:-1:3040 ps
-B:aux7_ins:-1:5713 ps
-B:aux9_ins:-1:6228 ps
-B:aux11_ins:-1:6763 ps
-B:aux13_ins:-1:7835 ps
-B:aux14_ins:-1:7910 ps
-B:aux15_ins:-1:8652 ps
-B:aux17_ins:-1:9254 ps
-B:aux20_ins:-1:9759 ps
-B:aux22_ins:32:9901 ps
-B:aux26_ins:-1:800 ps
-B:aux28_ins:-1:1564 ps
-B:aux30_ins:-1:981 ps
-B:aux31_ins:-1:981 ps
-B:aux32_ins:-1:981 ps
-B:aux33_ins:-1:981 ps
-B:aux34_ins:-1:984 ps
-B:aux36_ins:-1:984 ps
-B:aux40_ins:-1:776 ps
-B:aux42_ins:-1:776 ps
-B:aux44_ins:-1:778 ps
-B:aux45_ins:-1:918 ps
-B:aux47_ins:-1:917 ps
-B:aux49_ins:-1:934 ps
-B:aux50_ins:-1:917 ps
-B:aux52_ins:-1:919 ps
-B:aux53_ins:-1:1723 ps
-B:aux54_ins:-1:3352 ps
-B:aux55_ins:-1:4129 ps
-B:aux56_ins:-1:7069 ps
-B:not_c_nreg_ins:-1:736 ps
-B:not_reset_ins:-1:447 ps
-B:not_aux0_ins:-1:2235 ps
-B:not_aux1_ins:-1:2529 ps
-B:not_aux2_ins:-1:2798 ps
-B:not_reg_nreg_3_ins:-1:700 ps
-B:not_rtlcarry_0_4_ins:32:2621 ps
-B:not_reg_nreg_4_ins:-1:709 ps
-B:not_rtlcarry_0_6_ins:32:3958 ps
-B:not_aux4_ins:-1:4667 ps
-B:not_aux5_ins:-1:4960 ps
-B:not_reg_nreg_6_ins:-1:707 ps
-B:not_aux6_ins:-1:5472 ps
-B:not_reg_nreg_7_ins:-1:704 ps
-B:not_aux8_ins:-1:6003 ps
-B:not_aux39_ins:-1:782 ps
-B:not_aux10_ins:-1:6538 ps
-B:not_aux41_ins:-1:782 ps
-B:not_aux12_ins:-1:7610 ps
-B:not_aux43_ins:-1:784 ps
-B:not_rtlcarry_0_12_ins:32:7082 ps
-B:not_reg_nreg_12_ins:-1:683 ps
-B:not_aux46_ins:-1:905 ps
-B:not_rtlcarry_0_13_ins:32:7467 ps
-B:not_rtlcarry_0_14_ins:32:7822 ps
-B:not_reg_nreg_14_ins:-1:679 ps
-B:not_aux48_ins:-1:905 ps
-B:not_rtlcarry_0_15_ins:32:8198 ps
-B:not_aux16_ins:-1:8930 ps
-B:not_rtlcarry_0_16_ins:32:8553 ps
-B:not_reg_nreg_16_ins:-1:679 ps
-B:not_aux19_ins:-1:9854 ps
-B:na2_x1_ins:-1:9460 ps
-B:not_rtlcarry_0_17_ins:32:8929 ps
-B:not_reg_nreg_17_ins:-1:679 ps
-B:not_aux51_ins:-1:905 ps
-B:not_rtlcarry_0_18_ins:32:9304 ps
-B:not_aux21_ins:-1:10037 ps
-B:not_rtlcarry_0_19_ins:32:9666 ps
-B:not_reg_nreg_19_ins:-1:724 ps
-B:not_aux23_ins:32:10126 ps
-B:not_aux25_ins:32:10882 ps
-B:o2_x2_ins:32:10493 ps
-B:not_aux26_ins:-1:1166 ps
-B:not_aux27_ins:-1:1163 ps
-B:not_aux29_ins:-1:1163 ps
-B:not_rtlalc_1_8_ins:-1:681 ps
-B:not_rtlalc_1_9_ins:-1:681 ps
-B:not_rtlalc_1_11_ins:-1:681 ps
-B:not_rtlalc_1_12_ins:-1:681 ps
-B:not_aux35_ins:-1:1163 ps
-B:not_aux37_ins:-1:1163 ps
-B:not_aux38_ins:-1:1163 ps
+B:a2_x2_ins:32:1925 ps
+B:rtlcarry_0_2_ins:32:1453 ps
+B:rtlcarry_0_1_ins:32:893 ps
+B:aux0_ins:-1:325 ps
+B:aux6_ins:-1:969 ps
+B:aux21_ins:-1:9499 ps
+B:na3_x1_2_ins:-1:662 ps
+B:aux27_ins:-1:2748 ps
+B:aux28_ins:-1:2748 ps
+B:aux29_ins:-1:954 ps
+B:aux30_ins:-1:1287 ps
+B:aux32_ins:-1:1289 ps
+B:aux33_ins:-1:1287 ps
+B:aux34_ins:-1:2748 ps
+B:aux37_ins:-1:2742 ps
+B:aux41_ins:-1:937 ps
+B:na3_x1_ins:-1:662 ps
+B:aux42_ins:-1:1013 ps
+B:not_in_nreg_val_6_ins:-1:162 ps
+B:not_c_nreg_ins:-1:732 ps
+B:not_c_reset_reg_ins:-1:376 ps
+B:not_reset_ins:-1:374 ps
+B:not_aux0_ins:-1:1041 ps
+B:not_reg_nreg_0_ins:32:650 ps
+B:not_aux1_ins:-1:2350 ps
+B:not_aux2_ins:-1:1794 ps
+B:not_reg_nreg_1_ins:-1:725 ps
+B:not_rtlcarry_0_2_ins:32:1583 ps
+B:not_aux3_ins:-1:2345 ps
+B:not_reg_nreg_2_ins:-1:749 ps
+B:not_aux4_ins:-1:3121 ps
+B:not_reg_nreg_3_ins:-1:721 ps
+B:not_rtlcarry_0_4_ins:-1:3377 ps
+B:not_aux5_ins:-1:3652 ps
+B:not_reg_nreg_4_ins:-1:713 ps
+B:not_rtlcarry_0_5_ins:-1:3957 ps
+B:not_aux38_ins:-1:1423 ps
+B:not_rtlcarry_0_6_ins:-1:4452 ps
+B:not_rtlcarry_0_7_ins:32:4523 ps
+B:not_aux7_ins:-1:5297 ps
+B:not_reg_nreg_7_ins:-1:725 ps
+B:not_aux9_ins:-1:6009 ps
+B:xr2_x1_ins:-1:944 ps
+B:not_rtlcarry_0_9_ins:32:5860 ps
+B:not_aux10_ins:-1:6622 ps
+B:not_reg_nreg_9_ins:-1:749 ps
+B:not_rtlcarry_0_10_ins:-1:7119 ps
+B:not_aux11_ins:-1:7395 ps
+B:not_reg_nreg_10_ins:-1:713 ps
+B:not_rtlcarry_0_11_ins:-1:7654 ps
+B:not_aux12_ins:-1:7929 ps
+B:not_reg_nreg_11_ins:-1:713 ps
+B:not_aux13_ins:-1:8444 ps
+B:not_aux17_ins:-1:8689 ps
+B:no4_x1_ins:-1:1171 ps
+B:not_rtlcarry_0_13_ins:32:7909 ps
+B:not_reg_nreg_13_ins:-1:704 ps
+B:not_rtlcarry_0_14_ins:32:8286 ps
+B:not_reg_nreg_14_ins:-1:695 ps
+B:not_rtlcarry_0_15_ins:32:8663 ps
+B:not_reg_nreg_15_ins:-1:683 ps
+B:not_rtlcarry_0_16_ins:32:9039 ps
+B:not_reg_nreg_16_ins:-1:695 ps
+B:not_rtlcarry_0_17_ins:32:9416 ps
+B:not_reg_nreg_17_ins:-1:688 ps
+B:not_aux43_ins:-1:1124 ps
+B:not_rtlcarry_0_18_ins:32:9793 ps
+B:not_reg_nreg_18_ins:-1:688 ps
+B:not_aux44_ins:-1:1124 ps
+B:not_rtlcarry_0_19_ins:32:10241 ps
+B:not_aux45_ins:-1:10516 ps
+B:not_reg_nreg_19_ins:-1:745 ps
+B:not_aux24_ins:32:10769 ps
+B:not_aux26_ins:32:11239 ps
+B:not_rtlalc_1_5_ins:-1:673 ps
+B:not_aux31_ins:-1:4694 ps
+B:not_rtlalc_1_7_ins:-1:677 ps
+B:not_rtlalc_1_17_ins:-1:673 ps
+B:not_aux35_ins:-1:1403 ps
+B:not_rtlalc_1_18_ins:-1:673 ps
+B:not_aux36_ins:-1:1403 ps
 C:out_nreg_val 0:-1:911 ps
 C:out_nreg_val 1:-1:911 ps
-C:out_nreg_val 2:-1:921 ps
+C:out_nreg_val 2:-1:922 ps
 C:out_nreg_val 3:-1:922 ps
 C:out_nreg_val 4:-1:911 ps
-C:out_nreg_val 5:-1:921 ps
-C:out_nreg_val 6:-1:921 ps
-C:out_nreg_val 7:-1:911 ps
-C:out_nreg_val 8:-1:915 ps
-C:out_nreg_val 9:-1:915 ps
-C:out_nreg_val 10:-1:921 ps
-C:out_nreg_val 11:-1:915 ps
-C:out_nreg_val 12:-1:915 ps
+C:out_nreg_val 5:-1:915 ps
+C:out_nreg_val 6:-1:931 ps
+C:out_nreg_val 7:-1:915 ps
+C:out_nreg_val 8:-1:919 ps
+C:out_nreg_val 9:-1:911 ps
+C:out_nreg_val 10:-1:922 ps
+C:out_nreg_val 11:-1:911 ps
+C:out_nreg_val 12:-1:914 ps
 C:out_nreg_val 13:-1:911 ps
-C:out_nreg_val 14:-1:921 ps
-C:out_nreg_val 15:-1:921 ps
-C:out_nreg_val 16:-1:914 ps
-C:out_nreg_val 17:-1:921 ps
-C:out_nreg_val 18:-1:921 ps
-C:out_nreg_val 19:-1:921 ps
+C:out_nreg_val 14:-1:911 ps
+C:out_nreg_val 15:-1:912 ps
+C:out_nreg_val 16:-1:911 ps
+C:out_nreg_val 17:-1:915 ps
+C:out_nreg_val 18:-1:915 ps
+C:out_nreg_val 19:-1:922 ps
 C:out_nreg_val 20:-1:914 ps
 C:in_nreg_val 0:-1:0 ps
 C:in_nreg_val 1:-1:0 ps
@@ -685,37 +795,38 @@ C:in_nreg_val 8:-1:0 ps
 C:in_nreg_val 9:-1:0 ps
 C:in_nreg_val 10:-1:0 ps
 C:in_nreg_val 11:-1:0 ps
+C:in_nreg_val 12:-1:0 ps
 C:c_nreg:-1:0 ps
+C:c_reset_reg:-1:0 ps
 C:reset:-1:0 ps
 C:clk:-1:0 ps
-P:reg_nreg 0:reg_nreg 0:rtlcarry_0_1_ins:32:1163 ps
-P:rtlcarry_0_1_ins:rtlcarry_0 1:rtlcarry_0_2_ins:32:1163 ps
-P:rtlcarry_0_2_ins:rtlcarry_0 2:rtlcarry_0_3_ins:32:1163 ps
-P:rtlcarry_0_3_ins:rtlcarry_0 3:rtlcarry_0_4_ins:32:1163 ps
-P:rtlcarry_0_4_ins:rtlcarry_0 4:not_rtlcarry_0_4_ins:32:1163 ps
-P:not_rtlcarry_0_4_ins:not_rtlcarry_0 4:a2_x2_ins:32:1163 ps
-P:a2_x2_ins:a2_x2_sig:rtlcarry_0_5_ins:32:1163 ps
-P:rtlcarry_0_5_ins:rtlcarry_0 5:rtlcarry_0_6_ins:32:1163 ps
-P:rtlcarry_0_6_ins:rtlcarry_0 6:not_rtlcarry_0_6_ins:32:1163 ps
-P:not_rtlcarry_0_6_ins:not_rtlcarry_0 6:a2_x2_2_ins:32:1163 ps
-P:a2_x2_2_ins:a2_x2_2_sig:rtlcarry_0_7_ins:32:1163 ps
-P:rtlcarry_0_7_ins:rtlcarry_0 7:rtlcarry_0_8_ins:32:1163 ps
-P:rtlcarry_0_8_ins:rtlcarry_0 8:rtlcarry_0_9_ins:32:1163 ps
-P:rtlcarry_0_9_ins:rtlcarry_0 9:rtlcarry_0_10_ins:32:1163 ps
-P:rtlcarry_0_10_ins:rtlcarry_0 10:rtlcarry_0_11_ins:32:1163 ps
-P:rtlcarry_0_11_ins:rtlcarry_0 11:not_rtlcarry_0_12_ins:32:1163 ps
-P:not_rtlcarry_0_12_ins:not_rtlcarry_0 12:rtlcarry_0_13_ins:32:1163 ps
-P:rtlcarry_0_13_ins:rtlcarry_0 13:not_rtlcarry_0_13_ins:32:1163 ps
-P:not_rtlcarry_0_13_ins:not_rtlcarry_0 13:not_rtlcarry_0_14_ins:32:1163 ps
-P:not_rtlcarry_0_14_ins:not_rtlcarry_0 14:not_rtlcarry_0_15_ins:32:1163 ps
-P:not_rtlcarry_0_15_ins:not_rtlcarry_0 15:not_rtlcarry_0_16_ins:32:1163 ps
-P:not_rtlcarry_0_16_ins:not_rtlcarry_0 16:not_rtlcarry_0_17_ins:32:1163 ps
-P:not_rtlcarry_0_17_ins:not_rtlcarry_0 17:not_rtlcarry_0_18_ins:32:1163 ps
-P:not_rtlcarry_0_18_ins:not_rtlcarry_0 18:not_rtlcarry_0_19_ins:32:1163 ps
-P:not_rtlcarry_0_19_ins:not_rtlcarry_0 19:aux22_ins:32:1163 ps
-P:aux22_ins:aux22:not_aux23_ins:32:1163 ps
-P:not_aux23_ins:not_aux23:o2_x2_ins:32:1163 ps
-P:o2_x2_ins:o2_x2_sig:not_aux25_ins:32:1163 ps
-P:not_aux25_ins:not_aux25:inv_x2_10_ins:32:1163 ps
-P:inv_x2_10_ins:inv_x2_10_sig:oa22_x2_ins:32:1163 ps
-P:oa22_x2_ins:oa22_x2_sig:reg_nreg_20_ins:32:1163 ps
+P:reg_nreg 0:reg_nreg 0:not_reg_nreg_0_ins:32:1403 ps
+P:not_reg_nreg_0_ins:not_reg_nreg 0:rtlcarry_0_1_ins:32:1403 ps
+P:rtlcarry_0_1_ins:rtlcarry_0 1:rtlcarry_0_2_ins:32:1403 ps
+P:rtlcarry_0_2_ins:rtlcarry_0 2:not_rtlcarry_0_2_ins:32:1403 ps
+P:not_rtlcarry_0_2_ins:not_rtlcarry_0 2:a2_x2_ins:32:1403 ps
+P:a2_x2_ins:a2_x2_sig:rtlcarry_0_3_ins:32:1403 ps
+P:rtlcarry_0_3_ins:rtlcarry_0 3:rtlcarry_0_4_ins:32:1403 ps
+P:rtlcarry_0_4_ins:rtlcarry_0 4:rtlcarry_0_5_ins:32:1403 ps
+P:rtlcarry_0_5_ins:rtlcarry_0 5:rtlcarry_0_6_ins:32:1403 ps
+P:rtlcarry_0_6_ins:rtlcarry_0 6:rtlcarry_0_7_ins:32:1403 ps
+P:rtlcarry_0_7_ins:rtlcarry_0 7:not_rtlcarry_0_7_ins:32:1403 ps
+P:not_rtlcarry_0_7_ins:not_rtlcarry_0 7:a2_x2_2_ins:32:1403 ps
+P:a2_x2_2_ins:a2_x2_2_sig:rtlcarry_0_8_ins:32:1403 ps
+P:rtlcarry_0_8_ins:rtlcarry_0 8:rtlcarry_0_9_ins:32:1403 ps
+P:rtlcarry_0_9_ins:rtlcarry_0 9:not_rtlcarry_0_9_ins:32:1403 ps
+P:not_rtlcarry_0_9_ins:not_rtlcarry_0 9:a2_x2_3_ins:32:1403 ps
+P:a2_x2_3_ins:a2_x2_3_sig:rtlcarry_0_10_ins:32:1403 ps
+P:rtlcarry_0_10_ins:rtlcarry_0 10:rtlcarry_0_11_ins:32:1403 ps
+P:rtlcarry_0_11_ins:rtlcarry_0 11:rtlcarry_0_12_ins:32:1403 ps
+P:rtlcarry_0_12_ins:rtlcarry_0 12:not_rtlcarry_0_13_ins:32:1403 ps
+P:not_rtlcarry_0_13_ins:not_rtlcarry_0 13:not_rtlcarry_0_14_ins:32:1403 ps
+P:not_rtlcarry_0_14_ins:not_rtlcarry_0 14:not_rtlcarry_0_15_ins:32:1403 ps
+P:not_rtlcarry_0_15_ins:not_rtlcarry_0 15:not_rtlcarry_0_16_ins:32:1403 ps
+P:not_rtlcarry_0_16_ins:not_rtlcarry_0 16:not_rtlcarry_0_17_ins:32:1403 ps
+P:not_rtlcarry_0_17_ins:not_rtlcarry_0 17:not_rtlcarry_0_18_ins:32:1403 ps
+P:not_rtlcarry_0_18_ins:not_rtlcarry_0 18:not_rtlcarry_0_19_ins:32:1403 ps
+P:not_rtlcarry_0_19_ins:not_rtlcarry_0 19:not_aux24_ins:32:1403 ps
+P:not_aux24_ins:not_aux24:not_aux26_ins:32:1403 ps
+P:not_aux26_ins:not_aux26:na3_x1_30_ins:32:1403 ps
+P:na3_x1_30_ins:na3_x1_30_sig:rtlalc_1_20_ins:32:1403 ps

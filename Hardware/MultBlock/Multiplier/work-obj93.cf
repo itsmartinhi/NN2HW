@@ -1,26 +1,26 @@
 v 4
-file . "multiplier_tb.vhdl" "6ae7f5c3b611f8ce1d63e3e1d4d786c2833dd9e7" "20220621154809.591":
-  entity multiplier_tb at 1( 0) + 0 on 309;
-  architecture testbench of multiplier_tb at 6( 87) + 0 on 310;
-file . "multiplier.vhdl" "cdd300a97a4bedc29b232288c7579ba17ea67f19" "20220621154809.590":
-  entity multiplier at 1( 0) + 0 on 307;
-  architecture behavor of multiplier at 11( 234) + 0 on 308;
-file . "full_adder.vhdl" "e02e359505fb3a7d439be0993d1871b4ad7e234c" "20220619161911.871":
-  entity full_adder at 1( 0) + 0 on 295;
-  architecture behavior of full_adder at 14( 260) + 0 on 296;
-  architecture dataflow of full_adder at 28( 594) + 0 on 297;
-  architecture structure of full_adder at 34( 742) + 0 on 298;
-file . "half_adder.vhdl" "d0f64ad6b79828ba260484166afe511c6df2e391" "20220619161911.868":
-  entity half_adder at 1( 0) + 0 on 291;
-  architecture behavior of half_adder at 13( 168) + 0 on 292;
-  architecture dataflow of half_adder at 30( 560) + 0 on 293;
-  architecture structure of half_adder at 38( 660) + 0 on 294;
-file . "xor2.vhdl" "53a5d73d4baf287387b4ac7fec37d44a0164582f" "20220619161911.863":
-  entity xor2 at 1( 0) + 0 on 289;
-  architecture dataflow of xor2 at 8( 126) + 0 on 290;
-file . "and2.vhdl" "888b9ef13c5b9c939a8102a553eb215be2e8319b" "20220619161911.861":
-  entity and2 at 1( 0) + 0 on 285;
-  architecture dataflow of and2 at 8( 126) + 0 on 286;
-file . "or2.vhdl" "fbec4640227108f3ba57ce98cbb7d8234e5888f1" "20220619161911.862":
-  entity or2 at 1( 0) + 0 on 287;
-  architecture dataflow of or2 at 10( 136) + 0 on 288;
+file . "or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220630095304.694":
+  entity or2 at 1( 0) + 0 on 676;
+  architecture dataflow of or2 at 10( 136) + 0 on 677;
+file . "and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220630095304.692":
+  entity and2 at 1( 0) + 0 on 674;
+  architecture dataflow of and2 at 8( 126) + 0 on 675;
+file . "xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220630095304.695":
+  entity xor2 at 1( 0) + 0 on 678;
+  architecture dataflow of xor2 at 8( 126) + 0 on 679;
+file . "half_adder.vhdl" "48f810741079cb37ab69b8ff936c59625f1d8954" "20220630095304.699":
+  entity half_adder at 1( 0) + 0 on 680;
+  architecture structure of half_adder at 32( 702) + 0 on 681;
+file . "full_adder.vhdl" "3dfdc46c669ce47c2829d4936b0f552132159345" "20220630095304.701":
+  entity full_adder at 1( 0) + 0 on 682;
+  architecture structure of full_adder at 34( 796) + 0 on 683;
+file . "multiplier.vhdl" "f7570aa84d46d4b2097d968587435e4a399be3d9" "20220630095304.703":
+  entity multiplier at 1( 0) + 0 on 684;
+  architecture structure of multiplier at 11( 234) + 0 on 685;
+file . "multiplier_tb.vhdl" "28ccc981b1def90514e66a20a05906d1759a6b2f" "20220630095304.779":
+  entity multiplier_tb at 1( 0) + 0 on 691;
+  architecture testbench of multiplier_tb at 8( 114) + 0 on 692;
+file . "multiplier_final.vhdl" "195c7578c95d326b8e741fd5bdfc722d8dff2d4a" "20220630095304.772":
+  entity multiplier_final at 5( 52) + 0 on 688;
+  architecture rtl of multiplier_final at 23( 547) + 0 on 689;
+  configuration cfg_multiplier_final at 244( 3656) + 0 on 690;

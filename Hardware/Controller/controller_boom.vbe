@@ -1,0 +1,70 @@
+-- VHDL data flow description generated from `controller_boom`
+--		date : Sun Jul  3 10:09:00 2022
+
+
+-- Entity Declaration
+
+ENTITY controller_boom IS
+  PORT (
+  clk : in BIT;	-- clk
+  reset : in BIT;	-- reset
+  in_ctrl_neuron_reset : in BIT;	-- in_ctrl_neuron_reset
+  in_ctrl_input_reset : in BIT;	-- in_ctrl_input_reset
+  c_dec_neuron : out BIT;	-- c_dec_neuron
+  c_dec_input : out BIT;	-- c_dec_input
+  c_add_to_neuron : out BIT;	-- c_add_to_neuron
+  c_reset_register : out BIT;	-- c_reset_register
+  c_argmax : out BIT;	-- c_argmax
+  halt : out BIT;	-- halt
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END controller_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF controller_boom IS
+  SIGNAL state : REG_VECTOR(0 TO 2) REGISTER;	-- state
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux5 : BIT;		-- aux5
+
+BEGIN
+  aux5 <= (NOT(state(0)) AND state(1));
+  aux4 <= (NOT(state(0)) AND NOT(state(1)));
+  aux3 <= NOT((state(2) OR state(1)) OR in_ctrl_input_reset
+);
+  aux1 <= (aux0 AND state(1));
+  aux0 <= (NOT(state(2)) AND state(0));
+  label0 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    state (2) <= GUARDED (NOT(aux3) AND (state(2) OR NOT(state(1)) OR 
+in_ctrl_neuron_reset) AND ((state(2) AND state(1)) OR state(0)) AND 
+NOT(reset));
+  END BLOCK label0;
+  label1 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    state (1) <= GUARDED ((aux3 OR (aux1 AND NOT(in_ctrl_neuron_reset)) OR
+ aux4) AND NOT(reset));
+  END BLOCK label1;
+  label2 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    state (0) <= GUARDED (((state(1) AND in_ctrl_neuron_reset) OR state(2)
+ OR aux5) AND NOT(reset));
+  END BLOCK label2;
+
+halt <= (state(2) AND state(0) AND NOT(state(1)));
+
+c_argmax <= (state(2) AND aux4);
+
+c_reset_register <= aux1;
+
+c_add_to_neuron <= (NOT(state(2)) AND aux5);
+
+c_dec_input <= (aux0 AND NOT(state(1)));
+
+c_dec_neuron <= aux1;
+END;

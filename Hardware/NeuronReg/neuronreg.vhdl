@@ -6,8 +6,9 @@ entity NEURONREG is
 	port (
 		clk: 			in 	std_logic;
 		reset: 			in 	std_logic;
+		c_reset_reg:   	in  std_logic;
 		c_nreg: 		in 	std_logic;						
-		in_nreg_val: 	in 	std_logic_vector(11 downto 0);
+		in_nreg_val: 	in 	std_logic_vector(12 downto 0);
 		out_nreg_val: 	out std_logic_vector(20 downto 0)
 	);
 end NEURONREG;
@@ -20,7 +21,7 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if reset = '1' then
+			if reset = '1' or c_reset_reg = '1' then
 				reg_nreg <= "000000000000000000000";
 			elsif c_nreg = '1' then
 				out_nreg_val <= sum;

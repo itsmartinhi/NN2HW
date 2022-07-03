@@ -1,0 +1,336 @@
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file neurondec
+	--> Drive Alliance file neurondec_vasy
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file neurondec_vasy
+	--> Drive Standard VHDL file neurondec_vasy
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'neurondec_vasy.vhdl'...
+
+                   @@@@@@@                         @@@     @@@
+                     @@   @@                        @@     @@
+                     @@    @@                       @@@   @@@
+                     @@    @@     @@@       @@@     @@@   @@@
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@
+                     @@     @@ @@     @@ @@     @@  @  @@  @@
+                     @@     @@ @@     @@ @@     @@  @  @   @@
+                     @@    @@   @@   @@   @@   @@   @      @@
+                   @@@@@@@@       @@@       @@@    @@@    @@@@
+
+                              BOOlean Minimization
+
+                   Alliance CAD System 5.0,           boom 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Parse BEH file neurondec_vasy.vbe
+	--> Drive BEH file neurondec_boom
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file neurondec_boom
+	--> Drive Standard VHDL file neurondec_boom
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'neurondec_boom.vhdl'...
+
+                  @@@@@@@                             @@@@ @
+                    @@   @@                         @@    @@
+                    @@    @@                       @@      @
+                    @@    @@     @@@       @@@    @@
+                    @@   @@    @@   @@   @@   @@  @@
+                    @@@@@@    @@     @@ @@     @@ @@     @@@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@
+                    @@     @@ @@     @@ @@     @@ @@    @  @@
+                    @@     @@ @@     @@ @@     @@  @@      @@
+                    @@    @@   @@   @@   @@   @@    @@    @@
+                  @@@@@@@@       @@@       @@@        @@@@
+
+                         Binding and Optimizing On Gates
+
+                 Alliance CAD System 5.0, boog 5.0 [2003/01/09]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+        MBK_VDD        : vdd
+        MBK_VSS        : vss
+        MBK_IN_LO      : vst
+        MBK_OUT_LO     : vst
+        MBK_WORK_LIB   : .
+        MBK_TARGET_LIB : /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'neurondec_boom.vbe'...
+Controlling file 'neurondec_boom.vbe'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Mapping Warning: Cell 'halfadder_x4' isn't supported
+Mapping Warning: Cell 'ts_x8' isn't supported
+Mapping Warning: Cell 'nmx3_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'na3_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'ao2o22_x4' isn't supported
+Mapping Warning: Cell 'on12_x4' isn't supported
+Mapping Warning: Cell 'buf_x4' isn't supported
+Mapping Warning: Cell 'o4_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'noa3ao322_x4' isn't supported
+Mapping Warning: Cell 'nxr2_x4' isn't supported
+Mapping Warning: Cell 'nts_x2' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'na2_x4' isn't supported
+Mapping Warning: Cell 'oa22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x4' isn't supported
+Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Preparing file 'neurondec_boom.vbe'...
+Capacitances on file 'neurondec_boom.vbe'...
+Unflattening file 'neurondec_boom.vbe'...
+Mapping file 'neurondec_boom.vbe'...
+Saving file 'neurondec_boog.vst'...
+Adding signal 'not_count 1'
+Quick estimated critical path (no warranty)...1804 ps from 'count 0' to 'count 2'
+Quick estimated area (with over-cell routing)...101750 lambda�
+Details...
+	sff1_x4: 9
+	na2_x1: 8
+	inv_x2: 7
+	no2_x1: 6
+	buf_x2: 5
+	nao22_x1: 3
+	an12_x1: 3
+	no3_x1: 2
+	ao22_x2: 2
+	a2_x2: 2
+	xr2_x1: 2
+	oa2a22_x2: 1
+	sff2_x4: 1
+	oa22_x2: 1
+	a3_x2: 1
+	on12_x1: 1
+	nxr2_x1: 1
+	o3_x2: 1
+	Total: 56
+Saving critical path in xsch color file 'neurondec_boog.xsc'...
+End of boog...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file neurondec_boog
+	--> Drive Standard VHDL file neurondec_boog
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'neurondec_boog.vhdl'...
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @
+                     @@                             @@@    @
+                     @@           @@@       @@@     @ @@   @
+                     @@         @@   @@   @@   @@   @ @@   @
+                     @@        @@     @@ @@     @@  @  @@  @
+                     @@        @@     @@ @@     @@  @   @@ @
+                     @@        @@     @@ @@     @@  @   @@ @
+                     @@      @ @@     @@ @@     @@  @    @@@
+                     @@     @   @@   @@   @@   @@   @     @@
+                   @@@@@@@@@@     @@@       @@@    @@@    @@
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'neurondec_boog.vst'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Capacitances on file 'neurondec_boog.vst'...
+Delays on file 'neurondec_boog.vst'...1964 ps
+Area on file 'neurondec_boog.vst'...101750 lamda� (with over-cell routing)
+Details...
+	sff1_x4: 9 (39%)
+	na2_x1: 8 (7%)
+	inv_x2: 7 (5%)
+	no2_x1: 6 (5%)
+	buf_x2: 5 (4%)
+	nao22_x1: 3 (4%)
+	an12_x1: 3 (3%)
+	no3_x1: 2 (2%)
+	ao22_x2: 2 (2%)
+	a2_x2: 2 (2%)
+	xr2_x1: 2 (4%)
+	oa2a22_x2: 1 (2%)
+	sff2_x4: 1 (5%)
+	oa22_x2: 1 (1%)
+	a3_x2: 1 (1%)
+	on12_x1: 1 (1%)
+	nxr2_x1: 1 (2%)
+	o3_x2: 1 (1%)
+	Total: 56
+Worst RC on file 'neurondec_boog.vst'...197 ps
+Inserting buffers on critical path for file 'neurondec_final.vst'...None inserted
+Improving RC on critical path for file 'neurondec_final.vst'...1963 ps
+Improving all RC for file 'neurondec_final.vst'...
+Worst RC on file 'neurondec_final.vst'...197 ps
+Area on file 'neurondec_final.vst'...101750 lamda� (with over-cell routing)
+Details...
+	sff1_x4: 9 (39%)
+	na2_x1: 8 (7%)
+	inv_x2: 7 (5%)
+	no2_x1: 6 (5%)
+	buf_x2: 5 (4%)
+	nao22_x1: 3 (4%)
+	an12_x1: 3 (3%)
+	no3_x1: 2 (2%)
+	ao22_x2: 2 (2%)
+	a2_x2: 2 (2%)
+	xr2_x1: 2 (4%)
+	oa2a22_x2: 1 (2%)
+	sff2_x4: 1 (5%)
+	oa22_x2: 1 (1%)
+	a3_x2: 1 (1%)
+	on12_x1: 1 (1%)
+	nxr2_x1: 1 (2%)
+	o3_x2: 1 (1%)
+	Total: 56
+Critical path (no warranty)...1963 ps from 'count 1' to 'count_2_ins'
+Saving file 'neurondec_final.vst'...
+Saving critical path in xsch color file 'neurondec_final.xsc'...
+End of loon...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file neurondec_final
+	--> Drive Standard VHDL file neurondec_final
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'neurondec_final.vhdl'...
+done

@@ -1,31 +1,25 @@
 [*]
 [*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
-[*] Sun Jun 19 15:02:01 2022
+[*] Thu Jun 30 04:08:57 2022
 [*]
-[dumpfile] "/Users/matthiasmoser/Documents/SS22/HardwareSysteme/Praktikum/Code/Multiplier/multiplier_tb_wave.ghw"
-[dumpfile_mtime] "Sun Jun 19 14:58:37 2022"
-[dumpfile_size] 3295
-[savefile] "/Users/matthiasmoser/Documents/SS22/HardwareSysteme/Praktikum/Code/Multiplier/savefile.gtkw"
+[dumpfile] "/Users/matthiasmoser/Documents/SS22/HardwareSysteme/nnhardware/Hardware/MultBlock/Multiplier/multiplier_tb_wave.ghw"
+[dumpfile_mtime] "Thu Jun 30 04:08:32 2022"
+[dumpfile_size] 3991
+[savefile] "/Users/matthiasmoser/Documents/SS22/HardwareSysteme/nnhardware/Hardware/MultBlock/Multiplier/savefile.gtkw"
 [timestart] 0
-[size] 1920 925
-[pos] -1 -1
-*-21.337475 10120000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1920 1027
+[pos] -529 -110
+*-23.538002 27830000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.multiplier_tb.
 [treeopen] top.multiplier_tb.spec.
 [sst_width] 193
 [signals_width] 226
 [sst_expanded] 1
-[sst_vpaned_height] 281
+[sst_vpaned_height] 550
 @28
-#{top.multiplier_tb.a[7:0]} top.multiplier_tb.a[7] top.multiplier_tb.a[6] top.multiplier_tb.a[5] top.multiplier_tb.a[4] top.multiplier_tb.a[3] top.multiplier_tb.a[2] top.multiplier_tb.a[1] top.multiplier_tb.a[0]
-@22
-#{top.multiplier_tb.spec.ab0[7:0]} top.multiplier_tb.spec.ab0[7] top.multiplier_tb.spec.ab0[6] top.multiplier_tb.spec.ab0[5] top.multiplier_tb.spec.ab0[4] top.multiplier_tb.spec.ab0[3] top.multiplier_tb.spec.ab0[2] top.multiplier_tb.spec.ab0[1] top.multiplier_tb.spec.ab0[0]
-@28
-#{top.multiplier_tb.spec.ab1[7:0]} top.multiplier_tb.spec.ab1[7] top.multiplier_tb.spec.ab1[6] top.multiplier_tb.spec.ab1[5] top.multiplier_tb.spec.ab1[4] top.multiplier_tb.spec.ab1[3] top.multiplier_tb.spec.ab1[2] top.multiplier_tb.spec.ab1[1] top.multiplier_tb.spec.ab1[0]
-#{top.multiplier_tb.spec.ab2[7:0]} top.multiplier_tb.spec.ab2[7] top.multiplier_tb.spec.ab2[6] top.multiplier_tb.spec.ab2[5] top.multiplier_tb.spec.ab2[4] top.multiplier_tb.spec.ab2[3] top.multiplier_tb.spec.ab2[2] top.multiplier_tb.spec.ab2[1] top.multiplier_tb.spec.ab2[0]
 #{top.multiplier_tb.b[2:0]} top.multiplier_tb.b[2] top.multiplier_tb.b[1] top.multiplier_tb.b[0]
-@22
+#{top.multiplier_tb.a[7:0]} top.multiplier_tb.a[7] top.multiplier_tb.a[6] top.multiplier_tb.a[5] top.multiplier_tb.a[4] top.multiplier_tb.a[3] top.multiplier_tb.a[2] top.multiplier_tb.a[1] top.multiplier_tb.a[0]
 #{top.multiplier_tb.s[10:0]} top.multiplier_tb.s[10] top.multiplier_tb.s[9] top.multiplier_tb.s[8] top.multiplier_tb.s[7] top.multiplier_tb.s[6] top.multiplier_tb.s[5] top.multiplier_tb.s[4] top.multiplier_tb.s[3] top.multiplier_tb.s[2] top.multiplier_tb.s[1] top.multiplier_tb.s[0]
 [pattern_trace] 1
 [pattern_trace] 0

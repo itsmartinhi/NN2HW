@@ -1,0 +1,353 @@
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file argmax
+	--> Drive Alliance file argmax_vasy
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file argmax_vasy
+	--> Drive Standard VHDL file argmax_vasy
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'argmax_vasy.vhdl'...
+
+                   @@@@@@@                         @@@     @@@
+                     @@   @@                        @@     @@
+                     @@    @@                       @@@   @@@
+                     @@    @@     @@@       @@@     @@@   @@@
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@
+                     @@     @@ @@     @@ @@     @@  @  @@  @@
+                     @@     @@ @@     @@ @@     @@  @  @   @@
+                     @@    @@   @@   @@   @@   @@   @      @@
+                   @@@@@@@@       @@@       @@@    @@@    @@@@
+
+                              BOOlean Minimization
+
+                   Alliance CAD System 5.0,           boom 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Parse BEH file argmax_vasy.vbe
+	--> Drive BEH file argmax_boom
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file argmax_boom
+	--> Drive Standard VHDL file argmax_boom
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'argmax_boom.vhdl'...
+
+                  @@@@@@@                             @@@@ @
+                    @@   @@                         @@    @@
+                    @@    @@                       @@      @
+                    @@    @@     @@@       @@@    @@
+                    @@   @@    @@   @@   @@   @@  @@
+                    @@@@@@    @@     @@ @@     @@ @@     @@@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@
+                    @@     @@ @@     @@ @@     @@ @@    @  @@
+                    @@     @@ @@     @@ @@     @@  @@      @@
+                    @@    @@   @@   @@   @@   @@    @@    @@
+                  @@@@@@@@       @@@       @@@        @@@@
+
+                         Binding and Optimizing On Gates
+
+                 Alliance CAD System 5.0, boog 5.0 [2003/01/09]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+        MBK_VDD        : vdd
+        MBK_VSS        : vss
+        MBK_IN_LO      : vst
+        MBK_OUT_LO     : vst
+        MBK_WORK_LIB   : .
+        MBK_TARGET_LIB : /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'argmax_boom.vbe'...
+Controlling file 'argmax_boom.vbe'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Mapping Warning: Cell 'halfadder_x4' isn't supported
+Mapping Warning: Cell 'ts_x8' isn't supported
+Mapping Warning: Cell 'nmx3_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'na3_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'ao2o22_x4' isn't supported
+Mapping Warning: Cell 'on12_x4' isn't supported
+Mapping Warning: Cell 'buf_x4' isn't supported
+Mapping Warning: Cell 'o4_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'noa3ao322_x4' isn't supported
+Mapping Warning: Cell 'nxr2_x4' isn't supported
+Mapping Warning: Cell 'nts_x2' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'na2_x4' isn't supported
+Mapping Warning: Cell 'oa22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x4' isn't supported
+Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Preparing file 'argmax_boom.vbe'...
+Capacitances on file 'argmax_boom.vbe'...
+Unflattening file 'argmax_boom.vbe'...
+Mapping file 'argmax_boom.vbe'...
+Saving file 'argmax_boog.vst'...
+Adding signal 'not_in_argmax_val 1'
+Adding signal 'not_reg_argmax_val 2'
+Adding signal 'not_reg_argmax_val 3'
+Adding signal 'not_reg_argmax_val 4'
+Adding signal 'not_reg_argmax_val 5'
+Adding signal 'not_reg_argmax_val 6'
+Adding signal 'not_reg_argmax_val 7'
+Adding signal 'not_reg_argmax_val 8'
+Adding signal 'not_reg_argmax_val 9'
+Adding signal 'not_reg_argmax_val 10'
+Adding signal 'not_reg_argmax_val 11'
+Adding signal 'not_reg_argmax_val 12'
+Adding signal 'not_reg_argmax_val 13'
+Adding signal 'not_reg_argmax_val 14'
+Adding signal 'not_reg_argmax_val 15'
+Adding signal 'not_reg_argmax_val 16'
+Adding signal 'not_reg_argmax_val 17'
+Adding signal 'not_reg_argmax_val 18'
+Adding signal 'not_reg_argmax_val 19'
+Quick estimated critical path (no warranty)...1175 ps from 'reg_argmax_val 0' to 'reg_argmax_val 3'
+Quick estimated area (with over-cell routing)...280750 lambda�
+Details...
+	inv_x2: 44
+	sff1_x4: 25
+	oa2a2a23_x2: 17
+	ao2o22_x2: 15
+	na3_x1: 7
+	na2_x1: 6
+	ao22_x2: 6
+	buf_x2: 4
+	noa22_x1: 2
+	a3_x2: 2
+	o2_x2: 2
+	a2_x2: 2
+	on12_x1: 2
+	oa22_x2: 1
+	nmx2_x1: 1
+	oa2a22_x2: 1
+	an12_x1: 1
+	noa2a2a23_x1: 1
+	Total: 139
+Saving critical path in xsch color file 'argmax_boog.xsc'...
+End of boog...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file argmax_boog
+	--> Drive Standard VHDL file argmax_boog
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'argmax_boog.vhdl'...
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @
+                     @@                             @@@    @
+                     @@           @@@       @@@     @ @@   @
+                     @@         @@   @@   @@   @@   @ @@   @
+                     @@        @@     @@ @@     @@  @  @@  @
+                     @@        @@     @@ @@     @@  @   @@ @
+                     @@        @@     @@ @@     @@  @   @@ @
+                     @@      @ @@     @@ @@     @@  @    @@@
+                     @@     @   @@   @@   @@   @@   @     @@
+                   @@@@@@@@@@     @@@       @@@    @@@    @@
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'argmax_boog.vst'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Capacitances on file 'argmax_boog.vst'...
+Delays on file 'argmax_boog.vst'...15500 ps
+Area on file 'argmax_boog.vst'...280750 lamda� (with over-cell routing)
+Details...
+	inv_x2: 44 (11%)
+	sff1_x4: 25 (40%)
+	oa2a2a23_x2: 17 (18%)
+	ao2o22_x2: 15 (12%)
+	na3_x1: 7 (3%)
+	na2_x1: 6 (2%)
+	ao22_x2: 6 (3%)
+	buf_x2: 4 (1%)
+	noa22_x1: 2 (1%)
+	a3_x2: 2 (1%)
+	o2_x2: 2 (0%)
+	a2_x2: 2 (0%)
+	on12_x1: 2 (0%)
+	oa22_x2: 1 (0%)
+	nmx2_x1: 1 (0%)
+	oa2a22_x2: 1 (0%)
+	an12_x1: 1 (0%)
+	noa2a2a23_x1: 1 (0%)
+	Total: 139
+Worst RC on file 'argmax_boog.vst'...1264 ps
+Inserting buffers on critical path for file 'argmax_final.vst'...4 buffers inserted -> 14774 ps
+Improving RC on critical path for file 'argmax_final.vst'...14202 ps
+Improving all RC for file 'argmax_final.vst'...
+Worst RC on file 'argmax_final.vst'...166 ps
+Area on file 'argmax_final.vst'...286000 lamda� (with over-cell routing)
+Details...
+	inv_x2: 43 (11%)
+	sff1_x4: 25 (39%)
+	oa2a2a23_x2: 17 (17%)
+	ao2o22_x2: 15 (11%)
+	buf_x2: 7 (2%)
+	na3_x1: 7 (3%)
+	na2_x1: 6 (2%)
+	ao22_x2: 6 (3%)
+	noa22_x1: 2 (1%)
+	a3_x2: 2 (1%)
+	o2_x2: 2 (0%)
+	a2_x2: 2 (0%)
+	on12_x1: 2 (0%)
+	buf_x8: 1 (0%)
+	oa22_x2: 1 (0%)
+	inv_x4: 1 (0%)
+	nmx2_x1: 1 (0%)
+	oa2a22_x2: 1 (0%)
+	an12_x1: 1 (0%)
+	noa2a2a23_x1: 1 (0%)
+	Total: 143
+Critical path (no warranty)...14202 ps from 'reg_argmax_val 0' to 'reg_argmax_val_18_ins'
+Saving file 'argmax_final.vst'...
+Saving critical path in xsch color file 'argmax_final.xsc'...
+End of loon...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @
+                  @@      @       @@@     @@     @    @@   @
+                   @@    @        @@@     @@@          @@ @
+                   @@    @       @  @@     @@@@         @@
+                    @@  @        @  @@       @@@@       @@
+                    @@  @       @    @@        @@@      @@
+                     @@@        @@@@@@@   @      @@     @@
+                     @@@       @      @@  @@     @@     @@
+                      @        @      @@  @@@    @      @@
+                      @      @@@@    @@@@ @  @@@@     @@@@@@
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file argmax_final
+vbl_bcomp_y.y 965 : Error 19 line 1637 in file argmax_final :label `mbk_buf_not_aux4` already used
+Note that errors might also be due to unsupported statements
+done
