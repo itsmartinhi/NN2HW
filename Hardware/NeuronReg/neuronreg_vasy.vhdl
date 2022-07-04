@@ -19,21 +19,24 @@ END neuronreg_vasy;
 
 ARCHITECTURE RTL OF neuronreg_vasy IS
   SIGNAL rtl_std_logic_vector_0	: STD_LOGIC_VECTOR(20 DOWNTO 0);
-  SIGNAL rtlalc_1	: STD_LOGIC_VECTOR(20 DOWNTO 0);
+  SIGNAL rtlalc_2	: STD_LOGIC_VECTOR(20 DOWNTO 0);
+  SIGNAL rtlsum_1	: STD_LOGIC_VECTOR(20 DOWNTO 0);
+  SIGNAL rtlcarry_1	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL rtlsum_0	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL rtlcarry_0	: STD_LOGIC_VECTOR(20 DOWNTO 0);
+  SIGNAL rtlexts_1	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL rtlexts_0	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL reg_nreg	: STD_LOGIC_VECTOR(20 DOWNTO 0);
-  SIGNAL sum	: STD_LOGIC_VECTOR(20 DOWNTO 0);
 BEGIN
   rtl_std_logic_vector_0 <= ("00000000" & in_nreg_val);
-  sum <= rtlsum_0;
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((c_nreg AND (NOT(reset) AND NOT(c_reset_reg))) = '1')
-    THEN rtlalc_1 <= sum;
+    IF ((reset OR c_reset_reg) = '1')
+    THEN rtlalc_2 <= (OTHERS => '0');
+    ELSIF ((NOT(reset) AND (NOT(c_reset_reg) AND c_nreg)) = '1')
+    THEN rtlalc_2 <= rtlsum_1;
     END IF;
     END IF;
   END PROCESS;
@@ -44,17 +47,23 @@ BEGIN
     IF ((reset OR c_reset_reg) = '1')
     THEN reg_nreg <= (OTHERS => '0');
     ELSIF ((NOT(reset) AND (NOT(c_reset_reg) AND c_nreg)) = '1')
-    THEN reg_nreg <= sum;
+    THEN reg_nreg <= rtlsum_0;
     END IF;
     END IF;
   END PROCESS;
   rtlexts_0 <= rtl_std_logic_vector_0;
+  rtlexts_1 <= rtl_std_logic_vector_0;
   rtlcarry_0(20 downto 1) <= (((reg_nreg(19 downto 0) AND rtlexts_0(19 downto 0)) OR (reg_nreg(19 downto 0) 
 AND rtlcarry_0(19 downto 0))) OR (rtlexts_0(19 downto 0) AND rtlcarry_0(19 downto 0)
 ));
   rtlsum_0 <= ((reg_nreg XOR rtlexts_0) XOR rtlcarry_0);
   rtlcarry_0(0) <= '0';
-  out_nreg_val <= rtlalc_1;
+  rtlcarry_1(20 downto 1) <= (((reg_nreg(19 downto 0) AND rtlexts_1(19 downto 0)) OR (reg_nreg(19 downto 0) 
+AND rtlcarry_1(19 downto 0))) OR (rtlexts_1(19 downto 0) AND rtlcarry_1(19 downto 0)
+));
+  rtlsum_1 <= ((reg_nreg XOR rtlexts_1) XOR rtlcarry_1);
+  rtlcarry_1(0) <= '0';
+  out_nreg_val <= rtlalc_2;
 END RTL;
 
 

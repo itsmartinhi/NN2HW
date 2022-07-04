@@ -16,29 +16,37 @@ END neuronreg_vasy;
 
 ARCHITECTURE VBE OF neuronreg_vasy IS
 
-  SIGNAL rtlalc_1	: REG_VECTOR(20 DOWNTO 0) REGISTER;
+  SIGNAL rtlalc_2	: REG_VECTOR(20 DOWNTO 0) REGISTER;
+  SIGNAL rtlsum_1	: BIT_VECTOR(20 DOWNTO 0);
+  SIGNAL rtlcarry_1	: BIT_VECTOR(20 DOWNTO 0);
   SIGNAL rtlsum_0	: BIT_VECTOR(20 DOWNTO 0);
   SIGNAL rtlcarry_0	: BIT_VECTOR(20 DOWNTO 0);
+  SIGNAL rtlexts_1	: BIT_VECTOR(20 DOWNTO 0);
   SIGNAL rtlexts_0	: BIT_VECTOR(20 DOWNTO 0);
   SIGNAL reg_nreg	: REG_VECTOR(20 DOWNTO 0) REGISTER;
-  SIGNAL sum	: BIT_VECTOR(20 DOWNTO 0);
 BEGIN
 
-  out_nreg_val <= rtlalc_1;
+  out_nreg_val <= rtlalc_2;
+  rtlcarry_1(0) <= '0';
+  rtlsum_1 <= ((reg_nreg XOR rtlexts_1) XOR rtlcarry_1);
+  rtlcarry_1(20 downto 1) <= (((reg_nreg(19 downto 0) AND rtlexts_1(19 downto 0)) OR (reg_nreg(19 downto 0) 
+AND rtlcarry_1(19 downto 0))) OR (rtlexts_1(19 downto 0) AND rtlcarry_1(19 downto 0)
+));
   rtlcarry_0(0) <= '0';
   rtlsum_0 <= ((reg_nreg XOR rtlexts_0) XOR rtlcarry_0);
   rtlcarry_0(20 downto 1) <= (((reg_nreg(19 downto 0) AND rtlexts_0(19 downto 0)) OR (reg_nreg(19 downto 0) 
 AND rtlcarry_0(19 downto 0))) OR (rtlexts_0(19 downto 0) AND rtlcarry_0(19 downto 0)
 ));
+  rtlexts_1 <= ("00000000" & in_nreg_val);
   rtlexts_0 <= ("00000000" & in_nreg_val);
   LABEL0 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
     reg_nreg <= GUARDED "000000000000000000000" WHEN (c_reset_reg OR reset) ELSE
-     sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE reg_nreg;
+     rtlsum_0 WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE reg_nreg;
   END BLOCK LABEL0;
   LABEL1 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    rtlalc_1 <= GUARDED sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE rtlalc_1;
+    rtlalc_2 <= GUARDED "000000000000000000000" WHEN (c_reset_reg OR reset) ELSE
+     rtlsum_1 WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE rtlalc_2;
   END BLOCK LABEL1;
-  sum <= rtlsum_0;
 END VBE;

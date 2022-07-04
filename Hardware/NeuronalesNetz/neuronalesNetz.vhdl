@@ -102,7 +102,8 @@ architecture RTL of NEURONALESNETZ is
     for all : NEURONREGISTER 	use entity WORK.NEURONREG(RTL);
     for all : ARGMAX 		  	use configuration WORK.CFG_argmax_final;
     for all : MULTBLOCK			use entity WORK.MULTBLOCK(RTL);
-
+	for all : ROM 				use entity WORK.ROM(RTL);
+	for all : RAM 				use entity WORK.RAM(RTL); -- just switch to cfg when demo is finished
 
     -- internal signals
     

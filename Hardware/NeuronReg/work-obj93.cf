@@ -1,7 +1,11 @@
 v 4
-file . "neuronreg.vhdl" "dced9ab3ce99a40916e9c1464175bf97e9cab334" "20220702155542.583":
-  entity neuronreg at 1( 0) + 0 on 455;
-  architecture rtl of neuronreg at 16( 338) + 0 on 456;
-file . "neuronreg_tb.vhdl" "d67646bbe6cb27fdbde97cade54aa743e2a980cb" "20220702155542.584":
-  entity neuronreg_tb at 1( 0) + 0 on 457;
-  architecture testbench of neuronreg_tb at 8( 113) + 0 on 458;
+file . "neuronreg.vhdl" "fd5dfb47ae8bb9fc4f1175ba277d19eb31926d43" "20220704175435.366":
+  entity neuronreg at 1( 0) + 0 on 616;
+  architecture rtl of neuronreg at 16( 338) + 0 on 617;
+file . "neuronreg_tb.vhdl" "23b973a231678f7824fe870542166e1d58f00978" "20220704175435.416":
+  entity neuronreg_tb at 1( 0) + 0 on 621;
+  architecture testbench of neuronreg_tb at 8( 113) + 0 on 622;
+file . "neuronreg_final.vhdl" "29757a1b5e130956abc0de5d9bb564134ac446c6" "20220704175435.415":
+  entity neuronreg_final at 5( 52) + 0 on 618;
+  architecture rtl of neuronreg_final at 20( 381) + 0 on 619;
+  configuration cfg_neuronreg_final at 2224( 45284) + 0 on 620;

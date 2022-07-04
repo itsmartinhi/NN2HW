@@ -19,67 +19,43 @@ END neuronreg_final;
 
 ARCHITECTURE RTL OF neuronreg_final IS
   SIGNAL mbk_buf_not_reg_nreg	: STD_LOGIC_VECTOR(0 DOWNTO 0);
-  SIGNAL mbk_buf_not_rtlcarry_0	: STD_LOGIC_VECTOR(18 DOWNTO 13);
+  SIGNAL mbk_buf_not_rtlcarry_0	: STD_LOGIC_VECTOR(15 DOWNTO 15);
   SIGNAL mbk_buf_reg_nreg	: STD_LOGIC_VECTOR(0 DOWNTO 0);
-  SIGNAL mbk_buf_rtlcarry_0	: STD_LOGIC_VECTOR(12 DOWNTO 1);
-  SIGNAL not_in_nreg_val	: STD_LOGIC_VECTOR(6 DOWNTO 6);
+  SIGNAL mbk_buf_rtlcarry_0	: STD_LOGIC_VECTOR(19 DOWNTO 1);
+  SIGNAL not_in_nreg_val	: STD_LOGIC_VECTOR(4 DOWNTO 4);
   SIGNAL not_reg_nreg	: STD_LOGIC_VECTOR(19 DOWNTO 0);
-  SIGNAL not_rtlalc_1	: STD_LOGIC_VECTOR(18 DOWNTO 5);
-  SIGNAL not_rtlcarry_0	: STD_LOGIC_VECTOR(19 DOWNTO 2);
+  SIGNAL not_rtlcarry_0	: STD_LOGIC_VECTOR(15 DOWNTO 1);
   SIGNAL reg_nreg	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL rtlalc_1	: STD_LOGIC_VECTOR(20 DOWNTO 0);
-  SIGNAL rtlcarry_0	: STD_LOGIC_VECTOR(12 DOWNTO 1);
+  SIGNAL rtlcarry_0	: STD_LOGIC_VECTOR(19 DOWNTO 1);
   SIGNAL xr2_x1_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_9_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_8_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_7_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_6_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_5_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_4_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_3_sig	: STD_LOGIC;
   SIGNAL xr2_x1_2_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_23_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_22_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_21_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_20_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_19_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_18_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_17_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_16_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_15_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_14_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_13_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_12_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_11_sig	: STD_LOGIC;
+  SIGNAL xr2_x1_10_sig	: STD_LOGIC;
   SIGNAL on12_x1_sig	: STD_LOGIC;
-  SIGNAL on12_x1_9_sig	: STD_LOGIC;
-  SIGNAL on12_x1_8_sig	: STD_LOGIC;
-  SIGNAL on12_x1_7_sig	: STD_LOGIC;
-  SIGNAL on12_x1_6_sig	: STD_LOGIC;
-  SIGNAL on12_x1_5_sig	: STD_LOGIC;
-  SIGNAL on12_x1_4_sig	: STD_LOGIC;
-  SIGNAL on12_x1_3_sig	: STD_LOGIC;
   SIGNAL on12_x1_2_sig	: STD_LOGIC;
-  SIGNAL on12_x1_16_sig	: STD_LOGIC;
-  SIGNAL on12_x1_15_sig	: STD_LOGIC;
-  SIGNAL on12_x1_14_sig	: STD_LOGIC;
-  SIGNAL on12_x1_13_sig	: STD_LOGIC;
-  SIGNAL on12_x1_12_sig	: STD_LOGIC;
-  SIGNAL on12_x1_11_sig	: STD_LOGIC;
-  SIGNAL on12_x1_10_sig	: STD_LOGIC;
-  SIGNAL oa2ao222_x2_sig	: STD_LOGIC;
-  SIGNAL oa2a22_x2_sig	: STD_LOGIC;
-  SIGNAL oa22_x2_sig	: STD_LOGIC;
-  SIGNAL oa22_x2_6_sig	: STD_LOGIC;
-  SIGNAL oa22_x2_5_sig	: STD_LOGIC;
-  SIGNAL oa22_x2_4_sig	: STD_LOGIC;
-  SIGNAL oa22_x2_3_sig	: STD_LOGIC;
-  SIGNAL oa22_x2_2_sig	: STD_LOGIC;
   SIGNAL o4_x2_sig	: STD_LOGIC;
-  SIGNAL o4_x2_6_sig	: STD_LOGIC;
-  SIGNAL o4_x2_5_sig	: STD_LOGIC;
-  SIGNAL o4_x2_4_sig	: STD_LOGIC;
-  SIGNAL o4_x2_3_sig	: STD_LOGIC;
   SIGNAL o4_x2_2_sig	: STD_LOGIC;
-  SIGNAL o3_x2_sig	: STD_LOGIC;
-  SIGNAL o3_x2_9_sig	: STD_LOGIC;
-  SIGNAL o3_x2_8_sig	: STD_LOGIC;
-  SIGNAL o3_x2_7_sig	: STD_LOGIC;
-  SIGNAL o3_x2_6_sig	: STD_LOGIC;
-  SIGNAL o3_x2_5_sig	: STD_LOGIC;
-  SIGNAL o3_x2_4_sig	: STD_LOGIC;
-  SIGNAL o3_x2_3_sig	: STD_LOGIC;
-  SIGNAL o3_x2_2_sig	: STD_LOGIC;
-  SIGNAL o3_x2_17_sig	: STD_LOGIC;
-  SIGNAL o3_x2_16_sig	: STD_LOGIC;
-  SIGNAL o3_x2_15_sig	: STD_LOGIC;
-  SIGNAL o3_x2_14_sig	: STD_LOGIC;
-  SIGNAL o3_x2_13_sig	: STD_LOGIC;
-  SIGNAL o3_x2_12_sig	: STD_LOGIC;
-  SIGNAL o3_x2_11_sig	: STD_LOGIC;
-  SIGNAL o3_x2_10_sig	: STD_LOGIC;
   SIGNAL o2_x2_sig	: STD_LOGIC;
-  SIGNAL o2_x2_9_sig	: STD_LOGIC;
   SIGNAL o2_x2_8_sig	: STD_LOGIC;
   SIGNAL o2_x2_7_sig	: STD_LOGIC;
   SIGNAL o2_x2_6_sig	: STD_LOGIC;
@@ -87,124 +63,89 @@ ARCHITECTURE RTL OF neuronreg_final IS
   SIGNAL o2_x2_4_sig	: STD_LOGIC;
   SIGNAL o2_x2_3_sig	: STD_LOGIC;
   SIGNAL o2_x2_2_sig	: STD_LOGIC;
-  SIGNAL o2_x2_13_sig	: STD_LOGIC;
-  SIGNAL o2_x2_12_sig	: STD_LOGIC;
-  SIGNAL o2_x2_11_sig	: STD_LOGIC;
-  SIGNAL o2_x2_10_sig	: STD_LOGIC;
   SIGNAL not_reset	: STD_LOGIC;
   SIGNAL not_c_reset_reg	: STD_LOGIC;
   SIGNAL not_c_nreg	: STD_LOGIC;
-  SIGNAL not_aux9	: STD_LOGIC;
-  SIGNAL not_aux7	: STD_LOGIC;
-  SIGNAL not_aux5	: STD_LOGIC;
-  SIGNAL not_aux45	: STD_LOGIC;
-  SIGNAL not_aux44	: STD_LOGIC;
-  SIGNAL not_aux43	: STD_LOGIC;
-  SIGNAL not_aux4	: STD_LOGIC;
-  SIGNAL not_aux38	: STD_LOGIC;
-  SIGNAL not_aux36	: STD_LOGIC;
-  SIGNAL not_aux35	: STD_LOGIC;
-  SIGNAL not_aux31	: STD_LOGIC;
+  SIGNAL not_aux97	: STD_LOGIC;
+  SIGNAL not_aux93	: STD_LOGIC;
+  SIGNAL not_aux86	: STD_LOGIC;
+  SIGNAL not_aux82	: STD_LOGIC;
+  SIGNAL not_aux8	: STD_LOGIC;
+  SIGNAL not_aux78	: STD_LOGIC;
+  SIGNAL not_aux71	: STD_LOGIC;
+  SIGNAL not_aux70	: STD_LOGIC;
+  SIGNAL not_aux63	: STD_LOGIC;
+  SIGNAL not_aux62	: STD_LOGIC;
+  SIGNAL not_aux57	: STD_LOGIC;
+  SIGNAL not_aux52	: STD_LOGIC;
+  SIGNAL not_aux47	: STD_LOGIC;
+  SIGNAL not_aux42	: STD_LOGIC;
+  SIGNAL not_aux34	: STD_LOGIC;
+  SIGNAL not_aux33	: STD_LOGIC;
   SIGNAL not_aux3	: STD_LOGIC;
-  SIGNAL not_aux26	: STD_LOGIC;
+  SIGNAL not_aux25	: STD_LOGIC;
   SIGNAL not_aux24	: STD_LOGIC;
-  SIGNAL not_aux2	: STD_LOGIC;
-  SIGNAL not_aux17	: STD_LOGIC;
+  SIGNAL not_aux23	: STD_LOGIC;
+  SIGNAL not_aux18	: STD_LOGIC;
   SIGNAL not_aux13	: STD_LOGIC;
-  SIGNAL not_aux12	: STD_LOGIC;
-  SIGNAL not_aux11	: STD_LOGIC;
-  SIGNAL not_aux10	: STD_LOGIC;
-  SIGNAL not_aux1	: STD_LOGIC;
-  SIGNAL not_aux0	: STD_LOGIC;
-  SIGNAL noa22_x1_sig	: STD_LOGIC;
-  SIGNAL no4_x1_sig	: STD_LOGIC;
-  SIGNAL no4_x1_7_sig	: STD_LOGIC;
-  SIGNAL no4_x1_6_sig	: STD_LOGIC;
-  SIGNAL no4_x1_5_sig	: STD_LOGIC;
-  SIGNAL no4_x1_4_sig	: STD_LOGIC;
-  SIGNAL no4_x1_3_sig	: STD_LOGIC;
-  SIGNAL no4_x1_2_sig	: STD_LOGIC;
+  SIGNAL not_aux120	: STD_LOGIC;
+  SIGNAL not_aux119	: STD_LOGIC;
+  SIGNAL not_aux118	: STD_LOGIC;
+  SIGNAL not_aux110	: STD_LOGIC;
+  SIGNAL not_aux109	: STD_LOGIC;
+  SIGNAL not_aux105	: STD_LOGIC;
+  SIGNAL not_aux101	: STD_LOGIC;
   SIGNAL no3_x1_sig	: STD_LOGIC;
-  SIGNAL no3_x1_9_sig	: STD_LOGIC;
-  SIGNAL no3_x1_8_sig	: STD_LOGIC;
-  SIGNAL no3_x1_7_sig	: STD_LOGIC;
-  SIGNAL no3_x1_6_sig	: STD_LOGIC;
-  SIGNAL no3_x1_5_sig	: STD_LOGIC;
-  SIGNAL no3_x1_4_sig	: STD_LOGIC;
   SIGNAL no3_x1_3_sig	: STD_LOGIC;
   SIGNAL no3_x1_2_sig	: STD_LOGIC;
-  SIGNAL no3_x1_13_sig	: STD_LOGIC;
-  SIGNAL no3_x1_12_sig	: STD_LOGIC;
-  SIGNAL no3_x1_11_sig	: STD_LOGIC;
-  SIGNAL no3_x1_10_sig	: STD_LOGIC;
   SIGNAL no2_x1_sig	: STD_LOGIC;
-  SIGNAL no2_x1_9_sig	: STD_LOGIC;
-  SIGNAL no2_x1_8_sig	: STD_LOGIC;
-  SIGNAL no2_x1_7_sig	: STD_LOGIC;
-  SIGNAL no2_x1_6_sig	: STD_LOGIC;
-  SIGNAL no2_x1_5_sig	: STD_LOGIC;
-  SIGNAL no2_x1_4_sig	: STD_LOGIC;
-  SIGNAL no2_x1_3_sig	: STD_LOGIC;
-  SIGNAL no2_x1_2_sig	: STD_LOGIC;
   SIGNAL nao22_x1_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_9_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_8_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_7_sig	: STD_LOGIC;
   SIGNAL nao22_x1_6_sig	: STD_LOGIC;
   SIGNAL nao22_x1_5_sig	: STD_LOGIC;
   SIGNAL nao22_x1_4_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_42_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_41_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_40_sig	: STD_LOGIC;
   SIGNAL nao22_x1_3_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_39_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_38_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_37_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_36_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_35_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_34_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_33_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_32_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_31_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_30_sig	: STD_LOGIC;
   SIGNAL nao22_x1_2_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_29_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_28_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_27_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_26_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_25_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_24_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_23_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_22_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_21_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_20_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_19_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_18_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_17_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_16_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_15_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_14_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_13_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_12_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_11_sig	: STD_LOGIC;
+  SIGNAL nao22_x1_10_sig	: STD_LOGIC;
   SIGNAL na4_x1_sig	: STD_LOGIC;
-  SIGNAL na4_x1_8_sig	: STD_LOGIC;
-  SIGNAL na4_x1_7_sig	: STD_LOGIC;
-  SIGNAL na4_x1_6_sig	: STD_LOGIC;
-  SIGNAL na4_x1_5_sig	: STD_LOGIC;
-  SIGNAL na4_x1_4_sig	: STD_LOGIC;
-  SIGNAL na4_x1_3_sig	: STD_LOGIC;
   SIGNAL na4_x1_2_sig	: STD_LOGIC;
   SIGNAL na3_x1_sig	: STD_LOGIC;
-  SIGNAL na3_x1_9_sig	: STD_LOGIC;
-  SIGNAL na3_x1_8_sig	: STD_LOGIC;
-  SIGNAL na3_x1_7_sig	: STD_LOGIC;
-  SIGNAL na3_x1_6_sig	: STD_LOGIC;
-  SIGNAL na3_x1_5_sig	: STD_LOGIC;
-  SIGNAL na3_x1_4_sig	: STD_LOGIC;
-  SIGNAL na3_x1_3_sig	: STD_LOGIC;
-  SIGNAL na3_x1_30_sig	: STD_LOGIC;
-  SIGNAL na3_x1_2_sig	: STD_LOGIC;
-  SIGNAL na3_x1_29_sig	: STD_LOGIC;
-  SIGNAL na3_x1_28_sig	: STD_LOGIC;
-  SIGNAL na3_x1_27_sig	: STD_LOGIC;
-  SIGNAL na3_x1_26_sig	: STD_LOGIC;
-  SIGNAL na3_x1_25_sig	: STD_LOGIC;
-  SIGNAL na3_x1_24_sig	: STD_LOGIC;
-  SIGNAL na3_x1_23_sig	: STD_LOGIC;
-  SIGNAL na3_x1_22_sig	: STD_LOGIC;
-  SIGNAL na3_x1_21_sig	: STD_LOGIC;
-  SIGNAL na3_x1_20_sig	: STD_LOGIC;
-  SIGNAL na3_x1_19_sig	: STD_LOGIC;
-  SIGNAL na3_x1_18_sig	: STD_LOGIC;
-  SIGNAL na3_x1_17_sig	: STD_LOGIC;
-  SIGNAL na3_x1_16_sig	: STD_LOGIC;
-  SIGNAL na3_x1_15_sig	: STD_LOGIC;
-  SIGNAL na3_x1_14_sig	: STD_LOGIC;
-  SIGNAL na3_x1_13_sig	: STD_LOGIC;
-  SIGNAL na3_x1_12_sig	: STD_LOGIC;
-  SIGNAL na3_x1_11_sig	: STD_LOGIC;
-  SIGNAL na3_x1_10_sig	: STD_LOGIC;
   SIGNAL na2_x1_sig	: STD_LOGIC;
-  SIGNAL na2_x1_9_sig	: STD_LOGIC;
-  SIGNAL na2_x1_8_sig	: STD_LOGIC;
-  SIGNAL na2_x1_7_sig	: STD_LOGIC;
-  SIGNAL na2_x1_6_sig	: STD_LOGIC;
-  SIGNAL na2_x1_5_sig	: STD_LOGIC;
-  SIGNAL na2_x1_4_sig	: STD_LOGIC;
-  SIGNAL na2_x1_3_sig	: STD_LOGIC;
   SIGNAL na2_x1_2_sig	: STD_LOGIC;
-  SIGNAL na2_x1_14_sig	: STD_LOGIC;
-  SIGNAL na2_x1_13_sig	: STD_LOGIC;
-  SIGNAL na2_x1_12_sig	: STD_LOGIC;
-  SIGNAL na2_x1_11_sig	: STD_LOGIC;
-  SIGNAL na2_x1_10_sig	: STD_LOGIC;
-  SIGNAL mbk_buf_not_aux24	: STD_LOGIC;
   SIGNAL inv_x2_sig	: STD_LOGIC;
   SIGNAL inv_x2_9_sig	: STD_LOGIC;
   SIGNAL inv_x2_8_sig	: STD_LOGIC;
@@ -213,39 +154,48 @@ ARCHITECTURE RTL OF neuronreg_final IS
   SIGNAL inv_x2_5_sig	: STD_LOGIC;
   SIGNAL inv_x2_4_sig	: STD_LOGIC;
   SIGNAL inv_x2_3_sig	: STD_LOGIC;
+  SIGNAL inv_x2_32_sig	: STD_LOGIC;
+  SIGNAL inv_x2_31_sig	: STD_LOGIC;
+  SIGNAL inv_x2_30_sig	: STD_LOGIC;
   SIGNAL inv_x2_2_sig	: STD_LOGIC;
+  SIGNAL inv_x2_29_sig	: STD_LOGIC;
+  SIGNAL inv_x2_28_sig	: STD_LOGIC;
+  SIGNAL inv_x2_27_sig	: STD_LOGIC;
+  SIGNAL inv_x2_26_sig	: STD_LOGIC;
+  SIGNAL inv_x2_25_sig	: STD_LOGIC;
+  SIGNAL inv_x2_24_sig	: STD_LOGIC;
+  SIGNAL inv_x2_23_sig	: STD_LOGIC;
+  SIGNAL inv_x2_22_sig	: STD_LOGIC;
+  SIGNAL inv_x2_21_sig	: STD_LOGIC;
+  SIGNAL inv_x2_20_sig	: STD_LOGIC;
+  SIGNAL inv_x2_19_sig	: STD_LOGIC;
+  SIGNAL inv_x2_18_sig	: STD_LOGIC;
+  SIGNAL inv_x2_17_sig	: STD_LOGIC;
+  SIGNAL inv_x2_16_sig	: STD_LOGIC;
+  SIGNAL inv_x2_15_sig	: STD_LOGIC;
   SIGNAL inv_x2_14_sig	: STD_LOGIC;
   SIGNAL inv_x2_13_sig	: STD_LOGIC;
   SIGNAL inv_x2_12_sig	: STD_LOGIC;
   SIGNAL inv_x2_11_sig	: STD_LOGIC;
   SIGNAL inv_x2_10_sig	: STD_LOGIC;
-  SIGNAL aux6	: STD_LOGIC;
-  SIGNAL aux42	: STD_LOGIC;
-  SIGNAL aux41	: STD_LOGIC;
-  SIGNAL aux37	: STD_LOGIC;
-  SIGNAL aux34	: STD_LOGIC;
-  SIGNAL aux33	: STD_LOGIC;
-  SIGNAL aux32	: STD_LOGIC;
-  SIGNAL aux30	: STD_LOGIC;
-  SIGNAL aux29	: STD_LOGIC;
-  SIGNAL aux28	: STD_LOGIC;
-  SIGNAL aux27	: STD_LOGIC;
-  SIGNAL aux21	: STD_LOGIC;
-  SIGNAL aux0	: STD_LOGIC;
-  SIGNAL ao2o22_x2_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_7_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_6_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_5_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_4_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_3_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_2_sig	: STD_LOGIC;
-  SIGNAL an12_x1_sig	: STD_LOGIC;
-  SIGNAL an12_x1_2_sig	: STD_LOGIC;
-  SIGNAL a4_x2_sig	: STD_LOGIC;
   SIGNAL a3_x2_sig	: STD_LOGIC;
+  SIGNAL a3_x2_9_sig	: STD_LOGIC;
+  SIGNAL a3_x2_8_sig	: STD_LOGIC;
+  SIGNAL a3_x2_7_sig	: STD_LOGIC;
+  SIGNAL a3_x2_6_sig	: STD_LOGIC;
+  SIGNAL a3_x2_5_sig	: STD_LOGIC;
+  SIGNAL a3_x2_4_sig	: STD_LOGIC;
   SIGNAL a3_x2_3_sig	: STD_LOGIC;
   SIGNAL a3_x2_2_sig	: STD_LOGIC;
+  SIGNAL a3_x2_18_sig	: STD_LOGIC;
+  SIGNAL a3_x2_17_sig	: STD_LOGIC;
+  SIGNAL a3_x2_16_sig	: STD_LOGIC;
+  SIGNAL a3_x2_15_sig	: STD_LOGIC;
+  SIGNAL a3_x2_14_sig	: STD_LOGIC;
+  SIGNAL a3_x2_13_sig	: STD_LOGIC;
+  SIGNAL a3_x2_12_sig	: STD_LOGIC;
+  SIGNAL a3_x2_11_sig	: STD_LOGIC;
+  SIGNAL a3_x2_10_sig	: STD_LOGIC;
   SIGNAL a2_x2_sig	: STD_LOGIC;
   SIGNAL a2_x2_9_sig	: STD_LOGIC;
   SIGNAL a2_x2_8_sig	: STD_LOGIC;
@@ -255,14 +205,6 @@ ARCHITECTURE RTL OF neuronreg_final IS
   SIGNAL a2_x2_4_sig	: STD_LOGIC;
   SIGNAL a2_x2_3_sig	: STD_LOGIC;
   SIGNAL a2_x2_2_sig	: STD_LOGIC;
-  SIGNAL a2_x2_17_sig	: STD_LOGIC;
-  SIGNAL a2_x2_16_sig	: STD_LOGIC;
-  SIGNAL a2_x2_15_sig	: STD_LOGIC;
-  SIGNAL a2_x2_14_sig	: STD_LOGIC;
-  SIGNAL a2_x2_13_sig	: STD_LOGIC;
-  SIGNAL a2_x2_12_sig	: STD_LOGIC;
-  SIGNAL a2_x2_11_sig	: STD_LOGIC;
-  SIGNAL a2_x2_10_sig	: STD_LOGIC;
 
   COMPONENT buf_x2
   PORT(
@@ -279,23 +221,6 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
-  COMPONENT na3_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT on12_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
   COMPONENT nao22_x1
   PORT(
   i0	: IN STD_LOGIC;
@@ -305,43 +230,9 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
-  COMPONENT a2_x2
+  COMPONENT inv_x2
   PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT na2_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT an12_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT o3_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT no2_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
+  i	: IN STD_LOGIC;
   nq	: OUT STD_LOGIC
    );
   END COMPONENT;
@@ -354,119 +245,7 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
-  COMPONENT ao22_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT a3_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT no3_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT a4_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT inv_x2
-  PORT(
-  i	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT oa22_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT no4_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT sff2_x4
-  PORT(
-  ck	: IN STD_LOGIC;
-  cmd	: IN STD_LOGIC;
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT noa22_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT na4_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT o4_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT ao2o22_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT xr2_x1
+  COMPONENT an12_x1
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
@@ -485,16 +264,6 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
-  COMPONENT oa2a22_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
   COMPONENT nao2o22_x1
   PORT(
   i0	: IN STD_LOGIC;
@@ -505,6 +274,14 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
+  COMPONENT a2_x2
+  PORT(
+  i1	: IN STD_LOGIC;
+  i0	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
   COMPONENT inv_x4
   PORT(
   i	: IN STD_LOGIC;
@@ -512,7 +289,7 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
-  COMPONENT nxr2_x1
+  COMPONENT na2_x1
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
@@ -520,77 +297,134 @@ ARCHITECTURE RTL OF neuronreg_final IS
    );
   END COMPONENT;
 
-  COMPONENT noa2ao222_x1
+  COMPONENT a3_x2
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT xr2_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT oa22_x2
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT o4_x2
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
   i2	: IN STD_LOGIC;
   i3	: IN STD_LOGIC;
-  i4	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT na4_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  i3	: IN STD_LOGIC;
   nq	: OUT STD_LOGIC
    );
   END COMPONENT;
 
+  COMPONENT no3_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  nq	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT on12_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT no2_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  nq	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT na3_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  nq	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT an12_x4
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
 BEGIN
-  i_mbk_buf_not_aux24 : buf_x2
-  PORT MAP (
-    i => not_aux24,
-    q => mbk_buf_not_aux24
-  );
-  mbk_buf_rtlcarry_0_8 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(8),
-    q => mbk_buf_rtlcarry_0(8)
-  );
-  mbk_buf_rtlcarry_0_3 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(3),
-    q => mbk_buf_rtlcarry_0(3)
-  );
-  mbk_buf_rtlcarry_0_1 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(1),
-    q => mbk_buf_rtlcarry_0(1)
-  );
-  mbk_buf_rtlcarry_0_9 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(9),
-    q => mbk_buf_rtlcarry_0(9)
-  );
-  mbk_buf_rtlcarry_0_7 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(7),
-    q => mbk_buf_rtlcarry_0(7)
-  );
-  dmbk_buf_rtlcarry_0_2 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(2),
-    q => mbk_buf_rtlcarry_0(2)
-  );
-  mbk_buf_reg_nreg_0 : buf_x2
-  PORT MAP (
-    i => reg_nreg(0),
-    q => mbk_buf_reg_nreg(0)
-  );
-  mbk_buf_rtlcarry_0_12 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(12),
-    q => mbk_buf_rtlcarry_0(12)
-  );
-  mbk_buf_rtlcarry_0_5 : buf_x2
-  PORT MAP (
-    i => rtlcarry_0(5),
-    q => mbk_buf_rtlcarry_0(5)
-  );
   mbk_buf_not_reg_nreg_0 : buf_x2
   PORT MAP (
     i => not_reg_nreg(0),
     q => mbk_buf_not_reg_nreg(0)
   );
-  mbk_buf_rtlcarry_0_11 : buf_x2
+  mbk_buf_rtlcarry_0_19 : buf_x2
   PORT MAP (
-    i => rtlcarry_0(11),
-    q => mbk_buf_rtlcarry_0(11)
+    i => rtlcarry_0(19),
+    q => mbk_buf_rtlcarry_0(19)
+  );
+  mbk_buf_rtlcarry_0_18 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(18),
+    q => mbk_buf_rtlcarry_0(18)
+  );
+  mbk_buf_rtlcarry_0_17 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(17),
+    q => mbk_buf_rtlcarry_0(17)
+  );
+  mbk_buf_rtlcarry_0_16 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(16),
+    q => mbk_buf_rtlcarry_0(16)
+  );
+  mbk_buf_rtlcarry_0_13 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(13),
+    q => mbk_buf_rtlcarry_0(13)
+  );
+  mbk_buf_rtlcarry_0_14 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(14),
+    q => mbk_buf_rtlcarry_0(14)
+  );
+  mbk_buf_rtlcarry_0_12 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(12),
+    q => mbk_buf_rtlcarry_0(12)
   );
   mbk_buf_rtlcarry_0_10 : buf_x2
   PORT MAP (
@@ -602,40 +436,60 @@ BEGIN
     i => rtlcarry_0(6),
     q => mbk_buf_rtlcarry_0(6)
   );
+  mbk_buf_rtlcarry_0_3 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(3),
+    q => mbk_buf_rtlcarry_0(3)
+  );
+  dmbk_buf_rtlcarry_0_2 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(2),
+    q => mbk_buf_rtlcarry_0(2)
+  );
+  mbk_buf_rtlcarry_0_11 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(11),
+    q => mbk_buf_rtlcarry_0(11)
+  );
+  mbk_buf_rtlcarry_0_9 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(9),
+    q => mbk_buf_rtlcarry_0(9)
+  );
+  mbk_buf_rtlcarry_0_8 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(8),
+    q => mbk_buf_rtlcarry_0(8)
+  );
+  mbk_buf_rtlcarry_0_7 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(7),
+    q => mbk_buf_rtlcarry_0(7)
+  );
+  mbk_buf_rtlcarry_0_5 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(5),
+    q => mbk_buf_rtlcarry_0(5)
+  );
   mbk_buf_rtlcarry_0_4 : buf_x2
   PORT MAP (
     i => rtlcarry_0(4),
     q => mbk_buf_rtlcarry_0(4)
   );
-  dmbk_buf_not_rtlcarry_0_15 : buf_x2
+  mbk_buf_rtlcarry_0_1 : buf_x2
+  PORT MAP (
+    i => rtlcarry_0(1),
+    q => mbk_buf_rtlcarry_0(1)
+  );
+  mbk_buf_reg_nreg_0 : buf_x2
+  PORT MAP (
+    i => reg_nreg(0),
+    q => mbk_buf_reg_nreg(0)
+  );
+  mbk_buf_not_rtlcarry_0_15 : buf_x2
   PORT MAP (
     i => not_rtlcarry_0(15),
     q => mbk_buf_not_rtlcarry_0(15)
-  );
-  dmbk_buf_not_rtlcarry_0_18 : buf_x2
-  PORT MAP (
-    i => not_rtlcarry_0(18),
-    q => mbk_buf_not_rtlcarry_0(18)
-  );
-  dmbk_buf_not_rtlcarry_0_17 : buf_x2
-  PORT MAP (
-    i => not_rtlcarry_0(17),
-    q => mbk_buf_not_rtlcarry_0(17)
-  );
-  dmbk_buf_not_rtlcarry_0_16 : buf_x2
-  PORT MAP (
-    i => not_rtlcarry_0(16),
-    q => mbk_buf_not_rtlcarry_0(16)
-  );
-  dmbk_buf_not_rtlcarry_0_14 : buf_x2
-  PORT MAP (
-    i => not_rtlcarry_0(14),
-    q => mbk_buf_not_rtlcarry_0(14)
-  );
-  dmbk_buf_not_rtlcarry_0_13 : buf_x2
-  PORT MAP (
-    i => not_rtlcarry_0(13),
-    q => mbk_buf_not_rtlcarry_0(13)
   );
   out_nreg_val_20_ins : buf_x2
   PORT MAP (
@@ -745,1496 +599,784 @@ BEGIN
   rtlalc_1_20_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_30_sig,
+    i => nao22_x1_42_sig,
     q => rtlalc_1(20)
   );
-  na3_x1_30_ins : na3_x1
+  nao22_x1_42_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux26,
-    i1 => on12_x1_16_sig,
-    i2 => nao22_x1_6_sig,
-    nq => na3_x1_30_sig
+    i0 => not_aux120,
+    i1 => inv_x2_32_sig,
+    i2 => not_aux118,
+    nq => nao22_x1_42_sig
   );
-  on12_x1_16_ins : on12_x1
+  inv_x2_32_ins : inv_x2
   PORT MAP (
-    i0 => rtlalc_1(20),
-    i1 => not_aux1,
-    q => on12_x1_16_sig
-  );
-  nao22_x1_6_ins : nao22_x1
-  PORT MAP (
-    i0 => not_reg_nreg(19),
-    i1 => not_rtlcarry_0(19),
-    i2 => a2_x2_17_sig,
-    nq => nao22_x1_6_sig
-  );
-  a2_x2_17_ins : a2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => reg_nreg(20),
-    q => a2_x2_17_sig
+    i => rtlalc_1(20),
+    nq => inv_x2_32_sig
   );
   rtlalc_1_19_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_28_sig,
+    i => nao22_x1_41_sig,
     q => rtlalc_1(19)
   );
-  na3_x1_28_ins : na3_x1
+  nao22_x1_41_ins : nao22_x1
   PORT MAP (
-    i0 => on12_x1_15_sig,
-    i1 => na3_x1_29_sig,
-    i2 => na2_x1_14_sig,
-    nq => na3_x1_28_sig
+    i0 => not_aux120,
+    i1 => inv_x2_31_sig,
+    i2 => not_aux109,
+    nq => nao22_x1_41_sig
   );
-  on12_x1_15_ins : on12_x1
+  inv_x2_31_ins : inv_x2
   PORT MAP (
-    i0 => rtlalc_1(19),
-    i1 => not_aux1,
-    q => on12_x1_15_sig
-  );
-  na3_x1_29_ins : na3_x1
-  PORT MAP (
-    i0 => not_rtlcarry_0(19),
-    i1 => reg_nreg(19),
-    i2 => aux37,
-    nq => na3_x1_29_sig
-  );
-  na2_x1_14_ins : na2_x1
-  PORT MAP (
-    i0 => not_reg_nreg(19),
-    i1 => an12_x1_2_sig,
-    nq => na2_x1_14_sig
-  );
-  an12_x1_2_ins : an12_x1
-  PORT MAP (
-    i0 => not_rtlcarry_0(19),
-    i1 => aux37,
-    q => an12_x1_2_sig
+    i => rtlalc_1(19),
+    nq => inv_x2_31_sig
   );
   rtlalc_1_18_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_26_sig,
+    i => nao22_x1_40_sig,
     q => rtlalc_1(18)
   );
-  na3_x1_26_ins : na3_x1
+  nao22_x1_40_ins : nao22_x1
   PORT MAP (
-    i0 => o3_x2_17_sig,
-    i1 => na3_x1_27_sig,
-    i2 => o2_x2_13_sig,
-    nq => na3_x1_26_sig
+    i0 => not_aux120,
+    i1 => inv_x2_30_sig,
+    i2 => not_aux105,
+    nq => nao22_x1_40_sig
   );
-  o3_x2_17_ins : o3_x2
+  inv_x2_30_ins : inv_x2
   PORT MAP (
-    i0 => not_aux44,
-    i1 => not_aux36,
-    i2 => mbk_buf_not_rtlcarry_0(18),
-    q => o3_x2_17_sig
-  );
-  na3_x1_27_ins : na3_x1
-  PORT MAP (
-    i0 => no2_x1_9_sig,
-    i1 => mbk_buf_not_rtlcarry_0(18),
-    i2 => reg_nreg(18),
-    nq => na3_x1_27_sig
-  );
-  no2_x1_9_ins : no2_x1
-  PORT MAP (
-    i0 => not_aux36,
-    i1 => not_c_nreg,
-    nq => no2_x1_9_sig
-  );
-  o2_x2_13_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => not_rtlalc_1(18),
-    q => o2_x2_13_sig
+    i => rtlalc_1(18),
+    nq => inv_x2_30_sig
   );
   rtlalc_1_17_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_24_sig,
+    i => nao22_x1_39_sig,
     q => rtlalc_1(17)
   );
-  na3_x1_24_ins : na3_x1
+  nao22_x1_39_ins : nao22_x1
   PORT MAP (
-    i0 => o3_x2_16_sig,
-    i1 => na3_x1_25_sig,
-    i2 => o2_x2_12_sig,
-    nq => na3_x1_24_sig
+    i0 => not_aux120,
+    i1 => inv_x2_29_sig,
+    i2 => not_aux101,
+    nq => nao22_x1_39_sig
   );
-  o3_x2_16_ins : o3_x2
+  inv_x2_29_ins : inv_x2
   PORT MAP (
-    i0 => not_aux43,
-    i1 => not_aux35,
-    i2 => mbk_buf_not_rtlcarry_0(17),
-    q => o3_x2_16_sig
-  );
-  na3_x1_25_ins : na3_x1
-  PORT MAP (
-    i0 => no2_x1_8_sig,
-    i1 => mbk_buf_not_rtlcarry_0(17),
-    i2 => reg_nreg(17),
-    nq => na3_x1_25_sig
-  );
-  no2_x1_8_ins : no2_x1
-  PORT MAP (
-    i0 => not_aux35,
-    i1 => not_c_nreg,
-    nq => no2_x1_8_sig
-  );
-  o2_x2_12_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => not_rtlalc_1(17),
-    q => o2_x2_12_sig
+    i => rtlalc_1(17),
+    nq => inv_x2_29_sig
   );
   rtlalc_1_16_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_7_sig,
+    i => nao22_x1_38_sig,
     q => rtlalc_1(16)
   );
-  ao22_x2_7_ins : ao22_x2
+  nao22_x1_38_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(16),
-    i2 => na3_x1_23_sig,
-    q => ao22_x2_7_sig
+    i0 => not_aux120,
+    i1 => inv_x2_28_sig,
+    i2 => not_aux97,
+    nq => nao22_x1_38_sig
   );
-  na3_x1_23_ins : na3_x1
+  inv_x2_28_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_13_sig,
-    i2 => o2_x2_11_sig,
-    nq => na3_x1_23_sig
-  );
-  na2_x1_13_ins : na2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(16),
-    i1 => reg_nreg(16),
-    nq => na2_x1_13_sig
-  );
-  o2_x2_11_ins : o2_x2
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(16),
-    i1 => reg_nreg(16),
-    q => o2_x2_11_sig
+    i => rtlalc_1(16),
+    nq => inv_x2_28_sig
   );
   rtlalc_1_15_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => o3_x2_15_sig,
+    i => nao22_x1_37_sig,
     q => rtlalc_1(15)
   );
-  o3_x2_15_ins : o3_x2
+  nao22_x1_37_ins : nao22_x1
   PORT MAP (
-    i0 => aux21,
-    i1 => an12_x1_sig,
-    i2 => a3_x2_3_sig,
-    q => o3_x2_15_sig
+    i0 => not_aux120,
+    i1 => inv_x2_27_sig,
+    i2 => not_aux93,
+    nq => nao22_x1_37_sig
   );
-  an12_x1_ins : an12_x1
+  inv_x2_27_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(15),
-    q => an12_x1_sig
-  );
-  a3_x2_3_ins : a3_x2
-  PORT MAP (
-    i0 => no3_x1_13_sig,
-    i1 => mbk_buf_not_rtlcarry_0(15),
-    i2 => reg_nreg(15),
-    q => a3_x2_3_sig
-  );
-  no3_x1_13_ins : no3_x1
-  PORT MAP (
-    i0 => reset,
-    i1 => not_c_nreg,
-    i2 => c_reset_reg,
-    nq => no3_x1_13_sig
+    i => rtlalc_1(15),
+    nq => inv_x2_27_sig
   );
   rtlalc_1_14_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_6_sig,
+    i => nao22_x1_36_sig,
     q => rtlalc_1(14)
   );
-  ao22_x2_6_ins : ao22_x2
+  nao22_x1_36_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(14),
-    i2 => na3_x1_22_sig,
-    q => ao22_x2_6_sig
+    i0 => not_aux120,
+    i1 => inv_x2_26_sig,
+    i2 => not_aux86,
+    nq => nao22_x1_36_sig
   );
-  na3_x1_22_ins : na3_x1
+  inv_x2_26_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_12_sig,
-    i2 => o2_x2_10_sig,
-    nq => na3_x1_22_sig
-  );
-  na2_x1_12_ins : na2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(14),
-    i1 => reg_nreg(14),
-    nq => na2_x1_12_sig
-  );
-  o2_x2_10_ins : o2_x2
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(14),
-    i1 => reg_nreg(14),
-    q => o2_x2_10_sig
+    i => rtlalc_1(14),
+    nq => inv_x2_26_sig
   );
   rtlalc_1_13_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_5_sig,
+    i => nao22_x1_35_sig,
     q => rtlalc_1(13)
   );
-  ao22_x2_5_ins : ao22_x2
+  nao22_x1_35_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(13),
-    i2 => na3_x1_21_sig,
-    q => ao22_x2_5_sig
+    i0 => o2_x2_8_sig,
+    i1 => inv_x2_25_sig,
+    i2 => not_aux82,
+    nq => nao22_x1_35_sig
   );
-  na3_x1_21_ins : na3_x1
+  o2_x2_8_ins : o2_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_11_sig,
-    i2 => o2_x2_9_sig,
-    nq => na3_x1_21_sig
+    i0 => c_nreg,
+    i1 => not_aux24,
+    q => o2_x2_8_sig
   );
-  na2_x1_11_ins : na2_x1
+  inv_x2_25_ins : inv_x2
   PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(13),
-    i1 => reg_nreg(13),
-    nq => na2_x1_11_sig
-  );
-  o2_x2_9_ins : o2_x2
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(13),
-    i1 => reg_nreg(13),
-    q => o2_x2_9_sig
+    i => rtlalc_1(13),
+    nq => inv_x2_25_sig
   );
   rtlalc_1_12_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_20_sig,
+    i => nao22_x1_34_sig,
     q => rtlalc_1(12)
   );
-  na3_x1_20_ins : na3_x1
+  nao22_x1_34_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux17,
-    i1 => on12_x1_14_sig,
-    i2 => on12_x1_13_sig,
-    nq => na3_x1_20_sig
+    i0 => not_aux120,
+    i1 => inv_x2_24_sig,
+    i2 => not_aux78,
+    nq => nao22_x1_34_sig
   );
-  on12_x1_14_ins : on12_x1
+  inv_x2_24_ins : inv_x2
   PORT MAP (
-    i0 => rtlalc_1(12),
-    i1 => not_aux1,
-    q => on12_x1_14_sig
-  );
-  on12_x1_13_ins : on12_x1
-  PORT MAP (
-    i0 => a4_x2_sig,
-    i1 => not_aux13,
-    q => on12_x1_13_sig
-  );
-  a4_x2_ins : a4_x2
-  PORT MAP (
-    i0 => reg_nreg(12),
-    i1 => not_reset,
-    i2 => not_c_reset_reg,
-    i3 => c_nreg,
-    q => a4_x2_sig
+    i => rtlalc_1(12),
+    nq => inv_x2_24_sig
   );
   rtlalc_1_11_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_4_sig,
+    i => nao22_x1_33_sig,
     q => rtlalc_1(11)
   );
-  ao22_x2_4_ins : ao22_x2
+  nao22_x1_33_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(11),
-    i2 => na3_x1_19_sig,
-    q => ao22_x2_4_sig
+    i0 => not_aux120,
+    i1 => inv_x2_23_sig,
+    i2 => not_aux70,
+    nq => nao22_x1_33_sig
   );
-  na3_x1_19_ins : na3_x1
+  inv_x2_23_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_10_sig,
-    i2 => o2_x2_8_sig,
-    nq => na3_x1_19_sig
-  );
-  na2_x1_10_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux12,
-    i1 => not_reg_nreg(11),
-    nq => na2_x1_10_sig
-  );
-  o2_x2_8_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux12,
-    i1 => not_reg_nreg(11),
-    q => o2_x2_8_sig
+    i => rtlalc_1(11),
+    nq => inv_x2_23_sig
   );
   rtlalc_1_10_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_17_sig,
+    i => nao22_x1_32_sig,
     q => rtlalc_1(10)
   );
-  na3_x1_17_ins : na3_x1
+  nao22_x1_32_ins : nao22_x1
   PORT MAP (
-    i0 => on12_x1_12_sig,
-    i1 => na3_x1_18_sig,
-    i2 => o3_x2_14_sig,
-    nq => na3_x1_17_sig
+    i0 => not_aux120,
+    i1 => inv_x2_22_sig,
+    i2 => not_aux62,
+    nq => nao22_x1_32_sig
   );
-  on12_x1_12_ins : on12_x1
+  inv_x2_22_ins : inv_x2
   PORT MAP (
-    i0 => rtlalc_1(10),
-    i1 => not_aux1,
-    q => on12_x1_12_sig
-  );
-  na3_x1_18_ins : na3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(10),
-    i1 => not_aux11,
-    i2 => aux34,
-    nq => na3_x1_18_sig
-  );
-  o3_x2_14_ins : o3_x2
-  PORT MAP (
-    i0 => not_reg_nreg(10),
-    i1 => not_aux11,
-    i2 => inv_x2_14_sig,
-    q => o3_x2_14_sig
-  );
-  inv_x2_14_ins : inv_x2
-  PORT MAP (
-    i => aux34,
-    nq => inv_x2_14_sig
+    i => rtlalc_1(10),
+    nq => inv_x2_22_sig
   );
   rtlalc_1_9_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_3_sig,
+    i => nao22_x1_31_sig,
     q => rtlalc_1(9)
   );
-  ao22_x2_3_ins : ao22_x2
+  nao22_x1_31_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(9),
-    i2 => na3_x1_16_sig,
-    q => ao22_x2_3_sig
+    i0 => not_aux120,
+    i1 => inv_x2_21_sig,
+    i2 => not_aux57,
+    nq => nao22_x1_31_sig
   );
-  na3_x1_16_ins : na3_x1
+  inv_x2_21_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_9_sig,
-    i2 => o2_x2_7_sig,
-    nq => na3_x1_16_sig
-  );
-  na2_x1_9_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux10,
-    i1 => not_reg_nreg(9),
-    nq => na2_x1_9_sig
-  );
-  o2_x2_7_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux10,
-    i1 => not_reg_nreg(9),
-    q => o2_x2_7_sig
+    i => rtlalc_1(9),
+    nq => inv_x2_21_sig
   );
   rtlalc_1_8_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_6_sig,
+    i => nao22_x1_30_sig,
     q => rtlalc_1(8)
   );
-  oa22_x2_6_ins : oa22_x2
+  nao22_x1_30_ins : nao22_x1
   PORT MAP (
-    i0 => rtlalc_1(8),
-    i1 => not_c_nreg,
-    i2 => a3_x2_2_sig,
-    q => oa22_x2_6_sig
+    i0 => not_aux120,
+    i1 => inv_x2_20_sig,
+    i2 => not_aux52,
+    nq => nao22_x1_30_sig
   );
-  a3_x2_2_ins : a3_x2
+  inv_x2_20_ins : inv_x2
   PORT MAP (
-    i0 => c_nreg,
-    i1 => na3_x1_15_sig,
-    i2 => on12_x1_11_sig,
-    q => a3_x2_2_sig
-  );
-  na3_x1_15_ins : na3_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => not_aux9,
-    i2 => not_c_reset_reg,
-    nq => na3_x1_15_sig
-  );
-  on12_x1_11_ins : on12_x1
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => rtlalc_1(8),
-    q => on12_x1_11_sig
+    i => rtlalc_1(8),
+    nq => inv_x2_20_sig
   );
   rtlalc_1_7_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => o3_x2_13_sig,
+    i => nao22_x1_29_sig,
     q => rtlalc_1(7)
   );
-  o3_x2_13_ins : o3_x2
+  nao22_x1_29_ins : nao22_x1
   PORT MAP (
-    i0 => no2_x1_7_sig,
-    i1 => a3_x2_sig,
-    i2 => no4_x1_7_sig,
-    q => o3_x2_13_sig
+    i0 => not_aux120,
+    i1 => inv_x2_19_sig,
+    i2 => not_aux47,
+    nq => nao22_x1_29_sig
   );
-  no2_x1_7_ins : no2_x1
+  inv_x2_19_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => not_rtlalc_1(7),
-    nq => no2_x1_7_sig
+    i => rtlalc_1(7),
+    nq => inv_x2_19_sig
   );
-  a3_x2_ins : a3_x2
-  PORT MAP (
-    i0 => aux42,
-    i1 => not_aux7,
-    i2 => aux33,
-    q => a3_x2_sig
-  );
-  no4_x1_7_ins : no4_x1
-  PORT MAP (
-    i0 => not_reg_nreg(7),
-    i1 => inv_x2_13_sig,
-    i2 => not_aux7,
-    i3 => not_c_nreg,
-    nq => no4_x1_7_sig
-  );
-  inv_x2_13_ins : inv_x2
-  PORT MAP (
-    i => aux33,
-    nq => inv_x2_13_sig
-  );
-  rtlalc_1_6_ins : sff2_x4
+  rtlalc_1_6_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    cmd => c_nreg,
-    i0 => rtlalc_1(6),
-    i1 => na2_x1_8_sig,
+    i => nao22_x1_28_sig,
     q => rtlalc_1(6)
   );
-  na2_x1_8_ins : na2_x1
+  nao22_x1_28_ins : nao22_x1
   PORT MAP (
-    i0 => na3_x1_14_sig,
-    i1 => noa22_x1_sig,
-    nq => na2_x1_8_sig
+    i0 => not_aux120,
+    i1 => inv_x2_18_sig,
+    i2 => not_aux42,
+    nq => nao22_x1_28_sig
   );
-  na3_x1_14_ins : na3_x1
+  inv_x2_18_ins : inv_x2
   PORT MAP (
-    i0 => not_in_nreg_val(6),
-    i1 => not_aux31,
-    i2 => aux32,
-    nq => na3_x1_14_sig
-  );
-  noa22_x1_ins : noa22_x1
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => rtlalc_1(6),
-    i2 => no3_x1_12_sig,
-    nq => noa22_x1_sig
-  );
-  no3_x1_12_ins : no3_x1
-  PORT MAP (
-    i0 => inv_x2_12_sig,
-    i1 => not_aux31,
-    i2 => not_in_nreg_val(6),
-    nq => no3_x1_12_sig
-  );
-  inv_x2_12_ins : inv_x2
-  PORT MAP (
-    i => aux32,
-    nq => inv_x2_12_sig
+    i => rtlalc_1(6),
+    nq => inv_x2_18_sig
   );
   rtlalc_1_5_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_13_sig,
+    i => nao22_x1_27_sig,
     q => rtlalc_1(5)
   );
-  na3_x1_13_ins : na3_x1
+  nao22_x1_27_ins : nao22_x1
   PORT MAP (
-    i0 => o2_x2_6_sig,
-    i1 => na4_x1_8_sig,
-    i2 => o4_x2_6_sig,
-    nq => na3_x1_13_sig
+    i0 => not_aux120,
+    i1 => inv_x2_17_sig,
+    i2 => not_aux33,
+    nq => nao22_x1_27_sig
   );
-  o2_x2_6_ins : o2_x2
+  inv_x2_17_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => not_rtlalc_1(5),
-    q => o2_x2_6_sig
-  );
-  na4_x1_8_ins : na4_x1
-  PORT MAP (
-    i0 => aux30,
-    i1 => c_nreg,
-    i2 => not_rtlcarry_0(5),
-    i3 => aux29,
-    nq => na4_x1_8_sig
-  );
-  o4_x2_6_ins : o4_x2
-  PORT MAP (
-    i0 => aux29,
-    i1 => not_c_nreg,
-    i2 => not_rtlcarry_0(5),
-    i3 => inv_x2_11_sig,
-    q => o4_x2_6_sig
-  );
-  inv_x2_11_ins : inv_x2
-  PORT MAP (
-    i => aux30,
-    nq => inv_x2_11_sig
+    i => rtlalc_1(5),
+    nq => inv_x2_17_sig
   );
   rtlalc_1_4_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_2_sig,
+    i => nao22_x1_26_sig,
     q => rtlalc_1(4)
   );
-  ao22_x2_2_ins : ao22_x2
+  nao22_x1_26_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(4),
-    i2 => na3_x1_12_sig,
-    q => ao22_x2_2_sig
+    i0 => not_aux120,
+    i1 => inv_x2_16_sig,
+    i2 => not_aux23,
+    nq => nao22_x1_26_sig
   );
-  na3_x1_12_ins : na3_x1
+  inv_x2_16_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_7_sig,
-    i2 => o2_x2_5_sig,
-    nq => na3_x1_12_sig
-  );
-  na2_x1_7_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux5,
-    i1 => not_reg_nreg(4),
-    nq => na2_x1_7_sig
-  );
-  o2_x2_5_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux5,
-    i1 => not_reg_nreg(4),
-    q => o2_x2_5_sig
+    i => rtlalc_1(4),
+    nq => inv_x2_16_sig
   );
   rtlalc_1_3_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_10_sig,
+    i => nao22_x1_25_sig,
     q => rtlalc_1(3)
   );
-  na3_x1_10_ins : na3_x1
+  nao22_x1_25_ins : nao22_x1
   PORT MAP (
-    i0 => on12_x1_10_sig,
-    i1 => na3_x1_11_sig,
-    i2 => o3_x2_12_sig,
-    nq => na3_x1_10_sig
+    i0 => o2_x2_7_sig,
+    i1 => inv_x2_15_sig,
+    i2 => not_aux18,
+    nq => nao22_x1_25_sig
   );
-  on12_x1_10_ins : on12_x1
+  o2_x2_7_ins : o2_x2
   PORT MAP (
-    i0 => rtlalc_1(3),
-    i1 => not_aux1,
-    q => on12_x1_10_sig
+    i0 => c_nreg,
+    i1 => not_aux24,
+    q => o2_x2_7_sig
   );
-  na3_x1_11_ins : na3_x1
+  inv_x2_15_ins : inv_x2
   PORT MAP (
-    i0 => not_reg_nreg(3),
-    i1 => not_aux4,
-    i2 => aux28,
-    nq => na3_x1_11_sig
-  );
-  o3_x2_12_ins : o3_x2
-  PORT MAP (
-    i0 => not_reg_nreg(3),
-    i1 => not_aux4,
-    i2 => inv_x2_10_sig,
-    q => o3_x2_12_sig
-  );
-  inv_x2_10_ins : inv_x2
-  PORT MAP (
-    i => aux28,
-    nq => inv_x2_10_sig
+    i => rtlalc_1(3),
+    nq => inv_x2_15_sig
   );
   rtlalc_1_2_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na3_x1_8_sig,
+    i => nao22_x1_24_sig,
     q => rtlalc_1(2)
   );
-  na3_x1_8_ins : na3_x1
+  nao22_x1_24_ins : nao22_x1
   PORT MAP (
-    i0 => on12_x1_9_sig,
-    i1 => na3_x1_9_sig,
-    i2 => o3_x2_11_sig,
-    nq => na3_x1_8_sig
+    i0 => not_aux120,
+    i1 => inv_x2_14_sig,
+    i2 => not_aux13,
+    nq => nao22_x1_24_sig
   );
-  on12_x1_9_ins : on12_x1
+  inv_x2_14_ins : inv_x2
   PORT MAP (
-    i0 => rtlalc_1(2),
-    i1 => not_aux1,
-    q => on12_x1_9_sig
-  );
-  na3_x1_9_ins : na3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(2),
-    i1 => not_aux3,
-    i2 => aux27,
-    nq => na3_x1_9_sig
-  );
-  o3_x2_11_ins : o3_x2
-  PORT MAP (
-    i0 => not_reg_nreg(2),
-    i1 => not_aux3,
-    i2 => inv_x2_9_sig,
-    q => o3_x2_11_sig
-  );
-  inv_x2_9_ins : inv_x2
-  PORT MAP (
-    i => aux27,
-    nq => inv_x2_9_sig
+    i => rtlalc_1(2),
+    nq => inv_x2_14_sig
   );
   rtlalc_1_1_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_sig,
+    i => nao22_x1_23_sig,
     q => rtlalc_1(1)
   );
-  ao22_x2_ins : ao22_x2
+  nao22_x1_23_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(1),
-    i2 => na3_x1_7_sig,
-    q => ao22_x2_sig
+    i0 => not_aux120,
+    i1 => inv_x2_13_sig,
+    i2 => not_aux8,
+    nq => nao22_x1_23_sig
   );
-  na3_x1_7_ins : na3_x1
+  inv_x2_13_ins : inv_x2
   PORT MAP (
-    i0 => not_aux1,
-    i1 => na2_x1_6_sig,
-    i2 => o2_x2_4_sig,
-    nq => na3_x1_7_sig
-  );
-  na2_x1_6_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux2,
-    i1 => not_reg_nreg(1),
-    nq => na2_x1_6_sig
-  );
-  o2_x2_4_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux2,
-    i1 => not_reg_nreg(1),
-    q => o2_x2_4_sig
+    i => rtlalc_1(1),
+    nq => inv_x2_13_sig
   );
   rtlalc_1_0_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao2o22_x2_sig,
+    i => nao22_x1_22_sig,
     q => rtlalc_1(0)
   );
-  ao2o22_x2_ins : ao2o22_x2
+  nao22_x1_22_ins : nao22_x1
   PORT MAP (
-    i0 => inv_x2_8_sig,
-    i1 => xr2_x1_2_sig,
-    i2 => not_aux1,
-    i3 => rtlalc_1(0),
-    q => ao2o22_x2_sig
+    i0 => not_aux120,
+    i1 => inv_x2_12_sig,
+    i2 => not_aux3,
+    nq => nao22_x1_22_sig
   );
-  inv_x2_8_ins : inv_x2
+  inv_x2_12_ins : inv_x2
   PORT MAP (
-    i => not_aux1,
-    nq => inv_x2_8_sig
-  );
-  xr2_x1_2_ins : xr2_x1
-  PORT MAP (
-    i0 => mbk_buf_reg_nreg(0),
-    i1 => in_nreg_val(0),
-    q => xr2_x1_2_sig
+    i => rtlalc_1(0),
+    nq => inv_x2_12_sig
   );
   reg_nreg_20_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_8_sig,
+    i => nao22_x1_21_sig,
     q => reg_nreg(20)
   );
-  on12_x1_8_ins : on12_x1
+  nao22_x1_21_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux26,
-    i1 => no3_x1_11_sig,
-    q => on12_x1_8_sig
+    i0 => o2_x2_6_sig,
+    i1 => inv_x2_11_sig,
+    i2 => not_aux118,
+    nq => nao22_x1_21_sig
   );
-  no3_x1_11_ins : no3_x1
+  o2_x2_6_ins : o2_x2
   PORT MAP (
-    i0 => inv_x2_7_sig,
-    i1 => a2_x2_16_sig,
-    i2 => not_aux0,
-    nq => no3_x1_11_sig
+    i0 => c_nreg,
+    i1 => not_aux24,
+    q => o2_x2_6_sig
   );
-  inv_x2_7_ins : inv_x2
+  inv_x2_11_ins : inv_x2
   PORT MAP (
     i => reg_nreg(20),
-    nq => inv_x2_7_sig
-  );
-  a2_x2_16_ins : a2_x2
-  PORT MAP (
-    i0 => not_aux45,
-    i1 => reg_nreg(19),
-    q => a2_x2_16_sig
+    nq => inv_x2_11_sig
   );
   reg_nreg_19_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_5_sig,
+    i => nao22_x1_20_sig,
     q => reg_nreg(19)
   );
-  nao22_x1_5_ins : nao22_x1
+  nao22_x1_20_ins : nao22_x1
   PORT MAP (
-    i0 => reg_nreg(19),
-    i1 => mbk_buf_not_aux24,
-    i2 => o3_x2_10_sig,
-    nq => nao22_x1_5_sig
-  );
-  o3_x2_10_ins : o3_x2
-  PORT MAP (
-    i0 => not_aux45,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(19),
-    q => o3_x2_10_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(19),
+    i2 => not_aux109,
+    nq => nao22_x1_20_sig
   );
   reg_nreg_18_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_7_sig,
+    i => nao22_x1_19_sig,
     q => reg_nreg(18)
   );
-  on12_x1_7_ins : on12_x1
+  nao22_x1_19_ins : nao22_x1
   PORT MAP (
-    i0 => o4_x2_5_sig,
-    i1 => no3_x1_10_sig,
-    q => on12_x1_7_sig
-  );
-  o4_x2_5_ins : o4_x2
-  PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => not_aux44,
-    i3 => mbk_buf_not_rtlcarry_0(18),
-    q => o4_x2_5_sig
-  );
-  no3_x1_10_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(18),
-    i1 => not_aux0,
-    i2 => no2_x1_6_sig,
-    nq => no3_x1_10_sig
-  );
-  no2_x1_6_ins : no2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(18),
-    i1 => not_c_nreg,
-    nq => no2_x1_6_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(18),
+    i2 => not_aux105,
+    nq => nao22_x1_19_sig
   );
   reg_nreg_17_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_6_sig,
+    i => nao22_x1_18_sig,
     q => reg_nreg(17)
   );
-  on12_x1_6_ins : on12_x1
+  nao22_x1_18_ins : nao22_x1
   PORT MAP (
-    i0 => o4_x2_4_sig,
-    i1 => no3_x1_9_sig,
-    q => on12_x1_6_sig
-  );
-  o4_x2_4_ins : o4_x2
-  PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => not_aux43,
-    i3 => mbk_buf_not_rtlcarry_0(17),
-    q => o4_x2_4_sig
-  );
-  no3_x1_9_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(17),
-    i1 => not_aux0,
-    i2 => no2_x1_5_sig,
-    nq => no3_x1_9_sig
-  );
-  no2_x1_5_ins : no2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(17),
-    i1 => not_c_nreg,
-    nq => no2_x1_5_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(17),
+    i2 => not_aux101,
+    nq => nao22_x1_18_sig
   );
   reg_nreg_16_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_5_sig,
+    i => nao22_x1_17_sig,
     q => reg_nreg(16)
   );
-  on12_x1_5_ins : on12_x1
+  nao22_x1_17_ins : nao22_x1
   PORT MAP (
-    i0 => o3_x2_9_sig,
-    i1 => no3_x1_8_sig,
-    q => on12_x1_5_sig
-  );
-  o3_x2_9_ins : o3_x2
-  PORT MAP (
-    i0 => na3_x1_6_sig,
-    i1 => mbk_buf_not_rtlcarry_0(16),
-    i2 => reg_nreg(16),
-    q => o3_x2_9_sig
-  );
-  na3_x1_6_ins : na3_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => c_nreg,
-    i2 => not_c_reset_reg,
-    nq => na3_x1_6_sig
-  );
-  no3_x1_8_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(16),
-    i1 => not_aux0,
-    i2 => no2_x1_4_sig,
-    nq => no3_x1_8_sig
-  );
-  no2_x1_4_ins : no2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(16),
-    i1 => not_c_nreg,
-    nq => no2_x1_4_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(16),
+    i2 => not_aux97,
+    nq => nao22_x1_17_sig
   );
   reg_nreg_15_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_4_sig,
+    i => nao22_x1_16_sig,
     q => reg_nreg(15)
   );
-  on12_x1_4_ins : on12_x1
+  nao22_x1_16_ins : nao22_x1
   PORT MAP (
-    i0 => o3_x2_8_sig,
-    i1 => aux21,
-    q => on12_x1_4_sig
+    i0 => o2_x2_5_sig,
+    i1 => inv_x2_10_sig,
+    i2 => not_aux93,
+    nq => nao22_x1_16_sig
   );
-  o3_x2_8_ins : o3_x2
+  o2_x2_5_ins : o2_x2
   PORT MAP (
-    i0 => no2_x1_3_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(15),
-    q => o3_x2_8_sig
+    i0 => c_reset_reg,
+    i1 => not_aux119,
+    q => o2_x2_5_sig
   );
-  no2_x1_3_ins : no2_x1
+  inv_x2_10_ins : inv_x2
   PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(15),
-    i1 => not_c_nreg,
-    nq => no2_x1_3_sig
+    i => reg_nreg(15),
+    nq => inv_x2_10_sig
   );
   reg_nreg_14_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_3_sig,
+    i => nao22_x1_15_sig,
     q => reg_nreg(14)
   );
-  on12_x1_3_ins : on12_x1
+  nao22_x1_15_ins : nao22_x1
   PORT MAP (
-    i0 => o3_x2_7_sig,
-    i1 => no3_x1_7_sig,
-    q => on12_x1_3_sig
-  );
-  o3_x2_7_ins : o3_x2
-  PORT MAP (
-    i0 => na3_x1_5_sig,
-    i1 => mbk_buf_not_rtlcarry_0(14),
-    i2 => reg_nreg(14),
-    q => o3_x2_7_sig
-  );
-  na3_x1_5_ins : na3_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => c_nreg,
-    i2 => not_c_reset_reg,
-    nq => na3_x1_5_sig
-  );
-  no3_x1_7_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(14),
-    i1 => not_aux0,
-    i2 => no2_x1_2_sig,
-    nq => no3_x1_7_sig
-  );
-  no2_x1_2_ins : no2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(14),
-    i1 => not_c_nreg,
-    nq => no2_x1_2_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(14),
+    i2 => not_aux86,
+    nq => nao22_x1_15_sig
   );
   reg_nreg_13_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_4_sig,
+    i => nao22_x1_14_sig,
     q => reg_nreg(13)
   );
-  nao22_x1_4_ins : nao22_x1
+  nao22_x1_14_ins : nao22_x1
   PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(13),
-    i1 => na4_x1_7_sig,
-    i2 => o3_x2_6_sig,
-    nq => nao22_x1_4_sig
-  );
-  na4_x1_7_ins : na4_x1
-  PORT MAP (
-    i0 => not_c_reset_reg,
-    i1 => not_reset,
-    i2 => c_nreg,
-    i3 => not_reg_nreg(13),
-    nq => na4_x1_7_sig
-  );
-  o3_x2_6_ins : o3_x2
-  PORT MAP (
-    i0 => no2_x1_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(13),
-    q => o3_x2_6_sig
-  );
-  no2_x1_ins : no2_x1
-  PORT MAP (
-    i0 => mbk_buf_not_rtlcarry_0(13),
-    i1 => not_c_nreg,
-    nq => no2_x1_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(13),
+    i2 => not_aux82,
+    nq => nao22_x1_14_sig
   );
   reg_nreg_12_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na2_x1_4_sig,
+    i => nao22_x1_13_sig,
     q => reg_nreg(12)
   );
-  na2_x1_4_ins : na2_x1
+  nao22_x1_13_ins : nao22_x1
   PORT MAP (
-    i0 => not_aux17,
-    i1 => na3_x1_4_sig,
-    nq => na2_x1_4_sig
+    i0 => o2_x2_4_sig,
+    i1 => not_reg_nreg(12),
+    i2 => not_aux78,
+    nq => nao22_x1_13_sig
   );
-  na3_x1_4_ins : na3_x1
+  o2_x2_4_ins : o2_x2
   PORT MAP (
-    i0 => na2_x1_5_sig,
-    i1 => reg_nreg(12),
-    i2 => aux0,
-    nq => na3_x1_4_sig
-  );
-  na2_x1_5_ins : na2_x1
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux13,
-    nq => na2_x1_5_sig
+    i0 => c_reset_reg,
+    i1 => not_aux119,
+    q => o2_x2_4_sig
   );
   reg_nreg_11_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_3_sig,
+    i => nao22_x1_12_sig,
     q => reg_nreg(11)
   );
-  nao22_x1_3_ins : nao22_x1
+  nao22_x1_12_ins : nao22_x1
   PORT MAP (
-    i0 => a2_x2_15_sig,
-    i1 => o2_x2_3_sig,
-    i2 => o3_x2_5_sig,
-    nq => nao22_x1_3_sig
-  );
-  a2_x2_15_ins : a2_x2
-  PORT MAP (
-    i0 => na4_x1_6_sig,
-    i1 => o4_x2_3_sig,
-    q => a2_x2_15_sig
-  );
-  na4_x1_6_ins : na4_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => in_nreg_val(11),
-    i2 => not_rtlcarry_0(11),
-    i3 => not_c_reset_reg,
-    nq => na4_x1_6_sig
-  );
-  o4_x2_3_ins : o4_x2
-  PORT MAP (
-    i0 => reset,
-    i1 => in_nreg_val(11),
-    i2 => c_reset_reg,
-    i3 => not_rtlcarry_0(11),
-    q => o4_x2_3_sig
+    i0 => o2_x2_3_sig,
+    i1 => not_reg_nreg(11),
+    i2 => not_aux70,
+    nq => nao22_x1_12_sig
   );
   o2_x2_3_ins : o2_x2
   PORT MAP (
-    i0 => not_c_nreg,
-    i1 => reg_nreg(11),
+    i0 => c_reset_reg,
+    i1 => not_aux119,
     q => o2_x2_3_sig
-  );
-  o3_x2_5_ins : o3_x2
-  PORT MAP (
-    i0 => a2_x2_14_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(11),
-    q => o3_x2_5_sig
-  );
-  a2_x2_14_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux12,
-    q => a2_x2_14_sig
   );
   reg_nreg_10_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_2_sig,
+    i => nao22_x1_11_sig,
     q => reg_nreg(10)
   );
-  nao22_x1_2_ins : nao22_x1
+  nao22_x1_11_ins : nao22_x1
   PORT MAP (
-    i0 => a2_x2_13_sig,
-    i1 => o2_x2_2_sig,
-    i2 => o3_x2_4_sig,
-    nq => nao22_x1_2_sig
+    i0 => not_aux120,
+    i1 => inv_x2_9_sig,
+    i2 => not_aux62,
+    nq => nao22_x1_11_sig
   );
-  a2_x2_13_ins : a2_x2
+  inv_x2_9_ins : inv_x2
   PORT MAP (
-    i0 => na4_x1_5_sig,
-    i1 => o4_x2_2_sig,
-    q => a2_x2_13_sig
-  );
-  na4_x1_5_ins : na4_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => in_nreg_val(10),
-    i2 => not_rtlcarry_0(10),
-    i3 => not_c_reset_reg,
-    nq => na4_x1_5_sig
-  );
-  o4_x2_2_ins : o4_x2
-  PORT MAP (
-    i0 => reset,
-    i1 => in_nreg_val(10),
-    i2 => c_reset_reg,
-    i3 => not_rtlcarry_0(10),
-    q => o4_x2_2_sig
-  );
-  o2_x2_2_ins : o2_x2
-  PORT MAP (
-    i0 => not_c_nreg,
-    i1 => reg_nreg(10),
-    q => o2_x2_2_sig
-  );
-  o3_x2_4_ins : o3_x2
-  PORT MAP (
-    i0 => a2_x2_12_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(10),
-    q => o3_x2_4_sig
-  );
-  a2_x2_12_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux11,
-    q => a2_x2_12_sig
+    i => reg_nreg(10),
+    nq => inv_x2_9_sig
   );
   reg_nreg_9_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_5_sig,
+    i => nao22_x1_10_sig,
     q => reg_nreg(9)
   );
-  oa22_x2_5_ins : oa22_x2
+  nao22_x1_10_ins : nao22_x1
   PORT MAP (
-    i0 => no4_x1_6_sig,
-    i1 => not_aux10,
-    i2 => no3_x1_6_sig,
-    q => oa22_x2_5_sig
-  );
-  no4_x1_6_ins : no4_x1
-  PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => reg_nreg(9),
-    i3 => not_c_nreg,
-    nq => no4_x1_6_sig
-  );
-  no3_x1_6_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(9),
-    i1 => not_aux0,
-    i2 => a2_x2_11_sig,
-    nq => no3_x1_6_sig
-  );
-  a2_x2_11_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux10,
-    q => a2_x2_11_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(9),
+    i2 => not_aux57,
+    nq => nao22_x1_10_sig
   );
   reg_nreg_8_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_4_sig,
+    i => nao22_x1_9_sig,
     q => reg_nreg(8)
   );
-  oa22_x2_4_ins : oa22_x2
+  nao22_x1_9_ins : nao22_x1
   PORT MAP (
-    i0 => reg_nreg(8),
-    i1 => no3_x1_5_sig,
-    i2 => no4_x1_5_sig,
-    q => oa22_x2_4_sig
-  );
-  no3_x1_5_ins : no3_x1
-  PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => c_nreg,
-    nq => no3_x1_5_sig
-  );
-  no4_x1_5_ins : no4_x1
-  PORT MAP (
-    i0 => not_c_nreg,
-    i1 => reset,
-    i2 => not_aux9,
-    i3 => c_reset_reg,
-    nq => no4_x1_5_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(8),
+    i2 => not_aux52,
+    nq => nao22_x1_9_sig
   );
   reg_nreg_7_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na2_x1_3_sig,
+    i => nao22_x1_8_sig,
     q => reg_nreg(7)
   );
-  na2_x1_3_ins : na2_x1
+  nao22_x1_8_ins : nao22_x1
   PORT MAP (
-    i0 => na4_x1_4_sig,
-    i1 => o3_x2_3_sig,
-    nq => na2_x1_3_sig
-  );
-  na4_x1_4_ins : na4_x1
-  PORT MAP (
-    i0 => not_c_reset_reg,
-    i1 => not_reset,
-    i2 => not_aux7,
-    i3 => aux42,
-    nq => na4_x1_4_sig
-  );
-  o3_x2_3_ins : o3_x2
-  PORT MAP (
-    i0 => a2_x2_10_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(7),
-    q => o3_x2_3_sig
-  );
-  a2_x2_10_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux7,
-    q => a2_x2_10_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(7),
+    i2 => not_aux47,
+    nq => nao22_x1_8_sig
   );
   reg_nreg_6_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_3_sig,
+    i => nao22_x1_7_sig,
     q => reg_nreg(6)
   );
-  oa22_x2_3_ins : oa22_x2
+  nao22_x1_7_ins : nao22_x1
   PORT MAP (
-    i0 => on12_x1_2_sig,
-    i1 => c_nreg,
-    i2 => no3_x1_4_sig,
-    q => oa22_x2_3_sig
+    i0 => o2_x2_2_sig,
+    i1 => not_reg_nreg(6),
+    i2 => not_aux42,
+    nq => nao22_x1_7_sig
   );
-  on12_x1_2_ins : on12_x1
-  PORT MAP (
-    i0 => na4_x1_3_sig,
-    i1 => no4_x1_4_sig,
-    q => on12_x1_2_sig
-  );
-  na4_x1_3_ins : na4_x1
-  PORT MAP (
-    i0 => not_c_reset_reg,
-    i1 => not_reset,
-    i2 => not_rtlcarry_0(6),
-    i3 => aux6,
-    nq => na4_x1_3_sig
-  );
-  no4_x1_4_ins : no4_x1
-  PORT MAP (
-    i0 => aux6,
-    i1 => reset,
-    i2 => not_rtlcarry_0(6),
-    i3 => c_reset_reg,
-    nq => no4_x1_4_sig
-  );
-  no3_x1_4_ins : no3_x1
-  PORT MAP (
-    i0 => inv_x2_6_sig,
-    i1 => not_aux0,
-    i2 => c_nreg,
-    nq => no3_x1_4_sig
-  );
-  inv_x2_6_ins : inv_x2
-  PORT MAP (
-    i => reg_nreg(6),
-    nq => inv_x2_6_sig
-  );
-  reg_nreg_5_ins : sff2_x4
-  PORT MAP (
-    ck => clk,
-    cmd => in_nreg_val(5),
-    i0 => oa2ao222_x2_sig,
-    i1 => oa2a22_x2_sig,
-    q => reg_nreg(5)
-  );
-  oa2ao222_x2_ins : oa2ao222_x2
-  PORT MAP (
-    i0 => mbk_buf_rtlcarry_0(5),
-    i1 => aux41,
-    i2 => not_rtlcarry_0(5),
-    i3 => not_c_nreg,
-    i4 => inv_x2_5_sig,
-    q => oa2ao222_x2_sig
-  );
-  inv_x2_5_ins : inv_x2
-  PORT MAP (
-    i => not_aux38,
-    nq => inv_x2_5_sig
-  );
-  oa2a22_x2_ins : oa2a22_x2
-  PORT MAP (
-    i0 => aux41,
-    i1 => not_rtlcarry_0(5),
-    i2 => inv_x2_4_sig,
-    i3 => na2_x1_2_sig,
-    q => oa2a22_x2_sig
-  );
-  inv_x2_4_ins : inv_x2
-  PORT MAP (
-    i => not_aux38,
-    nq => inv_x2_4_sig
-  );
-  na2_x1_2_ins : na2_x1
+  o2_x2_2_ins : o2_x2
   PORT MAP (
     i0 => c_nreg,
-    i1 => not_rtlcarry_0(5),
-    nq => na2_x1_2_sig
+    i1 => not_aux24,
+    q => o2_x2_2_sig
+  );
+  reg_nreg_5_ins : sff1_x4
+  PORT MAP (
+    ck => clk,
+    i => nao22_x1_6_sig,
+    q => reg_nreg(5)
+  );
+  nao22_x1_6_ins : nao22_x1
+  PORT MAP (
+    i0 => o2_x2_sig,
+    i1 => not_reg_nreg(5),
+    i2 => not_aux33,
+    nq => nao22_x1_6_sig
+  );
+  o2_x2_ins : o2_x2
+  PORT MAP (
+    i0 => c_nreg,
+    i1 => not_aux24,
+    q => o2_x2_sig
   );
   reg_nreg_4_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_sig,
+    i => nao22_x1_5_sig,
     q => reg_nreg(4)
   );
-  nao22_x1_ins : nao22_x1
+  nao22_x1_5_ins : nao22_x1
   PORT MAP (
-    i0 => a2_x2_9_sig,
-    i1 => o2_x2_sig,
-    i2 => o3_x2_2_sig,
-    nq => nao22_x1_sig
-  );
-  a2_x2_9_ins : a2_x2
-  PORT MAP (
-    i0 => na4_x1_2_sig,
-    i1 => o4_x2_sig,
-    q => a2_x2_9_sig
-  );
-  na4_x1_2_ins : na4_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => in_nreg_val(4),
-    i2 => not_rtlcarry_0(4),
-    i3 => not_c_reset_reg,
-    nq => na4_x1_2_sig
-  );
-  o4_x2_ins : o4_x2
-  PORT MAP (
-    i0 => reset,
-    i1 => in_nreg_val(4),
-    i2 => c_reset_reg,
-    i3 => not_rtlcarry_0(4),
-    q => o4_x2_sig
-  );
-  o2_x2_ins : o2_x2
-  PORT MAP (
-    i0 => not_c_nreg,
-    i1 => reg_nreg(4),
-    q => o2_x2_sig
-  );
-  o3_x2_2_ins : o3_x2
-  PORT MAP (
-    i0 => a2_x2_8_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(4),
-    q => o3_x2_2_sig
-  );
-  a2_x2_8_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux5,
-    q => a2_x2_8_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(4),
+    i2 => not_aux23,
+    nq => nao22_x1_5_sig
   );
   reg_nreg_3_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_2_sig,
+    i => nao22_x1_4_sig,
     q => reg_nreg(3)
   );
-  oa22_x2_2_ins : oa22_x2
+  nao22_x1_4_ins : nao22_x1
   PORT MAP (
-    i0 => no4_x1_3_sig,
-    i1 => not_aux4,
-    i2 => no3_x1_3_sig,
-    q => oa22_x2_2_sig
+    i0 => not_aux120,
+    i1 => inv_x2_8_sig,
+    i2 => not_aux18,
+    nq => nao22_x1_4_sig
   );
-  no4_x1_3_ins : no4_x1
+  inv_x2_8_ins : inv_x2
   PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => reg_nreg(3),
-    i3 => not_c_nreg,
-    nq => no4_x1_3_sig
-  );
-  no3_x1_3_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(3),
-    i1 => not_aux0,
-    i2 => a2_x2_7_sig,
-    nq => no3_x1_3_sig
-  );
-  a2_x2_7_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux4,
-    q => a2_x2_7_sig
+    i => reg_nreg(3),
+    nq => inv_x2_8_sig
   );
   reg_nreg_2_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_sig,
+    i => nao22_x1_3_sig,
     q => reg_nreg(2)
   );
-  oa22_x2_ins : oa22_x2
+  nao22_x1_3_ins : nao22_x1
   PORT MAP (
-    i0 => no4_x1_2_sig,
-    i1 => not_aux3,
-    i2 => no3_x1_2_sig,
-    q => oa22_x2_sig
+    i0 => not_aux120,
+    i1 => inv_x2_7_sig,
+    i2 => not_aux13,
+    nq => nao22_x1_3_sig
   );
-  no4_x1_2_ins : no4_x1
+  inv_x2_7_ins : inv_x2
   PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => reg_nreg(2),
-    i3 => not_c_nreg,
-    nq => no4_x1_2_sig
-  );
-  no3_x1_2_ins : no3_x1
-  PORT MAP (
-    i0 => not_reg_nreg(2),
-    i1 => not_aux0,
-    i2 => a2_x2_6_sig,
-    nq => no3_x1_2_sig
-  );
-  a2_x2_6_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux3,
-    q => a2_x2_6_sig
+    i => reg_nreg(2),
+    nq => inv_x2_7_sig
   );
   reg_nreg_1_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => na2_x1_sig,
+    i => nao22_x1_2_sig,
     q => reg_nreg(1)
   );
-  na2_x1_ins : na2_x1
+  nao22_x1_2_ins : nao22_x1
   PORT MAP (
-    i0 => o3_x2_sig,
-    i1 => na4_x1_sig,
-    nq => na2_x1_sig
-  );
-  o3_x2_ins : o3_x2
-  PORT MAP (
-    i0 => a2_x2_5_sig,
-    i1 => not_aux0,
-    i2 => not_reg_nreg(1),
-    q => o3_x2_sig
-  );
-  a2_x2_5_ins : a2_x2
-  PORT MAP (
-    i0 => c_nreg,
-    i1 => not_aux2,
-    q => a2_x2_5_sig
-  );
-  na4_x1_ins : na4_x1
-  PORT MAP (
-    i0 => not_reg_nreg(1),
-    i1 => c_nreg,
-    i2 => not_aux2,
-    i3 => aux0,
-    nq => na4_x1_sig
+    i0 => not_aux120,
+    i1 => not_reg_nreg(1),
+    i2 => not_aux8,
+    nq => nao22_x1_2_sig
   );
   reg_nreg_0_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => on12_x1_sig,
+    i => nao22_x1_sig,
     q => reg_nreg(0)
   );
-  on12_x1_ins : on12_x1
+  nao22_x1_ins : nao22_x1
   PORT MAP (
-    i0 => na3_x1_3_sig,
-    i1 => no3_x1_sig,
-    q => on12_x1_sig
+    i0 => not_aux120,
+    i1 => mbk_buf_not_reg_nreg(0),
+    i2 => not_aux3,
+    nq => nao22_x1_sig
   );
-  na3_x1_3_ins : na3_x1
+  rtlcarry_0_19_ins : an12_x1
   PORT MAP (
-    i0 => in_nreg_val(0),
-    i1 => not_aux1,
-    i2 => mbk_buf_not_reg_nreg(0),
-    nq => na3_x1_3_sig
+    i0 => not_reg_nreg(18),
+    i1 => rtlcarry_0(18),
+    q => rtlcarry_0(19)
   );
-  no3_x1_ins : no3_x1
+  rtlcarry_0_18_ins : an12_x1
   PORT MAP (
-    i0 => mbk_buf_not_reg_nreg(0),
-    i1 => not_aux0,
-    i2 => a2_x2_4_sig,
-    nq => no3_x1_sig
+    i0 => not_reg_nreg(17),
+    i1 => rtlcarry_0(17),
+    q => rtlcarry_0(18)
   );
-  a2_x2_4_ins : a2_x2
+  rtlcarry_0_17_ins : an12_x1
   PORT MAP (
-    i0 => in_nreg_val(0),
-    i1 => c_nreg,
-    q => a2_x2_4_sig
+    i0 => not_reg_nreg(16),
+    i1 => rtlcarry_0(16),
+    q => rtlcarry_0(17)
   );
-  rtlcarry_0_12_ins : oa2ao222_x2
+  rtlcarry_0_16_ins : an12_x1
   PORT MAP (
-    i0 => reg_nreg(11),
-    i1 => in_nreg_val(11),
-    i2 => in_nreg_val(11),
-    i3 => reg_nreg(11),
-    i4 => rtlcarry_0(11),
-    q => rtlcarry_0(12)
+    i0 => not_rtlcarry_0(15),
+    i1 => reg_nreg(15),
+    q => rtlcarry_0(16)
+  );
+  rtlcarry_0_14_ins : an12_x1
+  PORT MAP (
+    i0 => not_reg_nreg(13),
+    i1 => rtlcarry_0(13),
+    q => rtlcarry_0(14)
+  );
+  rtlcarry_0_13_ins : oa2ao222_x2
+  PORT MAP (
+    i0 => reg_nreg(12),
+    i1 => in_nreg_val(12),
+    i2 => in_nreg_val(12),
+    i3 => reg_nreg(12),
+    i4 => rtlcarry_0(12),
+    q => rtlcarry_0(13)
+  );
+  rtlcarry_0_12_ins : nao2o22_x1
+  PORT MAP (
+    i0 => inv_x2_6_sig,
+    i1 => a2_x2_9_sig,
+    i2 => not_rtlcarry_0(11),
+    i3 => not_reg_nreg(11),
+    nq => rtlcarry_0(12)
+  );
+  inv_x2_6_ins : inv_x2
+  PORT MAP (
+    i => in_nreg_val(11),
+    nq => inv_x2_6_sig
+  );
+  a2_x2_9_ins : a2_x2
+  PORT MAP (
+    i1 => not_rtlcarry_0(11),
+    i0 => not_reg_nreg(11),
+    q => a2_x2_9_sig
   );
   rtlcarry_0_11_ins : oa2ao222_x2
   PORT MAP (
@@ -2247,50 +1389,60 @@ BEGIN
   );
   rtlcarry_0_10_ins : nao2o22_x1
   PORT MAP (
-    i0 => inv_x2_3_sig,
-    i1 => a2_x2_3_sig,
+    i0 => inv_x2_5_sig,
+    i1 => a2_x2_8_sig,
     i2 => not_rtlcarry_0(9),
     i3 => not_reg_nreg(9),
     nq => rtlcarry_0(10)
   );
-  inv_x2_3_ins : inv_x2
+  inv_x2_5_ins : inv_x2
   PORT MAP (
     i => in_nreg_val(9),
-    nq => inv_x2_3_sig
+    nq => inv_x2_5_sig
   );
-  a2_x2_3_ins : a2_x2
+  a2_x2_8_ins : a2_x2
   PORT MAP (
     i1 => not_rtlcarry_0(9),
     i0 => not_reg_nreg(9),
-    q => a2_x2_3_sig
+    q => a2_x2_8_sig
   );
-  rtlcarry_0_9_ins : oa2ao222_x2
+  rtlcarry_0_9_ins : nao2o22_x1
   PORT MAP (
-    i0 => reg_nreg(8),
-    i1 => in_nreg_val(8),
-    i2 => in_nreg_val(8),
-    i3 => reg_nreg(8),
-    i4 => rtlcarry_0(8),
-    q => rtlcarry_0(9)
+    i0 => inv_x2_4_sig,
+    i1 => a2_x2_7_sig,
+    i2 => not_rtlcarry_0(8),
+    i3 => not_reg_nreg(8),
+    nq => rtlcarry_0(9)
+  );
+  inv_x2_4_ins : inv_x2
+  PORT MAP (
+    i => in_nreg_val(8),
+    nq => inv_x2_4_sig
+  );
+  a2_x2_7_ins : a2_x2
+  PORT MAP (
+    i1 => not_rtlcarry_0(8),
+    i0 => not_reg_nreg(8),
+    q => a2_x2_7_sig
   );
   rtlcarry_0_8_ins : nao2o22_x1
   PORT MAP (
-    i0 => inv_x2_2_sig,
-    i1 => a2_x2_2_sig,
+    i0 => inv_x2_3_sig,
+    i1 => a2_x2_6_sig,
     i2 => not_rtlcarry_0(7),
     i3 => not_reg_nreg(7),
     nq => rtlcarry_0(8)
   );
-  inv_x2_2_ins : inv_x2
+  inv_x2_3_ins : inv_x2
   PORT MAP (
     i => in_nreg_val(7),
-    nq => inv_x2_2_sig
+    nq => inv_x2_3_sig
   );
-  a2_x2_2_ins : a2_x2
+  a2_x2_6_ins : a2_x2
   PORT MAP (
     i1 => not_rtlcarry_0(7),
     i0 => not_reg_nreg(7),
-    q => a2_x2_2_sig
+    q => a2_x2_6_sig
   );
   rtlcarry_0_7_ins : oa2ao222_x2
   PORT MAP (
@@ -2301,23 +1453,38 @@ BEGIN
     i4 => rtlcarry_0(6),
     q => rtlcarry_0(7)
   );
-  rtlcarry_0_6_ins : oa2ao222_x2
+  rtlcarry_0_6_ins : nao2o22_x1
   PORT MAP (
-    i0 => reg_nreg(5),
-    i1 => in_nreg_val(5),
-    i2 => in_nreg_val(5),
-    i3 => reg_nreg(5),
-    i4 => rtlcarry_0(5),
-    q => rtlcarry_0(6)
+    i0 => inv_x2_2_sig,
+    i1 => a2_x2_5_sig,
+    i2 => not_reg_nreg(5),
+    i3 => not_rtlcarry_0(5),
+    nq => rtlcarry_0(6)
   );
-  rtlcarry_0_5_ins : oa2ao222_x2
+  inv_x2_2_ins : inv_x2
   PORT MAP (
-    i0 => reg_nreg(4),
-    i1 => in_nreg_val(4),
-    i2 => in_nreg_val(4),
-    i3 => reg_nreg(4),
-    i4 => rtlcarry_0(4),
-    q => rtlcarry_0(5)
+    i => in_nreg_val(5),
+    nq => inv_x2_2_sig
+  );
+  a2_x2_5_ins : a2_x2
+  PORT MAP (
+    i1 => not_rtlcarry_0(5),
+    i0 => not_reg_nreg(5),
+    q => a2_x2_5_sig
+  );
+  rtlcarry_0_5_ins : nao2o22_x1
+  PORT MAP (
+    i1 => a2_x2_4_sig,
+    i0 => not_reg_nreg(4),
+    i2 => not_rtlcarry_0(4),
+    i3 => not_in_nreg_val(4),
+    nq => rtlcarry_0(5)
+  );
+  a2_x2_4_ins : a2_x2
+  PORT MAP (
+    i0 => not_in_nreg_val(4),
+    i1 => not_rtlcarry_0(4),
+    q => a2_x2_4_sig
   );
   rtlcarry_0_4_ins : oa2ao222_x2
   PORT MAP (
@@ -2328,33 +1495,33 @@ BEGIN
     i4 => rtlcarry_0(3),
     q => rtlcarry_0(4)
   );
-  rtlcarry_0_3_ins : nao2o22_x1
+  rtlcarry_0_3_ins : oa2ao222_x2
+  PORT MAP (
+    i0 => reg_nreg(2),
+    i1 => in_nreg_val(2),
+    i2 => in_nreg_val(2),
+    i3 => reg_nreg(2),
+    i4 => rtlcarry_0(2),
+    q => rtlcarry_0(3)
+  );
+  rtlcarry_0_2_ins : nao2o22_x1
   PORT MAP (
     i0 => inv_x2_sig,
-    i1 => a2_x2_sig,
-    i2 => not_rtlcarry_0(2),
-    i3 => not_reg_nreg(2),
-    nq => rtlcarry_0(3)
+    i1 => a2_x2_3_sig,
+    i2 => not_reg_nreg(1),
+    i3 => not_rtlcarry_0(1),
+    nq => rtlcarry_0(2)
   );
   inv_x2_ins : inv_x2
   PORT MAP (
-    i => in_nreg_val(2),
+    i => in_nreg_val(1),
     nq => inv_x2_sig
   );
-  a2_x2_ins : a2_x2
+  a2_x2_3_ins : a2_x2
   PORT MAP (
-    i1 => not_rtlcarry_0(2),
-    i0 => not_reg_nreg(2),
-    q => a2_x2_sig
-  );
-  rtlcarry_0_2_ins : oa2ao222_x2
-  PORT MAP (
-    i0 => reg_nreg(1),
-    i1 => in_nreg_val(1),
-    i2 => in_nreg_val(1),
-    i3 => reg_nreg(1),
-    i4 => rtlcarry_0(1),
-    q => rtlcarry_0(2)
+    i1 => not_rtlcarry_0(1),
+    i0 => not_reg_nreg(1),
+    q => a2_x2_3_sig
   );
   rtlcarry_0_1_ins : an12_x1
   PORT MAP (
@@ -2362,103 +1529,10 @@ BEGIN
     i1 => in_nreg_val(0),
     q => rtlcarry_0(1)
   );
-  aux0_ins : no2_x1
+  not_in_nreg_val_4_ins : inv_x2
   PORT MAP (
-    i0 => reset,
-    i1 => c_reset_reg,
-    nq => aux0
-  );
-  aux6_ins : xr2_x1
-  PORT MAP (
-    i0 => reg_nreg(6),
-    i1 => in_nreg_val(6),
-    q => aux6
-  );
-  aux21_ins : no3_x1
-  PORT MAP (
-    i0 => na3_x1_2_sig,
-    i1 => reg_nreg(15),
-    i2 => mbk_buf_not_rtlcarry_0(15),
-    nq => aux21
-  );
-  na3_x1_2_ins : na3_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => c_nreg,
-    i2 => not_c_reset_reg,
-    nq => na3_x1_2_sig
-  );
-  aux27_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(2),
-    q => aux27
-  );
-  aux28_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(3),
-    q => aux28
-  );
-  aux29_ins : xr2_x1
-  PORT MAP (
-    i0 => reg_nreg(5),
-    i1 => in_nreg_val(5),
-    q => aux29
-  );
-  aux30_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => not_rtlalc_1(5),
-    nq => aux30
-  );
-  aux32_ins : on12_x1
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => rtlalc_1(6),
-    q => aux32
-  );
-  aux33_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => not_rtlalc_1(7),
-    nq => aux33
-  );
-  aux34_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(10),
-    q => aux34
-  );
-  aux37_ins : o2_x2
-  PORT MAP (
-    i0 => not_aux1,
-    i1 => rtlalc_1(19),
-    q => aux37
-  );
-  aux41_ins : no2_x1
-  PORT MAP (
-    i0 => na3_x1_sig,
-    i1 => reg_nreg(5),
-    nq => aux41
-  );
-  na3_x1_ins : na3_x1
-  PORT MAP (
-    i0 => not_reset,
-    i1 => c_nreg,
-    i2 => not_c_reset_reg,
-    nq => na3_x1_sig
-  );
-  aux42_ins : no2_x1
-  PORT MAP (
-    i0 => not_c_nreg,
-    i1 => reg_nreg(7),
-    nq => aux42
-  );
-  not_in_nreg_val_6_ins : inv_x2
-  PORT MAP (
-    i => in_nreg_val(6),
-    nq => not_in_nreg_val(6)
+    i => in_nreg_val(4),
+    nq => not_in_nreg_val(4)
   );
   not_c_nreg_ins : inv_x2
   PORT MAP (
@@ -2475,338 +1549,672 @@ BEGIN
     i => reset,
     nq => not_reset
   );
-  not_aux0_ins : inv_x2
-  PORT MAP (
-    i => aux0,
-    nq => not_aux0
-  );
   not_reg_nreg_0_ins : inv_x4
   PORT MAP (
     i => reg_nreg(0),
     nq => not_reg_nreg(0)
   );
-  not_aux1_ins : no2_x1
+  not_aux3_ins : na2_x1
   PORT MAP (
-    i0 => not_aux0,
-    i1 => not_c_nreg,
-    nq => not_aux1
+    i0 => a3_x2_18_sig,
+    i1 => xr2_x1_23_sig,
+    nq => not_aux3
   );
-  not_aux2_ins : xr2_x1
+  a3_x2_18_ins : a3_x2
   PORT MAP (
-    i0 => mbk_buf_rtlcarry_0(1),
-    i1 => in_nreg_val(1),
-    q => not_aux2
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_18_sig
+  );
+  xr2_x1_23_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_reg_nreg(0),
+    i1 => in_nreg_val(0),
+    q => xr2_x1_23_sig
+  );
+  not_aux119_ins : o2_x2
+  PORT MAP (
+    i0 => reset,
+    i1 => c_nreg,
+    q => not_aux119
+  );
+  not_aux120_ins : o2_x2
+  PORT MAP (
+    i0 => c_reset_reg,
+    i1 => not_aux119,
+    q => not_aux120
   );
   not_reg_nreg_1_ins : inv_x2
   PORT MAP (
     i => reg_nreg(1),
     nq => not_reg_nreg(1)
   );
-  not_rtlcarry_0_2_ins : inv_x4
+  not_rtlcarry_0_1_ins : inv_x2
   PORT MAP (
-    i => rtlcarry_0(2),
-    nq => not_rtlcarry_0(2)
+    i => rtlcarry_0(1),
+    nq => not_rtlcarry_0(1)
   );
-  not_aux3_ins : xr2_x1
+  not_aux8_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_17_sig,
+    i1 => xr2_x1_21_sig,
+    nq => not_aux8
+  );
+  a3_x2_17_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_17_sig
+  );
+  xr2_x1_21_ins : xr2_x1
+  PORT MAP (
+    i0 => xr2_x1_22_sig,
+    i1 => reg_nreg(1),
+    q => xr2_x1_21_sig
+  );
+  xr2_x1_22_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(1),
+    i1 => in_nreg_val(1),
+    q => xr2_x1_22_sig
+  );
+  not_aux13_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_16_sig,
+    i1 => xr2_x1_19_sig,
+    nq => not_aux13
+  );
+  a3_x2_16_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_16_sig
+  );
+  xr2_x1_19_ins : xr2_x1
   PORT MAP (
     i0 => mbk_buf_rtlcarry_0(2),
-    i1 => in_nreg_val(2),
-    q => not_aux3
+    i1 => xr2_x1_20_sig,
+    q => xr2_x1_19_sig
   );
-  not_reg_nreg_2_ins : inv_x2
+  xr2_x1_20_ins : xr2_x1
   PORT MAP (
-    i => reg_nreg(2),
-    nq => not_reg_nreg(2)
+    i0 => reg_nreg(2),
+    i1 => in_nreg_val(2),
+    q => xr2_x1_20_sig
   );
-  not_aux4_ins : xr2_x1
+  not_aux18_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_15_sig,
+    i1 => xr2_x1_17_sig,
+    nq => not_aux18
+  );
+  a3_x2_15_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_15_sig
+  );
+  xr2_x1_17_ins : xr2_x1
   PORT MAP (
     i0 => mbk_buf_rtlcarry_0(3),
+    i1 => xr2_x1_18_sig,
+    q => xr2_x1_17_sig
+  );
+  xr2_x1_18_ins : xr2_x1
+  PORT MAP (
+    i0 => reg_nreg(3),
     i1 => in_nreg_val(3),
-    q => not_aux4
+    q => xr2_x1_18_sig
   );
-  not_reg_nreg_3_ins : inv_x2
+  not_rtlcarry_0_4_ins : inv_x4
   PORT MAP (
-    i => reg_nreg(3),
-    nq => not_reg_nreg(3)
-  );
-  not_rtlcarry_0_4_ins : inv_x2
-  PORT MAP (
-    i => mbk_buf_rtlcarry_0(4),
+    i => rtlcarry_0(4),
     nq => not_rtlcarry_0(4)
-  );
-  not_aux5_ins : xr2_x1
-  PORT MAP (
-    i0 => mbk_buf_rtlcarry_0(4),
-    i1 => in_nreg_val(4),
-    q => not_aux5
   );
   not_reg_nreg_4_ins : inv_x2
   PORT MAP (
     i => reg_nreg(4),
     nq => not_reg_nreg(4)
   );
+  not_aux23_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_14_sig,
+    i1 => xr2_x1_15_sig,
+    nq => not_aux23
+  );
+  a3_x2_14_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_14_sig
+  );
+  xr2_x1_15_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(4),
+    i1 => xr2_x1_16_sig,
+    q => xr2_x1_15_sig
+  );
+  xr2_x1_16_ins : xr2_x1
+  PORT MAP (
+    i0 => reg_nreg(4),
+    i1 => in_nreg_val(4),
+    q => xr2_x1_16_sig
+  );
   not_rtlcarry_0_5_ins : inv_x2
   PORT MAP (
-    i => mbk_buf_rtlcarry_0(5),
+    i => rtlcarry_0(5),
     nq => not_rtlcarry_0(5)
   );
-  not_aux38_ins : on12_x1
+  not_aux25_ins : xr2_x1
   PORT MAP (
-    i0 => reg_nreg(5),
-    i1 => not_aux0,
-    q => not_aux38
+    i0 => mbk_buf_rtlcarry_0(5),
+    i1 => in_nreg_val(5),
+    q => not_aux25
   );
-  not_rtlcarry_0_6_ins : inv_x2
+  not_reg_nreg_5_ins : inv_x2
   PORT MAP (
-    i => mbk_buf_rtlcarry_0(6),
-    nq => not_rtlcarry_0(6)
+    i => reg_nreg(5),
+    nq => not_reg_nreg(5)
+  );
+  not_aux33_ins : oa22_x2
+  PORT MAP (
+    i0 => o4_x2_2_sig,
+    i1 => na4_x1_2_sig,
+    i2 => not_c_nreg,
+    q => not_aux33
+  );
+  o4_x2_2_ins : o4_x2
+  PORT MAP (
+    i0 => c_reset_reg,
+    i1 => reset,
+    i2 => not_aux25,
+    i3 => not_reg_nreg(5),
+    q => o4_x2_2_sig
+  );
+  na4_x1_2_ins : na4_x1
+  PORT MAP (
+    i0 => not_c_reset_reg,
+    i1 => not_reset,
+    i2 => not_aux25,
+    i3 => not_reg_nreg(5),
+    nq => na4_x1_2_sig
+  );
+  not_aux24_ins : o2_x2
+  PORT MAP (
+    i0 => reset,
+    i1 => c_reset_reg,
+    q => not_aux24
+  );
+  not_aux34_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(6),
+    i1 => in_nreg_val(6),
+    q => not_aux34
+  );
+  not_reg_nreg_6_ins : inv_x2
+  PORT MAP (
+    i => reg_nreg(6),
+    nq => not_reg_nreg(6)
+  );
+  not_aux42_ins : oa22_x2
+  PORT MAP (
+    i0 => o4_x2_sig,
+    i1 => na4_x1_sig,
+    i2 => not_c_nreg,
+    q => not_aux42
+  );
+  o4_x2_ins : o4_x2
+  PORT MAP (
+    i0 => c_reset_reg,
+    i1 => reset,
+    i2 => not_aux34,
+    i3 => not_reg_nreg(6),
+    q => o4_x2_sig
+  );
+  na4_x1_ins : na4_x1
+  PORT MAP (
+    i0 => not_c_reset_reg,
+    i1 => not_reset,
+    i2 => not_aux34,
+    i3 => not_reg_nreg(6),
+    nq => na4_x1_sig
   );
   not_rtlcarry_0_7_ins : inv_x4
   PORT MAP (
     i => rtlcarry_0(7),
     nq => not_rtlcarry_0(7)
   );
-  not_aux7_ins : xr2_x1
-  PORT MAP (
-    i0 => mbk_buf_rtlcarry_0(7),
-    i1 => in_nreg_val(7),
-    q => not_aux7
-  );
   not_reg_nreg_7_ins : inv_x2
   PORT MAP (
     i => reg_nreg(7),
     nq => not_reg_nreg(7)
   );
-  not_aux9_ins : nxr2_x1
+  not_aux47_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_13_sig,
+    i1 => xr2_x1_13_sig,
+    nq => not_aux47
+  );
+  a3_x2_13_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_13_sig
+  );
+  xr2_x1_13_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(7),
+    i1 => xr2_x1_14_sig,
+    q => xr2_x1_13_sig
+  );
+  xr2_x1_14_ins : xr2_x1
+  PORT MAP (
+    i0 => reg_nreg(7),
+    i1 => in_nreg_val(7),
+    q => xr2_x1_14_sig
+  );
+  not_rtlcarry_0_8_ins : inv_x2
+  PORT MAP (
+    i => rtlcarry_0(8),
+    nq => not_rtlcarry_0(8)
+  );
+  not_reg_nreg_8_ins : inv_x2
+  PORT MAP (
+    i => reg_nreg(8),
+    nq => not_reg_nreg(8)
+  );
+  not_aux52_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_12_sig,
+    i1 => xr2_x1_11_sig,
+    nq => not_aux52
+  );
+  a3_x2_12_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_12_sig
+  );
+  xr2_x1_11_ins : xr2_x1
   PORT MAP (
     i0 => mbk_buf_rtlcarry_0(8),
-    i1 => xr2_x1_sig,
-    nq => not_aux9
+    i1 => xr2_x1_12_sig,
+    q => xr2_x1_11_sig
   );
-  xr2_x1_ins : xr2_x1
+  xr2_x1_12_ins : xr2_x1
   PORT MAP (
     i0 => reg_nreg(8),
     i1 => in_nreg_val(8),
-    q => xr2_x1_sig
+    q => xr2_x1_12_sig
   );
-  not_rtlcarry_0_9_ins : inv_x4
+  not_rtlcarry_0_9_ins : inv_x2
   PORT MAP (
     i => rtlcarry_0(9),
     nq => not_rtlcarry_0(9)
-  );
-  not_aux10_ins : xr2_x1
-  PORT MAP (
-    i0 => mbk_buf_rtlcarry_0(9),
-    i1 => in_nreg_val(9),
-    q => not_aux10
   );
   not_reg_nreg_9_ins : inv_x2
   PORT MAP (
     i => reg_nreg(9),
     nq => not_reg_nreg(9)
   );
-  not_rtlcarry_0_10_ins : inv_x2
+  not_aux57_ins : na2_x1
   PORT MAP (
-    i => mbk_buf_rtlcarry_0(10),
-    nq => not_rtlcarry_0(10)
+    i0 => a3_x2_11_sig,
+    i1 => xr2_x1_9_sig,
+    nq => not_aux57
   );
-  not_aux11_ins : xr2_x1
+  a3_x2_11_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_11_sig
+  );
+  xr2_x1_9_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(9),
+    i1 => xr2_x1_10_sig,
+    q => xr2_x1_9_sig
+  );
+  xr2_x1_10_ins : xr2_x1
+  PORT MAP (
+    i0 => reg_nreg(9),
+    i1 => in_nreg_val(9),
+    q => xr2_x1_10_sig
+  );
+  not_aux62_ins : na2_x1
+  PORT MAP (
+    i0 => a3_x2_10_sig,
+    i1 => xr2_x1_7_sig,
+    nq => not_aux62
+  );
+  a3_x2_10_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_10_sig
+  );
+  xr2_x1_7_ins : xr2_x1
   PORT MAP (
     i0 => mbk_buf_rtlcarry_0(10),
+    i1 => xr2_x1_8_sig,
+    q => xr2_x1_7_sig
+  );
+  xr2_x1_8_ins : xr2_x1
+  PORT MAP (
+    i0 => reg_nreg(10),
     i1 => in_nreg_val(10),
-    q => not_aux11
+    q => xr2_x1_8_sig
   );
-  not_reg_nreg_10_ins : inv_x2
+  not_rtlcarry_0_11_ins : inv_x4
   PORT MAP (
-    i => reg_nreg(10),
-    nq => not_reg_nreg(10)
-  );
-  not_rtlcarry_0_11_ins : inv_x2
-  PORT MAP (
-    i => mbk_buf_rtlcarry_0(11),
+    i => rtlcarry_0(11),
     nq => not_rtlcarry_0(11)
   );
-  not_aux12_ins : xr2_x1
+  not_aux63_ins : xr2_x1
   PORT MAP (
     i0 => mbk_buf_rtlcarry_0(11),
     i1 => in_nreg_val(11),
-    q => not_aux12
+    q => not_aux63
   );
   not_reg_nreg_11_ins : inv_x2
   PORT MAP (
     i => reg_nreg(11),
     nq => not_reg_nreg(11)
   );
-  not_aux13_ins : xr2_x1
+  not_aux70_ins : nao22_x1
+  PORT MAP (
+    i0 => no3_x1_3_sig,
+    i1 => a3_x2_9_sig,
+    i2 => a2_x2_2_sig,
+    nq => not_aux70
+  );
+  no3_x1_3_ins : no3_x1
+  PORT MAP (
+    i0 => not_reg_nreg(11),
+    i1 => not_aux63,
+    i2 => c_reset_reg,
+    nq => no3_x1_3_sig
+  );
+  a3_x2_9_ins : a3_x2
+  PORT MAP (
+    i0 => not_c_reset_reg,
+    i1 => not_aux63,
+    i2 => not_reg_nreg(11),
+    q => a3_x2_9_sig
+  );
+  a2_x2_2_ins : a2_x2
+  PORT MAP (
+    i0 => c_nreg,
+    i1 => not_reset,
+    q => a2_x2_2_sig
+  );
+  not_aux71_ins : xr2_x1
   PORT MAP (
     i0 => mbk_buf_rtlcarry_0(12),
     i1 => in_nreg_val(12),
-    q => not_aux13
+    q => not_aux71
   );
-  not_aux17_ins : na2_x1
+  not_reg_nreg_12_ins : inv_x2
   PORT MAP (
-    i0 => not_aux13,
-    i1 => no4_x1_sig,
-    nq => not_aux17
+    i => reg_nreg(12),
+    nq => not_reg_nreg(12)
   );
-  no4_x1_ins : no4_x1
+  not_aux78_ins : nao22_x1
   PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i2 => reg_nreg(12),
-    i3 => not_c_nreg,
-    nq => no4_x1_sig
+    i0 => no3_x1_2_sig,
+    i1 => a3_x2_8_sig,
+    i2 => a2_x2_sig,
+    nq => not_aux78
   );
-  not_rtlcarry_0_13_ins : noa2ao222_x1
+  no3_x1_2_ins : no3_x1
   PORT MAP (
-    i0 => reg_nreg(12),
-    i1 => in_nreg_val(12),
-    i2 => reg_nreg(12),
-    i3 => in_nreg_val(12),
-    i4 => rtlcarry_0(12),
-    nq => not_rtlcarry_0(13)
+    i0 => not_reg_nreg(12),
+    i1 => not_aux71,
+    i2 => c_reset_reg,
+    nq => no3_x1_2_sig
+  );
+  a3_x2_8_ins : a3_x2
+  PORT MAP (
+    i0 => not_c_reset_reg,
+    i1 => not_aux71,
+    i2 => not_reg_nreg(12),
+    q => a3_x2_8_sig
+  );
+  a2_x2_ins : a2_x2
+  PORT MAP (
+    i0 => c_nreg,
+    i1 => not_reset,
+    q => a2_x2_sig
   );
   not_reg_nreg_13_ins : inv_x2
   PORT MAP (
     i => reg_nreg(13),
     nq => not_reg_nreg(13)
   );
-  not_rtlcarry_0_14_ins : o2_x2
+  not_aux82_ins : na2_x1
   PORT MAP (
-    i1 => not_rtlcarry_0(13),
-    i0 => not_reg_nreg(13),
-    q => not_rtlcarry_0(14)
+    i0 => a3_x2_7_sig,
+    i1 => xr2_x1_6_sig,
+    nq => not_aux82
+  );
+  a3_x2_7_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_7_sig
+  );
+  xr2_x1_6_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(13),
+    i1 => reg_nreg(13),
+    q => xr2_x1_6_sig
   );
   not_reg_nreg_14_ins : inv_x2
   PORT MAP (
     i => reg_nreg(14),
     nq => not_reg_nreg(14)
   );
-  not_rtlcarry_0_15_ins : o2_x2
+  not_aux86_ins : na2_x1
   PORT MAP (
-    i1 => not_rtlcarry_0(14),
-    i0 => not_reg_nreg(14),
+    i0 => a3_x2_6_sig,
+    i1 => xr2_x1_5_sig,
+    nq => not_aux86
+  );
+  a3_x2_6_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_6_sig
+  );
+  xr2_x1_5_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(14),
+    i1 => reg_nreg(14),
+    q => xr2_x1_5_sig
+  );
+  not_rtlcarry_0_15_ins : on12_x1
+  PORT MAP (
+    i0 => rtlcarry_0(14),
+    i1 => not_reg_nreg(14),
     q => not_rtlcarry_0(15)
   );
-  not_reg_nreg_15_ins : inv_x2
+  not_aux93_ins : oa22_x2
   PORT MAP (
-    i => reg_nreg(15),
-    nq => not_reg_nreg(15)
+    i0 => on12_x1_2_sig,
+    i1 => na3_x1_sig,
+    i2 => na2_x1_2_sig,
+    q => not_aux93
   );
-  not_rtlcarry_0_16_ins : o2_x2
+  on12_x1_2_ins : on12_x1
   PORT MAP (
-    i1 => not_rtlcarry_0(15),
-    i0 => not_reg_nreg(15),
-    q => not_rtlcarry_0(16)
+    i0 => no2_x1_sig,
+    i1 => reg_nreg(15),
+    q => on12_x1_2_sig
+  );
+  no2_x1_ins : no2_x1
+  PORT MAP (
+    i0 => c_reset_reg,
+    i1 => mbk_buf_not_rtlcarry_0(15),
+    nq => no2_x1_sig
+  );
+  na3_x1_ins : na3_x1
+  PORT MAP (
+    i0 => not_c_reset_reg,
+    i1 => mbk_buf_not_rtlcarry_0(15),
+    i2 => reg_nreg(15),
+    nq => na3_x1_sig
+  );
+  na2_x1_2_ins : na2_x1
+  PORT MAP (
+    i0 => c_nreg,
+    i1 => not_reset,
+    nq => na2_x1_2_sig
   );
   not_reg_nreg_16_ins : inv_x2
   PORT MAP (
     i => reg_nreg(16),
     nq => not_reg_nreg(16)
   );
-  not_rtlcarry_0_17_ins : o2_x2
+  not_aux97_ins : na2_x1
   PORT MAP (
-    i1 => not_rtlcarry_0(16),
-    i0 => not_reg_nreg(16),
-    q => not_rtlcarry_0(17)
+    i0 => a3_x2_5_sig,
+    i1 => xr2_x1_4_sig,
+    nq => not_aux97
+  );
+  a3_x2_5_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_5_sig
+  );
+  xr2_x1_4_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(16),
+    i1 => reg_nreg(16),
+    q => xr2_x1_4_sig
   );
   not_reg_nreg_17_ins : inv_x2
   PORT MAP (
     i => reg_nreg(17),
     nq => not_reg_nreg(17)
   );
-  not_aux43_ins : o2_x2
+  not_aux101_ins : na2_x1
   PORT MAP (
-    i0 => not_c_nreg,
-    i1 => reg_nreg(17),
-    q => not_aux43
+    i0 => a3_x2_4_sig,
+    i1 => xr2_x1_3_sig,
+    nq => not_aux101
   );
-  not_rtlcarry_0_18_ins : o2_x2
+  a3_x2_4_ins : a3_x2
   PORT MAP (
-    i1 => not_rtlcarry_0(17),
-    i0 => not_reg_nreg(17),
-    q => not_rtlcarry_0(18)
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_4_sig
+  );
+  xr2_x1_3_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(17),
+    i1 => reg_nreg(17),
+    q => xr2_x1_3_sig
   );
   not_reg_nreg_18_ins : inv_x2
   PORT MAP (
     i => reg_nreg(18),
     nq => not_reg_nreg(18)
   );
-  not_aux44_ins : o2_x2
+  not_aux105_ins : na2_x1
   PORT MAP (
-    i0 => not_c_nreg,
+    i0 => a3_x2_3_sig,
+    i1 => xr2_x1_2_sig,
+    nq => not_aux105
+  );
+  a3_x2_3_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_3_sig
+  );
+  xr2_x1_2_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(18),
     i1 => reg_nreg(18),
-    q => not_aux44
-  );
-  not_rtlcarry_0_19_ins : o2_x2
-  PORT MAP (
-    i1 => not_rtlcarry_0(18),
-    i0 => not_reg_nreg(18),
-    q => not_rtlcarry_0(19)
-  );
-  not_aux45_ins : no2_x1
-  PORT MAP (
-    i0 => not_rtlcarry_0(19),
-    i1 => not_c_nreg,
-    nq => not_aux45
+    q => xr2_x1_2_sig
   );
   not_reg_nreg_19_ins : inv_x2
   PORT MAP (
     i => reg_nreg(19),
     nq => not_reg_nreg(19)
   );
-  not_aux24_ins : o4_x2
+  not_aux109_ins : na2_x1
   PORT MAP (
-    i0 => c_reset_reg,
-    i1 => reset,
-    i3 => not_rtlcarry_0(19),
+    i0 => a3_x2_2_sig,
+    i1 => xr2_x1_sig,
+    nq => not_aux109
+  );
+  a3_x2_2_ins : a3_x2
+  PORT MAP (
+    i0 => not_reset,
+    i1 => c_nreg,
+    i2 => not_c_reset_reg,
+    q => a3_x2_2_sig
+  );
+  xr2_x1_ins : xr2_x1
+  PORT MAP (
+    i0 => mbk_buf_rtlcarry_0(19),
+    i1 => reg_nreg(19),
+    q => xr2_x1_sig
+  );
+  not_aux110_ins : an12_x4
+  PORT MAP (
+    i0 => not_reg_nreg(19),
+    i1 => rtlcarry_0(19),
+    q => not_aux110
+  );
+  not_aux118_ins : oa22_x2
+  PORT MAP (
+    i0 => on12_x1_sig,
+    i1 => na2_x1_sig,
     i2 => not_c_nreg,
-    q => not_aux24
+    q => not_aux118
   );
-  not_aux26_ins : o3_x2
+  on12_x1_ins : on12_x1
   PORT MAP (
-    i2 => not_aux24,
-    i0 => reg_nreg(20),
-    i1 => not_reg_nreg(19),
-    q => not_aux26
+    i0 => a3_x2_sig,
+    i1 => reg_nreg(20),
+    q => on12_x1_sig
   );
-  not_rtlalc_1_5_ins : inv_x2
+  a3_x2_ins : a3_x2
   PORT MAP (
-    i => rtlalc_1(5),
-    nq => not_rtlalc_1(5)
+    i0 => not_reset,
+    i2 => not_aux110,
+    i1 => not_c_reset_reg,
+    q => a3_x2_sig
   );
-  not_aux31_ins : xr2_x1
+  na2_x1_ins : na2_x1
   PORT MAP (
-    i0 => mbk_buf_rtlcarry_0(6),
-    i1 => reg_nreg(6),
-    q => not_aux31
+    i0 => no3_x1_sig,
+    i1 => reg_nreg(20),
+    nq => na2_x1_sig
   );
-  not_rtlalc_1_7_ins : inv_x2
+  no3_x1_ins : no3_x1
   PORT MAP (
-    i => rtlalc_1(7),
-    nq => not_rtlalc_1(7)
-  );
-  not_rtlalc_1_17_ins : inv_x2
-  PORT MAP (
-    i => rtlalc_1(17),
-    nq => not_rtlalc_1(17)
-  );
-  not_aux35_ins : a2_x2
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => not_rtlalc_1(17),
-    q => not_aux35
-  );
-  not_rtlalc_1_18_ins : inv_x2
-  PORT MAP (
-    i => rtlalc_1(18),
-    nq => not_rtlalc_1(18)
-  );
-  not_aux36_ins : a2_x2
-  PORT MAP (
-    i0 => not_aux0,
-    i1 => not_rtlalc_1(18),
-    q => not_aux36
+    i0 => reset,
+    i1 => not_aux110,
+    i2 => c_reset_reg,
+    nq => no3_x1_sig
   );
 END RTL;
 
@@ -2820,33 +2228,24 @@ configuration CFG_neuronreg_final of neuronreg_final is
   for RTL
     for all: buf_x2 use entity sxlib.buf_x2(vital); end for;
     for all: sff1_x4 use entity sxlib.sff1_x4(vital); end for;
-    for all: na3_x1 use entity sxlib.na3_x1(vital); end for;
-    for all: on12_x1 use entity sxlib.on12_x1(vital); end for;
     for all: nao22_x1 use entity sxlib.nao22_x1(vital); end for;
-    for all: a2_x2 use entity sxlib.a2_x2(vital); end for;
-    for all: na2_x1 use entity sxlib.na2_x1(vital); end for;
-    for all: an12_x1 use entity sxlib.an12_x1(vital); end for;
-    for all: o3_x2 use entity sxlib.o3_x2(vital); end for;
-    for all: no2_x1 use entity sxlib.no2_x1(vital); end for;
-    for all: o2_x2 use entity sxlib.o2_x2(vital); end for;
-    for all: ao22_x2 use entity sxlib.ao22_x2(vital); end for;
-    for all: a3_x2 use entity sxlib.a3_x2(vital); end for;
-    for all: no3_x1 use entity sxlib.no3_x1(vital); end for;
-    for all: a4_x2 use entity sxlib.a4_x2(vital); end for;
     for all: inv_x2 use entity sxlib.inv_x2(vital); end for;
-    for all: oa22_x2 use entity sxlib.oa22_x2(vital); end for;
-    for all: no4_x1 use entity sxlib.no4_x1(vital); end for;
-    for all: sff2_x4 use entity sxlib.sff2_x4(vital); end for;
-    for all: noa22_x1 use entity sxlib.noa22_x1(vital); end for;
-    for all: na4_x1 use entity sxlib.na4_x1(vital); end for;
-    for all: o4_x2 use entity sxlib.o4_x2(vital); end for;
-    for all: ao2o22_x2 use entity sxlib.ao2o22_x2(vital); end for;
-    for all: xr2_x1 use entity sxlib.xr2_x1(vital); end for;
+    for all: o2_x2 use entity sxlib.o2_x2(vital); end for;
+    for all: an12_x1 use entity sxlib.an12_x1(vital); end for;
     for all: oa2ao222_x2 use entity sxlib.oa2ao222_x2(vital); end for;
-    for all: oa2a22_x2 use entity sxlib.oa2a22_x2(vital); end for;
     for all: nao2o22_x1 use entity sxlib.nao2o22_x1(vital); end for;
+    for all: a2_x2 use entity sxlib.a2_x2(vital); end for;
     for all: inv_x4 use entity sxlib.inv_x4(vital); end for;
-    for all: nxr2_x1 use entity sxlib.nxr2_x1(vital); end for;
-    for all: noa2ao222_x1 use entity sxlib.noa2ao222_x1(vital); end for;
+    for all: na2_x1 use entity sxlib.na2_x1(vital); end for;
+    for all: a3_x2 use entity sxlib.a3_x2(vital); end for;
+    for all: xr2_x1 use entity sxlib.xr2_x1(vital); end for;
+    for all: oa22_x2 use entity sxlib.oa22_x2(vital); end for;
+    for all: o4_x2 use entity sxlib.o4_x2(vital); end for;
+    for all: na4_x1 use entity sxlib.na4_x1(vital); end for;
+    for all: no3_x1 use entity sxlib.no3_x1(vital); end for;
+    for all: on12_x1 use entity sxlib.on12_x1(vital); end for;
+    for all: no2_x1 use entity sxlib.no2_x1(vital); end for;
+    for all: na3_x1 use entity sxlib.na3_x1(vital); end for;
+    for all: an12_x4 use entity sxlib.an12_x4(vital); end for;
   end for;
 end CFG_neuronreg_final;

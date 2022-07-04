@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Tue Jun 21 22:49:56 2022
+[*] Mon Jul  4 17:41:19 2022
 [*]
-[dumpfile] "/home/eeslabor/Dokumente/nnhardware/NeuronRegister/neuronreg_tb_wave.ghw"
-[dumpfile_mtime] "Tue Jun 21 22:48:26 2022"
-[dumpfile_size] 761
-[savefile] "/home/eeslabor/Dokumente/nnhardware/NeuronRegister/neuronreg_tb.save"
+[dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronReg/neuronreg_tb_wave.ghw"
+[dumpfile_mtime] "Mon Jul  4 17:39:22 2022"
+[dumpfile_size] 35330
+[savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronReg/neuronreg_tb.save"
 [timestart] 0
 [size] 1920 884
-[pos] -1 -31
-*-23.345324 9270000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -1 -1
+*-23.948013 30180000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.neuronreg_tb.
 [treeopen] top.neuronreg_tb.spec.
@@ -20,7 +20,12 @@
 @28
 top.neuronreg_tb.c_nreg
 #{top.neuronreg_tb.spec.out_nreg_val[20:0]} top.neuronreg_tb.spec.out_nreg_val[20] top.neuronreg_tb.spec.out_nreg_val[19] top.neuronreg_tb.spec.out_nreg_val[18] top.neuronreg_tb.spec.out_nreg_val[17] top.neuronreg_tb.spec.out_nreg_val[16] top.neuronreg_tb.spec.out_nreg_val[15] top.neuronreg_tb.spec.out_nreg_val[14] top.neuronreg_tb.spec.out_nreg_val[13] top.neuronreg_tb.spec.out_nreg_val[12] top.neuronreg_tb.spec.out_nreg_val[11] top.neuronreg_tb.spec.out_nreg_val[10] top.neuronreg_tb.spec.out_nreg_val[9] top.neuronreg_tb.spec.out_nreg_val[8] top.neuronreg_tb.spec.out_nreg_val[7] top.neuronreg_tb.spec.out_nreg_val[6] top.neuronreg_tb.spec.out_nreg_val[5] top.neuronreg_tb.spec.out_nreg_val[4] top.neuronreg_tb.spec.out_nreg_val[3] top.neuronreg_tb.spec.out_nreg_val[2] top.neuronreg_tb.spec.out_nreg_val[1] top.neuronreg_tb.spec.out_nreg_val[0]
-#{top.neuronreg_tb.out_nreg_spec[20:0]} top.neuronreg_tb.out_nreg_spec[20] top.neuronreg_tb.out_nreg_spec[19] top.neuronreg_tb.out_nreg_spec[18] top.neuronreg_tb.out_nreg_spec[17] top.neuronreg_tb.out_nreg_spec[16] top.neuronreg_tb.out_nreg_spec[15] top.neuronreg_tb.out_nreg_spec[14] top.neuronreg_tb.out_nreg_spec[13] top.neuronreg_tb.out_nreg_spec[12] top.neuronreg_tb.out_nreg_spec[11] top.neuronreg_tb.out_nreg_spec[10] top.neuronreg_tb.out_nreg_spec[9] top.neuronreg_tb.out_nreg_spec[8] top.neuronreg_tb.out_nreg_spec[7] top.neuronreg_tb.out_nreg_spec[6] top.neuronreg_tb.out_nreg_spec[5] top.neuronreg_tb.out_nreg_spec[4] top.neuronreg_tb.out_nreg_spec[3] top.neuronreg_tb.out_nreg_spec[2] top.neuronreg_tb.out_nreg_spec[1] top.neuronreg_tb.out_nreg_spec[0]
 #{top.neuronreg_tb.in_nreg_val[11:0]} top.neuronreg_tb.in_nreg_val[11] top.neuronreg_tb.in_nreg_val[10] top.neuronreg_tb.in_nreg_val[9] top.neuronreg_tb.in_nreg_val[8] top.neuronreg_tb.in_nreg_val[7] top.neuronreg_tb.in_nreg_val[6] top.neuronreg_tb.in_nreg_val[5] top.neuronreg_tb.in_nreg_val[4] top.neuronreg_tb.in_nreg_val[3] top.neuronreg_tb.in_nreg_val[2] top.neuronreg_tb.in_nreg_val[1] top.neuronreg_tb.in_nreg_val[0]
+#{top.neuronreg_tb.out_nreg_spec[20:0]} top.neuronreg_tb.out_nreg_spec[20] top.neuronreg_tb.out_nreg_spec[19] top.neuronreg_tb.out_nreg_spec[18] top.neuronreg_tb.out_nreg_spec[17] top.neuronreg_tb.out_nreg_spec[16] top.neuronreg_tb.out_nreg_spec[15] top.neuronreg_tb.out_nreg_spec[14] top.neuronreg_tb.out_nreg_spec[13] top.neuronreg_tb.out_nreg_spec[12] top.neuronreg_tb.out_nreg_spec[11] top.neuronreg_tb.out_nreg_spec[10] top.neuronreg_tb.out_nreg_spec[9] top.neuronreg_tb.out_nreg_spec[8] top.neuronreg_tb.out_nreg_spec[7] top.neuronreg_tb.out_nreg_spec[6] top.neuronreg_tb.out_nreg_spec[5] top.neuronreg_tb.out_nreg_spec[4] top.neuronreg_tb.out_nreg_spec[3] top.neuronreg_tb.out_nreg_spec[2] top.neuronreg_tb.out_nreg_spec[1] top.neuronreg_tb.out_nreg_spec[0]
+#{top.neuronreg_tb.out_nreg_impl[20:0]} top.neuronreg_tb.out_nreg_impl[20] top.neuronreg_tb.out_nreg_impl[19] top.neuronreg_tb.out_nreg_impl[18] top.neuronreg_tb.out_nreg_impl[17] top.neuronreg_tb.out_nreg_impl[16] top.neuronreg_tb.out_nreg_impl[15] top.neuronreg_tb.out_nreg_impl[14] top.neuronreg_tb.out_nreg_impl[13] top.neuronreg_tb.out_nreg_impl[12] top.neuronreg_tb.out_nreg_impl[11] top.neuronreg_tb.out_nreg_impl[10] top.neuronreg_tb.out_nreg_impl[9] top.neuronreg_tb.out_nreg_impl[8] top.neuronreg_tb.out_nreg_impl[7] top.neuronreg_tb.out_nreg_impl[6] top.neuronreg_tb.out_nreg_impl[5] top.neuronreg_tb.out_nreg_impl[4] top.neuronreg_tb.out_nreg_impl[3] top.neuronreg_tb.out_nreg_impl[2] top.neuronreg_tb.out_nreg_impl[1] top.neuronreg_tb.out_nreg_impl[0]
+top.neuronreg_tb.impl.reset
+top.neuronreg_tb.impl.c_nreg
+@29
+top.neuronreg_tb.reset
 [pattern_trace] 1
 [pattern_trace] 0

@@ -1,0 +1,329 @@
+-- VHDL data flow description generated from `ram_boom`
+--		date : Mon Jul  4 18:38:10 2022
+
+
+-- Entity Declaration
+
+ENTITY ram_boom IS
+  PORT (
+  in_ram_input_index : in bit_vector(7 DOWNTO 0) ;	-- in_ram_input_index
+  out_data_ram : out bit_vector(11 DOWNTO 0) ;	-- out_data_ram
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END ram_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF ram_boom IS
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux7 : BIT;		-- aux7
+  SIGNAL aux8 : BIT;		-- aux8
+  SIGNAL aux9 : BIT;		-- aux9
+  SIGNAL aux11 : BIT;		-- aux11
+  SIGNAL aux13 : BIT;		-- aux13
+  SIGNAL aux14 : BIT;		-- aux14
+  SIGNAL aux15 : BIT;		-- aux15
+  SIGNAL aux16 : BIT;		-- aux16
+  SIGNAL aux17 : BIT;		-- aux17
+  SIGNAL aux19 : BIT;		-- aux19
+  SIGNAL aux20 : BIT;		-- aux20
+  SIGNAL aux22 : BIT;		-- aux22
+  SIGNAL aux23 : BIT;		-- aux23
+  SIGNAL aux24 : BIT;		-- aux24
+  SIGNAL aux25 : BIT;		-- aux25
+  SIGNAL aux26 : BIT;		-- aux26
+  SIGNAL aux27 : BIT;		-- aux27
+  SIGNAL aux28 : BIT;		-- aux28
+  SIGNAL aux30 : BIT;		-- aux30
+  SIGNAL aux31 : BIT;		-- aux31
+  SIGNAL aux32 : BIT;		-- aux32
+  SIGNAL aux33 : BIT;		-- aux33
+  SIGNAL aux35 : BIT;		-- aux35
+  SIGNAL aux36 : BIT;		-- aux36
+  SIGNAL aux37 : BIT;		-- aux37
+  SIGNAL aux38 : BIT;		-- aux38
+  SIGNAL aux41 : BIT;		-- aux41
+  SIGNAL aux42 : BIT;		-- aux42
+  SIGNAL aux46 : BIT;		-- aux46
+  SIGNAL aux48 : BIT;		-- aux48
+  SIGNAL aux49 : BIT;		-- aux49
+  SIGNAL aux51 : BIT;		-- aux51
+  SIGNAL aux52 : BIT;		-- aux52
+  SIGNAL aux53 : BIT;		-- aux53
+  SIGNAL aux54 : BIT;		-- aux54
+  SIGNAL aux56 : BIT;		-- aux56
+  SIGNAL aux59 : BIT;		-- aux59
+  SIGNAL aux61 : BIT;		-- aux61
+  SIGNAL aux63 : BIT;		-- aux63
+  SIGNAL aux64 : BIT;		-- aux64
+  SIGNAL aux65 : BIT;		-- aux65
+  SIGNAL aux66 : BIT;		-- aux66
+  SIGNAL aux71 : BIT;		-- aux71
+  SIGNAL aux74 : BIT;		-- aux74
+  SIGNAL aux76 : BIT;		-- aux76
+  SIGNAL aux78 : BIT;		-- aux78
+  SIGNAL aux80 : BIT;		-- aux80
+  SIGNAL aux82 : BIT;		-- aux82
+  SIGNAL aux84 : BIT;		-- aux84
+  SIGNAL aux85 : BIT;		-- aux85
+  SIGNAL aux86 : BIT;		-- aux86
+  SIGNAL aux87 : BIT;		-- aux87
+  SIGNAL aux90 : BIT;		-- aux90
+  SIGNAL aux91 : BIT;		-- aux91
+  SIGNAL aux92 : BIT;		-- aux92
+  SIGNAL aux93 : BIT;		-- aux93
+  SIGNAL aux99 : BIT;		-- aux99
+  SIGNAL aux101 : BIT;		-- aux101
+  SIGNAL aux103 : BIT;		-- aux103
+  SIGNAL aux105 : BIT;		-- aux105
+  SIGNAL aux106 : BIT;		-- aux106
+  SIGNAL aux111 : BIT;		-- aux111
+  SIGNAL aux113 : BIT;		-- aux113
+  SIGNAL aux115 : BIT;		-- aux115
+  SIGNAL aux116 : BIT;		-- aux116
+  SIGNAL aux117 : BIT;		-- aux117
+  SIGNAL aux118 : BIT;		-- aux118
+  SIGNAL aux119 : BIT;		-- aux119
+  SIGNAL aux120 : BIT;		-- aux120
+  SIGNAL aux121 : BIT;		-- aux121
+  SIGNAL aux122 : BIT;		-- aux122
+  SIGNAL aux123 : BIT;		-- aux123
+
+BEGIN
+  aux123 <= (NOT(in_ram_input_index(7)) AND 
+in_ram_input_index(5));
+  aux122 <= (NOT(in_ram_input_index(5)) AND NOT(
+in_ram_input_index(0)));
+  aux121 <= (NOT(in_ram_input_index(5)) AND 
+in_ram_input_index(0));
+  aux120 <= (in_ram_input_index(0) AND in_ram_input_index(2));
+  aux119 <= (in_ram_input_index(0) AND NOT(
+in_ram_input_index(2)));
+  aux118 <= (in_ram_input_index(5) AND in_ram_input_index(0));
+  aux117 <= (in_ram_input_index(5) AND NOT(
+in_ram_input_index(0)));
+  aux116 <= (NOT(in_ram_input_index(0)) AND NOT(
+in_ram_input_index(2)));
+  aux115 <= ((aux7 AND NOT(in_ram_input_index(7))) AND 
+in_ram_input_index(5));
+  aux113 <= ((aux33 OR aux42) AND NOT(in_ram_input_index(5)));
+  aux111 <= ((aux28 OR (((NOT(in_ram_input_index(3)) AND NOT(
+aux66)) AND NOT(in_ram_input_index(7))) AND NOT(
+in_ram_input_index(5)))) AND NOT(in_ram_input_index(0)));
+  aux106 <= (aux16 AND in_ram_input_index(7));
+  aux105 <= ((aux33 OR aux24) AND NOT(in_ram_input_index(5)));
+  aux103 <= ((aux90 OR aux101) AND NOT(in_ram_input_index(0))
+);
+  aux101 <= ((aux86 OR aux13) AND NOT(in_ram_input_index(5)));
+  aux99 <= ((((aux9 OR ((aux26 OR aux85) AND NOT(
+in_ram_input_index(7)))) AND in_ram_input_index(5)) OR aux3) AND 
+in_ram_input_index(0));
+  aux93 <= NOT(in_ram_input_index(4) OR 
+in_ram_input_index(6));
+  aux92 <= (aux31 AND in_ram_input_index(5));
+  aux91 <= (aux4 AND aux49);
+  aux90 <= (((aux87 AND NOT(in_ram_input_index(6))) AND NOT(
+in_ram_input_index(7))) AND in_ram_input_index(5));
+  aux87 <= (in_ram_input_index(3) XOR in_ram_input_index(4));
+  aux86 <= (aux85 AND in_ram_input_index(7));
+  aux85 <= (in_ram_input_index(4) AND NOT(
+in_ram_input_index(6)));
+  aux84 <= ((aux82 AND NOT(in_ram_input_index(5))) AND 
+in_ram_input_index(0));
+  aux82 <= ((NOT(in_ram_input_index(3)) AND NOT(
+in_ram_input_index(6))) AND in_ram_input_index(7));
+  aux80 <= ((aux17 AND in_ram_input_index(5)) AND NOT(
+in_ram_input_index(0)));
+  aux78 <= ((aux76 OR ((aux14 OR aux54) AND NOT(
+in_ram_input_index(0)))) AND NOT(in_ram_input_index(2)));
+  aux76 <= ((aux74 OR aux36) AND in_ram_input_index(0));
+  aux74 <= (aux24 AND in_ram_input_index(5));
+  aux71 <= (((aux33 OR ((in_ram_input_index(3) AND aux66) 
+AND NOT(in_ram_input_index(7)))) AND 
+in_ram_input_index(5)) AND NOT(in_ram_input_index(0)));
+  aux66 <= (in_ram_input_index(4) XOR in_ram_input_index(6));
+  aux65 <= (aux61 OR aux64);
+  aux64 <= (aux63 AND NOT(in_ram_input_index(5)));
+  aux63 <= ((in_ram_input_index(3) AND NOT(
+in_ram_input_index(6))) AND in_ram_input_index(7));
+  aux61 <= ((aux32 AND NOT(in_ram_input_index(7))) AND 
+in_ram_input_index(5));
+  aux59 <= (((aux9 OR aux48) AND in_ram_input_index(5)) OR 
+aux3);
+  aux56 <= ((aux37 OR aux16) AND NOT(in_ram_input_index(7)));
+  aux54 <= (aux6 AND NOT(in_ram_input_index(5)));
+  aux53 <= (aux52 AND in_ram_input_index(0));
+  aux52 <= (aux22 OR aux51);
+  aux51 <= ((aux0 AND aux49) AND NOT(in_ram_input_index(5)));
+  aux49 <= (in_ram_input_index(6) XOR in_ram_input_index(7));
+  aux48 <= ((aux41 OR aux32) AND NOT(in_ram_input_index(7)));
+  aux46 <= ((((aux42 AND NOT(in_ram_input_index(5))) AND 
+in_ram_input_index(0)) OR ((aux38 AND NOT(in_ram_input_index(5))) AND 
+NOT(in_ram_input_index(0)))) AND NOT(
+in_ram_input_index(2)));
+  aux42 <= (aux41 AND NOT(in_ram_input_index(7)));
+  aux41 <= (NOT(in_ram_input_index(3)) AND 
+in_ram_input_index(6));
+  aux38 <= (aux37 AND NOT(in_ram_input_index(7)));
+  aux37 <= (in_ram_input_index(3) AND in_ram_input_index(6));
+  aux36 <= (aux27 AND NOT(in_ram_input_index(5)));
+  aux35 <= ((aux33 OR aux31) AND in_ram_input_index(5));
+  aux33 <= (aux32 AND in_ram_input_index(7));
+  aux32 <= (aux4 AND NOT(in_ram_input_index(6)));
+  aux31 <= (aux1 AND NOT(in_ram_input_index(7)));
+  aux30 <= ((aux28 OR aux25) AND in_ram_input_index(0));
+  aux28 <= (aux27 AND in_ram_input_index(5));
+  aux27 <= (aux26 AND NOT(in_ram_input_index(7)));
+  aux26 <= (aux7 AND in_ram_input_index(6));
+  aux25 <= (aux24 AND NOT(in_ram_input_index(5)));
+  aux24 <= (aux23 AND NOT(in_ram_input_index(7)));
+  aux23 <= (aux15 AND in_ram_input_index(6));
+  aux22 <= ((aux4 AND NOT(in_ram_input_index(7))) AND 
+in_ram_input_index(5));
+  aux20 <= (aux13 AND NOT(in_ram_input_index(5)));
+  aux19 <= ((aux9 OR aux17) AND in_ram_input_index(5));
+  aux17 <= (aux16 AND NOT(in_ram_input_index(7)));
+  aux16 <= (aux15 AND NOT(in_ram_input_index(6)));
+  aux15 <= (NOT(in_ram_input_index(3)) AND 
+in_ram_input_index(4));
+  aux14 <= (aux13 AND in_ram_input_index(5));
+  aux13 <= ((aux0 AND in_ram_input_index(6)) AND NOT(
+in_ram_input_index(7)));
+  aux11 <= ((aux9 OR aux6) AND NOT(in_ram_input_index(5)));
+  aux9 <= (aux8 AND in_ram_input_index(7));
+  aux8 <= (aux7 AND NOT(in_ram_input_index(6)));
+  aux7 <= (NOT(in_ram_input_index(3)) AND NOT(
+in_ram_input_index(4)));
+  aux6 <= ((aux4 AND in_ram_input_index(6)) AND NOT(
+in_ram_input_index(7)));
+  aux4 <= (in_ram_input_index(3) AND NOT(
+in_ram_input_index(4)));
+  aux3 <= ((aux1 AND in_ram_input_index(7)) AND NOT(
+in_ram_input_index(5)));
+  aux1 <= (aux0 AND NOT(in_ram_input_index(6)));
+  aux0 <= (in_ram_input_index(3) AND in_ram_input_index(4));
+
+out_data_ram (0) <= (((aux19 OR aux3) AND NOT(in_ram_input_index(0)) 
+AND in_ram_input_index(2) AND in_ram_input_index(1))
+ OR (((((aux14 AND in_ram_input_index(0)) OR (
+aux11 AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR (aux3 AND aux116)) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (1) <= (((((aux53 OR (aux48 AND aux117)) AND 
+in_ram_input_index(2)) OR aux46) AND in_ram_input_index(1)) OR ((((((
+aux19 OR aux36) AND in_ram_input_index(0)) OR (aux35 
+AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR ((aux30 OR ((aux22 OR aux20) AND NOT(
+in_ram_input_index(0)))) AND NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (2) <= (((((aux53 OR (aux59 AND NOT(
+in_ram_input_index(0)))) AND in_ram_input_index(2)) OR aux46) AND 
+in_ram_input_index(1)) OR ((((((aux9 OR aux56) AND aux118) OR ((aux35 
+OR aux54) AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR ((aux30 OR (aux52 AND NOT(
+in_ram_input_index(0)))) AND NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (3) <= ((((((aux3 AND in_ram_input_index(0)) OR (aux20 
+AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR (aux36 AND aux119)) AND 
+in_ram_input_index(1)) OR (((aux28 AND aux120) OR (aux61 AND aux116)) 
+AND NOT(in_ram_input_index(1))));
+
+out_data_ram (4) <= ((((((aux32 AND (in_ram_input_index(7) XOR 
+in_ram_input_index(5)) AND in_ram_input_index(0)) OR aux80) AND 
+in_ram_input_index(2)) OR aux78) AND in_ram_input_index(1)) OR ((((((
+aux9 OR (NOT(in_ram_input_index(3)) AND aux66 AND NOT
+(in_ram_input_index(7)))) AND aux118) OR aux71) 
+AND in_ram_input_index(2)) OR ((((aux9 OR aux24) AND
+ aux121) OR (aux65 AND NOT(in_ram_input_index(0)))
+) AND NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (5) <= ((((((aux65 AND in_ram_input_index(0)) OR ((aux90
+ OR (aux86 AND NOT(in_ram_input_index(5)))) AND 
+NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR aux78) AND in_ram_input_index(1)) OR ((((((
+aux9 OR (aux85 AND NOT(in_ram_input_index(7)))) AND 
+aux118) OR aux71) AND in_ram_input_index(2)) OR ((aux84
+ OR (aux64 AND NOT(in_ram_input_index(0)))) AND 
+NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (6) <= (((((((aux26 OR aux32) AND NOT(
+in_ram_input_index(7)) AND aux118) OR (aux6 AND aux117)) AND 
+in_ram_input_index(2)) OR (((aux92 AND in_ram_input_index(0)) OR (
+aux91 AND aux122)) AND NOT(in_ram_input_index(2)))) 
+AND in_ram_input_index(1)) OR (((((aux74 AND 
+in_ram_input_index(0)) OR ((((aux9 OR aux13) AND in_ram_input_index(5)
+) OR aux36) AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR (((aux20 AND in_ram_input_index(0)) OR ((
+aux28 OR aux3) AND NOT(in_ram_input_index(0)))) AND 
+NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (7) <= ((((((((aux93 AND aux123) OR aux105) AND 
+in_ram_input_index(0)) OR aux103) AND in_ram_input_index(2)) OR ((
+aux76 OR ((aux14 OR aux25) AND NOT(
+in_ram_input_index(0)))) AND NOT(in_ram_input_index(2)))) AND 
+in_ram_input_index(1)) OR ((((aux99 OR ((aux9 OR (
+in_ram_input_index(3) AND NOT(aux93) AND NOT(in_ram_input_index(7)))) 
+AND aux117)) AND in_ram_input_index(2)) OR ((aux84 
+OR (aux33 AND aux122)) AND NOT(
+in_ram_input_index(2)))) AND NOT(in_ram_input_index(1))));
+
+out_data_ram (8) <= ((((((aux105 AND in_ram_input_index(0)) OR aux103
+) AND in_ram_input_index(2)) OR ((((aux74 OR aux11
+) AND in_ram_input_index(0)) OR ((aux14 OR ((aux33
+ OR aux27) AND NOT(in_ram_input_index(5)))) AND 
+NOT(in_ram_input_index(0)))) AND NOT(
+in_ram_input_index(2)))) AND in_ram_input_index(1)) OR ((((aux99 OR ((
+(aux91 AND in_ram_input_index(5)) OR aux36) AND 
+NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR ((((aux82 OR aux6) AND aux121) OR ((aux63 OR
+ aux24) AND aux122)) AND NOT(in_ram_input_index(2)
+))) AND NOT(in_ram_input_index(1))));
+
+out_data_ram (9) <= ((aux80 AND in_ram_input_index(2)) OR (((aux106 
+AND NOT(in_ram_input_index(5)) AND aux120) OR (aux33
+ AND in_ram_input_index(5) AND aux119)) AND 
+in_ram_input_index(1)) OR ((aux33 OR (aux8 AND NOT(
+in_ram_input_index(7)))) AND NOT(in_ram_input_index(5)) AND NOT(
+in_ram_input_index(0)) AND NOT(in_ram_input_index(2)) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (10) <= (((((((aux115 OR aux25) AND in_ram_input_index(0)
+) OR (((NOT(aux41) AND aux87 AND aux123) OR aux51)
+ AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR ((((aux92 OR aux11) AND 
+in_ram_input_index(0)) OR (aux113 AND NOT(in_ram_input_index(0)))) AND
+ NOT(in_ram_input_index(2)))) AND 
+in_ram_input_index(1)) OR (((((aux59 AND in_ram_input_index(0)) OR (((
+((aux93 AND in_ram_input_index(7)) OR aux56) AND 
+in_ram_input_index(5)) OR aux36) AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR ((((aux9 OR aux38) AND aux121) OR aux111) 
+AND NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+
+out_data_ram (11) <= (((((((aux115 OR aux105) AND 
+in_ram_input_index(0)) OR ((aux22 OR aux101) AND NOT(
+in_ram_input_index(0)))) AND in_ram_input_index(2)) OR ((((((aux23 OR 
+aux1) AND aux123) OR aux11) AND in_ram_input_index(0)
+) OR ((aux14 OR aux113) AND NOT(
+in_ram_input_index(0)))) AND NOT(in_ram_input_index(2)))) AND 
+in_ram_input_index(1)) OR (((((aux9 AND in_ram_input_index(5)) OR ((((
+aux41 OR aux85) AND aux123) OR aux3) AND 
+in_ram_input_index(0)) OR (((aux38 AND in_ram_input_index(5)) OR aux36
+) AND NOT(in_ram_input_index(0)))) AND 
+in_ram_input_index(2)) OR ((((aux106 OR aux38) AND aux121) OR aux111) 
+AND NOT(in_ram_input_index(2)))) AND NOT(
+in_ram_input_index(1))));
+END;
