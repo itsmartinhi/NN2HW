@@ -6,7 +6,7 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
-ENTITY argmax_boog IS
+ENTITY argmax_final IS
 PORT(
   clk	: IN STD_LOGIC;
   c_argmax	: IN STD_LOGIC;
@@ -15,9 +15,9 @@ PORT(
   in_argmax_index	: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
   out_argmax_index	: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 );
-END argmax_boog;
+END argmax_final;
 
-ARCHITECTURE RTL OF argmax_boog IS
+ARCHITECTURE RTL OF argmax_final IS
   SIGNAL not_in_argmax_val	: STD_LOGIC_VECTOR(19 DOWNTO 0);
   SIGNAL not_reg_argmax_val	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL not_rtlcarry_2	: STD_LOGIC_VECTOR(20 DOWNTO 20);
@@ -77,6 +77,7 @@ ARCHITECTURE RTL OF argmax_boog IS
   SIGNAL na2_x1_12_sig	: STD_LOGIC;
   SIGNAL na2_x1_11_sig	: STD_LOGIC;
   SIGNAL na2_x1_10_sig	: STD_LOGIC;
+  SIGNAL mbk_buf_not_aux2	: STD_LOGIC;
   SIGNAL inv_x2_sig	: STD_LOGIC;
   SIGNAL inv_x2_9_sig	: STD_LOGIC;
   SIGNAL inv_x2_8_sig	: STD_LOGIC;
@@ -184,8 +185,8 @@ ARCHITECTURE RTL OF argmax_boog IS
 
   COMPONENT oa22_x2
   PORT(
-  i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
+  i0	: IN STD_LOGIC;
   i2	: IN STD_LOGIC;
   q	: OUT STD_LOGIC
    );
@@ -195,8 +196,8 @@ ARCHITECTURE RTL OF argmax_boog IS
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
   i3	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
   i4	: IN STD_LOGIC;
   i5	: IN STD_LOGIC;
   q	: OUT STD_LOGIC
@@ -226,24 +227,29 @@ ARCHITECTURE RTL OF argmax_boog IS
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
   i3	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
   i4	: IN STD_LOGIC;
   i5	: IN STD_LOGIC;
   nq	: OUT STD_LOGIC
    );
   END COMPONENT;
 
-  COMPONENT o3_x2
+  COMPONENT o3_x4
   PORT(
   i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
   i2	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
   q	: OUT STD_LOGIC
    );
   END COMPONENT;
 
 BEGIN
+  i_mbk_buf_not_aux2 : buf_x2
+  PORT MAP (
+    i => not_aux2,
+    q => mbk_buf_not_aux2
+  );
   out_argmax_index_3_ins : buf_x2
   PORT MAP (
     i => rtlalc_3(3),
@@ -470,8 +476,8 @@ BEGIN
   );
   oa22_x2_3_ins : oa22_x2
   PORT MAP (
-    i0 => not_in_argmax_val(17),
-    i1 => not_aux6,
+    i1 => not_in_argmax_val(17),
+    i0 => not_aux6,
     i2 => reset,
     q => oa22_x2_3_sig
   );
@@ -659,8 +665,8 @@ BEGIN
   );
   oa22_x2_2_ins : oa22_x2
   PORT MAP (
-    i0 => not_in_argmax_val(10),
-    i1 => not_aux6,
+    i1 => not_in_argmax_val(10),
+    i0 => not_aux6,
     i2 => reset,
     q => oa22_x2_2_sig
   );
@@ -817,8 +823,8 @@ BEGIN
   );
   oa22_x2_ins : oa22_x2
   PORT MAP (
-    i0 => not_in_argmax_val(4),
-    i1 => not_aux6,
+    i1 => not_in_argmax_val(4),
+    i0 => not_aux6,
     i2 => reset,
     q => oa22_x2_sig
   );
@@ -923,8 +929,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(18),
     i1 => not_in_argmax_val(18),
-    i2 => reg_argmax_val(18),
-    i3 => rtlcarry_2(18),
+    i3 => reg_argmax_val(18),
+    i2 => rtlcarry_2(18),
     i4 => rtlcarry_2(18),
     i5 => not_in_argmax_val(18),
     q => rtlcarry_2(19)
@@ -933,8 +939,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(17),
     i1 => not_in_argmax_val(17),
-    i2 => reg_argmax_val(17),
-    i3 => rtlcarry_2(17),
+    i3 => reg_argmax_val(17),
+    i2 => rtlcarry_2(17),
     i4 => rtlcarry_2(17),
     i5 => not_in_argmax_val(17),
     q => rtlcarry_2(18)
@@ -943,8 +949,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(16),
     i1 => not_in_argmax_val(16),
-    i2 => reg_argmax_val(16),
-    i3 => rtlcarry_2(16),
+    i3 => reg_argmax_val(16),
+    i2 => rtlcarry_2(16),
     i4 => rtlcarry_2(16),
     i5 => not_in_argmax_val(16),
     q => rtlcarry_2(17)
@@ -953,8 +959,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(15),
     i1 => not_in_argmax_val(15),
-    i2 => reg_argmax_val(15),
-    i3 => rtlcarry_2(15),
+    i3 => reg_argmax_val(15),
+    i2 => rtlcarry_2(15),
     i4 => rtlcarry_2(15),
     i5 => not_in_argmax_val(15),
     q => rtlcarry_2(16)
@@ -963,8 +969,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(14),
     i1 => not_in_argmax_val(14),
-    i2 => reg_argmax_val(14),
-    i3 => rtlcarry_2(14),
+    i3 => reg_argmax_val(14),
+    i2 => rtlcarry_2(14),
     i4 => rtlcarry_2(14),
     i5 => not_in_argmax_val(14),
     q => rtlcarry_2(15)
@@ -973,8 +979,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(13),
     i1 => not_in_argmax_val(13),
-    i2 => reg_argmax_val(13),
-    i3 => rtlcarry_2(13),
+    i3 => reg_argmax_val(13),
+    i2 => rtlcarry_2(13),
     i4 => rtlcarry_2(13),
     i5 => not_in_argmax_val(13),
     q => rtlcarry_2(14)
@@ -983,8 +989,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(12),
     i1 => not_in_argmax_val(12),
-    i2 => reg_argmax_val(12),
-    i3 => rtlcarry_2(12),
+    i3 => reg_argmax_val(12),
+    i2 => rtlcarry_2(12),
     i4 => rtlcarry_2(12),
     i5 => not_in_argmax_val(12),
     q => rtlcarry_2(13)
@@ -993,8 +999,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(11),
     i1 => not_in_argmax_val(11),
-    i2 => reg_argmax_val(11),
-    i3 => rtlcarry_2(11),
+    i3 => reg_argmax_val(11),
+    i2 => rtlcarry_2(11),
     i4 => rtlcarry_2(11),
     i5 => not_in_argmax_val(11),
     q => rtlcarry_2(12)
@@ -1003,8 +1009,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(10),
     i1 => not_in_argmax_val(10),
-    i2 => reg_argmax_val(10),
-    i3 => rtlcarry_2(10),
+    i3 => reg_argmax_val(10),
+    i2 => rtlcarry_2(10),
     i4 => rtlcarry_2(10),
     i5 => not_in_argmax_val(10),
     q => rtlcarry_2(11)
@@ -1013,8 +1019,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(9),
     i1 => not_in_argmax_val(9),
-    i2 => reg_argmax_val(9),
-    i3 => rtlcarry_2(9),
+    i3 => reg_argmax_val(9),
+    i2 => rtlcarry_2(9),
     i4 => rtlcarry_2(9),
     i5 => not_in_argmax_val(9),
     q => rtlcarry_2(10)
@@ -1023,8 +1029,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(8),
     i1 => not_in_argmax_val(8),
-    i2 => reg_argmax_val(8),
-    i3 => rtlcarry_2(8),
+    i3 => reg_argmax_val(8),
+    i2 => rtlcarry_2(8),
     i4 => rtlcarry_2(8),
     i5 => not_in_argmax_val(8),
     q => rtlcarry_2(9)
@@ -1033,8 +1039,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(7),
     i1 => not_in_argmax_val(7),
-    i2 => reg_argmax_val(7),
-    i3 => rtlcarry_2(7),
+    i3 => reg_argmax_val(7),
+    i2 => rtlcarry_2(7),
     i4 => rtlcarry_2(7),
     i5 => not_in_argmax_val(7),
     q => rtlcarry_2(8)
@@ -1043,8 +1049,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(6),
     i1 => not_in_argmax_val(6),
-    i2 => reg_argmax_val(6),
-    i3 => rtlcarry_2(6),
+    i3 => reg_argmax_val(6),
+    i2 => rtlcarry_2(6),
     i4 => rtlcarry_2(6),
     i5 => not_in_argmax_val(6),
     q => rtlcarry_2(7)
@@ -1053,8 +1059,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(5),
     i1 => not_in_argmax_val(5),
-    i2 => reg_argmax_val(5),
-    i3 => rtlcarry_2(5),
+    i3 => reg_argmax_val(5),
+    i2 => rtlcarry_2(5),
     i4 => rtlcarry_2(5),
     i5 => not_in_argmax_val(5),
     q => rtlcarry_2(6)
@@ -1063,8 +1069,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(4),
     i1 => not_in_argmax_val(4),
-    i2 => reg_argmax_val(4),
-    i3 => rtlcarry_2(4),
+    i3 => reg_argmax_val(4),
+    i2 => rtlcarry_2(4),
     i4 => rtlcarry_2(4),
     i5 => not_in_argmax_val(4),
     q => rtlcarry_2(5)
@@ -1073,8 +1079,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(3),
     i1 => not_in_argmax_val(3),
-    i2 => reg_argmax_val(3),
-    i3 => rtlcarry_2(3),
+    i3 => reg_argmax_val(3),
+    i2 => rtlcarry_2(3),
     i4 => rtlcarry_2(3),
     i5 => not_in_argmax_val(3),
     q => rtlcarry_2(4)
@@ -1083,8 +1089,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(2),
     i1 => not_in_argmax_val(2),
-    i2 => reg_argmax_val(2),
-    i3 => rtlcarry_2(2),
+    i3 => reg_argmax_val(2),
+    i2 => rtlcarry_2(2),
     i4 => rtlcarry_2(2),
     i5 => not_in_argmax_val(2),
     q => rtlcarry_2(3)
@@ -1236,8 +1242,8 @@ BEGIN
   PORT MAP (
     i0 => reg_argmax_val(19),
     i1 => not_in_argmax_val(19),
-    i2 => reg_argmax_val(19),
-    i3 => rtlcarry_2(19),
+    i3 => reg_argmax_val(19),
+    i2 => rtlcarry_2(19),
     i4 => rtlcarry_2(19),
     i5 => not_in_argmax_val(19),
     nq => not_rtlcarry_2(20)
@@ -1249,22 +1255,22 @@ BEGIN
   );
   not_aux0_ins : no2_x1
   PORT MAP (
-    i0 => not_rtlcarry_2(20),
-    i1 => not_reg_argmax_val(20),
+    i1 => not_rtlcarry_2(20),
+    i0 => not_reg_argmax_val(20),
     nq => not_aux0
   );
   not_aux2_ins : noa22_x1
   PORT MAP (
-    i0 => not_reg_argmax_val(20),
-    i1 => not_rtlcarry_2(20),
+    i1 => not_reg_argmax_val(20),
+    i0 => not_rtlcarry_2(20),
     i2 => in_argmax_val(20),
     nq => not_aux2
   );
-  not_aux4_ins : o3_x2
+  not_aux4_ins : o3_x4
   PORT MAP (
     i0 => not_aux0,
-    i1 => not_aux2,
-    i2 => inv_x2_sig,
+    i2 => not_aux2,
+    i1 => inv_x2_sig,
     q => not_aux4
   );
   inv_x2_ins : inv_x2
@@ -1275,13 +1281,13 @@ BEGIN
   not_aux7_ins : no2_x1
   PORT MAP (
     i0 => not_aux0,
-    i1 => not_aux2,
+    i1 => mbk_buf_not_aux2,
     nq => not_aux7
   );
   not_aux6_ins : na2_x1
   PORT MAP (
-    i0 => not_aux4,
-    i1 => not_reset,
+    i1 => not_aux4,
+    i0 => not_reset,
     nq => not_aux6
   );
 END RTL;
@@ -1292,7 +1298,7 @@ END RTL;
 library sxlib;
 use sxlib.vcomponents.all;
 
-configuration CFG_argmax_boog of argmax_boog is
+configuration CFG_argmax_final of argmax_final is
   for RTL
     for all: buf_x2 use entity sxlib.buf_x2(vital); end for;
     for all: sff1_x4 use entity sxlib.sff1_x4(vital); end for;
@@ -1307,6 +1313,6 @@ configuration CFG_argmax_boog of argmax_boog is
     for all: oa2ao222_x2 use entity sxlib.oa2ao222_x2(vital); end for;
     for all: no2_x1 use entity sxlib.no2_x1(vital); end for;
     for all: noa2a2a23_x1 use entity sxlib.noa2a2a23_x1(vital); end for;
-    for all: o3_x2 use entity sxlib.o3_x2(vital); end for;
+    for all: o3_x4 use entity sxlib.o3_x4(vital); end for;
   end for;
-end CFG_argmax_boog;
+end CFG_argmax_final;
