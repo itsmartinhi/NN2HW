@@ -15,8 +15,8 @@ end NEURONREG;
 
 architecture RTL of NEURONREG is
 	signal reg_nreg: std_logic_vector(20 downto 0); 
+	signal sum : std_logic_vector(20 downto 0); 
 begin
-	
 	process(clk)
 	begin
 		if rising_edge(clk) then
@@ -24,9 +24,11 @@ begin
 				reg_nreg <= "000000000000000000000";
 				out_nreg_val <= "000000000000000000000";
 			elsif c_nreg = '1' then
-				out_nreg_val <= std_logic_vector(unsigned(reg_nreg) + unsigned(in_nreg_val)); 
-				reg_nreg <= std_logic_vector(unsigned(reg_nreg) + unsigned(in_nreg_val));
+				out_nreg_val <= sum; 
+				reg_nreg <= sum;
 			end if;
+		else 
+			sum <= std_logic_vector(unsigned(reg_nreg) + unsigned(in_nreg_val));
 		end if;
 	end process;
 end RTL;
