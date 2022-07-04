@@ -72,6 +72,7 @@ architecture RTL of NEURONALESNETZ is
     component ARGMAX is
         port (
             clk:			  in  std_logic;
+            reset: 			  in  std_logic;
 			c_argmax: 		  in  std_logic;						
 			in_argmax_val: 	  in  std_logic_vector(20 downto 0);	
 			in_argmax_index:  in  std_logic_vector(3 downto 0);
@@ -186,6 +187,7 @@ begin
     
     U_ARGMAX : ARGMAX port map (
 		clk 			 => clk,
+		reset 			 => reset,
 		c_argmax 		 => c_argmax,
         in_argmax_val 	 => out_nreg_val,
         in_argmax_index  => out_neuron_index,
