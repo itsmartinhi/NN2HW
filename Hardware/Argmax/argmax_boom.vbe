@@ -1,5 +1,5 @@
 -- VHDL data flow description generated from `argmax_boom`
---		date : Sat Jul  2 16:23:48 2022
+--		date : Mon Jul  4 16:45:27 2022
 
 
 -- Entity Declaration
@@ -8,6 +8,7 @@ ENTITY argmax_boom IS
   PORT (
   clk : in BIT;	-- clk
   c_argmax : in BIT;	-- c_argmax
+  reset : in BIT;	-- reset
   in_argmax_val : in bit_vector(20 DOWNTO 0) ;	-- in_argmax_val
   in_argmax_index : in bit_vector(3 DOWNTO 0) ;	-- in_argmax_index
   out_argmax_index : out bit_vector(3 DOWNTO 0) ;	-- out_argmax_index
@@ -24,23 +25,20 @@ ARCHITECTURE behaviour_data_flow OF argmax_boom IS
   SIGNAL reg_argmax_val : REG_VECTOR(20 DOWNTO 0) REGISTER;	-- reg_argmax_val
   SIGNAL rtlcarry_2 : BIT_VECTOR(20 DOWNTO 2);	-- rtlcarry_2
   SIGNAL aux0 : BIT;		-- aux0
-  SIGNAL aux1 : BIT;		-- aux1
   SIGNAL aux2 : BIT;		-- aux2
-  SIGNAL aux3 : BIT;		-- aux3
   SIGNAL aux4 : BIT;		-- aux4
   SIGNAL aux5 : BIT;		-- aux5
   SIGNAL aux6 : BIT;		-- aux6
   SIGNAL aux7 : BIT;		-- aux7
 
 BEGIN
-  aux7 <= (aux2 OR NOT(aux0));
-  aux6 <= (aux3 AND NOT(reg_argmax_val(20)));
-  aux5 <= (aux1 AND c_argmax);
-  aux4 <= (NOT(aux2) AND aux3);
-  aux3 <= (aux0 AND c_argmax);
-  aux2 <= (NOT(aux1) AND reg_argmax_val(20));
-  aux1 <= NOT(rtlcarry_2(20) OR NOT(in_argmax_val(20)));
-  aux0 <= NOT(rtlcarry_2(20) AND NOT(in_argmax_val(20)));
+  aux7 <= (NOT(aux2) OR NOT(aux0));
+  aux6 <= (NOT(aux4) AND NOT(reset));
+  aux5 <= (aux4 AND NOT(reset));
+  aux4 <= (aux2 AND (aux0 AND c_argmax));
+  aux2 <= NOT((rtlcarry_2(20) OR reg_argmax_val(20)) AND 
+NOT(in_argmax_val(20)));
+  aux0 <= NOT(rtlcarry_2(20) AND reg_argmax_val(20));
   rtlcarry_2 (2) <= (((((reg_argmax_val(0) AND NOT(in_argmax_val(0)))
  OR reg_argmax_val(0)) OR NOT(in_argmax_val(0))) 
 AND (reg_argmax_val(1) OR NOT(in_argmax_val(1)))) OR
@@ -101,128 +99,128 @@ NOT(in_argmax_val(18)) AND rtlcarry_2(18)));
 NOT(in_argmax_val(19)) AND rtlcarry_2(19)));
   label0 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (0) <= GUARDED ((aux4 OR reg_argmax_val(0)) AND (aux7 OR 
-in_argmax_val(0) OR NOT(c_argmax)));
+    reg_argmax_val (0) <= GUARDED ((aux4 OR reg_argmax_val(0)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(0)) AND NOT(reset));
   END BLOCK label0;
   label1 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (1) <= GUARDED ((aux4 OR reg_argmax_val(1)) AND (NOT(aux4) OR 
-in_argmax_val(1)));
+    reg_argmax_val (1) <= GUARDED ((aux5 OR reg_argmax_val(1)) AND (NOT(aux4) OR 
+in_argmax_val(1)) AND NOT(reset));
   END BLOCK label1;
   label2 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (2) <= GUARDED ((aux4 OR reg_argmax_val(2)) AND (NOT(aux4) OR 
-in_argmax_val(2)));
+    reg_argmax_val (2) <= GUARDED ((aux4 OR reg_argmax_val(2)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(2)) AND NOT(reset));
   END BLOCK label2;
   label3 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (3) <= GUARDED ((aux4 OR reg_argmax_val(3)) AND (aux2 OR NOT(
-aux3) OR in_argmax_val(3)));
+    reg_argmax_val (3) <= GUARDED ((aux5 OR reg_argmax_val(3)) AND (NOT(aux4) OR 
+in_argmax_val(3)) AND NOT(reset));
   END BLOCK label3;
   label4 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (4) <= GUARDED ((aux4 OR reg_argmax_val(4)) AND (NOT(aux4) OR 
-in_argmax_val(4)));
+    reg_argmax_val (4) <= GUARDED ((aux6 OR in_argmax_val(4)) AND (aux4 OR 
+reg_argmax_val(4)) AND NOT(reset));
   END BLOCK label4;
   label5 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (5) <= GUARDED ((aux4 OR reg_argmax_val(5)) AND (NOT(aux4) OR 
-in_argmax_val(5)));
+    reg_argmax_val (5) <= GUARDED ((aux5 OR reg_argmax_val(5)) AND (NOT(aux4) OR 
+in_argmax_val(5)) AND NOT(reset));
   END BLOCK label5;
   label6 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (6) <= GUARDED ((aux4 OR reg_argmax_val(6)) AND (NOT(aux4) OR 
-in_argmax_val(6)));
+    reg_argmax_val (6) <= GUARDED ((aux5 OR reg_argmax_val(6)) AND (NOT(aux4) OR 
+in_argmax_val(6)) AND NOT(reset));
   END BLOCK label6;
   label7 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (7) <= GUARDED ((aux4 OR reg_argmax_val(7)) AND (aux7 OR 
-in_argmax_val(7) OR NOT(c_argmax)));
+    reg_argmax_val (7) <= GUARDED ((aux4 OR reg_argmax_val(7)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(7)) AND NOT(reset));
   END BLOCK label7;
   label8 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (8) <= GUARDED ((aux4 OR reg_argmax_val(8)) AND (NOT(aux4) OR 
-in_argmax_val(8)));
+    reg_argmax_val (8) <= GUARDED ((aux4 OR reg_argmax_val(8)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(8)) AND NOT(reset));
   END BLOCK label8;
   label9 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (9) <= GUARDED ((aux4 OR reg_argmax_val(9)) AND (NOT(aux4) OR 
-in_argmax_val(9)));
+    reg_argmax_val (9) <= GUARDED ((aux4 OR reg_argmax_val(9)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(9)) AND NOT(reset));
   END BLOCK label9;
   label10 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (10) <= GUARDED ((aux4 OR reg_argmax_val(10)) AND (aux7 OR 
-in_argmax_val(10) OR NOT(c_argmax)));
+    reg_argmax_val (10) <= GUARDED ((aux6 OR in_argmax_val(10)) AND (aux4 OR 
+reg_argmax_val(10)) AND NOT(reset));
   END BLOCK label10;
   label11 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (11) <= GUARDED ((aux4 OR reg_argmax_val(11)) AND (NOT(aux4) OR 
-in_argmax_val(11)));
+    reg_argmax_val (11) <= GUARDED ((aux4 OR reg_argmax_val(11)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(11)) AND NOT(reset));
   END BLOCK label11;
   label12 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (12) <= GUARDED ((aux4 OR reg_argmax_val(12)) AND (NOT(aux4) OR 
-in_argmax_val(12)));
+    reg_argmax_val (12) <= GUARDED ((aux5 OR reg_argmax_val(12)) AND (NOT(aux4) OR 
+in_argmax_val(12)) AND NOT(reset));
   END BLOCK label12;
   label13 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (13) <= GUARDED ((aux4 OR reg_argmax_val(13)) AND (NOT(aux4) OR 
-in_argmax_val(13)));
+    reg_argmax_val (13) <= GUARDED ((aux4 OR reg_argmax_val(13)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(13)) AND NOT(reset));
   END BLOCK label13;
   label14 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (14) <= GUARDED ((aux4 OR reg_argmax_val(14)) AND (aux7 OR 
-in_argmax_val(14) OR NOT(c_argmax)));
+    reg_argmax_val (14) <= GUARDED ((aux5 OR reg_argmax_val(14)) AND (NOT(aux4) OR 
+in_argmax_val(14)) AND NOT(reset));
   END BLOCK label14;
   label15 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (15) <= GUARDED ((aux4 OR reg_argmax_val(15)) AND (NOT(aux4) OR 
-in_argmax_val(15)));
+    reg_argmax_val (15) <= GUARDED ((aux4 OR reg_argmax_val(15)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(15)) AND NOT(reset));
   END BLOCK label15;
   label16 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (16) <= GUARDED ((aux4 OR reg_argmax_val(16)) AND (aux7 OR 
-in_argmax_val(16) OR NOT(c_argmax)));
+    reg_argmax_val (16) <= GUARDED ((aux4 OR reg_argmax_val(16)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(16)) AND NOT(reset));
   END BLOCK label16;
   label17 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (17) <= GUARDED ((aux4 OR reg_argmax_val(17)) AND (aux7 OR 
-in_argmax_val(17) OR NOT(c_argmax)));
+    reg_argmax_val (17) <= GUARDED ((aux6 OR in_argmax_val(17)) AND (aux4 OR 
+reg_argmax_val(17)) AND NOT(reset));
   END BLOCK label17;
   label18 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (18) <= GUARDED ((NOT(aux4) OR in_argmax_val(18)) AND (aux6 OR 
-aux5 OR reg_argmax_val(18)));
+    reg_argmax_val (18) <= GUARDED ((aux4 OR reg_argmax_val(18)) AND (aux7 OR NOT(
+c_argmax) OR in_argmax_val(18)) AND NOT(reset));
   END BLOCK label18;
   label19 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (19) <= GUARDED ((aux4 OR reg_argmax_val(19)) AND (aux7 OR 
-in_argmax_val(19) OR NOT(c_argmax)));
+    reg_argmax_val (19) <= GUARDED ((aux5 OR reg_argmax_val(19)) AND (NOT(aux4) OR 
+in_argmax_val(19)) AND NOT(reset));
   END BLOCK label19;
   label20 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    reg_argmax_val (20) <= GUARDED ((in_argmax_val(20) AND c_argmax) OR 
-reg_argmax_val(20));
+    reg_argmax_val (20) <= GUARDED (((c_argmax AND in_argmax_val(20)) OR 
+reg_argmax_val(20)) AND NOT(reset));
   END BLOCK label20;
   label21 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    rtlalc_3 (0) <= GUARDED ((NOT(aux4) OR in_argmax_index(0)) AND (aux4 OR 
-rtlalc_3(0)));
+    rtlalc_3 (0) <= GUARDED ((aux5 OR rtlalc_3(0)) AND (NOT(aux4) OR 
+in_argmax_index(0)) AND NOT(reset));
   END BLOCK label21;
   label22 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    rtlalc_3 (1) <= GUARDED ((NOT(aux4) OR in_argmax_index(1)) AND (aux4 OR 
-rtlalc_3(1)));
+    rtlalc_3 (1) <= GUARDED ((aux6 OR in_argmax_index(1)) AND (aux4 OR 
+rtlalc_3(1)) AND NOT(reset));
   END BLOCK label22;
   label23 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    rtlalc_3 (2) <= GUARDED ((NOT(aux4) OR in_argmax_index(2)) AND (aux6 OR 
-aux5 OR rtlalc_3(2)));
+    rtlalc_3 (2) <= GUARDED ((aux6 OR in_argmax_index(2)) AND (aux4 OR 
+rtlalc_3(2)) AND NOT(reset));
   END BLOCK label23;
   label24 : BLOCK ((NOT((clk'STABLE)) AND clk) = '1')
   BEGIN
-    rtlalc_3 (3) <= GUARDED ((NOT(aux4) OR in_argmax_index(3)) AND (aux6 OR 
-aux5 OR rtlalc_3(3)));
+    rtlalc_3 (3) <= GUARDED ((aux4 OR rtlalc_3(3)) AND (aux7 OR NOT(c_argmax)
+ OR in_argmax_index(3)) AND NOT(reset));
   END BLOCK label24;
 
 out_argmax_index (0) <= rtlalc_3(0);

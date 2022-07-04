@@ -1,0 +1,84 @@
+N:a2_x2_2_sig:-1:1998 ps
+N:a2_x2_sig:-1:2075 ps
+N:aux1:-1:1264 ps
+N:c_add_to_neuron:-1:1593 ps
+N:c_argmax:-1:1593 ps
+N:c_dec_input:-1:1659 ps
+N:c_dec_neuron:-1:2084 ps
+N:c_reset_register:-1:2084 ps
+N:clk:-1:0 ps
+N:halt:-1:1368 ps
+N:in_ctrl_input_reset:-1:0 ps
+N:in_ctrl_neuron_reset:-1:0 ps
+N:mbk_buf_aux1:-1:1684 ps
+N:mbk_buf_not_aux0:-1:1449 ps
+N:mbk_buf_not_state 0:-1:1069 ps
+N:mbk_buf_state 0:-1:986 ps
+N:na2_x1_2_sig:-1:777 ps
+N:na2_x1_sig:-1:1273 ps
+N:na3_x1_2_sig:-1:1660 ps
+N:na3_x1_sig:-1:1737 ps
+N:no3_x1_2_sig:-1:1032 ps
+N:no3_x1_sig:-1:1606 ps
+N:noa22_x1_sig:-1:1245 ps
+N:not_aux0:-1:1029 ps
+N:not_aux3:-1:1061 ps
+N:not_aux4:-1:1383 ps
+N:not_aux5:-1:1383 ps
+N:not_reset:-1:182 ps
+N:not_state 0:-1:649 ps
+N:not_state 1:-1:753 ps
+N:not_state 2:-1:745 ps
+N:on12_x1_sig:-1:1473 ps
+N:reset:-1:0 ps
+N:state 0:-1:527 ps
+N:state 1:-1:568 ps
+N:state 2:-1:558 ps
+B:mbk_buf_not_state 0:-1:1069 ps
+B:mbk_buf_aux1:32:1684 ps
+B:mbk_buf_not_aux0:-1:1449 ps
+B:mbk_buf_state 0:-1:986 ps
+B:c_dec_neuron_ins:-1:2084 ps
+B:c_dec_input_ins:-1:1659 ps
+B:c_add_to_neuron_ins:-1:1593 ps
+B:c_reset_register_ins:32:2084 ps
+B:c_argmax_ins:-1:1593 ps
+B:halt_ins:-1:1368 ps
+B:state_0_ins:-1:527 ps
+B:a2_x2_2_ins:-1:1998 ps
+B:na3_x1_2_ins:-1:1660 ps
+B:na2_x1_2_ins:-1:777 ps
+B:state_1_ins:-1:568 ps
+B:a2_x2_ins:-1:2075 ps
+B:na3_x1_ins:-1:1737 ps
+B:on12_x1_ins:-1:1473 ps
+B:state_2_ins:-1:558 ps
+B:no3_x1_ins:-1:1606 ps
+B:no3_x1_2_ins:-1:1032 ps
+B:noa22_x1_ins:-1:1245 ps
+B:na2_x1_ins:-1:1273 ps
+B:aux1_ins:32:1264 ps
+B:not_reset_ins:-1:182 ps
+B:not_state_2_ins:-1:745 ps
+B:not_state_1_ins:-1:753 ps
+B:not_aux3_ins:-1:1061 ps
+B:not_state_0_ins:32:649 ps
+B:not_aux0_ins:32:1029 ps
+B:not_aux4_ins:-1:1383 ps
+B:not_aux5_ins:-1:1383 ps
+C:halt:-1:1368 ps
+C:c_argmax:-1:1593 ps
+C:c_reset_register:32:2084 ps
+C:c_add_to_neuron:-1:1593 ps
+C:c_dec_input:-1:1659 ps
+C:c_dec_neuron:-1:2084 ps
+C:in_ctrl_input_reset:-1:0 ps
+C:in_ctrl_neuron_reset:-1:0 ps
+C:reset:-1:0 ps
+C:clk:-1:0 ps
+P:state 0:state 0:not_state_0_ins:32:1383 ps
+P:not_state_0_ins:not_state 0:not_aux0_ins:32:1383 ps
+P:not_aux0_ins:not_aux0:aux1_ins:32:1383 ps
+P:aux1_ins:aux1:mbk_buf_aux1:32:1383 ps
+P:mbk_buf_aux1:mbk_buf_aux1:c_reset_register_ins:32:1383 ps
+P:c_reset_register_ins:c_reset_register:c_reset_register:32:1383 ps

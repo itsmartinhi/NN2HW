@@ -1,9 +1,0 @@
-N:x:-1:0 ps
-N:y:-1:0 ps
-N:z:-1:357 ps
-B:z_ins:32:357 ps
-C:z:32:357 ps
-C:y:-1:0 ps
-C:x:32:0 ps
-P:x:x:z_ins:32:357 ps
-P:z_ins:z:z:32:357 ps
