@@ -100,7 +100,7 @@ architecture RTL of NEURONALESNETZ is
     for all : INPUTDECREMENTER 	use entity WORK.INPDEC(RTL);
     for all : NEURONDECREMENTER use entity WORK.NEURONDEC(RTL);
     for all : NEURONREGISTER 	use entity WORK.NEURONREG(RTL);
-    for all : ARGMAX 			use entity WORK.ARGMAX(RTL);
+    for all : ARGMAX 		  	use configuration WORK.CFG_argmax_final;
     for all : MULTBLOCK			use entity WORK.MULTBLOCK(RTL);
 
 

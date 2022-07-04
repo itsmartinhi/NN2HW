@@ -20,13 +20,14 @@ END argmax_boom;
 ARCHITECTURE RTL OF argmax_boom IS
   SIGNAL rtlalc_3	: STD_LOGIC_VECTOR(3 DOWNTO 0);
   SIGNAL reg_argmax_val	: STD_LOGIC_VECTOR(20 DOWNTO 0);
-  SIGNAL rtlcarry_2	: STD_LOGIC_VECTOR(20 DOWNTO 2);
+  SIGNAL rtlcarry_2	: STD_LOGIC_VECTOR(20 DOWNTO 1);
   SIGNAL aux0	: STD_LOGIC;
+  SIGNAL aux1	: STD_LOGIC;
   SIGNAL aux2	: STD_LOGIC;
+  SIGNAL aux3	: STD_LOGIC;
   SIGNAL aux4	: STD_LOGIC;
-  SIGNAL aux5	: STD_LOGIC;
-  SIGNAL aux6	: STD_LOGIC;
   SIGNAL aux7	: STD_LOGIC;
+  SIGNAL aux11	: STD_LOGIC;
 BEGIN
   out_argmax_index(3) <= rtlalc_3(3);
   out_argmax_index(2) <= rtlalc_3(2);
@@ -36,10 +37,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_index(3))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_index(3)) AND NOT(reset))) = '1')
     THEN rtlalc_3(3) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_index(3)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_index(3)) OR reset) = '1')
     THEN rtlalc_3(3) <= '0';
     END IF;
     END IF;
@@ -48,9 +48,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux6 OR in_argmax_index(2)) AND (NOT(reset) AND aux4)) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_index(2)) AND NOT(reset))) = '1')
     THEN rtlalc_3(2) <= '1';
-    ELSIF ((NOT(aux6 OR in_argmax_index(2)) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_index(2)) OR reset) = '1')
     THEN rtlalc_3(2) <= '0';
     END IF;
     END IF;
@@ -59,9 +59,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux6 OR in_argmax_index(1)) AND (NOT(reset) AND aux4)) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_index(1)) AND NOT(reset))) = '1')
     THEN rtlalc_3(1) <= '1';
-    ELSIF ((NOT(aux6 OR in_argmax_index(1)) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_index(1)) OR reset) = '1')
     THEN rtlalc_3(1) <= '0';
     END IF;
     END IF;
@@ -70,9 +70,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_index(0))) AND NOT(reset))) = '1')
+    IF (((aux11 OR in_argmax_index(0)) AND (NOT(aux4) AND NOT(reset))) = '1')
     THEN rtlalc_3(0) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_index(0))) OR reset) = '1')
+    ELSIF ((NOT(aux11 OR in_argmax_index(0)) OR reset) = '1')
     THEN rtlalc_3(0) <= '0';
     END IF;
     END IF;
@@ -81,7 +81,7 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((c_argmax AND (in_argmax_val(20) AND NOT(reset))) = '1')
+    IF ((in_argmax_val(20) AND (c_argmax AND NOT(reset))) = '1')
     THEN reg_argmax_val(20) <= '1';
     ELSIF (reset = '1')
     THEN reg_argmax_val(20) <= '0';
@@ -92,9 +92,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(19))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(19)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(19) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(19))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(19)) OR reset) = '1')
     THEN reg_argmax_val(19) <= '0';
     END IF;
     END IF;
@@ -103,10 +103,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(18))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(18)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(18) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(18)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(18)) OR reset) = '1')
     THEN reg_argmax_val(18) <= '0';
     END IF;
     END IF;
@@ -115,9 +114,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux6 OR in_argmax_val(17)) AND (NOT(reset) AND aux4)) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(17)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(17) <= '1';
-    ELSIF ((NOT(aux6 OR in_argmax_val(17)) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(17)) OR reset) = '1')
     THEN reg_argmax_val(17) <= '0';
     END IF;
     END IF;
@@ -126,10 +125,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(16))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(16)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(16) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(16)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(16)) OR reset) = '1')
     THEN reg_argmax_val(16) <= '0';
     END IF;
     END IF;
@@ -138,10 +136,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(15))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(15)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(15) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(15)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(15)) OR reset) = '1')
     THEN reg_argmax_val(15) <= '0';
     END IF;
     END IF;
@@ -150,9 +147,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(14))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(14)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(14) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(14))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(14)) OR reset) = '1')
     THEN reg_argmax_val(14) <= '0';
     END IF;
     END IF;
@@ -161,10 +158,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(13))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(13)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(13) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(13)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(13)) OR reset) = '1')
     THEN reg_argmax_val(13) <= '0';
     END IF;
     END IF;
@@ -173,9 +169,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(12))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(12)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(12) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(12))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(12)) OR reset) = '1')
     THEN reg_argmax_val(12) <= '0';
     END IF;
     END IF;
@@ -184,10 +180,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(11))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(11)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(11) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(11)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(11)) OR reset) = '1')
     THEN reg_argmax_val(11) <= '0';
     END IF;
     END IF;
@@ -196,9 +191,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux6 OR in_argmax_val(10)) AND (NOT(reset) AND aux4)) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(10)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(10) <= '1';
-    ELSIF ((NOT(aux6 OR in_argmax_val(10)) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(10)) OR reset) = '1')
     THEN reg_argmax_val(10) <= '0';
     END IF;
     END IF;
@@ -207,10 +202,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(9))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(9)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(9) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(9)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(9)) OR reset) = '1')
     THEN reg_argmax_val(9) <= '0';
     END IF;
     END IF;
@@ -219,10 +213,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(8))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(8)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(8) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(8)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(8)) OR reset) = '1')
     THEN reg_argmax_val(8) <= '0';
     END IF;
     END IF;
@@ -231,10 +224,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(7))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(7)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(7) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(7)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(7)) OR reset) = '1')
     THEN reg_argmax_val(7) <= '0';
     END IF;
     END IF;
@@ -243,9 +235,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(6))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(6)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(6) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(6))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(6)) OR reset) = '1')
     THEN reg_argmax_val(6) <= '0';
     END IF;
     END IF;
@@ -254,9 +246,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(5))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(5)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(5) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(5))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(5)) OR reset) = '1')
     THEN reg_argmax_val(5) <= '0';
     END IF;
     END IF;
@@ -265,9 +257,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux6 OR in_argmax_val(4)) AND (NOT(reset) AND aux4)) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(4)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(4) <= '1';
-    ELSIF ((NOT(aux6 OR in_argmax_val(4)) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(4)) OR reset) = '1')
     THEN reg_argmax_val(4) <= '0';
     END IF;
     END IF;
@@ -276,9 +268,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(3))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(3)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(3) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(3))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(3)) OR reset) = '1')
     THEN reg_argmax_val(3) <= '0';
     END IF;
     END IF;
@@ -287,10 +279,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(2))) AND NOT(reset))) = '1'
-)
+    IF (((aux11 OR in_argmax_val(2)) AND (NOT(aux4) AND NOT(reset))) = '1')
     THEN reg_argmax_val(2) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(2)))) OR reset) = '1')
+    ELSIF ((NOT(aux11 OR in_argmax_val(2)) OR reset) = '1')
     THEN reg_argmax_val(2) <= '0';
     END IF;
     END IF;
@@ -299,9 +290,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(aux4 AND NOT(in_argmax_val(1))) AND NOT(reset))) = '1')
+    IF ((aux7 AND ((aux4 OR in_argmax_val(1)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(1) <= '1';
-    ELSIF (((aux4 AND NOT(in_argmax_val(1))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(1)) OR reset) = '1')
     THEN reg_argmax_val(1) <= '0';
     END IF;
     END IF;
@@ -310,10 +301,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux4 AND ((aux7 OR (NOT(c_argmax) OR in_argmax_val(0))) AND NOT(reset))) = '1'
-)
+    IF ((aux7 AND ((aux4 OR in_argmax_val(0)) AND NOT(reset))) = '1')
     THEN reg_argmax_val(0) <= '1';
-    ELSIF ((NOT((aux7 OR (NOT(c_argmax) OR in_argmax_val(0)))) OR reset) = '1')
+    ELSIF ((NOT(aux4 OR in_argmax_val(0)) OR reset) = '1')
     THEN reg_argmax_val(0) <= '0';
     END IF;
     END IF;
@@ -354,15 +344,18 @@ BEGIN
 )) OR (NOT(in_argmax_val(3)) AND rtlcarry_2(3)));
   rtlcarry_2(3) <= (((reg_argmax_val(2) AND NOT(in_argmax_val(2))) OR (reg_argmax_val(2) AND rtlcarry_2(2)
 )) OR (NOT(in_argmax_val(2)) AND rtlcarry_2(2)));
-  rtlcarry_2(2) <= (((((reg_argmax_val(0) AND NOT(in_argmax_val(0))) OR reg_argmax_val(0)) OR NOT(in_argmax_val(0)
-)) AND (reg_argmax_val(1) OR NOT(in_argmax_val(1)))) OR (reg_argmax_val(1) AND 
-NOT(in_argmax_val(1))));
-  aux0 <= NOT((rtlcarry_2(20) AND reg_argmax_val(20)));
-  aux2 <= NOT(((rtlcarry_2(20) OR reg_argmax_val(20)) AND NOT(in_argmax_val(20))));
-  aux4 <= (aux2 AND (aux0 AND c_argmax));
-  aux5 <= (aux4 AND NOT(reset));
-  aux6 <= (NOT(aux4) AND NOT(reset));
-  aux7 <= (NOT(aux2) OR NOT(aux0));
+  rtlcarry_2(2) <= ((NOT(in_argmax_val(1)) AND (reg_argmax_val(1) OR rtlcarry_2(1))) OR (reg_argmax_val(1)
+ AND rtlcarry_2(1)));
+  rtlcarry_2(1) <= (((reg_argmax_val(0) AND NOT(in_argmax_val(0))) OR reg_argmax_val(0)) OR NOT(in_argmax_val(0)
+));
+  aux0 <= NOT((NOT(in_argmax_val(20)) AND rtlcarry_2(20)));
+  aux1 <= (NOT(aux0) OR NOT(c_argmax));
+  aux2 <= NOT((NOT(in_argmax_val(20)) OR rtlcarry_2(20)));
+  aux3 <= NOT((NOT(aux2) AND reg_argmax_val(20)));
+  aux4 <= (NOT(aux3) OR aux1);
+  aux7 <= (aux3 AND ((NOT(reset) AND aux0) AND c_argmax));
+  aux11 <= ((aux1 OR reg_argmax_val(20)) AND (NOT(reset) AND (NOT(aux2) OR NOT(c_argmax)))
+);
 END RTL;
 
 

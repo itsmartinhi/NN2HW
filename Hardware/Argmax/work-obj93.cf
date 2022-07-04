@@ -1,11 +1,11 @@
 v 4
-file . "argmax.vhdl" "49eb1deba6ae4f1cf5645a1b1adf142b1044b324" "20220704144831.028":
-  entity argmax at 1( 0) + 0 on 832;
-  architecture rtl of argmax at 16( 360) + 0 on 833;
-file . "argmax_tb.vhdl" "402b27f745decdab8f0a6e5f31df78df8a58c8b7" "20220704144831.068":
-  entity argmax_tb at 1( 0) + 0 on 837;
-  architecture testbench of argmax_tb at 8( 107) + 0 on 838;
-file . "argmax_final.vhdl" "f005e4abb62c3acd0f2552c204ce611a8c6d536c" "20220704144831.066":
-  entity argmax_final at 5( 52) + 0 on 834;
-  architecture rtl of argmax_final at 20( 405) + 0 on 835;
-  configuration cfg_argmax_final at 1298( 27687) + 0 on 836;
+file . "argmax.vhdl" "49eb1deba6ae4f1cf5645a1b1adf142b1044b324" "20220704163409.456":
+  entity argmax at 1( 0) + 0 on 969;
+  architecture rtl of argmax at 16( 360) + 0 on 970;
+file . "argmax_tb.vhdl" "402b27f745decdab8f0a6e5f31df78df8a58c8b7" "20220704163409.500":
+  entity argmax_tb at 1( 0) + 0 on 974;
+  architecture testbench of argmax_tb at 8( 107) + 0 on 975;
+file . "argmax_final.vhdl" "871e59ccac2d29608d41c56c8384940513b98060" "20220704163409.498":
+  entity argmax_final at 5( 52) + 0 on 971;
+  architecture rtl of argmax_final at 20( 405) + 0 on 972;
+  configuration cfg_argmax_final at 1302( 27724) + 0 on 973;

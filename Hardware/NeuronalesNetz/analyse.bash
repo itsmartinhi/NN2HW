@@ -36,7 +36,7 @@ cd ..
 # Argmax 
 echo "Argmax"
 cd Argmax
-ees-ghdl -a argmax.vhdl argmax_tb.vhdl
+ees-ghdl -a argmax.vhdl argmax_final.vhdl argmax_tb.vhdl
 ees-ghdl -r argmax_tb --wave=argmax_tb_wave.ghw
 
 cd ..
@@ -56,7 +56,7 @@ ees-ghdl -a ../Controller/controller.vhdl \
 			../InpDec/inpdec.vhdl \
 			../NeuronDec/neurondec.vhdl \
 			../MultBlock/Multiplier/and2.vhdl ../MultBlock/Multiplier/or2.vhdl ../MultBlock/Multiplier/xor2.vhdl ../MultBlock/Multiplier/half_adder.vhdl ../MultBlock/Multiplier/full_adder.vhdl ../MultBlock/Multiplier/multiplier.vhdl ../MultBlock/multblock.vhdl \
-			../Argmax/argmax.vhdl \
+			../Argmax/argmax.vhdl ../Argmax/argmax_final.vhdl \
 			../NeuronReg/neuronreg.vhdl \
 			../RAM/ram.vhdl \
 			../ROM/rom.vhdl \

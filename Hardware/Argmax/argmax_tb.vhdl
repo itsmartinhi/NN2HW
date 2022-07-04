@@ -64,7 +64,7 @@ begin
 	);
 
 	process 
-		constant period: time := 1 ns;
+		constant period: time := 20 ns;
 		procedure run_cycle is
 			begin
 				clk <= '0'; 
