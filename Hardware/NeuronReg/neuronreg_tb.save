@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Mon Jul  4 17:41:19 2022
+[*] Tue Jul  5 10:10:36 2022
 [*]
 [dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronReg/neuronreg_tb_wave.ghw"
-[dumpfile_mtime] "Mon Jul  4 17:39:22 2022"
-[dumpfile_size] 35330
+[dumpfile_mtime] "Tue Jul  5 10:10:17 2022"
+[dumpfile_size] 32730
 [savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronReg/neuronreg_tb.save"
 [timestart] 0
-[size] 1920 884
+[size] 1920 837
 [pos] -1 -1
-*-23.948013 30180000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-26.170404 30180000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.neuronreg_tb.
 [treeopen] top.neuronreg_tb.spec.
@@ -25,7 +25,9 @@ top.neuronreg_tb.c_nreg
 #{top.neuronreg_tb.out_nreg_impl[20:0]} top.neuronreg_tb.out_nreg_impl[20] top.neuronreg_tb.out_nreg_impl[19] top.neuronreg_tb.out_nreg_impl[18] top.neuronreg_tb.out_nreg_impl[17] top.neuronreg_tb.out_nreg_impl[16] top.neuronreg_tb.out_nreg_impl[15] top.neuronreg_tb.out_nreg_impl[14] top.neuronreg_tb.out_nreg_impl[13] top.neuronreg_tb.out_nreg_impl[12] top.neuronreg_tb.out_nreg_impl[11] top.neuronreg_tb.out_nreg_impl[10] top.neuronreg_tb.out_nreg_impl[9] top.neuronreg_tb.out_nreg_impl[8] top.neuronreg_tb.out_nreg_impl[7] top.neuronreg_tb.out_nreg_impl[6] top.neuronreg_tb.out_nreg_impl[5] top.neuronreg_tb.out_nreg_impl[4] top.neuronreg_tb.out_nreg_impl[3] top.neuronreg_tb.out_nreg_impl[2] top.neuronreg_tb.out_nreg_impl[1] top.neuronreg_tb.out_nreg_impl[0]
 top.neuronreg_tb.impl.reset
 top.neuronreg_tb.impl.c_nreg
-@29
 top.neuronreg_tb.reset
+top.neuronreg_tb.clk
+@29
+#{top.neuronreg_tb.spec.sum[20:0]} top.neuronreg_tb.spec.sum[20] top.neuronreg_tb.spec.sum[19] top.neuronreg_tb.spec.sum[18] top.neuronreg_tb.spec.sum[17] top.neuronreg_tb.spec.sum[16] top.neuronreg_tb.spec.sum[15] top.neuronreg_tb.spec.sum[14] top.neuronreg_tb.spec.sum[13] top.neuronreg_tb.spec.sum[12] top.neuronreg_tb.spec.sum[11] top.neuronreg_tb.spec.sum[10] top.neuronreg_tb.spec.sum[9] top.neuronreg_tb.spec.sum[8] top.neuronreg_tb.spec.sum[7] top.neuronreg_tb.spec.sum[6] top.neuronreg_tb.spec.sum[5] top.neuronreg_tb.spec.sum[4] top.neuronreg_tb.spec.sum[3] top.neuronreg_tb.spec.sum[2] top.neuronreg_tb.spec.sum[1] top.neuronreg_tb.spec.sum[0]
 [pattern_trace] 1
 [pattern_trace] 0

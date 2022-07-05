@@ -44,7 +44,7 @@ cd ..
 # NeuronReg
 echo "Neuron Reg"
 cd NeuronReg
-ees-ghdl -a neuronreg.vhdl neuronreg_tb.vhdl
+ees-ghdl -a neuronreg.vhdl neuronreg_final.vhdl neuronreg_tb.vhdl
 ees-ghdl -r neuronreg_tb --wave=neuronreg_tb_wave.ghw
 
 cd ..
@@ -57,7 +57,7 @@ ees-ghdl -a ../Controller/controller.vhdl \
 			../NeuronDec/neurondec.vhdl \
 			../MultBlock/Multiplier/and2.vhdl ../MultBlock/Multiplier/or2.vhdl ../MultBlock/Multiplier/xor2.vhdl ../MultBlock/Multiplier/half_adder.vhdl ../MultBlock/Multiplier/full_adder.vhdl ../MultBlock/Multiplier/multiplier.vhdl ../MultBlock/multblock.vhdl \
 			../Argmax/argmax.vhdl ../Argmax/argmax_final.vhdl \
-			../NeuronReg/neuronreg.vhdl \
+			../NeuronReg/neuronreg.vhdl ../NeuronReg/neuronreg_final.vhdl \
 			../RAM/ram.vhdl ../RAM/ram_final.vhdl \
 			../ROM/rom.vhdl ../ROM/rom_final.vhdl \
 			neuronalesNetz.vhdl testbench.vhdl

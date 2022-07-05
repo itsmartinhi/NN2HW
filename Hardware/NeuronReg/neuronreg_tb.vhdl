@@ -62,7 +62,7 @@ begin
 	);
 
 	process 
-		constant period: time := 20 ns;
+		constant period: time := 40 ns;
 		procedure run_cycle is
 			begin
 				clk <= '0'; 
@@ -72,24 +72,26 @@ begin
 			end procedure;
 	begin
 	
-		reset <= '1';
+		reset <= '0';
+		in_nreg_val <= "0000000000000";
+		c_reset_reg <= '1';
+		c_nreg <= '0';
 		run_cycle;
 		reset <= '0';
+		c_reset_reg <= '0';
+		c_nreg <= '1';
 		
 		in_nreg_val <= "0000000000000";
-		c_nreg <= '1';
 		run_cycle;
 		assert out_nreg_spec = "000000000000000000000" report "Test 1 failed";
 		assert out_nreg_impl = "000000000000000000000" report "Impl. Test 1 failed";
 		
 		in_nreg_val <= "1111111111111";
-		c_nreg <= '1';
 		run_cycle;
 		assert out_nreg_spec = "000000001111111111111" report "Test 2 failed";
 		assert out_nreg_impl = "000000001111111111111" report "Impl. Test 2 failed";
 		
 		in_nreg_val <= "1001001110110";
-		c_nreg <= '1';
 		run_cycle;
 		assert out_nreg_spec = "000000011001001110101" report "Test 3 failed";
 		assert out_nreg_impl = "000000011001001110101" report "Impl. Test 3 failed";

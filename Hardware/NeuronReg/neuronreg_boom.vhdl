@@ -21,37 +21,36 @@ ARCHITECTURE RTL OF neuronreg_boom IS
   SIGNAL rtlalc_1	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL reg_nreg	: STD_LOGIC_VECTOR(20 DOWNTO 0);
   SIGNAL rtlcarry_0	: STD_LOGIC_VECTOR(19 DOWNTO 1);
-  SIGNAL aux0	: STD_LOGIC;
-  SIGNAL aux1	: STD_LOGIC;
+  SIGNAL aux3	: STD_LOGIC;
+  SIGNAL aux4	: STD_LOGIC;
   SIGNAL aux9	: STD_LOGIC;
-  SIGNAL aux10	: STD_LOGIC;
-  SIGNAL aux11	: STD_LOGIC;
+  SIGNAL aux14	: STD_LOGIC;
   SIGNAL aux19	: STD_LOGIC;
   SIGNAL aux20	: STD_LOGIC;
-  SIGNAL aux21	: STD_LOGIC;
+  SIGNAL aux28	: STD_LOGIC;
   SIGNAL aux29	: STD_LOGIC;
-  SIGNAL aux30	: STD_LOGIC;
+  SIGNAL aux33	: STD_LOGIC;
   SIGNAL aux38	: STD_LOGIC;
-  SIGNAL aux39	: STD_LOGIC;
   SIGNAL aux43	: STD_LOGIC;
-  SIGNAL aux44	: STD_LOGIC;
   SIGNAL aux48	: STD_LOGIC;
-  SIGNAL aux50	: STD_LOGIC;
-  SIGNAL aux55	: STD_LOGIC;
-  SIGNAL aux56	: STD_LOGIC;
-  SIGNAL aux64	: STD_LOGIC;
-  SIGNAL aux69	: STD_LOGIC;
-  SIGNAL aux73	: STD_LOGIC;
-  SIGNAL aux81	: STD_LOGIC;
-  SIGNAL aux85	: STD_LOGIC;
-  SIGNAL aux89	: STD_LOGIC;
-  SIGNAL aux93	: STD_LOGIC;
-  SIGNAL aux97	: STD_LOGIC;
-  SIGNAL aux100	: STD_LOGIC;
-  SIGNAL aux101	: STD_LOGIC;
+  SIGNAL aux49	: STD_LOGIC;
+  SIGNAL aux53	: STD_LOGIC;
+  SIGNAL aux54	: STD_LOGIC;
+  SIGNAL aux58	: STD_LOGIC;
+  SIGNAL aux59	: STD_LOGIC;
+  SIGNAL aux67	: STD_LOGIC;
+  SIGNAL aux72	: STD_LOGIC;
+  SIGNAL aux78	: STD_LOGIC;
+  SIGNAL aux86	: STD_LOGIC;
+  SIGNAL aux90	: STD_LOGIC;
+  SIGNAL aux94	: STD_LOGIC;
+  SIGNAL aux98	: STD_LOGIC;
+  SIGNAL aux102	: STD_LOGIC;
   SIGNAL aux103	: STD_LOGIC;
-  SIGNAL aux105	: STD_LOGIC;
-  SIGNAL aux106	: STD_LOGIC;
+  SIGNAL aux111	: STD_LOGIC;
+  SIGNAL aux112	: STD_LOGIC;
+  SIGNAL aux114	: STD_LOGIC;
+  SIGNAL aux115	: STD_LOGIC;
 BEGIN
   out_nreg_val(20) <= rtlalc_1(20);
   out_nreg_val(19) <= rtlalc_1(19);
@@ -78,12 +77,10 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux103 = '1')
+    IF (aux111 = '1')
     THEN rtlalc_1(20) <= '1';
-    ELSIF ((NOT(aux0) AND NOT(aux103)) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux111)) = '1')
     THEN rtlalc_1(20) <= '0';
-    ELSIF ((aux0 AND (c_nreg AND NOT(aux103))) = '1')
-    THEN rtlalc_1(20) <= (NOT(rtlcarry_0(19) AND reg_nreg(19)) AND reg_nreg(20));
     END IF;
     END IF;
   END PROCESS;
@@ -91,11 +88,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT((rtlcarry_0(19) OR (reset OR (c_reset_reg OR NOT(aux106))))) OR aux101) =
- '1')
+    IF (aux102 = '1')
     THEN rtlalc_1(19) <= '1';
-    ELSIF ((NOT(aux105) AND ((rtlcarry_0(19) OR (reset OR (c_reset_reg OR NOT(aux106)))) 
-AND NOT(aux101))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux102)) = '1')
     THEN rtlalc_1(19) <= '0';
     END IF;
     END IF;
@@ -104,9 +99,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux97 = '1')
+    IF (aux98 = '1')
     THEN rtlalc_1(18) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux97)) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux98)) = '1')
     THEN rtlalc_1(18) <= '0';
     END IF;
     END IF;
@@ -115,11 +110,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT((rtlcarry_0(17) OR (reset OR (c_reset_reg OR (NOT(c_nreg) OR NOT(reg_nreg(17)
-)))))) OR aux93) = '1')
+    IF (aux94 = '1')
     THEN rtlalc_1(17) <= '1';
-    ELSIF ((NOT(aux105) AND ((rtlcarry_0(17) OR (reset OR (c_reset_reg OR (NOT(c_nreg) OR
- NOT(reg_nreg(17)))))) AND NOT(aux93))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux94)) = '1')
     THEN rtlalc_1(17) <= '0';
     END IF;
     END IF;
@@ -128,11 +121,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT((rtlcarry_0(16) OR (reset OR (c_reset_reg OR (NOT(c_nreg) OR NOT(reg_nreg(16)
-)))))) OR aux89) = '1')
+    IF (aux90 = '1')
     THEN rtlalc_1(16) <= '1';
-    ELSIF ((NOT(aux105) AND ((rtlcarry_0(16) OR (reset OR (c_reset_reg OR (NOT(c_nreg) OR
- NOT(reg_nreg(16)))))) AND NOT(aux89))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux90)) = '1')
     THEN rtlalc_1(16) <= '0';
     END IF;
     END IF;
@@ -141,11 +132,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT((rtlcarry_0(15) OR (reset OR (c_reset_reg OR (NOT(c_nreg) OR NOT(reg_nreg(15)
-)))))) OR aux85) = '1')
+    IF (aux86 = '1')
     THEN rtlalc_1(15) <= '1';
-    ELSIF ((NOT(aux105) AND ((rtlcarry_0(15) OR (reset OR (c_reset_reg OR (NOT(c_nreg) OR
- NOT(reg_nreg(15)))))) AND NOT(aux85))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux86)) = '1')
     THEN rtlalc_1(15) <= '0';
     END IF;
     END IF;
@@ -154,9 +143,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux81 = '1')
+    IF (aux78 = '1')
     THEN rtlalc_1(14) <= '1';
-    ELSIF ((NOT(aux81) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux78)) = '1')
     THEN rtlalc_1(14) <= '0';
     END IF;
     END IF;
@@ -164,21 +153,17 @@ AND NOT(aux101))) = '1')
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
-    THEN 
-    IF (aux73 = '1')
-    THEN rtlalc_1(13) <= '1';
-    ELSIF ((NOT(aux73) AND (c_nreg OR NOT(aux0))) = '1')
-    THEN rtlalc_1(13) <= '0';
-    END IF;
+    THEN rtlalc_1(13) <= ((aux112 AND aux115) OR (((aux112 AND (rtlcarry_0(13) OR NOT(c_nreg))) AND aux4
+) AND NOT(reg_nreg(13))));
     END IF;
   END PROCESS;
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux69 = '1')
+    IF (aux72 = '1')
     THEN rtlalc_1(12) <= '1';
-    ELSIF ((NOT(aux69) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux72)) = '1')
     THEN rtlalc_1(12) <= '0';
     END IF;
     END IF;
@@ -187,9 +172,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux64 = '1')
+    IF (aux67 = '1')
     THEN rtlalc_1(11) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux64)) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux67)) = '1')
     THEN rtlalc_1(11) <= '0';
     END IF;
     END IF;
@@ -198,9 +183,11 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux55 = '1')
+    IF (((aux54 AND (NOT(c_reset_reg) AND (NOT(reset) AND (c_nreg AND reg_nreg(10)))))
+ OR aux58) = '1')
     THEN rtlalc_1(10) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux55)) = '1')
+    ELSIF ((NOT(aux114) AND (NOT((aux54 AND (NOT(c_reset_reg) AND (NOT(reset) AND (c_nreg
+ AND reg_nreg(10)))))) AND NOT(aux58))) = '1')
     THEN rtlalc_1(10) <= '0';
     END IF;
     END IF;
@@ -209,10 +196,12 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (NOT(aux0) = '1')
+    IF (((aux49 AND (NOT(c_reset_reg) AND (NOT(reset) AND (c_nreg AND reg_nreg(9))))) 
+OR aux53) = '1')
+    THEN rtlalc_1(9) <= '1';
+    ELSIF ((NOT(aux114) AND (NOT((aux49 AND (NOT(c_reset_reg) AND (NOT(reset) AND (c_nreg
+ AND reg_nreg(9)))))) AND NOT(aux53))) = '1')
     THEN rtlalc_1(9) <= '0';
-    ELSIF ((c_nreg AND aux0) = '1')
-    THEN rtlalc_1(9) <= aux50;
     END IF;
     END IF;
   END PROCESS;
@@ -220,11 +209,9 @@ AND NOT(aux101))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux44 AND (NOT(reset) AND (NOT(c_reset_reg) AND (c_nreg AND reg_nreg(8))))) 
-OR aux48) = '1')
+    IF (aux48 = '1')
     THEN rtlalc_1(8) <= '1';
-    ELSIF ((NOT(aux105) AND (NOT((aux44 AND (NOT(reset) AND (NOT(c_reset_reg) AND (c_nreg
- AND reg_nreg(8)))))) AND NOT(aux48))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux48)) = '1')
     THEN rtlalc_1(8) <= '0';
     END IF;
     END IF;
@@ -233,11 +220,9 @@ OR aux48) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux39 AND (NOT(reset) AND (NOT(c_reset_reg) AND (c_nreg AND reg_nreg(7))))) 
-OR aux43) = '1')
+    IF (aux43 = '1')
     THEN rtlalc_1(7) <= '1';
-    ELSIF ((NOT(aux105) AND (NOT((aux39 AND (NOT(reset) AND (NOT(c_reset_reg) AND (c_nreg
- AND reg_nreg(7)))))) AND NOT(aux43))) = '1')
+    ELSIF ((NOT(aux43) AND (c_nreg OR NOT(aux4))) = '1')
     THEN rtlalc_1(7) <= '0';
     END IF;
     END IF;
@@ -248,7 +233,7 @@ OR aux43) = '1')
     THEN 
     IF (aux38 = '1')
     THEN rtlalc_1(6) <= '1';
-    ELSIF ((NOT(aux38) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux38)) = '1')
     THEN rtlalc_1(6) <= '0';
     END IF;
     END IF;
@@ -257,9 +242,11 @@ OR aux43) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux29 = '1')
+    IF (((aux29 AND (NOT(c_reset_reg) AND (NOT(reset) AND (c_nreg AND reg_nreg(5))))) 
+OR aux33) = '1')
     THEN rtlalc_1(5) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux29)) = '1')
+    ELSIF ((NOT(aux114) AND (NOT((aux29 AND (NOT(c_reset_reg) AND (NOT(reset) AND (c_nreg
+ AND reg_nreg(5)))))) AND NOT(aux33))) = '1')
     THEN rtlalc_1(5) <= '0';
     END IF;
     END IF;
@@ -268,10 +255,10 @@ OR aux43) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (NOT(aux0) = '1')
+    IF (aux28 = '1')
+    THEN rtlalc_1(4) <= '1';
+    ELSIF ((NOT(aux114) AND NOT(aux28)) = '1')
     THEN rtlalc_1(4) <= '0';
-    ELSIF ((c_nreg AND aux0) = '1')
-    THEN rtlalc_1(4) <= (aux20 XOR in_nreg_val(4));
     END IF;
     END IF;
   END PROCESS;
@@ -281,7 +268,7 @@ OR aux43) = '1')
     THEN 
     IF (aux19 = '1')
     THEN rtlalc_1(3) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux19)) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux19)) = '1')
     THEN rtlalc_1(3) <= '0';
     END IF;
     END IF;
@@ -290,10 +277,10 @@ OR aux43) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (NOT(aux0) = '1')
+    IF (aux14 = '1')
+    THEN rtlalc_1(2) <= '1';
+    ELSIF ((NOT(aux114) AND NOT(aux14)) = '1')
     THEN rtlalc_1(2) <= '0';
-    ELSIF ((c_nreg AND aux0) = '1')
-    THEN rtlalc_1(2) <= (reg_nreg(2) XOR (rtlcarry_0(2) XOR in_nreg_val(2)));
     END IF;
     END IF;
   END PROCESS;
@@ -303,7 +290,7 @@ OR aux43) = '1')
     THEN 
     IF (aux9 = '1')
     THEN rtlalc_1(1) <= '1';
-    ELSIF ((NOT(aux9) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux9) AND (c_nreg OR NOT(aux4))) = '1')
     THEN rtlalc_1(1) <= '0';
     END IF;
     END IF;
@@ -312,10 +299,11 @@ OR aux43) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux0 AND ((in_nreg_val(0) XOR reg_nreg(0)) AND c_nreg)) = '1')
+    IF ((NOT((in_nreg_val(0) OR (c_reset_reg OR (reset OR (NOT(c_nreg) OR NOT(reg_nreg(0)
+)))))) OR aux3) = '1')
     THEN rtlalc_1(0) <= '1';
-    ELSIF (((NOT(c_nreg) AND NOT(aux105)) OR ((NOT(in_nreg_val(0) XOR reg_nreg(0)) AND 
-NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
+    ELSIF ((NOT(aux114) AND ((in_nreg_val(0) OR (c_reset_reg OR (reset OR (NOT(c_nreg) OR
+ NOT(reg_nreg(0)))))) AND NOT(aux3))) = '1')
     THEN rtlalc_1(0) <= '0';
     END IF;
     END IF;
@@ -324,10 +312,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux103 = '1')
+    IF (aux111 = '1')
     THEN reg_nreg(20) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux103)) OR (rtlcarry_0(19) AND (aux106 AND NOT(aux103))))
- = '1')
+    ELSIF ((NOT(aux111) AND (c_nreg OR NOT(aux4))) = '1')
     THEN reg_nreg(20) <= '0';
     END IF;
     END IF;
@@ -336,10 +323,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux101 = '1')
+    IF (aux102 = '1')
     THEN reg_nreg(19) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux101)) OR (rtlcarry_0(19) AND (c_nreg AND NOT(aux101))))
- = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux102)) = '1')
     THEN reg_nreg(19) <= '0';
     END IF;
     END IF;
@@ -348,9 +334,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux97 = '1')
+    IF (aux98 = '1')
     THEN reg_nreg(18) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux97)) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux98)) = '1')
     THEN reg_nreg(18) <= '0';
     END IF;
     END IF;
@@ -359,10 +345,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux93 = '1')
+    IF (aux94 = '1')
     THEN reg_nreg(17) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux93)) OR (rtlcarry_0(17) AND (c_nreg AND NOT(aux93)))) =
- '1')
+    ELSIF ((NOT(aux114) AND NOT(aux94)) = '1')
     THEN reg_nreg(17) <= '0';
     END IF;
     END IF;
@@ -371,10 +356,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux89 = '1')
+    IF (aux90 = '1')
     THEN reg_nreg(16) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux89)) OR (rtlcarry_0(16) AND (c_nreg AND NOT(aux89)))) =
- '1')
+    ELSIF ((NOT(aux114) AND NOT(aux90)) = '1')
     THEN reg_nreg(16) <= '0';
     END IF;
     END IF;
@@ -383,10 +367,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux85 = '1')
+    IF (aux86 = '1')
     THEN reg_nreg(15) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux85)) OR (rtlcarry_0(15) AND (c_nreg AND NOT(aux85)))) =
- '1')
+    ELSIF ((NOT(aux86) AND (c_nreg OR NOT(aux4))) = '1')
     THEN reg_nreg(15) <= '0';
     END IF;
     END IF;
@@ -395,9 +378,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux81 = '1')
+    IF (aux78 = '1')
     THEN reg_nreg(14) <= '1';
-    ELSIF ((NOT(aux81) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux78)) = '1')
     THEN reg_nreg(14) <= '0';
     END IF;
     END IF;
@@ -405,21 +388,17 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
-    THEN 
-    IF (aux73 = '1')
-    THEN reg_nreg(13) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux73)) = '1')
-    THEN reg_nreg(13) <= '0';
-    END IF;
+    THEN reg_nreg(13) <= (aux115 OR (rtlcarry_0(13) AND (NOT(c_reset_reg) AND (NOT(reset) AND (NOT(reg_nreg(13)
+) AND c_nreg)))));
     END IF;
   END PROCESS;
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux69 = '1')
+    IF (aux72 = '1')
     THEN reg_nreg(12) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux69)) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux72)) = '1')
     THEN reg_nreg(12) <= '0';
     END IF;
     END IF;
@@ -428,9 +407,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux64 = '1')
+    IF (aux67 = '1')
     THEN reg_nreg(11) <= '1';
-    ELSIF ((NOT(aux64) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux67) AND (c_nreg OR NOT(aux4))) = '1')
     THEN reg_nreg(11) <= '0';
     END IF;
     END IF;
@@ -439,9 +418,10 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux55 = '1')
+    IF (aux58 = '1')
     THEN reg_nreg(10) <= '1';
-    ELSIF ((NOT(aux105) AND NOT(aux55)) = '1')
+    ELSIF (((NOT(aux4) AND NOT(aux58)) OR (NOT(aux54 OR NOT(c_nreg)) AND NOT(aux58))) = '1'
+)
     THEN reg_nreg(10) <= '0';
     END IF;
     END IF;
@@ -450,10 +430,10 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux50 AND (NOT(reset) AND (NOT(c_reset_reg) AND c_nreg))) = '1')
+    IF (aux53 = '1')
     THEN reg_nreg(9) <= '1';
-    ELSIF ((NOT((aux50 AND (NOT(reset) AND (NOT(c_reset_reg) AND c_nreg)))) AND NOT(aux105
-)) = '1')
+    ELSIF (((NOT(aux4) AND NOT(aux53)) OR (NOT(aux49 OR NOT(c_nreg)) AND NOT(aux53))) = '1'
+)
     THEN reg_nreg(9) <= '0';
     END IF;
     END IF;
@@ -464,8 +444,7 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
     THEN 
     IF (aux48 = '1')
     THEN reg_nreg(8) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux48)) OR (NOT(aux44 OR NOT(c_nreg)) AND NOT(aux48))) = '1'
-)
+    ELSIF ((NOT(aux114) AND NOT(aux48)) = '1')
     THEN reg_nreg(8) <= '0';
     END IF;
     END IF;
@@ -476,8 +455,7 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
     THEN 
     IF (aux43 = '1')
     THEN reg_nreg(7) <= '1';
-    ELSIF (((NOT(aux0) AND NOT(aux43)) OR (NOT(aux39 OR NOT(c_nreg)) AND NOT(aux43))) = '1'
-)
+    ELSIF ((NOT(aux114) AND NOT(aux43)) = '1')
     THEN reg_nreg(7) <= '0';
     END IF;
     END IF;
@@ -488,7 +466,7 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
     THEN 
     IF (aux38 = '1')
     THEN reg_nreg(6) <= '1';
-    ELSIF ((NOT(aux38) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux38)) = '1')
     THEN reg_nreg(6) <= '0';
     END IF;
     END IF;
@@ -497,9 +475,10 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (aux29 = '1')
+    IF (aux33 = '1')
     THEN reg_nreg(5) <= '1';
-    ELSIF ((NOT(aux29) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF (((NOT(aux4) AND NOT(aux33)) OR (NOT(aux29 OR NOT(c_nreg)) AND NOT(aux33))) = '1'
+)
     THEN reg_nreg(5) <= '0';
     END IF;
     END IF;
@@ -508,10 +487,10 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(c_nreg) AND NOT(aux0)) = '1')
+    IF (aux28 = '1')
+    THEN reg_nreg(4) <= '1';
+    ELSIF ((NOT(aux28) AND (c_nreg OR NOT(aux4))) = '1')
     THEN reg_nreg(4) <= '0';
-    ELSIF (c_nreg = '1')
-    THEN reg_nreg(4) <= (NOT(reset) AND (NOT(c_reset_reg) AND (aux20 XOR in_nreg_val(4))));
     END IF;
     END IF;
   END PROCESS;
@@ -521,7 +500,7 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
     THEN 
     IF (aux19 = '1')
     THEN reg_nreg(3) <= '1';
-    ELSIF ((NOT(aux19) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux19)) = '1')
     THEN reg_nreg(3) <= '0';
     END IF;
     END IF;
@@ -530,11 +509,9 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(reset) AND (NOT(c_reset_reg) AND (NOT(in_nreg_val(2) XOR aux10) AND c_nreg
-))) = '1')
+    IF (aux14 = '1')
     THEN reg_nreg(2) <= '1';
-    ELSIF (((NOT(c_nreg) AND NOT(aux105)) OR (((in_nreg_val(2) XOR aux10) AND NOT(aux105)
-) OR ((reset OR c_reset_reg) AND NOT(aux105)))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux14)) = '1')
     THEN reg_nreg(2) <= '0';
     END IF;
     END IF;
@@ -545,7 +522,7 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
     THEN 
     IF (aux9 = '1')
     THEN reg_nreg(1) <= '1';
-    ELSIF ((NOT(aux9) AND (c_nreg OR NOT(aux0))) = '1')
+    ELSIF ((NOT(aux114) AND NOT(aux9)) = '1')
     THEN reg_nreg(1) <= '0';
     END IF;
     END IF;
@@ -554,10 +531,11 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (NOT(aux0) = '1')
+    IF (aux3 = '1')
+    THEN reg_nreg(0) <= '1';
+    ELSIF (((NOT(aux4) AND NOT(aux3)) OR (in_nreg_val(0) AND (c_nreg AND NOT(aux3)))) = '1'
+)
     THEN reg_nreg(0) <= '0';
-    ELSIF ((aux0 AND (in_nreg_val(0) AND c_nreg)) = '1')
-    THEN reg_nreg(0) <= NOT(reg_nreg(0));
     END IF;
     END IF;
   END PROCESS;
@@ -567,78 +545,82 @@ NOT(aux105)) OR (NOT(aux0) AND NOT(aux105)))) = '1')
   rtlcarry_0(16) <= (rtlcarry_0(15) AND reg_nreg(15));
   rtlcarry_0(15) <= (rtlcarry_0(14) AND reg_nreg(14));
   rtlcarry_0(14) <= (rtlcarry_0(13) AND reg_nreg(13));
-  rtlcarry_0(13) <= ((rtlcarry_0(12) AND (in_nreg_val(12) OR reg_nreg(12))) OR (in_nreg_val(12) AND
- reg_nreg(12)));
+  rtlcarry_0(13) <= ((in_nreg_val(12) AND (reg_nreg(12) OR rtlcarry_0(12))) OR (reg_nreg(12) AND rtlcarry_0(12)
+));
   rtlcarry_0(12) <= ((rtlcarry_0(11) AND (reg_nreg(11) OR in_nreg_val(11))) OR (reg_nreg(11) AND in_nreg_val(11)
 ));
-  rtlcarry_0(11) <= ((rtlcarry_0(10) AND (reg_nreg(10) OR in_nreg_val(10))) OR (reg_nreg(10) AND in_nreg_val(10)
+  rtlcarry_0(11) <= ((in_nreg_val(10) AND (reg_nreg(10) OR rtlcarry_0(10))) OR (reg_nreg(10) AND rtlcarry_0(10)
 ));
   rtlcarry_0(10) <= ((rtlcarry_0(9) AND (reg_nreg(9) OR in_nreg_val(9))) OR (reg_nreg(9) AND in_nreg_val(9)
 ));
-  rtlcarry_0(9) <= ((in_nreg_val(8) AND (reg_nreg(8) OR rtlcarry_0(8))) OR (reg_nreg(8) AND rtlcarry_0(8)
+  rtlcarry_0(9) <= ((in_nreg_val(8) AND (rtlcarry_0(8) OR reg_nreg(8))) OR (rtlcarry_0(8) AND reg_nreg(8)
 ));
-  rtlcarry_0(8) <= ((rtlcarry_0(7) AND (reg_nreg(7) OR in_nreg_val(7))) OR (reg_nreg(7) AND in_nreg_val(7)
+  rtlcarry_0(8) <= ((in_nreg_val(7) AND (reg_nreg(7) OR rtlcarry_0(7))) OR (reg_nreg(7) AND rtlcarry_0(7)
 ));
   rtlcarry_0(7) <= ((rtlcarry_0(6) AND (reg_nreg(6) OR in_nreg_val(6))) OR (reg_nreg(6) AND in_nreg_val(6)
 ));
   rtlcarry_0(6) <= ((in_nreg_val(5) AND (reg_nreg(5) OR rtlcarry_0(5))) OR (reg_nreg(5) AND rtlcarry_0(5)
 ));
-  rtlcarry_0(5) <= ((in_nreg_val(4) AND (reg_nreg(4) OR rtlcarry_0(4))) OR (reg_nreg(4) AND rtlcarry_0(4)
+  rtlcarry_0(5) <= ((rtlcarry_0(4) AND (reg_nreg(4) OR in_nreg_val(4))) OR (reg_nreg(4) AND in_nreg_val(4)
 ));
-  rtlcarry_0(4) <= ((rtlcarry_0(3) AND (reg_nreg(3) OR in_nreg_val(3))) OR (reg_nreg(3) AND in_nreg_val(3)
+  rtlcarry_0(4) <= ((rtlcarry_0(3) AND (in_nreg_val(3) OR reg_nreg(3))) OR (in_nreg_val(3) AND reg_nreg(3)
 ));
-  rtlcarry_0(3) <= ((rtlcarry_0(2) AND (in_nreg_val(2) OR reg_nreg(2))) OR (in_nreg_val(2) AND reg_nreg(2)
+  rtlcarry_0(3) <= ((in_nreg_val(2) AND (reg_nreg(2) OR rtlcarry_0(2))) OR (reg_nreg(2) AND rtlcarry_0(2)
 ));
   rtlcarry_0(2) <= ((in_nreg_val(1) AND (reg_nreg(1) OR rtlcarry_0(1))) OR (reg_nreg(1) AND rtlcarry_0(1)
 ));
-  rtlcarry_0(1) <= (reg_nreg(0) AND in_nreg_val(0));
-  aux0 <= (NOT(reset) AND NOT(c_reset_reg));
-  aux1 <= NOT((in_nreg_val(1) XOR rtlcarry_0(1)));
-  aux9 <= (((((aux1 AND NOT(reset)) AND NOT(c_reset_reg)) AND reg_nreg(1)) OR (((NOT(aux1
-) AND NOT(reset)) AND NOT(c_reset_reg)) AND NOT(reg_nreg(1)))) AND c_nreg);
-  aux10 <= NOT((rtlcarry_0(2) XOR reg_nreg(2)));
-  aux11 <= NOT((rtlcarry_0(3) XOR in_nreg_val(3)));
-  aux19 <= (((((aux11 AND NOT(reset)) AND NOT(c_reset_reg)) AND reg_nreg(3)) OR (((NOT(aux11
-) AND NOT(reset)) AND NOT(c_reset_reg)) AND NOT(reg_nreg(3)))) AND c_nreg);
-  aux20 <= (rtlcarry_0(4) XOR reg_nreg(4));
-  aux21 <= NOT((in_nreg_val(5) XOR rtlcarry_0(5)));
-  aux29 <= (((((aux21 AND NOT(reset)) AND NOT(c_reset_reg)) AND reg_nreg(5)) OR (((NOT(aux21
-) AND NOT(reset)) AND NOT(c_reset_reg)) AND NOT(reg_nreg(5)))) AND c_nreg);
-  aux30 <= NOT((rtlcarry_0(6) XOR in_nreg_val(6)));
-  aux38 <= (((((aux30 AND NOT(reset)) AND NOT(c_reset_reg)) AND reg_nreg(6)) OR (((NOT(aux30
-) AND NOT(reset)) AND NOT(c_reset_reg)) AND NOT(reg_nreg(6)))) AND c_nreg);
-  aux39 <= NOT((rtlcarry_0(7) XOR in_nreg_val(7)));
-  aux43 <= ((((NOT(aux39) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg) AND NOT(reg_nreg(7)
+  rtlcarry_0(1) <= (in_nreg_val(0) AND reg_nreg(0));
+  aux3 <= ((((in_nreg_val(0) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg) AND NOT(reg_nreg(0)
 ));
-  aux44 <= NOT((in_nreg_val(8) XOR rtlcarry_0(8)));
-  aux48 <= ((((NOT(aux44) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg) AND NOT(reg_nreg(8)
+  aux4 <= (NOT(c_reset_reg) AND NOT(reset));
+  aux9 <= ((((in_nreg_val(1) XOR (rtlcarry_0(1) XOR reg_nreg(1))) AND NOT(c_reset_reg)) 
+AND NOT(reset)) AND c_nreg);
+  aux14 <= ((((in_nreg_val(2) XOR (rtlcarry_0(2) XOR reg_nreg(2))) AND NOT(c_reset_reg)) 
+AND NOT(reset)) AND c_nreg);
+  aux19 <= ((((rtlcarry_0(3) XOR (reg_nreg(3) XOR in_nreg_val(3))) AND NOT(c_reset_reg)) 
+AND NOT(reset)) AND c_nreg);
+  aux20 <= NOT((rtlcarry_0(4) XOR in_nreg_val(4)));
+  aux28 <= (((((aux20 AND NOT(c_reset_reg)) AND NOT(reset)) AND reg_nreg(4)) OR (((NOT(aux20
+) AND NOT(c_reset_reg)) AND NOT(reset)) AND NOT(reg_nreg(4)))) AND c_nreg);
+  aux29 <= NOT((in_nreg_val(5) XOR rtlcarry_0(5)));
+  aux33 <= ((((NOT(aux29) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg) AND NOT(reg_nreg(5)
 ));
-  aux50 <= (rtlcarry_0(9) XOR (in_nreg_val(9) XOR reg_nreg(9)));
-  aux55 <= ((((rtlcarry_0(10) XOR (in_nreg_val(10) XOR reg_nreg(10))) AND NOT(reset)) AND 
-NOT(c_reset_reg)) AND c_nreg);
-  aux56 <= NOT((rtlcarry_0(11) XOR in_nreg_val(11)));
-  aux64 <= (((((aux56 AND NOT(reset)) AND NOT(c_reset_reg)) AND reg_nreg(11)) OR (((NOT(aux56
-) AND NOT(reset)) AND NOT(c_reset_reg)) AND NOT(reg_nreg(11)))) AND c_nreg);
-  aux69 <= ((((rtlcarry_0(12) XOR (reg_nreg(12) XOR in_nreg_val(12))) AND NOT(reset)) AND 
-NOT(c_reset_reg)) AND c_nreg);
-  aux73 <= ((((rtlcarry_0(13) XOR reg_nreg(13)) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg
+  aux38 <= ((((rtlcarry_0(6) XOR (in_nreg_val(6) XOR reg_nreg(6))) AND NOT(c_reset_reg)) 
+AND NOT(reset)) AND c_nreg);
+  aux43 <= ((((in_nreg_val(7) XOR (rtlcarry_0(7) XOR reg_nreg(7))) AND NOT(c_reset_reg)) 
+AND NOT(reset)) AND c_nreg);
+  aux48 <= ((((in_nreg_val(8) XOR (reg_nreg(8) XOR rtlcarry_0(8))) AND NOT(c_reset_reg)) 
+AND NOT(reset)) AND c_nreg);
+  aux49 <= NOT((rtlcarry_0(9) XOR in_nreg_val(9)));
+  aux53 <= ((((NOT(aux49) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg) AND NOT(reg_nreg(9)
+));
+  aux54 <= NOT((in_nreg_val(10) XOR rtlcarry_0(10)));
+  aux58 <= ((((NOT(aux54) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg) AND NOT(reg_nreg(10)
+));
+  aux59 <= NOT((rtlcarry_0(11) XOR in_nreg_val(11)));
+  aux67 <= (((((aux59 AND NOT(c_reset_reg)) AND NOT(reset)) AND reg_nreg(11)) OR (((NOT(aux59
+) AND NOT(c_reset_reg)) AND NOT(reset)) AND NOT(reg_nreg(11)))) AND c_nreg);
+  aux72 <= ((((in_nreg_val(12) XOR (rtlcarry_0(12) XOR reg_nreg(12))) AND NOT(c_reset_reg)
+) AND NOT(reset)) AND c_nreg);
+  aux78 <= ((((rtlcarry_0(14) XOR reg_nreg(14)) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg
 );
-  aux81 <= (((((NOT(rtlcarry_0(14)) AND NOT(reset)) AND NOT(c_reset_reg)) AND reg_nreg(14)
-) OR (((rtlcarry_0(14) AND NOT(reset)) AND NOT(c_reset_reg)) AND NOT(reg_nreg(14)
+  aux86 <= (((((NOT(rtlcarry_0(15)) AND NOT(c_reset_reg)) AND NOT(reset)) AND reg_nreg(15)
+) OR (((rtlcarry_0(15) AND NOT(c_reset_reg)) AND NOT(reset)) AND NOT(reg_nreg(15)
 ))) AND c_nreg);
-  aux85 <= ((((rtlcarry_0(15) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg) AND NOT(reg_nreg(15)
-));
-  aux89 <= ((((rtlcarry_0(16) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg) AND NOT(reg_nreg(16)
-));
-  aux93 <= ((((rtlcarry_0(17) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg) AND NOT(reg_nreg(17)
-));
-  aux97 <= ((((rtlcarry_0(18) XOR reg_nreg(18)) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg
+  aux90 <= ((((rtlcarry_0(16) XOR reg_nreg(16)) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg
 );
-  aux100 <= (((rtlcarry_0(19) AND NOT(reset)) AND NOT(c_reset_reg)) AND c_nreg);
-  aux101 <= (aux100 AND NOT(reg_nreg(19)));
-  aux103 <= ((aux100 AND reg_nreg(19)) AND NOT(reg_nreg(20)));
-  aux105 <= (NOT(reset) AND (NOT(c_reset_reg) AND NOT(c_nreg)));
-  aux106 <= NOT((NOT(c_nreg) OR NOT(reg_nreg(19))));
+  aux94 <= ((((rtlcarry_0(17) XOR reg_nreg(17)) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg
+);
+  aux98 <= ((((rtlcarry_0(18) XOR reg_nreg(18)) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg
+);
+  aux102 <= ((((rtlcarry_0(19) XOR reg_nreg(19)) AND NOT(c_reset_reg)) AND NOT(reset)) AND c_nreg
+);
+  aux103 <= NOT((rtlcarry_0(19) AND reg_nreg(19)));
+  aux111 <= (((((aux103 AND NOT(c_reset_reg)) AND NOT(reset)) AND reg_nreg(20)) OR (((NOT(aux103
+) AND NOT(c_reset_reg)) AND NOT(reset)) AND NOT(reg_nreg(20)))) AND c_nreg);
+  aux112 <= (c_nreg OR rtlalc_1(13));
+  aux114 <= (NOT(c_reset_reg) AND (NOT(reset) AND NOT(c_nreg)));
+  aux115 <= (((NOT(rtlcarry_0(13)) OR NOT(c_nreg)) AND aux4) AND reg_nreg(13));
 END RTL;
 
 

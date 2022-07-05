@@ -21,8 +21,7 @@ ARCHITECTURE VBE OF neuronreg_vasy IS
   SIGNAL rtlcarry_0	: BIT_VECTOR(20 DOWNTO 0);
   SIGNAL rtlexts_0	: BIT_VECTOR(20 DOWNTO 0);
   SIGNAL reg_nreg	: REG_VECTOR(20 DOWNTO 0) REGISTER;
-  SIGNAL sum	: REG_VECTOR(20 DOWNTO 0) REGISTER;
-  SIGNAL p20_1_def_1	: BIT;
+  SIGNAL sum	: BIT_VECTOR(20 DOWNTO 0);
 BEGIN
 
   out_nreg_val <= rtlalc_1;
@@ -34,27 +33,13 @@ AND rtlcarry_0(19 downto 0))) OR (rtlexts_0(19 downto 0) AND rtlcarry_0(19 downt
   rtlexts_0 <= ("00000000" & in_nreg_val);
   LABEL0 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    reg_nreg(20 downto 12) <= GUARDED "000000000" WHEN (c_reset_reg OR reset) ELSE
-     sum(20 downto 12) WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE reg_nreg(20 downto 12);
+    reg_nreg <= GUARDED "000000000000000000000" WHEN (c_reset_reg OR reset) ELSE
+     sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE reg_nreg;
   END BLOCK LABEL0;
   LABEL1 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    reg_nreg(11) <= GUARDED '0' WHEN p20_1_def_1 ELSE
-     sum(11) WHEN (NOT(p20_1_def_1) AND (c_nreg = '1')) ELSE reg_nreg(11);
-  END BLOCK LABEL1;
-  LABEL2 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
-  BEGIN
-    reg_nreg(10 downto 0) <= GUARDED "00000000000" WHEN (c_reset_reg OR reset) ELSE
-     sum(10 downto 0) WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE reg_nreg(10 downto 0);
-  END BLOCK LABEL2;
-  LABEL3 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
-  BEGIN
     rtlalc_1 <= GUARDED "000000000000000000000" WHEN (c_reset_reg OR reset) ELSE
      sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE rtlalc_1;
-  END BLOCK LABEL3;
-  LABEL4 : BLOCK  ((clk = '0') AND NOT(clk'STABLE) )
-  BEGIN
-    sum <= GUARDED rtlsum_0;
-  END BLOCK LABEL4;
-  p20_1_def_1 <= ((reset = '1') OR (c_reset_reg = '1'));
+  END BLOCK LABEL1;
+  sum <= rtlsum_0;
 END VBE;
