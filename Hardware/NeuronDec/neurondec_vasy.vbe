@@ -59,7 +59,8 @@ BEGIN
   END BLOCK LABEL3;
   LABEL4 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    rtlalc_1 <= GUARDED p18_1_def_3 WHEN (NOT(reset) AND c_neuron_dec) ELSE rtlalc_1;
+    rtlalc_1 <= GUARDED '0' WHEN reset ELSE
+     p18_1_def_3 WHEN (NOT(reset) AND c_neuron_dec) ELSE rtlalc_1;
   END BLOCK LABEL4;
   LABEL5 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN

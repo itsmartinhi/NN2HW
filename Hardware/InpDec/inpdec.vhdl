@@ -21,6 +21,7 @@ begin
 			if reset = '1' then
 				count <= "011000100";
 				out_input_index <= "11000100";
+				out_input_reset <= '0';
 			elsif c_input_dec = '1' then
 				if count = "000000000" then
 					count <= "011000100";

@@ -26,19 +26,19 @@ ARCHITECTURE RTL OF inpdec_boom IS
   SIGNAL aux1	: STD_LOGIC;
   SIGNAL aux2	: STD_LOGIC;
   SIGNAL aux3	: STD_LOGIC;
-  SIGNAL aux4	: STD_LOGIC;
-  SIGNAL aux5	: STD_LOGIC;
-  SIGNAL aux6	: STD_LOGIC;
+  SIGNAL aux7	: STD_LOGIC;
   SIGNAL aux8	: STD_LOGIC;
   SIGNAL aux9	: STD_LOGIC;
+  SIGNAL aux10	: STD_LOGIC;
   SIGNAL aux12	: STD_LOGIC;
   SIGNAL aux13	: STD_LOGIC;
-  SIGNAL aux15	: STD_LOGIC;
+  SIGNAL aux14	: STD_LOGIC;
   SIGNAL aux16	: STD_LOGIC;
+  SIGNAL aux17	: STD_LOGIC;
+  SIGNAL aux18	: STD_LOGIC;
   SIGNAL aux19	: STD_LOGIC;
   SIGNAL aux20	: STD_LOGIC;
-  SIGNAL aux22	: STD_LOGIC;
-  SIGNAL aux23	: STD_LOGIC;
+  SIGNAL aux21	: STD_LOGIC;
 BEGIN
   out_input_index(7) <= rtlalc_2(7);
   out_input_index(6) <= rtlalc_2(6);
@@ -55,7 +55,7 @@ BEGIN
     THEN 
     IF (reset = '1')
     THEN rtlalc_5(1) <= '0';
-    ELSIF ((NOT(reset) AND c_input_dec) = '1')
+    ELSIF ((c_input_dec AND NOT(reset)) = '1')
     THEN rtlalc_5(1) <= count(1);
     END IF;
     END IF;
@@ -64,9 +64,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux6 AND (NOT(reset) AND c_input_dec)) = '1')
+    IF ((aux9 AND (NOT(reset) AND c_input_dec)) = '1')
     THEN rtlalc_5(0) <= '1';
-    ELSIF ((NOT(aux6) OR reset) = '1')
+    ELSIF ((NOT(aux9) OR reset) = '1')
     THEN rtlalc_5(0) <= '0';
     END IF;
     END IF;
@@ -77,7 +77,7 @@ BEGIN
     THEN 
     IF (reset = '1')
     THEN rtlalc_4 <= '1';
-    ELSIF ((NOT(reset) AND c_input_dec) = '1')
+    ELSIF ((c_input_dec AND NOT(reset)) = '1')
     THEN rtlalc_4 <= count(2);
     END IF;
     END IF;
@@ -86,10 +86,10 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (reset = '1')
+    IF ((c_input_dec AND (NOT(reset) AND aux14)) = '1')
+    THEN rtlalc_3(5) <= '1';
+    ELSIF ((reset OR NOT(aux14)) = '1')
     THEN rtlalc_3(5) <= '0';
-    ELSIF ((NOT(reset) AND c_input_dec) = '1')
-    THEN rtlalc_3(5) <= count(5);
     END IF;
     END IF;
   END PROCESS;
@@ -97,32 +97,21 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(c_input_dec) AND reset) = '1')
+    IF (reset = '1')
     THEN rtlalc_3(4) <= '0';
-    ELSIF (c_input_dec = '1')
-    THEN rtlalc_3(4) <= aux9;
-    END IF;
-    END IF;
-  END PROCESS;
-  PROCESS ( clk )
-  BEGIN
-    IF  ((clk = '1') AND clk'EVENT)
-    THEN 
-    IF (reset = '1')
-    THEN rtlalc_3(3) <= '0';
-    ELSIF ((NOT(reset) AND c_input_dec) = '1')
-    THEN rtlalc_3(3) <= count(3);
-    END IF;
-    END IF;
-  END PROCESS;
-  PROCESS ( clk )
-  BEGIN
-    IF  ((clk = '1') AND clk'EVENT)
-    THEN 
-    IF (reset = '1')
-    THEN rtlalc_2(7) <= '1';
     ELSIF ((c_input_dec AND NOT(reset)) = '1')
-    THEN rtlalc_2(7) <= count(7);
+    THEN rtlalc_3(4) <= count(4);
+    END IF;
+    END IF;
+  END PROCESS;
+  PROCESS ( clk )
+  BEGIN
+    IF  ((clk = '1') AND clk'EVENT)
+    THEN 
+    IF ((c_input_dec AND (NOT(reset) AND aux13)) = '1')
+    THEN rtlalc_3(3) <= '1';
+    ELSIF ((reset OR NOT(aux13)) = '1')
+    THEN rtlalc_3(3) <= '0';
     END IF;
     END IF;
   END PROCESS;
@@ -131,9 +120,9 @@ BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
     IF (reset = '1')
-    THEN rtlalc_2(6) <= '1';
-    ELSIF ((NOT(reset) AND c_input_dec) = '1')
-    THEN rtlalc_2(6) <= count(6);
+    THEN rtlalc_2 <= (OTHERS => '1');
+    ELSIF ((c_input_dec AND NOT(reset)) = '1')
+    THEN rtlalc_2 <= count(7 downto 6);
     END IF;
     END IF;
   END PROCESS;
@@ -141,9 +130,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(reset) AND (NOT(aux1) AND NOT(aux22))) = '1')
+    IF ((NOT(aux7) AND (NOT(reset) AND (aux21 AND c_input_dec))) = '1')
     THEN rtlalc_1 <= '1';
-    ELSIF ((NOT(reset) AND ((aux1 OR aux22) AND c_input_dec)) = '1')
+    ELSIF (((aux7 OR (reset OR NOT(aux21))) AND NOT(aux2)) = '1')
     THEN rtlalc_1 <= '0';
     END IF;
     END IF;
@@ -152,7 +141,7 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((reset OR NOT(aux15)) = '1')
+    IF ((reset OR NOT(aux18)) = '1')
     THEN count(8) <= '0';
     END IF;
     END IF;
@@ -161,9 +150,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((reset OR NOT(aux15)) = '1')
+    IF ((NOT(aux18) OR reset) = '1')
     THEN count(7) <= '1';
-    ELSIF ((NOT(reset) AND (NOT(aux13) AND aux15)) = '1')
+    ELSIF ((NOT(aux17) AND (NOT(aux12) AND (aux18 AND NOT(reset)))) = '1')
     THEN count(7) <= '0';
     END IF;
     END IF;
@@ -172,10 +161,10 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(aux13) OR reset) = '1')
+    IF (reset = '1')
     THEN count(6) <= '1';
-    ELSIF ((NOT(aux3) AND (NOT(aux12) AND (aux13 AND NOT(reset)))) = '1')
-    THEN count(6) <= '0';
+    ELSIF ((NOT(reset) AND (NOT(aux12) AND NOT(aux16))) = '1')
+    THEN count(6) <= NOT(count(6));
     END IF;
     END IF;
   END PROCESS;
@@ -183,10 +172,11 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (NOT(aux23) = '1')
+    IF ((aux19 AND (aux8 AND (NOT(aux13) AND (NOT(count(4)) AND aux20)))) = '1')
+    THEN count(5) <= '1';
+    ELSIF ((NOT(aux19) AND (NOT(aux8) OR NOT(aux20))) = '1')
     THEN count(5) <= '0';
-    ELSIF ((aux23 AND (NOT(aux8) AND (NOT(count(4)) AND (c_input_dec AND NOT(count(0)))))
-) = '1')
+    ELSIF ((NOT(aux19) AND (aux8 AND (NOT(aux13) AND (NOT(count(4)) AND aux20)))) = '1')
     THEN count(5) <= NOT(count(5));
     END IF;
     END IF;
@@ -195,15 +185,15 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((count(5) OR aux19) AND (NOT(aux6) AND (NOT(reset) AND (aux8 AND (NOT(count(3)
-) AND (NOT(count(2)) AND NOT(count(1)))))))) = '1')
+    IF ((aux19 AND ((count(5) OR (count(8) OR (count(6) OR count(7)))) AND (NOT(aux13)
+ AND aux20))) = '1')
     THEN count(4) <= '1';
-    ELSIF ((NOT(count(5) OR aux19) OR (NOT(aux6) AND (reset OR (NOT(aux8) AND (count(3) 
-OR (count(2) OR count(1))))))) = '1')
+    ELSIF ((NOT(aux19) AND (NOT((count(5) OR (count(8) OR (count(6) OR (count(7) OR aux13
+))))) OR NOT(aux20))) = '1')
     THEN count(4) <= '0';
-    ELSIF (((count(5) OR aux19) AND (aux6 OR (NOT(reset) AND (NOT(aux8) AND (NOT(count(3)
-) AND (NOT(count(2)) AND NOT(count(1)))))))) = '1')
-    THEN count(4) <= ((aux6 AND aux9) OR (NOT(aux6) AND NOT(count(4))));
+    ELSIF ((NOT(aux19) AND ((count(5) OR (count(8) OR (count(6) OR count(7)))) AND (NOT(aux13
+) AND aux20))) = '1')
+    THEN count(4) <= NOT(count(4));
     END IF;
     END IF;
   END PROCESS;
@@ -211,9 +201,11 @@ OR (count(2) OR count(1))))))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (NOT(aux23) = '1')
+    IF ((aux19 AND (c_input_dec AND (aux8 AND aux20))) = '1')
+    THEN count(3) <= '1';
+    ELSIF ((NOT(aux19) AND (NOT(aux8) OR NOT(aux20))) = '1')
     THEN count(3) <= '0';
-    ELSIF ((aux23 AND (NOT(count(2)) AND NOT(aux20))) = '1')
+    ELSIF ((NOT(aux19) AND (c_input_dec AND (aux8 AND aux20))) = '1')
     THEN count(3) <= NOT(count(3));
     END IF;
     END IF;
@@ -224,7 +216,7 @@ OR (count(2) OR count(1))))))) = '1')
     THEN 
     IF (reset = '1')
     THEN count(2) <= '1';
-    ELSIF ((NOT(reset) AND NOT(aux20)) = '1')
+    ELSIF ((NOT(reset) AND NOT(aux10)) = '1')
     THEN count(2) <= NOT(count(2));
     END IF;
     END IF;
@@ -233,9 +225,12 @@ OR (count(2) OR count(1))))))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(aux2 OR aux19) OR reset) = '1')
+    IF (((aux8 OR count(2)) AND (NOT(reset) AND (aux9 AND aux1))) = '1')
+    THEN count(1) <= '1';
+    ELSIF ((((reset OR NOT(aux9)) AND NOT(aux1)) OR (NOT(aux8 OR count(2)) AND (reset OR 
+NOT(aux9)))) = '1')
     THEN count(1) <= '0';
-    ELSIF (((aux2 OR aux19) AND (NOT(reset) AND NOT(aux6))) = '1')
+    ELSIF (((aux8 OR count(2)) AND ((reset OR NOT(aux9)) AND aux1)) = '1')
     THEN count(1) <= NOT(count(1));
     END IF;
     END IF;
@@ -244,29 +239,29 @@ OR (count(2) OR count(1))))))) = '1')
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(aux5 OR aux16) OR reset) = '1')
+    IF (((aux8 OR NOT(aux3)) AND aux1) = '1')
+    THEN count(0) <= '1';
+    ELSIF ((NOT(aux2) AND NOT(aux1)) = '1')
     THEN count(0) <= '0';
-    ELSIF (((aux5 OR aux16) AND (NOT(reset) AND c_input_dec)) = '1')
-    THEN count(0) <= NOT(count(0));
     END IF;
     END IF;
   END PROCESS;
-  aux1 <= (count(5) OR count(3));
-  aux2 <= (aux1 OR count(2));
-  aux3 <= (aux2 OR count(1));
-  aux4 <= (aux3 OR count(6));
-  aux5 <= (aux4 OR count(4));
-  aux6 <= (NOT(c_input_dec) OR count(0));
-  aux8 <= ((count(3) OR count(2)) OR count(1));
-  aux9 <= (NOT(reset) AND count(4));
-  aux12 <= NOT(((NOT(count(4)) AND c_input_dec) AND NOT(count(0))));
-  aux13 <= NOT((NOT(aux4) AND NOT(aux12)));
-  aux15 <= NOT((NOT(aux13) AND NOT(count(7))));
-  aux16 <= (count(0) OR (count(7) OR count(8)));
-  aux19 <= (count(6) OR (count(4) OR (NOT(c_input_dec) OR aux16)));
-  aux20 <= ((count(1) OR NOT(c_input_dec)) OR count(0));
-  aux22 <= (count(2) OR (count(1) OR aux19));
-  aux23 <= ((count(5) OR aux22) AND NOT(reset));
+  aux1 <= ((c_input_dec AND NOT(reset)) AND NOT(count(0)));
+  aux2 <= (NOT(c_input_dec) AND NOT(reset));
+  aux3 <= NOT((count(1) OR count(2)));
+  aux7 <= ((((count(5) OR count(3)) OR count(8)) OR count(4)) OR count(6));
+  aux8 <= (aux7 OR count(7));
+  aux9 <= (NOT(c_input_dec) OR count(0));
+  aux10 <= NOT((NOT(aux9) AND NOT(count(1))));
+  aux12 <= NOT(((NOT(count(0)) AND NOT(count(1))) AND NOT(count(2))));
+  aux13 <= NOT((c_input_dec AND NOT(count(3))));
+  aux14 <= NOT((NOT(count(5)) AND c_input_dec));
+  aux16 <= NOT(((NOT(aux14) AND NOT(count(3))) AND NOT(count(4))));
+  aux17 <= NOT((NOT(aux16) AND NOT(count(6))));
+  aux18 <= NOT((NOT(aux17) AND aux21));
+  aux19 <= (NOT(reset) AND aux12);
+  aux20 <= (NOT(reset) AND NOT(aux12));
+  aux21 <= ((NOT(count(7)) AND NOT(count(0))) AND aux3);
 END RTL;
 
 

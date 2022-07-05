@@ -1,4 +1,4 @@
 v 4
-file . "controller.vhdl" "d2c3a00037cc1699dd5bdd511d3b9f13b6758897" "20220705101710.595":
-  entity controller at 1( 0) + 0 on 243;
-  architecture rtl of controller at 20( 486) + 0 on 244;
+file . "controller.vhdl" "d2c3a00037cc1699dd5bdd511d3b9f13b6758897" "20220705110904.404":
+  entity controller at 1( 0) + 0 on 251;
+  architecture rtl of controller at 20( 486) + 0 on 252;

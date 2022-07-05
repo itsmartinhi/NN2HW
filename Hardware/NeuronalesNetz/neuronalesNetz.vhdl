@@ -96,13 +96,13 @@ architecture RTL of NEURONALESNETZ is
 	end component;
 	
 
-    for all : CONTROLLER 		use entity WORK.CONTROLLER(RTL);
-    for all : INPUTDECREMENTER 	use entity WORK.INPDEC(RTL);
-    for all : NEURONDECREMENTER use entity WORK.NEURONDEC(RTL);
+    for all : CONTROLLER 		use configuration WORK.CFG_controller_final;
+    for all : INPUTDECREMENTER 	use configuration WORK.CFG_inpdec_final;
+    for all : NEURONDECREMENTER use configuration WORK.CFG_neurondec_final;
     for all : NEURONREGISTER 	use configuration WORK.CFG_neuronreg_final;
     for all : ARGMAX 		  	use configuration WORK.CFG_argmax_final;
-    for all : MULTBLOCK			use entity WORK.MULTBLOCK(RTL);
-	for all : ROM 				use entity WORK.ROM(RTL);
+    for all : MULTBLOCK			use entity WORK.MULTBLOCK(RTL); -- did not work because of structure subcomponents
+	for all : ROM 				use entity WORK.ROM(RTL); -- for demo purposes off, because of too much signals
 	for all : RAM 				use entity WORK.RAM(RTL); -- just switch to cfg when demo is finished
 
     -- internal signals

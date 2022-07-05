@@ -110,7 +110,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((NOT(reset) AND c_input_dec) = '1')
+    IF (reset = '1')
+    THEN rtlalc_1 <= '0';
+    ELSIF ((NOT(reset) AND c_input_dec) = '1')
     THEN rtlalc_1 <= p18_1_def_3;
     END IF;
     END IF;

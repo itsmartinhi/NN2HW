@@ -12,7 +12,7 @@ cd ..
 # InputDec
 echo "InputDec"
 cd InpDec
-ees-ghdl -a inpdec.vhdl inpdec_tb.vhdl
+ees-ghdl -a inpdec.vhdl inpdec_final.vhdl inpdec_tb.vhdl
 ees-ghdl -r inpdec_tb --wave=inpdec_tb_wave.ghw
 
 cd ..
@@ -20,7 +20,7 @@ cd ..
 # NeuronDec
 echo "NeuronDec"
 cd NeuronDec
-ees-ghdl -a neurondec.vhdl neurondec_tb.vhdl
+ees-ghdl -a neurondec.vhdl neurondec_final.vhdl neurondec_tb.vhdl
 ees-ghdl -r neurondec_tb --wave=neurondec_tb_wave.ghw
 
 cd ..
@@ -52,9 +52,9 @@ cd ..
 # Neuronales Netz
 echo "Neuornales Netz"
 cd NeuronalesNetz
-ees-ghdl -a ../Controller/controller.vhdl \
-			../InpDec/inpdec.vhdl \
-			../NeuronDec/neurondec.vhdl \
+ees-ghdl -a ../Controller/controller.vhdl ../Controller/controller_final.vhdl\
+			../InpDec/inpdec.vhdl ../InpDec/inpdec_final.vhdl \
+			../NeuronDec/neurondec.vhdl ../NeuronDec/neurondec_final.vhdl \
 			../MultBlock/Multiplier/and2.vhdl ../MultBlock/Multiplier/or2.vhdl ../MultBlock/Multiplier/xor2.vhdl ../MultBlock/Multiplier/half_adder.vhdl ../MultBlock/Multiplier/full_adder.vhdl ../MultBlock/Multiplier/multiplier.vhdl ../MultBlock/multblock.vhdl \
 			../Argmax/argmax.vhdl ../Argmax/argmax_final.vhdl \
 			../NeuronReg/neuronreg.vhdl ../NeuronReg/neuronreg_final.vhdl \
