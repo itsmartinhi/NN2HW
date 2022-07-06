@@ -34,9 +34,9 @@ begin
 		procedure run_cycle is
 			begin
 				clk <= '0'; 
-				wait for 20 ns;
+				wait for 15 ns;
 				clk <= '1';
-				wait for 20 ns;
+				wait for 15 ns;
 			end procedure;
 	begin
 	

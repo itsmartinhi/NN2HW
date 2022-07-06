@@ -18,7 +18,7 @@ entity CONTROLLER is
 end CONTROLLER;
 
 architecture RTL of CONTROLLER is
-	 type t_state is (S_RESET, S_MULT, S_INPUT_DEC, S_NEURON_REG, S_NEURON_DEC, S_ARGMAX, S_HALT);
+	 type t_state is (S_RESET, S_LOAD, S_MULT, S_INPUT_DEC, S_NEURON_REG, S_NEURON_DEC, S_ARGMAX, S_HALT);
 	 signal state, next_state: t_state;
 begin
 
@@ -32,6 +32,7 @@ begin
 		end if;
 	end process;
 	
+	-- state might be dump
 	process(state, in_ctrl_neuron_reset, in_ctrl_input_reset) 
 	begin
 	
@@ -51,7 +52,9 @@ begin
 					c_argmax 			 <= '0';
 					c_reset_register     <= '0';
 					halt 				 <= '0';
-					next_state 			 <= S_NEURON_REG;
+					next_state 			 <= S_LOAD;
+			when S_LOAD => 
+					next_state 		 <= S_MULT;
 			when S_MULT => 
 					next_state 		 <= S_NEURON_REG;
 			when S_NEURON_REG =>
@@ -59,22 +62,22 @@ begin
 					next_state 		 <= S_INPUT_DEC;
 			when S_INPUT_DEC =>
 					c_dec_input 	<= '1';
-					c_add_to_neuron	<= '0';
 					if in_ctrl_input_reset = '1' 
 						then next_state <= S_ARGMAX;
-						else next_state <= S_MULT;		
+						else next_state <= S_NEURON_REG;		
 					end if;
 			when S_ARGMAX => 
-					c_argmax    <= '1';
-					c_dec_input <= '0';
-					next_state  <= S_NEURON_DEC;
+					c_argmax    	 <= '1';
+					c_dec_input 	 <= '0'; 
+					c_add_to_neuron  <= '0';
+					next_state  	 <= S_NEURON_DEC; 
 			when S_NEURON_DEC => 
 					c_reset_register <= '1';
 					c_dec_neuron 	 <= '1';
 					c_argmax 	 	 <= '0';
 					if in_ctrl_neuron_reset = '1' 
 						then next_state <= S_HALT;
-						else next_state <= S_MULT;
+						else next_state <= S_LOAD;
 					end if;
 			when S_HALT =>
 					c_reset_register <= '0';
