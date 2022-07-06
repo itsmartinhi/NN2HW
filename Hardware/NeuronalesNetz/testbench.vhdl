@@ -52,7 +52,7 @@ begin
 	
 		-- assert spec_result = "00001001" report "Result ist wrong";
 	
-		-- report "neuronales netz tb finished OK";	
+		report "Hip Hip Hooray!";	
 		wait;
 	end process;
 end architecture;
