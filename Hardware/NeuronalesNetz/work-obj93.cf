@@ -1,77 +1,77 @@
 v 4
-file . "../NeuronReg/neuronreg_final.vhdl" "ca9ba623bdb9c39b42ec9785492f03da75bd9c2a" "20220706182020.588":
-  entity neuronreg_final at 5( 52) + 0 on 2686;
-  architecture rtl of neuronreg_final at 20( 381) + 0 on 2687;
-  configuration cfg_neuronreg_final at 2334( 47069) + 0 on 2688;
-file . "neuronalesNetz.vhdl" "9d4f7448560bf376f8dafa4a488bc9ebb29e94d9" "20220706182021.408":
-  entity neuronalesnetz at 1( 0) + 0 on 2699;
-  architecture rtl of neuronalesnetz at 14( 250) + 0 on 2700;
-file . "../NeuronReg/neuronreg.vhdl" "296c69b5e2ef4a71af41e6d34e59653e3a5c9f0a" "20220706182020.560":
-  entity neuronreg at 1( 0) + 0 on 2684;
-  architecture rtl of neuronreg at 16( 338) + 0 on 2685;
-file . "../Argmax/argmax.vhdl" "49eb1deba6ae4f1cf5645a1b1adf142b1044b324" "20220706182020.541":
-  entity argmax at 1( 0) + 0 on 2679;
-  architecture rtl of argmax at 16( 360) + 0 on 2680;
-file . "../MultBlock/multblock.vhdl" "32c4a7f358c3fb0a754e40baecdf1ce9c005931b" "20220706182020.540":
-  entity multblock at 1( 0) + 0 on 2677;
-  architecture rtl of multblock at 13( 266) + 0 on 2678;
-file . "../MultBlock/Multiplier/multiplier.vhdl" "f7570aa84d46d4b2097d968587435e4a399be3d9" "20220706182020.538":
-  entity multiplier at 1( 0) + 0 on 2675;
-  architecture structure of multiplier at 11( 234) + 0 on 2676;
-file . "../MultBlock/Multiplier/full_adder.vhdl" "3dfdc46c669ce47c2829d4936b0f552132159345" "20220706182020.535":
-  entity full_adder at 1( 0) + 0 on 2673;
-  architecture structure of full_adder at 34( 796) + 0 on 2674;
-file . "../MultBlock/Multiplier/half_adder.vhdl" "48f810741079cb37ab69b8ff936c59625f1d8954" "20220706182020.534":
-  entity half_adder at 1( 0) + 0 on 2671;
-  architecture structure of half_adder at 32( 702) + 0 on 2672;
-file . "../MultBlock/Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220706182020.532":
-  entity xor2 at 1( 0) + 0 on 2669;
-  architecture dataflow of xor2 at 8( 126) + 0 on 2670;
-file . "../MultBlock/Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220706182020.532":
-  entity or2 at 1( 0) + 0 on 2667;
-  architecture dataflow of or2 at 10( 136) + 0 on 2668;
-file . "../MultBlock/Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220706182020.531":
-  entity and2 at 1( 0) + 0 on 2665;
-  architecture dataflow of and2 at 8( 126) + 0 on 2666;
-file . "../NeuronDec/neurondec.vhdl" "4b8a5efd82e98947f5155d26f3485d87a7e6bc54" "20220706182020.520":
-  entity neurondec at 1( 0) + 0 on 2660;
-  architecture rtl of neurondec at 15( 309) + 0 on 2661;
-file . "../InpDec/inpdec.vhdl" "b2d41e7680e352346d2fdba1895387d076be6989" "20220706182020.497":
-  entity inpdec at 1( 0) + 0 on 2655;
-  architecture rtl of inpdec at 15( 303) + 0 on 2656;
-file . "../Controller/controller.vhdl" "8b48424b0f60b3d1b04bed0bbe13864f62407b55" "20220706182020.444":
-  entity controller at 1( 0) + 0 on 2650;
-  architecture rtl of controller at 20( 486) + 0 on 2651;
-file . "testbench.vhdl" "1372c889a285d10563ebf985be7f39045f4cc0c0" "20220706182021.409":
-  entity testbench at 1( 0) + 0 on 2701;
-  architecture testbench of testbench at 8( 107) + 0 on 2702;
-file . "../RAM/ram.vhdl" "73683325564f87308fdf790a7c6ad918033f14f5" "20220706182020.591":
-  entity ram at 1( 0) + 0 on 2689;
-  architecture rtl of ram at 12( 304) + 0 on 2690;
-file . "../ROM/rom.vhdl" "062e6fc6ce2db5aa723579a69868c9e387183a6c" "20220706182020.634":
-  entity rom at 1( 0) + 0 on 2694;
-  architecture rtl of rom at 13( 388) + 0 on 2695;
-file . "../Argmax/argmax_final.vhdl" "871e59ccac2d29608d41c56c8384940513b98060" "20220706182020.559":
-  entity argmax_final at 5( 52) + 0 on 2681;
-  architecture rtl of argmax_final at 20( 405) + 0 on 2682;
-  configuration cfg_argmax_final at 1302( 27724) + 0 on 2683;
-file . "../RAM/ram_final.vhdl" "69361571eb2285e96ccb1549e81904204f574c56" "20220706182020.615":
-  entity ram_final at 5( 52) + 0 on 2691;
-  architecture rtl of ram_final at 16( 274) + 0 on 2692;
-  configuration cfg_ram_final at 1975( 41861) + 0 on 2693;
-file . "../ROM/rom_final.vhdl" "4939bec07dec170f4f918124391ca8bc13d4da93" "20220706182021.405":
-  entity rom_final at 5( 52) + 0 on 2696;
-  architecture rtl of rom_final at 17( 331) + 0 on 2697;
-  configuration cfg_rom_final at 59897( 1384150) + 0 on 2698;
-file . "../Controller/controller_final.vhdl" "184636de133e47c0e8a85e43b243cf410b9945cf" "20220706182020.495":
-  entity controller_final at 5( 52) + 0 on 2652;
-  architecture rtl of controller_final at 24( 489) + 0 on 2653;
-  configuration cfg_controller_final at 348( 6290) + 0 on 2654;
-file . "../InpDec/inpdec_final.vhdl" "e23fe20b5ba2104a729927eeb8d2c3affe639b64" "20220706182020.518":
-  entity inpdec_final at 5( 52) + 0 on 2657;
-  architecture rtl of inpdec_final at 19( 337) + 0 on 2658;
-  configuration cfg_inpdec_final at 973( 18276) + 0 on 2659;
-file . "../NeuronDec/neurondec_final.vhdl" "1e46fe8dd24c85a1dfe671aa5b13c599815a99f4" "20220706182020.530":
-  entity neurondec_final at 5( 52) + 0 on 2662;
-  architecture rtl of neurondec_final at 19( 346) + 0 on 2663;
-  configuration cfg_neurondec_final at 592( 10832) + 0 on 2664;
+file . "../NeuronReg/neuronreg_final.vhdl" "ca9ba623bdb9c39b42ec9785492f03da75bd9c2a" "20220706192857.718":
+  entity neuronreg_final at 5( 52) + 0 on 3322;
+  architecture rtl of neuronreg_final at 20( 381) + 0 on 3323;
+  configuration cfg_neuronreg_final at 2334( 47069) + 0 on 3324;
+file . "neuronalesNetz.vhdl" "9d4f7448560bf376f8dafa4a488bc9ebb29e94d9" "20220706192858.567":
+  entity neuronalesnetz at 1( 0) + 0 on 3335;
+  architecture rtl of neuronalesnetz at 14( 250) + 0 on 3336;
+file . "../NeuronReg/neuronreg.vhdl" "296c69b5e2ef4a71af41e6d34e59653e3a5c9f0a" "20220706192857.691":
+  entity neuronreg at 1( 0) + 0 on 3320;
+  architecture rtl of neuronreg at 16( 338) + 0 on 3321;
+file . "../Argmax/argmax.vhdl" "49eb1deba6ae4f1cf5645a1b1adf142b1044b324" "20220706192857.674":
+  entity argmax at 1( 0) + 0 on 3315;
+  architecture rtl of argmax at 16( 360) + 0 on 3316;
+file . "../MultBlock/multblock.vhdl" "32c4a7f358c3fb0a754e40baecdf1ce9c005931b" "20220706192857.672":
+  entity multblock at 1( 0) + 0 on 3313;
+  architecture rtl of multblock at 13( 266) + 0 on 3314;
+file . "../MultBlock/Multiplier/multiplier.vhdl" "f7570aa84d46d4b2097d968587435e4a399be3d9" "20220706192857.671":
+  entity multiplier at 1( 0) + 0 on 3311;
+  architecture structure of multiplier at 11( 234) + 0 on 3312;
+file . "../MultBlock/Multiplier/full_adder.vhdl" "3dfdc46c669ce47c2829d4936b0f552132159345" "20220706192857.668":
+  entity full_adder at 1( 0) + 0 on 3309;
+  architecture structure of full_adder at 34( 796) + 0 on 3310;
+file . "../MultBlock/Multiplier/half_adder.vhdl" "48f810741079cb37ab69b8ff936c59625f1d8954" "20220706192857.667":
+  entity half_adder at 1( 0) + 0 on 3307;
+  architecture structure of half_adder at 32( 702) + 0 on 3308;
+file . "../MultBlock/Multiplier/xor2.vhdl" "2fb88db1e1d76848c736778a4e826116b34bd03f" "20220706192857.665":
+  entity xor2 at 1( 0) + 0 on 3305;
+  architecture dataflow of xor2 at 8( 126) + 0 on 3306;
+file . "../MultBlock/Multiplier/or2.vhdl" "895d2d389e17a8236cb16ced914f20b95c1b3d9d" "20220706192857.665":
+  entity or2 at 1( 0) + 0 on 3303;
+  architecture dataflow of or2 at 10( 136) + 0 on 3304;
+file . "../MultBlock/Multiplier/and2.vhdl" "0008587ce1e751674c7616d6b2d24614cec9ac48" "20220706192857.664":
+  entity and2 at 1( 0) + 0 on 3301;
+  architecture dataflow of and2 at 8( 126) + 0 on 3302;
+file . "../NeuronDec/neurondec.vhdl" "4b8a5efd82e98947f5155d26f3485d87a7e6bc54" "20220706192857.654":
+  entity neurondec at 1( 0) + 0 on 3296;
+  architecture rtl of neurondec at 15( 309) + 0 on 3297;
+file . "../InpDec/inpdec.vhdl" "b2d41e7680e352346d2fdba1895387d076be6989" "20220706192857.631":
+  entity inpdec at 1( 0) + 0 on 3291;
+  architecture rtl of inpdec at 15( 303) + 0 on 3292;
+file . "../Controller/controller.vhdl" "e18b2a54aaaff605029f57803f0e4053a0ab3d70" "20220706192857.580":
+  entity controller at 1( 0) + 0 on 3286;
+  architecture rtl of controller at 20( 486) + 0 on 3287;
+file . "testbench.vhdl" "76fb4e80b6f22022c2a200f62a93a34ff079f45a" "20220706192858.569":
+  entity testbench at 1( 0) + 0 on 3337;
+  architecture testbench of testbench at 8( 107) + 0 on 3338;
+file . "../RAM/ram.vhdl" "73683325564f87308fdf790a7c6ad918033f14f5" "20220706192857.721":
+  entity ram at 1( 0) + 0 on 3325;
+  architecture rtl of ram at 12( 304) + 0 on 3326;
+file . "../ROM/rom.vhdl" "062e6fc6ce2db5aa723579a69868c9e387183a6c" "20220706192857.764":
+  entity rom at 1( 0) + 0 on 3330;
+  architecture rtl of rom at 13( 388) + 0 on 3331;
+file . "../Argmax/argmax_final.vhdl" "871e59ccac2d29608d41c56c8384940513b98060" "20220706192857.690":
+  entity argmax_final at 5( 52) + 0 on 3317;
+  architecture rtl of argmax_final at 20( 405) + 0 on 3318;
+  configuration cfg_argmax_final at 1302( 27724) + 0 on 3319;
+file . "../RAM/ram_final.vhdl" "69361571eb2285e96ccb1549e81904204f574c56" "20220706192857.746":
+  entity ram_final at 5( 52) + 0 on 3327;
+  architecture rtl of ram_final at 16( 274) + 0 on 3328;
+  configuration cfg_ram_final at 1975( 41861) + 0 on 3329;
+file . "../ROM/rom_final.vhdl" "4939bec07dec170f4f918124391ca8bc13d4da93" "20220706192858.565":
+  entity rom_final at 5( 52) + 0 on 3332;
+  architecture rtl of rom_final at 17( 331) + 0 on 3333;
+  configuration cfg_rom_final at 59897( 1384150) + 0 on 3334;
+file . "../Controller/controller_final.vhdl" "184636de133e47c0e8a85e43b243cf410b9945cf" "20220706192857.630":
+  entity controller_final at 5( 52) + 0 on 3288;
+  architecture rtl of controller_final at 24( 489) + 0 on 3289;
+  configuration cfg_controller_final at 348( 6290) + 0 on 3290;
+file . "../InpDec/inpdec_final.vhdl" "e23fe20b5ba2104a729927eeb8d2c3affe639b64" "20220706192857.652":
+  entity inpdec_final at 5( 52) + 0 on 3293;
+  architecture rtl of inpdec_final at 19( 337) + 0 on 3294;
+  configuration cfg_inpdec_final at 973( 18276) + 0 on 3295;
+file . "../NeuronDec/neurondec_final.vhdl" "1e46fe8dd24c85a1dfe671aa5b13c599815a99f4" "20220706192857.663":
+  entity neurondec_final at 5( 52) + 0 on 3298;
+  architecture rtl of neurondec_final at 19( 346) + 0 on 3299;
+  configuration cfg_neurondec_final at 592( 10832) + 0 on 3300;

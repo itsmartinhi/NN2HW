@@ -1,11 +1,11 @@
 v 4
-file . "neuronreg.vhdl" "296c69b5e2ef4a71af41e6d34e59653e3a5c9f0a" "20220706182019.720":
-  entity neuronreg at 1( 0) + 0 on 1089;
-  architecture rtl of neuronreg at 16( 338) + 0 on 1090;
-file . "neuronreg_tb.vhdl" "6cb6eb21362c160f982f481fa4536b93bae92fdc" "20220706182019.817":
-  entity neuronreg_tb at 1( 0) + 0 on 1094;
-  architecture testbench of neuronreg_tb at 8( 113) + 0 on 1095;
-file . "neuronreg_final.vhdl" "ca9ba623bdb9c39b42ec9785492f03da75bd9c2a" "20220706182019.815":
-  entity neuronreg_final at 5( 52) + 0 on 1091;
-  architecture rtl of neuronreg_final at 20( 381) + 0 on 1092;
-  configuration cfg_neuronreg_final at 2334( 47069) + 0 on 1093;
+file . "neuronreg.vhdl" "296c69b5e2ef4a71af41e6d34e59653e3a5c9f0a" "20220706192856.847":
+  entity neuronreg at 1( 0) + 0 on 1173;
+  architecture rtl of neuronreg at 16( 338) + 0 on 1174;
+file . "neuronreg_tb.vhdl" "6cb6eb21362c160f982f481fa4536b93bae92fdc" "20220706192856.947":
+  entity neuronreg_tb at 1( 0) + 0 on 1178;
+  architecture testbench of neuronreg_tb at 8( 113) + 0 on 1179;
+file . "neuronreg_final.vhdl" "ca9ba623bdb9c39b42ec9785492f03da75bd9c2a" "20220706192856.945":
+  entity neuronreg_final at 5( 52) + 0 on 1175;
+  architecture rtl of neuronreg_final at 20( 381) + 0 on 1176;
+  configuration cfg_neuronreg_final at 2334( 47069) + 0 on 1177;
