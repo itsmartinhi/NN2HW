@@ -1,0 +1,25 @@
+-- VHDL data flow description generated from `and2_boom`
+--		date : Tue Jul  5 11:58:39 2022
+
+
+-- Entity Declaration
+
+ENTITY and2_boom IS
+  PORT (
+  x : in BIT;	-- x
+  y : in BIT;	-- y
+  z : out BIT;	-- z
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END and2_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF and2_boom IS
+
+BEGIN
+
+z <= (x AND y);
+END;
