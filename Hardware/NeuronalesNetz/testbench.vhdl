@@ -34,9 +34,9 @@ begin
 		procedure run_cycle is
 			begin
 				clk <= '0'; 
-				wait for 20 ns;
+				wait for 15 ns;
 				clk <= '1';
-				wait for 20 ns;
+				wait for 15 ns;
 			end procedure;
 	begin
 	
@@ -52,7 +52,7 @@ begin
 	
 		-- assert spec_result = "00001001" report "Result ist wrong";
 	
-		-- report "neuronales netz tb finished OK";	
+		report "Hip Hip Hooray!";	
 		wait;
 	end process;
 end architecture;

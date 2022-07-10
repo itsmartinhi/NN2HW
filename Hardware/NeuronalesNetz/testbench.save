@@ -1,39 +1,23 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Fri Jul  1 10:11:52 2022
+[*] Wed Jul  6 18:08:29 2022
 [*]
 [dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronalesNetz/testbench_wave.ghw"
-[dumpfile_mtime] "Thu Jun 30 09:50:41 2022"
-[dumpfile_size] 343098
+[dumpfile_mtime] "Wed Jul  6 18:03:17 2022"
+[dumpfile_size] 9220251
 [savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronalesNetz/testbench.save"
-[timestart] 6335934000
+[timestart] 16203610000
 [size] 1920 884
 [pos] -1 -1
-*-20.547550 6341006000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-24.229855 16203610000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.testbench.
 [treeopen] top.testbench.spec.
-[treeopen] top.testbench.spec.u_argmax.
-[treeopen] top.testbench.spec.u_inputdecrementer.
-[treeopen] top.testbench.spec.u_neurondecrementer.
-[treeopen] top.testbench.spec.u_neuronregister.
 [sst_width] 255
 [signals_width] 317
 [sst_expanded] 1
 [sst_vpaned_height] 251
-@28
-top.testbench.halt
-@420
-top.testbench.spec.u_controller.state
-@24
-#{top.testbench.spec.u_inputdecrementer.out_input_index[7:0]} top.testbench.spec.u_inputdecrementer.out_input_index[7] top.testbench.spec.u_inputdecrementer.out_input_index[6] top.testbench.spec.u_inputdecrementer.out_input_index[5] top.testbench.spec.u_inputdecrementer.out_input_index[4] top.testbench.spec.u_inputdecrementer.out_input_index[3] top.testbench.spec.u_inputdecrementer.out_input_index[2] top.testbench.spec.u_inputdecrementer.out_input_index[1] top.testbench.spec.u_inputdecrementer.out_input_index[0]
-@28
-top.testbench.spec.u_inputdecrementer.reset
-top.testbench.clk
-@420
-top.testbench.spec.u_controller.state
 @200
--
 -# Argmax
 @22
 [color] 2
@@ -64,14 +48,25 @@ top.testbench.spec.u_controller.c_add_to_neuron
 #{top.testbench.spec.out_data_ram[11:0]} top.testbench.spec.out_data_ram[11] top.testbench.spec.out_data_ram[10] top.testbench.spec.out_data_ram[9] top.testbench.spec.out_data_ram[8] top.testbench.spec.out_data_ram[7] top.testbench.spec.out_data_ram[6] top.testbench.spec.out_data_ram[5] top.testbench.spec.out_data_ram[4] top.testbench.spec.out_data_ram[3] top.testbench.spec.out_data_ram[2] top.testbench.spec.out_data_ram[1] top.testbench.spec.out_data_ram[0]
 [color] 7
 #{top.testbench.spec.u_neuronregister.in_nreg_val[12:0]} top.testbench.spec.u_neuronregister.in_nreg_val[12] top.testbench.spec.u_neuronregister.in_nreg_val[11] top.testbench.spec.u_neuronregister.in_nreg_val[10] top.testbench.spec.u_neuronregister.in_nreg_val[9] top.testbench.spec.u_neuronregister.in_nreg_val[8] top.testbench.spec.u_neuronregister.in_nreg_val[7] top.testbench.spec.u_neuronregister.in_nreg_val[6] top.testbench.spec.u_neuronregister.in_nreg_val[5] top.testbench.spec.u_neuronregister.in_nreg_val[4] top.testbench.spec.u_neuronregister.in_nreg_val[3] top.testbench.spec.u_neuronregister.in_nreg_val[2] top.testbench.spec.u_neuronregister.in_nreg_val[1] top.testbench.spec.u_neuronregister.in_nreg_val[0]
-@25
 [color] 7
 #{top.testbench.spec.u_neuronregister.out_nreg_val[20:0]} top.testbench.spec.u_neuronregister.out_nreg_val[20] top.testbench.spec.u_neuronregister.out_nreg_val[19] top.testbench.spec.u_neuronregister.out_nreg_val[18] top.testbench.spec.u_neuronregister.out_nreg_val[17] top.testbench.spec.u_neuronregister.out_nreg_val[16] top.testbench.spec.u_neuronregister.out_nreg_val[15] top.testbench.spec.u_neuronregister.out_nreg_val[14] top.testbench.spec.u_neuronregister.out_nreg_val[13] top.testbench.spec.u_neuronregister.out_nreg_val[12] top.testbench.spec.u_neuronregister.out_nreg_val[11] top.testbench.spec.u_neuronregister.out_nreg_val[10] top.testbench.spec.u_neuronregister.out_nreg_val[9] top.testbench.spec.u_neuronregister.out_nreg_val[8] top.testbench.spec.u_neuronregister.out_nreg_val[7] top.testbench.spec.u_neuronregister.out_nreg_val[6] top.testbench.spec.u_neuronregister.out_nreg_val[5] top.testbench.spec.u_neuronregister.out_nreg_val[4] top.testbench.spec.u_neuronregister.out_nreg_val[3] top.testbench.spec.u_neuronregister.out_nreg_val[2] top.testbench.spec.u_neuronregister.out_nreg_val[1] top.testbench.spec.u_neuronregister.out_nreg_val[0]
-@24
 [color] 7
 #{top.testbench.spec.u_neuronregister.reg_nreg[20:0]} top.testbench.spec.u_neuronregister.reg_nreg[20] top.testbench.spec.u_neuronregister.reg_nreg[19] top.testbench.spec.u_neuronregister.reg_nreg[18] top.testbench.spec.u_neuronregister.reg_nreg[17] top.testbench.spec.u_neuronregister.reg_nreg[16] top.testbench.spec.u_neuronregister.reg_nreg[15] top.testbench.spec.u_neuronregister.reg_nreg[14] top.testbench.spec.u_neuronregister.reg_nreg[13] top.testbench.spec.u_neuronregister.reg_nreg[12] top.testbench.spec.u_neuronregister.reg_nreg[11] top.testbench.spec.u_neuronregister.reg_nreg[10] top.testbench.spec.u_neuronregister.reg_nreg[9] top.testbench.spec.u_neuronregister.reg_nreg[8] top.testbench.spec.u_neuronregister.reg_nreg[7] top.testbench.spec.u_neuronregister.reg_nreg[6] top.testbench.spec.u_neuronregister.reg_nreg[5] top.testbench.spec.u_neuronregister.reg_nreg[4] top.testbench.spec.u_neuronregister.reg_nreg[3] top.testbench.spec.u_neuronregister.reg_nreg[2] top.testbench.spec.u_neuronregister.reg_nreg[1] top.testbench.spec.u_neuronregister.reg_nreg[0]
 @28
 top.testbench.spec.u_controller.c_reset_register
 top.testbench.spec.u_neurondecrementer.c_neuron_dec
+@200
+-
+-# Controller
+@28
+top.testbench.spec.u_controller.clk
+@420
+top.testbench.spec.u_controller.state
+@28
+top.testbench.spec.u_controller.c_add_to_neuron
+top.testbench.spec.u_controller.c_dec_input
+top.testbench.spec.u_controller.c_dec_neuron
+top.testbench.spec.u_controller.c_reset_register
+top.testbench.spec.u_controller.c_argmax
 [pattern_trace] 1
 [pattern_trace] 0

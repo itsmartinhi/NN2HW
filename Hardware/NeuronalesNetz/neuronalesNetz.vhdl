@@ -96,7 +96,7 @@ architecture RTL of NEURONALESNETZ is
 	end component;
 	
 
-    for all : CONTROLLER 		use configuration WORK.CFG_controller_final;
+    for all : CONTROLLER 		use entity WORK.CONTROLLER(RTL);
     for all : INPUTDECREMENTER 	use configuration WORK.CFG_inpdec_final;
     for all : NEURONDECREMENTER use configuration WORK.CFG_neurondec_final;
     for all : NEURONREGISTER 	use configuration WORK.CFG_neuronreg_final;
