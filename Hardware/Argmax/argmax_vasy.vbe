@@ -5,6 +5,7 @@ ENTITY argmax_vasy IS
 PORT(
   clk	: IN BIT;
   c_argmax	: IN BIT;
+  reset	: IN BIT;
   in_argmax_val	: IN BIT_VECTOR(20 DOWNTO 0);
   in_argmax_index	: IN BIT_VECTOR(3 DOWNTO 0);
   out_argmax_index	: OUT BIT_VECTOR(3 DOWNTO 0);
@@ -21,7 +22,7 @@ ARCHITECTURE VBE OF argmax_vasy IS
   SIGNAL alcexts_1	: BIT_VECTOR(21 DOWNTO 0);
   SIGNAL alcexts_0	: BIT_VECTOR(21 DOWNTO 0);
   SIGNAL reg_argmax_val	: REG_VECTOR(20 DOWNTO 0) REGISTER;
-  SIGNAL p18_1_def_2	: BIT;
+  SIGNAL p19_1_def_3	: BIT;
 BEGIN
 
   out_argmax_index <= rtlalc_3;
@@ -34,11 +35,13 @@ BEGIN
   alcexts_0 <= ('0' & reg_argmax_val);
   LABEL0 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    reg_argmax_val <= GUARDED in_argmax_val WHEN (c_argmax AND p18_1_def_2) ELSE reg_argmax_val;
+    reg_argmax_val <= GUARDED "000000000000000000000" WHEN reset ELSE
+     in_argmax_val WHEN (NOT(reset) AND p19_1_def_3 AND c_argmax) ELSE reg_argmax_val;
   END BLOCK LABEL0;
   LABEL1 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    rtlalc_3 <= GUARDED in_argmax_index WHEN (c_argmax AND p18_1_def_2) ELSE rtlalc_3;
+    rtlalc_3 <= GUARDED "0000" WHEN reset ELSE
+     in_argmax_index WHEN (NOT(reset) AND p19_1_def_3 AND c_argmax) ELSE rtlalc_3;
   END BLOCK LABEL1;
-  p18_1_def_2 <= rtlltgt_2;
+  p19_1_def_3 <= rtlltgt_2;
 END VBE;

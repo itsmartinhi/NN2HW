@@ -1,15 +1,15 @@
 
                  @@@@    @@@       @        @@@@ @  @@@@   @@@@
-                  @@      @        @       @    @@   @@     @
-                  @@      @       @@@     @@     @    @@   @
-                   @@    @        @@@     @@@          @@ @
-                   @@    @       @  @@     @@@@         @@
-                    @@  @        @  @@       @@@@       @@
-                    @@  @       @    @@        @@@      @@
-                     @@@        @@@@@@@   @      @@     @@
-                     @@@       @      @@  @@     @@     @@
-                      @        @      @@  @@@    @      @@
-                      @      @@@@    @@@@ @  @@@@     @@@@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
 
                            VHDL Analyzer for SYnthesis
 
@@ -26,16 +26,16 @@
 Create VHDL using VASY...
 
                  @@@@    @@@       @        @@@@ @  @@@@   @@@@
-                  @@      @        @       @    @@   @@     @
-                  @@      @       @@@     @@     @    @@   @
-                   @@    @        @@@     @@@          @@ @
-                   @@    @       @  @@     @@@@         @@
-                    @@  @        @  @@       @@@@       @@
-                    @@  @       @    @@        @@@      @@
-                     @@@        @@@@@@@   @      @@     @@
-                     @@@       @      @@  @@     @@     @@
-                      @        @      @@  @@@    @      @@
-                      @      @@@@    @@@@ @  @@@@     @@@@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
 
                            VHDL Analyzer for SYnthesis
 
@@ -54,15 +54,15 @@ Adding a configuration named 'CFG_<entity>'...
 Writing 'neuronreg_vasy.vhdl'...
 
                    @@@@@@@                         @@@     @@@
-                     @@   @@                        @@     @@
-                     @@    @@                       @@@   @@@
-                     @@    @@     @@@       @@@     @@@   @@@
-                     @@   @@    @@   @@   @@   @@   @ @@ @ @@
-                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@
-                     @@    @@  @@     @@ @@     @@  @ @@@  @@
-                     @@     @@ @@     @@ @@     @@  @  @@  @@
-                     @@     @@ @@     @@ @@     @@  @  @   @@
-                     @@    @@   @@   @@   @@   @@   @      @@
+                     @@   @@                        @@     @@ 
+                     @@    @@                       @@@   @@@ 
+                     @@    @@     @@@       @@@     @@@   @@@ 
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@ 
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@ 
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @   @@ 
+                     @@    @@   @@   @@   @@   @@   @      @@ 
                    @@@@@@@@       @@@       @@@    @@@    @@@@
 
                               BOOlean Minimization
@@ -78,16 +78,16 @@ Writing 'neuronreg_vasy.vhdl'...
 Create VHDL using VASY...
 
                  @@@@    @@@       @        @@@@ @  @@@@   @@@@
-                  @@      @        @       @    @@   @@     @
-                  @@      @       @@@     @@     @    @@   @
-                   @@    @        @@@     @@@          @@ @
-                   @@    @       @  @@     @@@@         @@
-                    @@  @        @  @@       @@@@       @@
-                    @@  @       @    @@        @@@      @@
-                     @@@        @@@@@@@   @      @@     @@
-                     @@@       @      @@  @@     @@     @@
-                      @        @      @@  @@@    @      @@
-                      @      @@@@    @@@@ @  @@@@     @@@@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
 
                            VHDL Analyzer for SYnthesis
 
@@ -105,17 +105,17 @@ Removing all VDD/VSS ports...
 Adding a configuration named 'CFG_<entity>'...
 Writing 'neuronreg_boom.vhdl'...
 
-                  @@@@@@@                             @@@@ @
-                    @@   @@                         @@    @@
-                    @@    @@                       @@      @
-                    @@    @@     @@@       @@@    @@
-                    @@   @@    @@   @@   @@   @@  @@
+                  @@@@@@@                             @@@@ @  
+                    @@   @@                         @@    @@  
+                    @@    @@                       @@      @  
+                    @@    @@     @@@       @@@    @@          
+                    @@   @@    @@   @@   @@   @@  @@          
                     @@@@@@    @@     @@ @@     @@ @@     @@@@@
-                    @@    @@  @@     @@ @@     @@ @@     @ @@
-                    @@     @@ @@     @@ @@     @@ @@    @  @@
-                    @@     @@ @@     @@ @@     @@  @@      @@
-                    @@    @@   @@   @@   @@   @@    @@    @@
-                  @@@@@@@@       @@@       @@@        @@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@ 
+                    @@     @@ @@     @@ @@     @@ @@    @  @@ 
+                    @@     @@ @@     @@ @@     @@  @@      @@ 
+                    @@    @@   @@   @@   @@   @@    @@    @@  
+                  @@@@@@@@       @@@       @@@        @@@@    
 
                          Binding and Optimizing On Gates
 
@@ -137,102 +137,93 @@ Reading file 'neuronreg_boom.vbe'...
 Controlling file 'neuronreg_boom.vbe'...
 Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
 Mapping Warning: Cell 'halfadder_x4' isn't supported
-Mapping Warning: Cell 'ts_x8' isn't supported
-Mapping Warning: Cell 'nmx3_x4' isn't supported
-Mapping Warning: Cell 'buf_x8' isn't supported
-Mapping Warning: Cell 'halfadder_x2' isn't supported
-Mapping Warning: Cell 'noa22_x4' isn't supported
-Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
-Mapping Warning: Cell 'na3_x4' isn't supported
-Mapping Warning: Cell 'inv_x4' isn't supported
-Mapping Warning: Cell 'fulladder_x2' isn't supported
-Mapping Warning: Cell 'a4_x4' isn't supported
-Mapping Warning: Cell 'ao2o22_x4' isn't supported
-Mapping Warning: Cell 'on12_x4' isn't supported
-Mapping Warning: Cell 'buf_x4' isn't supported
-Mapping Warning: Cell 'o4_x4' isn't supported
-Mapping Warning: Cell 'noa2ao222_x4' isn't supported
-Mapping Warning: Cell 'noa3ao322_x4' isn't supported
+Mapping Warning: Cell 'nmx2_x4' isn't supported
 Mapping Warning: Cell 'nxr2_x4' isn't supported
-Mapping Warning: Cell 'nts_x2' isn't supported
-Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'oa3ao322_x4' isn't supported
 Mapping Warning: Cell 'na2_x4' isn't supported
-Mapping Warning: Cell 'oa22_x4' isn't supported
-Mapping Warning: Cell 'oa2a22_x4' isn't supported
-Mapping Warning: Cell 'o2_x4' isn't supported
 Mapping Warning: Cell 'fulladder_x4' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'a3_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a23_x4' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'mx3_x4' isn't supported
+Mapping Warning: Cell 'na4_x4' isn't supported
+Mapping Warning: Cell 'an12_x4' isn't supported
+Mapping Warning: Cell 'ao22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'noa2a22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'no4_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'nao2o22_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
 Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
 Preparing file 'neuronreg_boom.vbe'...
 Capacitances on file 'neuronreg_boom.vbe'...
 Unflattening file 'neuronreg_boom.vbe'...
 Mapping file 'neuronreg_boom.vbe'...
 Saving file 'neuronreg_boog.vst'...
-Adding signal 'not_reg_nreg 5'
+Adding signal 'not_reg_nreg 3'
 Adding signal 'not_reg_nreg 6'
-Adding signal 'not_reg_nreg 8'
-Adding signal 'not_reg_nreg 12'
-Adding signal 'not_rtlalc_1 6'
-Adding signal 'not_rtlalc_1 8'
-Adding signal 'not_rtlalc_1 9'
-Adding signal 'not_rtlalc_1 10'
-Adding signal 'not_rtlalc_1 11'
-Adding signal 'not_rtlalc_1 12'
-Adding signal 'not_rtlalc_1 13'
-Adding signal 'not_rtlalc_1 14'
-Adding signal 'not_rtlalc_1 15'
-Adding signal 'not_rtlalc_1 16'
+Adding signal 'not_reg_nreg 9'
+Adding signal 'not_reg_nreg 15'
 Adding signal 'not_rtlcarry_0 3'
-Adding signal 'not_rtlcarry_0 8'
-Adding signal 'not_rtlcarry_0 12'
-Quick estimated critical path (no warranty)...3087 ps from 'reg_nreg 2' to 'reg_nreg 5'
-Quick estimated area (with over-cell routing)...581250 lambda�
+Adding signal 'not_rtlcarry_0 4'
+Adding signal 'not_rtlcarry_0 6'
+Adding signal 'not_rtlcarry_0 9'
+Adding signal 'not_rtlcarry_0 11'
+Adding signal 'not_rtlcarry_0 14'
+Adding signal 'rtlcarry_0 13'
+Adding signal 'rtlcarry_0 15'
+Quick estimated critical path (no warranty)...1514 ps from 'reg_nreg 5' to 'rtlalc_1 5'
+Quick estimated area (with over-cell routing)...513250 lambda�
 Details...
-	inv_x2: 47
-	sff1_x4: 40
-	na3_x1: 30
-	o2_x2: 25
+	inv_x2: 53
+	sff1_x4: 42
+	nao22_x1: 34
+	na2_x1: 25
+	xr2_x1: 24
 	buf_x2: 21
-	a2_x2: 19
-	on12_x1: 18
-	o3_x2: 18
-	na2_x1: 17
-	no2_x1: 14
-	no3_x1: 14
-	xr2_x1: 14
-	oa2ao222_x2: 9
-	na4_x1: 8
-	ao22_x2: 7
-	no4_x1: 7
-	o4_x2: 7
-	nao22_x1: 6
-	oa22_x2: 6
-	an12_x1: 3
-	a3_x2: 3
-	nao2o22_x1: 3
-	sff2_x4: 2
+	a3_x2: 13
+	na3_x1: 10
+	a2_x2: 9
+	o2_x2: 9
+	on12_x1: 7
+	na4_x1: 6
+	an12_x1: 6
+	nao2o22_x1: 6
+	oa2ao222_x2: 5
+	no2_x1: 4
+	oa22_x2: 4
+	o4_x2: 3
+	o3_x2: 3
+	no4_x1: 3
+	no3_x1: 2
 	a4_x2: 1
-	noa22_x1: 1
 	ao2o22_x2: 1
-	oa2a22_x2: 1
-	nxr2_x1: 1
-	noa2ao222_x1: 1
-	Total: 344
+	Total: 291
 Saving critical path in xsch color file 'neuronreg_boog.xsc'...
 End of boog...
 
 Create VHDL using VASY...
 
                  @@@@    @@@       @        @@@@ @  @@@@   @@@@
-                  @@      @        @       @    @@   @@     @
-                  @@      @       @@@     @@     @    @@   @
-                   @@    @        @@@     @@@          @@ @
-                   @@    @       @  @@     @@@@         @@
-                    @@  @        @  @@       @@@@       @@
-                    @@  @       @    @@        @@@      @@
-                     @@@        @@@@@@@   @      @@     @@
-                     @@@       @      @@  @@     @@     @@
-                      @        @      @@  @@@    @      @@
-                      @      @@@@    @@@@ @  @@@@     @@@@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
 
                            VHDL Analyzer for SYnthesis
 
@@ -251,16 +242,16 @@ Adding a configuration named 'CFG_<entity>'...
 Writing 'neuronreg_boog.vhdl'...
 
                    @@@@@@                          @@@    @@@
-                     @@                             @@     @
-                     @@                             @@@    @
-                     @@           @@@       @@@     @ @@   @
-                     @@         @@   @@   @@   @@   @ @@   @
-                     @@        @@     @@ @@     @@  @  @@  @
-                     @@        @@     @@ @@     @@  @   @@ @
-                     @@        @@     @@ @@     @@  @   @@ @
-                     @@      @ @@     @@ @@     @@  @    @@@
-                     @@     @   @@   @@   @@   @@   @     @@
-                   @@@@@@@@@@     @@@       @@@    @@@    @@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
 
                            Local optimization on Nets
 
@@ -278,128 +269,87 @@ Reading default parameter...
 Reading file 'neuronreg_boog.vst'...
 Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
 Capacitances on file 'neuronreg_boog.vst'...
-Delays on file 'neuronreg_boog.vst'...12680 ps
-Area on file 'neuronreg_boog.vst'...581250 lamda� (with over-cell routing)
+Delays on file 'neuronreg_boog.vst'...13999 ps
+Area on file 'neuronreg_boog.vst'...513250 lamda� (with over-cell routing)
 Details...
-	inv_x2: 47 (6%)
-	sff1_x4: 40 (30%)
-	na3_x1: 30 (6%)
-	o2_x2: 25 (5%)
-	buf_x2: 21 (3%)
-	a2_x2: 19 (4%)
-	on12_x1: 18 (3%)
-	o3_x2: 18 (4%)
-	na2_x1: 17 (2%)
-	no2_x1: 14 (2%)
-	no3_x1: 14 (3%)
-	xr2_x1: 14 (5%)
-	oa2ao222_x2: 9 (3%)
-	na4_x1: 8 (2%)
-	ao22_x2: 7 (1%)
-	no4_x1: 7 (1%)
-	o4_x2: 7 (2%)
-	nao22_x1: 6 (1%)
-	oa22_x2: 6 (1%)
-	an12_x1: 3 (0%)
-	a3_x2: 3 (0%)
-	nao2o22_x1: 3 (0%)
-	sff2_x4: 2 (2%)
+	inv_x2: 53 (7%)
+	sff1_x4: 42 (36%)
+	nao22_x1: 34 (9%)
+	na2_x1: 25 (4%)
+	xr2_x1: 24 (10%)
+	buf_x2: 21 (4%)
+	a3_x2: 13 (3%)
+	na3_x1: 10 (2%)
+	a2_x2: 9 (2%)
+	o2_x2: 9 (2%)
+	on12_x1: 7 (1%)
+	na4_x1: 6 (1%)
+	an12_x1: 6 (1%)
+	nao2o22_x1: 6 (2%)
+	oa2ao222_x2: 5 (2%)
+	no2_x1: 4 (0%)
+	oa22_x2: 4 (1%)
+	o4_x2: 3 (1%)
+	o3_x2: 3 (0%)
+	no4_x1: 3 (0%)
+	no3_x1: 2 (0%)
 	a4_x2: 1 (0%)
-	noa22_x1: 1 (0%)
 	ao2o22_x2: 1 (0%)
-	oa2a22_x2: 1 (0%)
-	nxr2_x1: 1 (0%)
-	noa2ao222_x1: 1 (0%)
-	Total: 344
-Worst RC on file 'neuronreg_boog.vst'...1099 ps
-Inserting buffers on critical path for file 'neuronreg_final.vst'...21 buffers inserted -> 11690 ps
-Improving RC on critical path for file 'neuronreg_final.vst'...11512 ps
+	Total: 291
+Worst RC on file 'neuronreg_boog.vst'...682 ps
+Inserting buffers on critical path for file 'neuronreg_final.vst'...20 buffers inserted -> 13193 ps
+Improving RC on critical path for file 'neuronreg_final.vst'...13077 ps
 Improving all RC for file 'neuronreg_final.vst'...
-Worst RC on file 'neuronreg_final.vst'...1099 ps
-Area on file 'neuronreg_final.vst'...603250 lamda� (with over-cell routing)
+Worst RC on file 'neuronreg_final.vst'...682 ps
+Area on file 'neuronreg_final.vst'...535250 lamda� (with over-cell routing)
 Details...
-	inv_x2: 43 (5%)
-	buf_x2: 42 (6%)
-	sff1_x4: 40 (29%)
-	na3_x1: 30 (6%)
-	o2_x2: 25 (5%)
-	a2_x2: 19 (3%)
-	on12_x1: 18 (3%)
-	o3_x2: 18 (4%)
-	na2_x1: 17 (2%)
-	no2_x1: 14 (2%)
-	no3_x1: 14 (2%)
-	xr2_x1: 14 (5%)
-	oa2ao222_x2: 9 (3%)
-	na4_x1: 8 (1%)
-	ao22_x2: 7 (1%)
-	no4_x1: 7 (1%)
-	o4_x2: 7 (2%)
-	nao22_x1: 6 (1%)
-	oa22_x2: 6 (1%)
-	inv_x4: 4 (0%)
-	an12_x1: 3 (0%)
-	a3_x2: 3 (0%)
-	nao2o22_x1: 3 (0%)
-	sff2_x4: 2 (1%)
+	inv_x2: 48 (6%)
+	sff1_x4: 42 (35%)
+	buf_x2: 41 (7%)
+	nao22_x1: 34 (9%)
+	na2_x1: 25 (4%)
+	xr2_x1: 24 (10%)
+	a3_x2: 13 (3%)
+	na3_x1: 10 (2%)
+	a2_x2: 9 (2%)
+	o2_x2: 9 (2%)
+	on12_x1: 7 (1%)
+	na4_x1: 6 (1%)
+	nao2o22_x1: 6 (1%)
+	an12_x1: 5 (1%)
+	oa2ao222_x2: 5 (2%)
+	inv_x4: 5 (0%)
+	no2_x1: 4 (0%)
+	oa22_x2: 4 (1%)
+	o4_x2: 3 (0%)
+	o3_x2: 3 (0%)
+	no4_x1: 3 (0%)
+	no3_x1: 2 (0%)
 	a4_x2: 1 (0%)
-	noa22_x1: 1 (0%)
 	ao2o22_x2: 1 (0%)
-	oa2a22_x2: 1 (0%)
-	nxr2_x1: 1 (0%)
-	noa2ao222_x1: 1 (0%)
-	Total: 365
-Critical path (no warranty)...11512 ps from 'reg_nreg 0' to 'rtlalc_1_20_ins'
+	an12_x4: 1 (0%)
+	Total: 311
+Critical path (no warranty)...13077 ps from 'reg_nreg 0' to 'reg_nreg_20_ins'
 Saving file 'neuronreg_final.vst'...
+Adding signal 'mbk_buf_not_rtlcarry_0 14'
+Adding signal 'mbk_buf_rtlcarry_0 13'
+Adding signal 'mbk_buf_rtlcarry_0 15'
 Saving critical path in xsch color file 'neuronreg_final.xsc'...
 End of loon...
 
 Create VHDL using VASY...
 
                  @@@@    @@@       @        @@@@ @  @@@@   @@@@
-                  @@      @        @       @    @@   @@     @
-                  @@      @       @@@     @@     @    @@   @
-                   @@    @        @@@     @@@          @@ @
-                   @@    @       @  @@     @@@@         @@
-                    @@  @        @  @@       @@@@       @@
-                    @@  @       @    @@        @@@      @@
-                     @@@        @@@@@@@   @      @@     @@
-                     @@@       @      @@  @@     @@     @@
-                      @        @      @@  @@@    @      @@
-                      @      @@@@    @@@@ @  @@@@     @@@@@@
-
-                           VHDL Analyzer for SYnthesis
-
-                   Alliance CAD System 5.0,           vasy 5.0
-                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
-                   Author(s):                  Ludovic Jacomme
-                   Contributor(s):             Frederic Petrot
-                   E-mail        : alliance-users@asim.lip6.fr
-
-	--> Run VHDL Compiler
-	--> Compile file neuronreg_final
-vbl_bcomp_y.y 965 : Error 19 line 3954 in file neuronreg_final :label `mbk_buf_not_aux24` already used
-Note that errors might also be due to unsupported statements
-done
-labuser@lab:~/nnhardware$ bash synthesize_loon_to_vhdl_only.sh
-WARNING: This script only performs the loon to vhdl step!\n
-Enter the path to the component directory:
-Hardware/NeuronReg
-Enter the name of the component (without the file ending .vhdl etc.):
-neuronreg
-Create VHDL using VASY...
-
-                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
-                  @@      @        @       @    @@   @@     @
-                  @@      @       @@@     @@     @    @@   @
-                   @@    @        @@@     @@@          @@ @
-                   @@    @       @  @@     @@@@         @@
-                    @@  @        @  @@       @@@@       @@
-                    @@  @       @    @@        @@@      @@
-                     @@@        @@@@@@@   @      @@     @@
-                     @@@       @      @@  @@     @@     @@
-                      @        @      @@  @@@    @      @@
-                      @      @@@@    @@@@ @  @@@@     @@@@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
 
                            VHDL Analyzer for SYnthesis
 

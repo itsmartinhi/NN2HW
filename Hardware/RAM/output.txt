@@ -1,0 +1,360 @@
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file ram
+	--> Drive Alliance file ram_vasy
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file ram_vasy
+	--> Drive Standard VHDL file ram_vasy
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'ram_vasy.vhdl'...
+
+                   @@@@@@@                         @@@     @@@
+                     @@   @@                        @@     @@ 
+                     @@    @@                       @@@   @@@ 
+                     @@    @@     @@@       @@@     @@@   @@@ 
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@ 
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@ 
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @   @@ 
+                     @@    @@   @@   @@   @@   @@   @      @@ 
+                   @@@@@@@@       @@@       @@@    @@@    @@@@
+
+                              BOOlean Minimization
+
+                   Alliance CAD System 5.0,           boom 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Parse BEH file ram_vasy.vbe
+	--> Drive BEH file ram_boom
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file ram_boom
+	--> Drive Standard VHDL file ram_boom
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'ram_boom.vhdl'...
+
+                  @@@@@@@                             @@@@ @  
+                    @@   @@                         @@    @@  
+                    @@    @@                       @@      @  
+                    @@    @@     @@@       @@@    @@          
+                    @@   @@    @@   @@   @@   @@  @@          
+                    @@@@@@    @@     @@ @@     @@ @@     @@@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@ 
+                    @@     @@ @@     @@ @@     @@ @@    @  @@ 
+                    @@     @@ @@     @@ @@     @@  @@      @@ 
+                    @@    @@   @@   @@   @@   @@    @@    @@  
+                  @@@@@@@@       @@@       @@@        @@@@    
+
+                         Binding and Optimizing On Gates
+
+                 Alliance CAD System 5.0, boog 5.0 [2003/01/09]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+        MBK_VDD        : vdd
+        MBK_VSS        : vss
+        MBK_IN_LO      : vst
+        MBK_OUT_LO     : vst
+        MBK_WORK_LIB   : .
+        MBK_TARGET_LIB : /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'ram_boom.vbe'...
+Controlling file 'ram_boom.vbe'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Mapping Warning: Cell 'halfadder_x4' isn't supported
+Mapping Warning: Cell 'nmx2_x4' isn't supported
+Mapping Warning: Cell 'nxr2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'oa3ao322_x4' isn't supported
+Mapping Warning: Cell 'na2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x4' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'a3_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a23_x4' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'mx3_x4' isn't supported
+Mapping Warning: Cell 'na4_x4' isn't supported
+Mapping Warning: Cell 'an12_x4' isn't supported
+Mapping Warning: Cell 'ao22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'noa2a22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'no4_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'nao2o22_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
+Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Preparing file 'ram_boom.vbe'...
+Capacitances on file 'ram_boom.vbe'...
+Unflattening file 'ram_boom.vbe'...
+Mapping file 'ram_boom.vbe'...
+Saving file 'ram_boog.vst'...
+Quick estimated critical path (no warranty)...2400 ps from 'in_ram_input_index 5' to 'out_data_ram 10'
+Quick estimated area (with over-cell routing)...321000 lambda�
+Details...
+	inv_x2: 36
+	oa22_x2: 26
+	o2_x2: 25
+	na2_x1: 22
+	nao22_x1: 18
+	no2_x1: 18
+	a2_x2: 14
+	o3_x2: 14
+	mx3_x2: 12
+	nao2o22_x1: 7
+	noa22_x1: 6
+	na3_x1: 6
+	oa2ao222_x2: 5
+	oa2a22_x2: 3
+	ao22_x2: 3
+	an12_x1: 2
+	on12_x1: 2
+	xr2_x1: 2
+	nxr2_x1: 2
+	o4_x2: 2
+	oa2a2a23_x2: 1
+	no4_x1: 1
+	noa2ao222_x1: 1
+	a4_x2: 1
+	no3_x1: 1
+	Total: 230
+Saving critical path in xsch color file 'ram_boog.xsc'...
+End of boog...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file ram_boog
+	--> Drive Standard VHDL file ram_boog
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'ram_boog.vhdl'...
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'ram_boog.vst'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Capacitances on file 'ram_boog.vst'...
+Delays on file 'ram_boog.vst'...4074 ps
+Area on file 'ram_boog.vst'...321000 lamda� (with over-cell routing)
+Details...
+	inv_x2: 36 (8%)
+	oa22_x2: 26 (12%)
+	o2_x2: 25 (9%)
+	na2_x1: 22 (6%)
+	nao22_x1: 18 (8%)
+	no2_x1: 18 (5%)
+	a2_x2: 14 (5%)
+	o3_x2: 14 (6%)
+	mx3_x2: 12 (12%)
+	nao2o22_x1: 7 (3%)
+	noa22_x1: 6 (2%)
+	na3_x1: 6 (2%)
+	oa2ao222_x2: 5 (3%)
+	oa2a22_x2: 3 (2%)
+	ao22_x2: 3 (1%)
+	an12_x1: 2 (0%)
+	on12_x1: 2 (0%)
+	xr2_x1: 2 (1%)
+	nxr2_x1: 2 (1%)
+	o4_x2: 2 (1%)
+	oa2a2a23_x2: 1 (0%)
+	no4_x1: 1 (0%)
+	noa2ao222_x1: 1 (0%)
+	a4_x2: 1 (0%)
+	no3_x1: 1 (0%)
+	Total: 230
+Worst RC on file 'ram_boog.vst'...468 ps
+Inserting buffers on critical path for file 'ram_final.vst'...None inserted
+Improving RC on critical path for file 'ram_final.vst'...4063 ps
+Improving all RC for file 'ram_final.vst'...
+Worst RC on file 'ram_final.vst'...468 ps
+Area on file 'ram_final.vst'...321250 lamda� (with over-cell routing)
+Details...
+	inv_x2: 35 (8%)
+	oa22_x2: 26 (12%)
+	o2_x2: 25 (9%)
+	na2_x1: 22 (6%)
+	nao22_x1: 18 (8%)
+	no2_x1: 18 (5%)
+	a2_x2: 14 (5%)
+	o3_x2: 14 (6%)
+	mx3_x2: 12 (12%)
+	nao2o22_x1: 7 (3%)
+	noa22_x1: 6 (2%)
+	na3_x1: 6 (2%)
+	oa2ao222_x2: 5 (3%)
+	oa2a22_x2: 3 (2%)
+	ao22_x2: 3 (1%)
+	an12_x1: 2 (0%)
+	on12_x1: 2 (0%)
+	xr2_x1: 2 (1%)
+	nxr2_x1: 2 (1%)
+	o4_x2: 2 (1%)
+	oa2a2a23_x2: 1 (0%)
+	no4_x1: 1 (0%)
+	noa2ao222_x1: 1 (0%)
+	a4_x2: 1 (0%)
+	no3_x1: 1 (0%)
+	inv_x4: 1 (0%)
+	Total: 230
+Critical path (no warranty)...4063 ps from 'in_ram_input_index 4' to 'out_data_ram 7'
+Saving file 'ram_final.vst'...
+Saving critical path in xsch color file 'ram_final.xsc'...
+End of loon...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file ram_final
+	--> Drive Standard VHDL file ram_final
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'ram_final.vhdl'...
+done
+

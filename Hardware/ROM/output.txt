@@ -1,0 +1,384 @@
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file rom
+	--> Drive Alliance file rom_vasy
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file rom_vasy
+	--> Drive Standard VHDL file rom_vasy
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'rom_vasy.vhdl'...
+
+                   @@@@@@@                         @@@     @@@
+                     @@   @@                        @@     @@ 
+                     @@    @@                       @@@   @@@ 
+                     @@    @@     @@@       @@@     @@@   @@@ 
+                     @@   @@    @@   @@   @@   @@   @ @@ @ @@ 
+                     @@@@@@    @@     @@ @@     @@  @ @@ @ @@ 
+                     @@    @@  @@     @@ @@     @@  @ @@@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @@  @@ 
+                     @@     @@ @@     @@ @@     @@  @  @   @@ 
+                     @@    @@   @@   @@   @@   @@   @      @@ 
+                   @@@@@@@@       @@@       @@@    @@@    @@@@
+
+                              BOOlean Minimization
+
+                   Alliance CAD System 5.0,           boom 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Parse BEH file rom_vasy.vbe
+	--> Drive BEH file rom_boom
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file rom_boom
+	--> Drive Standard VHDL file rom_boom
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'rom_boom.vhdl'...
+
+                  @@@@@@@                             @@@@ @  
+                    @@   @@                         @@    @@  
+                    @@    @@                       @@      @  
+                    @@    @@     @@@       @@@    @@          
+                    @@   @@    @@   @@   @@   @@  @@          
+                    @@@@@@    @@     @@ @@     @@ @@     @@@@@
+                    @@    @@  @@     @@ @@     @@ @@     @ @@ 
+                    @@     @@ @@     @@ @@     @@ @@    @  @@ 
+                    @@     @@ @@     @@ @@     @@  @@      @@ 
+                    @@    @@   @@   @@   @@   @@    @@    @@  
+                  @@@@@@@@       @@@       @@@        @@@@    
+
+                         Binding and Optimizing On Gates
+
+                 Alliance CAD System 5.0, boog 5.0 [2003/01/09]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+        MBK_VDD        : vdd
+        MBK_VSS        : vss
+        MBK_IN_LO      : vst
+        MBK_OUT_LO     : vst
+        MBK_WORK_LIB   : .
+        MBK_TARGET_LIB : /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'rom_boom.vbe'...
+Controlling file 'rom_boom.vbe'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Mapping Warning: Cell 'halfadder_x4' isn't supported
+Mapping Warning: Cell 'nmx2_x4' isn't supported
+Mapping Warning: Cell 'nxr2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x2' isn't supported
+Mapping Warning: Cell 'oa3ao322_x4' isn't supported
+Mapping Warning: Cell 'na2_x4' isn't supported
+Mapping Warning: Cell 'fulladder_x4' isn't supported
+Mapping Warning: Cell 'halfadder_x2' isn't supported
+Mapping Warning: Cell 'a3_x4' isn't supported
+Mapping Warning: Cell 'noa2ao222_x4' isn't supported
+Mapping Warning: Cell 'inv_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a23_x4' isn't supported
+Mapping Warning: Cell 'o3_x4' isn't supported
+Mapping Warning: Cell 'mx3_x4' isn't supported
+Mapping Warning: Cell 'na4_x4' isn't supported
+Mapping Warning: Cell 'an12_x4' isn't supported
+Mapping Warning: Cell 'ao22_x4' isn't supported
+Mapping Warning: Cell 'o2_x4' isn't supported
+Mapping Warning: Cell 'noa2a22_x4' isn't supported
+Mapping Warning: Cell 'oa2a22_x4' isn't supported
+Mapping Warning: Cell 'no4_x4' isn't supported
+Mapping Warning: Cell 'oa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'nao2o22_x4' isn't supported
+Mapping Warning: Cell 'buf_x8' isn't supported
+Mapping Warning: Cell 'a4_x4' isn't supported
+Mapping Warning: Cell 'noa2a2a2a24_x4' isn't supported
+Mapping Warning: Cell 'noa22_x4' isn't supported
+Controlling lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Preparing file 'rom_boom.vbe'...
+Capacitances on file 'rom_boom.vbe'...
+Unflattening file 'rom_boom.vbe'...
+Mapping file 'rom_boom.vbe'...
+Saving file 'rom_boog.vst'...
+Quick estimated critical path (no warranty)...23055 ps from 'in_rom_neuron_index 0' to 'out_data_rom 20'
+Quick estimated area (with over-cell routing)...11002000 lambda�
+Details...
+	na2_x1: 1269
+	noa22_x1: 882
+	oa22_x2: 774
+	a2_x2: 625
+	inv_x2: 616
+	o2_x2: 417
+	nao22_x1: 405
+	no2_x1: 401
+	nao2o22_x1: 291
+	oa2ao222_x2: 256
+	na3_x1: 237
+	ao22_x2: 225
+	nmx3_x1: 217
+	a3_x2: 147
+	mx3_x2: 141
+	no3_x1: 130
+	o3_x2: 107
+	on12_x1: 83
+	mx2_x2: 80
+	nmx2_x1: 78
+	an12_x1: 62
+	noa2ao222_x1: 61
+	ao2o22_x2: 44
+	a4_x2: 37
+	na4_x1: 37
+	xr2_x1: 19
+	oa2a22_x2: 15
+	o4_x2: 14
+	nxr2_x1: 12
+	noa2a2a23_x1: 12
+	oa2a2a23_x2: 9
+	no4_x1: 8
+	noa2a22_x1: 6
+	oa3ao322_x2: 2
+	noa2a2a2a24_x1: 1
+	Total: 7720
+Saving critical path in xsch color file 'rom_boog.xsc'...
+End of boog...
+
+Create VHDL using VASY...
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file rom_boog
+	--> Drive Standard VHDL file rom_boog
+
+Removing all VDD/VSS ports...
+Adding a configuration named 'CFG_<entity>'...
+Writing 'rom_boog.vhdl'...
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2022,        ASIM/LIP6/UPMC
+                 Author(s):                     Fran�ois Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /opt/ees/alliance/alliance-5.0/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'rom_boog.vst'...
+Reading lib '/opt/ees/alliance/alliance-5.0/cells/sxlib'...
+Capacitances on file 'rom_boog.vst'...
+Delays on file 'rom_boog.vst'...17839 ps
+Area on file 'rom_boog.vst'...11002000 lamda� (with over-cell routing)
+Details...
+	na2_x1: 1269 (11%)
+	noa22_x1: 882 (12%)
+	oa22_x2: 774 (10%)
+	a2_x2: 625 (7%)
+	inv_x2: 616 (4%)
+	o2_x2: 417 (4%)
+	nao22_x1: 405 (5%)
+	no2_x1: 401 (3%)
+	nao2o22_x1: 291 (4%)
+	oa2ao222_x2: 256 (5%)
+	na3_x1: 237 (2%)
+	ao22_x2: 225 (3%)
+	nmx3_x1: 217 (5%)
+	a3_x2: 147 (2%)
+	mx3_x2: 141 (4%)
+	no3_x1: 130 (1%)
+	o3_x2: 107 (1%)
+	on12_x1: 83 (0%)
+	mx2_x2: 80 (1%)
+	nmx2_x1: 78 (1%)
+	an12_x1: 62 (0%)
+	noa2ao222_x1: 61 (0%)
+	ao2o22_x2: 44 (0%)
+	a4_x2: 37 (0%)
+	na4_x1: 37 (0%)
+	xr2_x1: 19 (0%)
+	oa2a22_x2: 15 (0%)
+	o4_x2: 14 (0%)
+	nxr2_x1: 12 (0%)
+	noa2a2a23_x1: 12 (0%)
+	oa2a2a23_x2: 9 (0%)
+	no4_x1: 8 (0%)
+	noa2a22_x1: 6 (0%)
+	oa3ao322_x2: 2 (0%)
+	noa2a2a2a24_x1: 1 (0%)
+	Total: 7720
+Worst RC on file 'rom_boog.vst'...13489 ps
+Inserting buffers on critical path for file 'rom_final.vst'...8 buffers inserted -> 7697 ps
+Improving RC on critical path for file 'rom_final.vst'...7354 ps
+Improving all RC for file 'rom_final.vst'...
+Worst RC on file 'rom_final.vst'...3120 ps
+Area on file 'rom_final.vst'...11025000 lamda� (with over-cell routing)
+Details...
+	na2_x1: 1269 (11%)
+	noa22_x1: 882 (12%)
+	oa22_x2: 774 (10%)
+	a2_x2: 625 (7%)
+	inv_x2: 609 (4%)
+	o2_x2: 417 (4%)
+	nao22_x1: 405 (5%)
+	no2_x1: 401 (3%)
+	nao2o22_x1: 291 (4%)
+	oa2ao222_x2: 256 (5%)
+	na3_x1: 237 (2%)
+	ao22_x2: 225 (3%)
+	nmx3_x1: 217 (5%)
+	a3_x2: 147 (2%)
+	mx3_x2: 141 (4%)
+	no3_x1: 130 (1%)
+	o3_x2: 107 (1%)
+	on12_x1: 83 (0%)
+	mx2_x2: 80 (1%)
+	nmx2_x1: 78 (1%)
+	an12_x1: 62 (0%)
+	noa2ao222_x1: 61 (0%)
+	ao2o22_x2: 44 (0%)
+	a4_x2: 37 (0%)
+	na4_x1: 37 (0%)
+	xr2_x1: 19 (0%)
+	oa2a22_x2: 15 (0%)
+	o4_x2: 14 (0%)
+	nxr2_x1: 12 (0%)
+	noa2a2a23_x1: 12 (0%)
+	oa2a2a23_x2: 9 (0%)
+	buf_x8: 8 (0%)
+	no4_x1: 8 (0%)
+	inv_x8: 7 (0%)
+	noa2a22_x1: 6 (0%)
+	oa3ao322_x2: 2 (0%)
+	noa2a2a2a24_x1: 1 (0%)
+	Total: 7728
+Critical path (no warranty)...7354 ps from 'in_rom_neuron_index 0' to 'out_data_rom 11'
+Saving file 'rom_final.vst'...
+Saving critical path in xsch color file 'rom_final.xsc'...
+End of loon...
+
+
+                 @@@@    @@@       @        @@@@ @  @@@@   @@@@
+                  @@      @        @       @    @@   @@     @  
+                  @@      @       @@@     @@     @    @@   @   
+                   @@    @        @@@     @@@          @@ @    
+                   @@    @       @  @@     @@@@         @@     
+                    @@  @        @  @@       @@@@       @@     
+                    @@  @       @    @@        @@@      @@     
+                     @@@        @@@@@@@   @      @@     @@     
+                     @@@       @      @@  @@     @@     @@     
+                      @        @      @@  @@@    @      @@     
+                      @      @@@@    @@@@ @  @@@@     @@@@@@   
+
+                           VHDL Analyzer for SYnthesis
+
+                   Alliance CAD System 5.0,           vasy 5.0
+                   Copyright (c) 2000-2022,     ASIM/LIP6/UPMC
+                   Author(s):                  Ludovic Jacomme
+                   Contributor(s):             Frederic Petrot
+                   E-mail        : alliance-users@asim.lip6.fr
+
+	--> Run VHDL Compiler
+	--> Compile file rom_final
+	--> Drive Standard VHDL file rom_final

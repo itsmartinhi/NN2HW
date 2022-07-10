@@ -26,9 +26,9 @@ ARCHITECTURE RTL OF neurondec_boom IS
   SIGNAL aux1	: STD_LOGIC;
   SIGNAL aux2	: STD_LOGIC;
   SIGNAL aux3	: STD_LOGIC;
+  SIGNAL aux4	: STD_LOGIC;
   SIGNAL aux5	: STD_LOGIC;
   SIGNAL aux6	: STD_LOGIC;
-  SIGNAL aux8	: STD_LOGIC;
 BEGIN
   out_neuron_index(3) <= rtlalc_2;
   out_neuron_index(2) <= rtlalc_3(2);
@@ -39,21 +39,10 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux0 AND c_neuron_dec) OR reset) = '1')
-    THEN rtlalc_4 <= '1';
-    ELSIF ((NOT(aux0) AND NOT(reset)) = '1')
-    THEN rtlalc_4 <= '0';
-    END IF;
-    END IF;
-  END PROCESS;
-  PROCESS ( clk )
-  BEGIN
-    IF  ((clk = '1') AND clk'EVENT)
-    THEN 
     IF (reset = '1')
-    THEN rtlalc_3(2) <= '0';
+    THEN rtlalc_4 <= '1';
     ELSIF ((c_neuron_dec AND NOT(reset)) = '1')
-    THEN rtlalc_3(2) <= count(2);
+    THEN rtlalc_4 <= count(0);
     END IF;
     END IF;
   END PROCESS;
@@ -61,9 +50,20 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((c_neuron_dec AND (NOT(reset) AND aux2)) = '1')
+    IF ((aux3 AND c_neuron_dec) = '1')
+    THEN rtlalc_3(2) <= '1';
+    ELSIF ((NOT(aux3 AND c_neuron_dec) AND NOT(aux6)) = '1')
+    THEN rtlalc_3(2) <= '0';
+    END IF;
+    END IF;
+  END PROCESS;
+  PROCESS ( clk )
+  BEGIN
+    IF  ((clk = '1') AND clk'EVENT)
+    THEN 
+    IF ((aux2 AND c_neuron_dec) = '1')
     THEN rtlalc_3(1) <= '1';
-    ELSIF ((reset OR NOT(aux2)) = '1')
+    ELSIF ((NOT(aux2 AND c_neuron_dec) AND NOT(aux6)) = '1')
     THEN rtlalc_3(1) <= '0';
     END IF;
     END IF;
@@ -72,10 +72,10 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((c_neuron_dec AND aux1) OR reset) = '1')
+    IF (reset = '1')
     THEN rtlalc_2 <= '1';
-    ELSIF ((NOT(aux1) AND NOT(reset)) = '1')
-    THEN rtlalc_2 <= '0';
+    ELSIF ((NOT(reset) AND c_neuron_dec) = '1')
+    THEN rtlalc_2 <= count(3);
     END IF;
     END IF;
   END PROCESS;
@@ -83,11 +83,10 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((aux5 AND (NOT(count(4)) AND aux8)) = '1')
-    THEN rtlalc_1 <= '1';
-    ELSIF ((NOT((aux5 AND (NOT(count(4)) AND aux8))) AND (c_neuron_dec AND NOT(reset))) =
- '1')
+    IF (reset = '1')
     THEN rtlalc_1 <= '0';
+    ELSIF ((NOT(reset) AND c_neuron_dec) = '1')
+    THEN rtlalc_1 <= (aux4 AND (NOT(count(4)) AND NOT(count(0))));
     END IF;
     END IF;
   END PROCESS;
@@ -95,7 +94,7 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((aux5 AND NOT(aux6)) OR reset) = '1')
+    IF (((aux4 AND NOT(aux0)) OR reset) = '1')
     THEN count(4) <= '0';
     END IF;
     END IF;
@@ -106,7 +105,7 @@ BEGIN
     THEN 
     IF (reset = '1')
     THEN count(3) <= '1';
-    ELSIF ((NOT(reset) AND (NOT(count(2)) AND NOT(aux3))) = '1')
+    ELSIF ((NOT(reset) AND (NOT(aux0) AND (NOT(count(2)) AND NOT(count(1))))) = '1')
     THEN count(3) <= NOT(count(3));
     END IF;
     END IF;
@@ -115,23 +114,19 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF (((count(3) OR count(4)) AND (NOT(aux2) AND aux8)) = '1')
+    IF ((aux3 AND aux0) = '1')
     THEN count(2) <= '1';
-    ELSIF ((NOT(aux3 AND NOT(reset)) AND (NOT(count(3) OR count(4)) OR (aux2 OR NOT(aux8)
-))) = '1')
+    ELSIF ((NOT(aux3 AND aux0) AND NOT(aux5)) = '1')
     THEN count(2) <= '0';
+    ELSIF ((NOT(aux3 AND aux0) AND (NOT(count(1)) AND aux5)) = '1')
+    THEN count(2) <= ((count(3) OR count(4)) AND NOT(count(2)));
     END IF;
     END IF;
   END PROCESS;
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
-    THEN 
-    IF ((NOT((aux1 OR (count(4) OR aux6))) OR reset) = '1')
-    THEN count(1) <= '0';
-    ELSIF (((aux1 OR (count(4) OR aux6)) AND (NOT(reset) AND NOT(aux0))) = '1')
-    THEN count(1) <= NOT(count(1));
-    END IF;
+    THEN count(1) <= ((aux2 AND aux0) OR ((aux1 OR count(4)) AND (NOT(count(1)) AND aux5)));
     END IF;
   END PROCESS;
   PROCESS ( clk )
@@ -140,18 +135,18 @@ BEGIN
     THEN 
     IF (reset = '1')
     THEN count(0) <= '1';
-    ELSIF ((c_neuron_dec AND NOT(reset)) = '1')
+    ELSIF ((NOT(reset) AND c_neuron_dec) = '1')
     THEN count(0) <= NOT(count(0));
     END IF;
     END IF;
   END PROCESS;
-  aux0 <= (NOT(c_neuron_dec) OR count(0));
-  aux1 <= (count(3) OR NOT(c_neuron_dec));
-  aux2 <= NOT((NOT(count(1)) AND c_neuron_dec));
-  aux3 <= (aux2 OR count(0));
-  aux5 <= NOT(((count(3) OR count(1)) OR NOT(c_neuron_dec)));
-  aux6 <= (count(0) OR count(2));
-  aux8 <= (NOT(count(0)) AND (NOT(reset) AND NOT(count(2))));
+  aux0 <= NOT((c_neuron_dec AND NOT(count(0))));
+  aux1 <= (count(3) OR count(2));
+  aux2 <= (count(1) AND NOT(reset));
+  aux3 <= (count(2) AND NOT(reset));
+  aux4 <= NOT((aux1 OR count(1)));
+  aux5 <= (NOT(reset) AND NOT(aux0));
+  aux6 <= (NOT(reset) AND NOT(c_neuron_dec));
 END RTL;
 
 

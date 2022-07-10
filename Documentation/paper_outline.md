@@ -5,7 +5,9 @@
 Mögliche Themenaufteilung:
 - Design der HW
     - Flächenverbrauch + Taktfrequenz wichtig im Report
-- Schnittstellen wie kommen welche Daten in den Speicher + Werte in den Speicher
+- Schnittstellen wie kommen welche Daten in den Speicher
+    - Werte in den Speicher
+    - Neuronales Netz SW -> HW (bezogen auf Speicher)
 - Implementierung (Insgesamt + Multiplizierer)
 
 # Demo

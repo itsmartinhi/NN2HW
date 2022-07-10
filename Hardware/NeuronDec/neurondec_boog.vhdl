@@ -18,48 +18,52 @@ END neurondec_boog;
 
 ARCHITECTURE RTL OF neurondec_boog IS
   SIGNAL count	: STD_LOGIC_VECTOR(4 DOWNTO 0);
-  SIGNAL not_count	: STD_LOGIC_VECTOR(4 DOWNTO 0);
+  SIGNAL not_count	: STD_LOGIC_VECTOR(4 DOWNTO 1);
   SIGNAL rtlalc_3	: STD_LOGIC_VECTOR(2 DOWNTO 1);
   SIGNAL xr2_x1_sig	: STD_LOGIC;
-  SIGNAL xr2_x1_2_sig	: STD_LOGIC;
   SIGNAL rtlalc_4	: STD_LOGIC;
   SIGNAL rtlalc_2	: STD_LOGIC;
   SIGNAL rtlalc_1	: STD_LOGIC;
   SIGNAL on12_x1_sig	: STD_LOGIC;
-  SIGNAL oa2a22_x2_sig	: STD_LOGIC;
   SIGNAL oa22_x2_sig	: STD_LOGIC;
+  SIGNAL o2_x2_sig	: STD_LOGIC;
   SIGNAL nxr2_x1_sig	: STD_LOGIC;
+  SIGNAL nxr2_x1_2_sig	: STD_LOGIC;
   SIGNAL not_reset	: STD_LOGIC;
   SIGNAL not_c_neuron_dec	: STD_LOGIC;
-  SIGNAL not_aux5	: STD_LOGIC;
+  SIGNAL not_aux4	: STD_LOGIC;
+  SIGNAL not_aux3	: STD_LOGIC;
   SIGNAL not_aux2	: STD_LOGIC;
   SIGNAL not_aux1	: STD_LOGIC;
-  SIGNAL no3_x1_sig	: STD_LOGIC;
+  SIGNAL not_aux0	: STD_LOGIC;
+  SIGNAL no4_x1_sig	: STD_LOGIC;
   SIGNAL no2_x1_sig	: STD_LOGIC;
-  SIGNAL no2_x1_6_sig	: STD_LOGIC;
-  SIGNAL no2_x1_5_sig	: STD_LOGIC;
-  SIGNAL no2_x1_4_sig	: STD_LOGIC;
-  SIGNAL no2_x1_3_sig	: STD_LOGIC;
-  SIGNAL no2_x1_2_sig	: STD_LOGIC;
+  SIGNAL nao2o22_x1_sig	: STD_LOGIC;
+  SIGNAL nao2o22_x1_3_sig	: STD_LOGIC;
+  SIGNAL nao2o22_x1_2_sig	: STD_LOGIC;
   SIGNAL nao22_x1_sig	: STD_LOGIC;
-  SIGNAL nao22_x1_3_sig	: STD_LOGIC;
-  SIGNAL nao22_x1_2_sig	: STD_LOGIC;
+  SIGNAL na3_x1_sig	: STD_LOGIC;
+  SIGNAL na3_x1_4_sig	: STD_LOGIC;
+  SIGNAL na3_x1_3_sig	: STD_LOGIC;
+  SIGNAL na3_x1_2_sig	: STD_LOGIC;
   SIGNAL na2_x1_sig	: STD_LOGIC;
+  SIGNAL na2_x1_8_sig	: STD_LOGIC;
+  SIGNAL na2_x1_7_sig	: STD_LOGIC;
+  SIGNAL na2_x1_6_sig	: STD_LOGIC;
   SIGNAL na2_x1_5_sig	: STD_LOGIC;
   SIGNAL na2_x1_4_sig	: STD_LOGIC;
   SIGNAL na2_x1_3_sig	: STD_LOGIC;
   SIGNAL na2_x1_2_sig	: STD_LOGIC;
   SIGNAL inv_x2_sig	: STD_LOGIC;
-  SIGNAL aux8	: STD_LOGIC;
+  SIGNAL inv_x2_4_sig	: STD_LOGIC;
+  SIGNAL inv_x2_3_sig	: STD_LOGIC;
+  SIGNAL inv_x2_2_sig	: STD_LOGIC;
   SIGNAL aux6	: STD_LOGIC;
-  SIGNAL aux3	: STD_LOGIC;
+  SIGNAL aux5	: STD_LOGIC;
   SIGNAL aux0	: STD_LOGIC;
   SIGNAL ao22_x2_sig	: STD_LOGIC;
-  SIGNAL ao22_x2_2_sig	: STD_LOGIC;
-  SIGNAL an12_x1_sig	: STD_LOGIC;
-  SIGNAL an12_x1_2_sig	: STD_LOGIC;
-  SIGNAL a3_x2_sig	: STD_LOGIC;
   SIGNAL a2_x2_sig	: STD_LOGIC;
+  SIGNAL a2_x2_2_sig	: STD_LOGIC;
 
   COMPONENT buf_x2
   PORT(
@@ -76,7 +80,7 @@ ARCHITECTURE RTL OF neurondec_boog IS
    );
   END COMPONENT;
 
-  COMPONENT nao22_x1
+  COMPONENT na3_x1
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
@@ -85,10 +89,20 @@ ARCHITECTURE RTL OF neurondec_boog IS
    );
   END COMPONENT;
 
-  COMPONENT no2_x1
+  COMPONENT na2_x1
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
+  nq	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT nao2o22_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  i3	: IN STD_LOGIC;
   nq	: OUT STD_LOGIC
    );
   END COMPONENT;
@@ -100,11 +114,29 @@ ARCHITECTURE RTL OF neurondec_boog IS
    );
   END COMPONENT;
 
-  COMPONENT no3_x1
+  COMPONENT oa22_x2
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
   i2	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT no2_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  nq	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
+  COMPONENT no4_x1
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  i2	: IN STD_LOGIC;
+  i3	: IN STD_LOGIC;
   nq	: OUT STD_LOGIC
    );
   END COMPONENT;
@@ -115,32 +147,6 @@ ARCHITECTURE RTL OF neurondec_boog IS
   i1	: IN STD_LOGIC;
   i2	: IN STD_LOGIC;
   q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT oa2a22_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  i3	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT an12_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT na2_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  nq	: OUT STD_LOGIC
    );
   END COMPONENT;
 
@@ -162,6 +168,14 @@ ARCHITECTURE RTL OF neurondec_boog IS
    );
   END COMPONENT;
 
+  COMPONENT o2_x2
+  PORT(
+  i0	: IN STD_LOGIC;
+  i1	: IN STD_LOGIC;
+  q	: OUT STD_LOGIC
+   );
+  END COMPONENT;
+
   COMPONENT xr2_x1
   PORT(
   i0	: IN STD_LOGIC;
@@ -170,29 +184,12 @@ ARCHITECTURE RTL OF neurondec_boog IS
    );
   END COMPONENT;
 
-  COMPONENT oa22_x2
+  COMPONENT nao22_x1
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
   i2	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT a3_x2
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
-   );
-  END COMPONENT;
-
-  COMPONENT on12_x1
-  PORT(
-  i0	: IN STD_LOGIC;
-  i1	: IN STD_LOGIC;
-  q	: OUT STD_LOGIC
+  nq	: OUT STD_LOGIC
    );
   END COMPONENT;
 
@@ -204,11 +201,10 @@ ARCHITECTURE RTL OF neurondec_boog IS
    );
   END COMPONENT;
 
-  COMPONENT o3_x2
+  COMPONENT on12_x1
   PORT(
   i0	: IN STD_LOGIC;
   i1	: IN STD_LOGIC;
-  i2	: IN STD_LOGIC;
   q	: OUT STD_LOGIC
    );
   END COMPONENT;
@@ -242,115 +238,133 @@ BEGIN
   rtlalc_4_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_3_sig,
+    i => na3_x1_4_sig,
     q => rtlalc_4
   );
-  nao22_x1_3_ins : nao22_x1
+  na3_x1_4_ins : na3_x1
   PORT MAP (
-    i0 => no2_x1_6_sig,
-    i1 => inv_x2_sig,
-    i2 => not_reset,
-    nq => nao22_x1_3_sig
+    i0 => not_reset,
+    i1 => na2_x1_8_sig,
+    i2 => na2_x1_7_sig,
+    nq => na3_x1_4_sig
   );
-  no2_x1_6_ins : no2_x1
+  na2_x1_8_ins : na2_x1
+  PORT MAP (
+    i0 => not_c_neuron_dec,
+    i1 => rtlalc_4,
+    nq => na2_x1_8_sig
+  );
+  na2_x1_7_ins : na2_x1
   PORT MAP (
     i0 => c_neuron_dec,
-    i1 => rtlalc_4,
-    nq => no2_x1_6_sig
-  );
-  inv_x2_ins : inv_x2
-  PORT MAP (
-    i => aux0,
-    nq => inv_x2_sig
+    i1 => count(0),
+    nq => na2_x1_7_sig
   );
   rtlalc_3_2_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => no3_x1_sig,
+    i => nao2o22_x1_3_sig,
     q => rtlalc_3(2)
   );
-  no3_x1_ins : no3_x1
+  nao2o22_x1_3_ins : nao2o22_x1
   PORT MAP (
-    i0 => no2_x1_5_sig,
-    i1 => no2_x1_4_sig,
-    i2 => reset,
-    nq => no3_x1_sig
+    i0 => inv_x2_4_sig,
+    i1 => inv_x2_3_sig,
+    i2 => not_aux3,
+    i3 => not_c_neuron_dec,
+    nq => nao2o22_x1_3_sig
   );
-  no2_x1_5_ins : no2_x1
+  inv_x2_4_ins : inv_x2
   PORT MAP (
-    i0 => c_neuron_dec,
-    i1 => rtlalc_3(2),
-    nq => no2_x1_5_sig
+    i => aux6,
+    nq => inv_x2_4_sig
   );
-  no2_x1_4_ins : no2_x1
+  inv_x2_3_ins : inv_x2
   PORT MAP (
-    i0 => not_c_neuron_dec,
-    i1 => count(2),
-    nq => no2_x1_4_sig
+    i => rtlalc_3(2),
+    nq => inv_x2_3_sig
   );
   rtlalc_3_1_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => ao22_x2_2_sig,
+    i => nao2o22_x1_2_sig,
     q => rtlalc_3(1)
   );
-  ao22_x2_2_ins : ao22_x2
+  nao2o22_x1_2_ins : nao2o22_x1
   PORT MAP (
-    i0 => rtlalc_3(1),
-    i1 => c_neuron_dec,
-    i2 => no2_x1_3_sig,
-    q => ao22_x2_2_sig
+    i0 => inv_x2_2_sig,
+    i1 => inv_x2_sig,
+    i2 => not_aux2,
+    i3 => not_c_neuron_dec,
+    nq => nao2o22_x1_2_sig
   );
-  no2_x1_3_ins : no2_x1
+  inv_x2_2_ins : inv_x2
   PORT MAP (
-    i0 => reset,
-    i1 => not_aux2,
-    nq => no2_x1_3_sig
+    i => aux6,
+    nq => inv_x2_2_sig
+  );
+  inv_x2_ins : inv_x2
+  PORT MAP (
+    i => rtlalc_3(1),
+    nq => inv_x2_sig
   );
   rtlalc_2_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => nao22_x1_2_sig,
+    i => na3_x1_3_sig,
     q => rtlalc_2
   );
-  nao22_x1_2_ins : nao22_x1
+  na3_x1_3_ins : na3_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => no2_x1_2_sig,
-    i2 => not_reset,
-    nq => nao22_x1_2_sig
+    i0 => not_reset,
+    i1 => na2_x1_6_sig,
+    i2 => na2_x1_5_sig,
+    nq => na3_x1_3_sig
   );
-  no2_x1_2_ins : no2_x1
+  na2_x1_6_ins : na2_x1
   PORT MAP (
-    i0 => c_neuron_dec,
+    i0 => not_c_neuron_dec,
     i1 => rtlalc_2,
-    nq => no2_x1_2_sig
-  );
-  rtlalc_1_ins : sff1_x4
-  PORT MAP (
-    ck => clk,
-    i => oa2a22_x2_sig,
-    q => rtlalc_1
-  );
-  oa2a22_x2_ins : oa2a22_x2
-  PORT MAP (
-    i0 => an12_x1_2_sig,
-    i1 => not_count(4),
-    i2 => rtlalc_1,
-    i3 => na2_x1_5_sig,
-    q => oa2a22_x2_sig
-  );
-  an12_x1_2_ins : an12_x1
-  PORT MAP (
-    i0 => not_aux5,
-    i1 => aux8,
-    q => an12_x1_2_sig
+    nq => na2_x1_6_sig
   );
   na2_x1_5_ins : na2_x1
   PORT MAP (
     i0 => c_neuron_dec,
-    i1 => not_reset,
+    i1 => count(3),
     nq => na2_x1_5_sig
+  );
+  rtlalc_1_ins : sff1_x4
+  PORT MAP (
+    ck => clk,
+    i => oa22_x2_sig,
+    q => rtlalc_1
+  );
+  oa22_x2_ins : oa22_x2
+  PORT MAP (
+    i0 => rtlalc_1,
+    i1 => no2_x1_sig,
+    i2 => no4_x1_sig,
+    q => oa22_x2_sig
+  );
+  no2_x1_ins : no2_x1
+  PORT MAP (
+    i0 => c_neuron_dec,
+    i1 => reset,
+    nq => no2_x1_sig
+  );
+  no4_x1_ins : no4_x1
+  PORT MAP (
+    i0 => count(0),
+    i1 => na2_x1_4_sig,
+    i2 => count(4),
+    i3 => not_aux4,
+    nq => no4_x1_sig
+  );
+  na2_x1_4_ins : na2_x1
+  PORT MAP (
+    i0 => c_neuron_dec,
+    i1 => not_reset,
+    nq => na2_x1_4_sig
   );
   count_4_ins : sff1_x4
   PORT MAP (
@@ -360,105 +374,107 @@ BEGIN
   );
   ao22_x2_ins : ao22_x2
   PORT MAP (
-    i0 => aux6,
-    i1 => not_aux5,
-    i2 => a2_x2_sig,
+    i0 => aux0,
+    i1 => not_aux4,
+    i2 => a2_x2_2_sig,
     q => ao22_x2_sig
   );
-  a2_x2_ins : a2_x2
+  a2_x2_2_ins : a2_x2
   PORT MAP (
     i0 => not_reset,
     i1 => count(4),
-    q => a2_x2_sig
+    q => a2_x2_2_sig
   );
   count_3_ins : sff2_x4
   PORT MAP (
     ck => clk,
-    cmd => not_count(2),
-    i0 => na2_x1_4_sig,
-    i1 => na2_x1_3_sig,
+    cmd => not_aux0,
+    i0 => o2_x2_sig,
+    i1 => na2_x1_2_sig,
     q => count(3)
   );
-  na2_x1_4_ins : na2_x1
+  o2_x2_ins : o2_x2
+  PORT MAP (
+    i0 => reset,
+    i1 => count(3),
+    q => o2_x2_sig
+  );
+  na2_x1_2_ins : na2_x1
   PORT MAP (
     i0 => not_reset,
-    i1 => not_count(3),
-    nq => na2_x1_4_sig
+    i1 => xr2_x1_sig,
+    nq => na2_x1_2_sig
+  );
+  xr2_x1_ins : xr2_x1
+  PORT MAP (
+    i0 => na2_x1_3_sig,
+    i1 => count(3),
+    q => xr2_x1_sig
   );
   na2_x1_3_ins : na2_x1
   PORT MAP (
-    i0 => not_reset,
-    i1 => xr2_x1_2_sig,
+    i0 => not_count(2),
+    i1 => not_count(1),
     nq => na2_x1_3_sig
-  );
-  xr2_x1_2_ins : xr2_x1
-  PORT MAP (
-    i0 => aux3,
-    i1 => count(3),
-    q => xr2_x1_2_sig
   );
   count_2_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => oa22_x2_sig,
+    i => nao22_x1_sig,
     q => count(2)
   );
-  oa22_x2_ins : oa22_x2
+  nao22_x1_ins : nao22_x1
   PORT MAP (
-    i0 => an12_x1_sig,
+    i0 => not_aux0,
+    i1 => not_aux3,
+    i2 => na3_x1_sig,
+    nq => nao22_x1_sig
+  );
+  na3_x1_ins : na3_x1
+  PORT MAP (
+    i0 => aux5,
+    i1 => nxr2_x1_2_sig,
+    i2 => na3_x1_2_sig,
+    nq => na3_x1_sig
+  );
+  nxr2_x1_2_ins : nxr2_x1
+  PORT MAP (
+    i0 => count(1),
     i1 => count(2),
-    i2 => a3_x2_sig,
-    q => oa22_x2_sig
+    nq => nxr2_x1_2_sig
   );
-  an12_x1_ins : an12_x1
-  PORT MAP (
-    i0 => reset,
-    i1 => aux3,
-    q => an12_x1_sig
-  );
-  a3_x2_ins : a3_x2
-  PORT MAP (
-    i0 => not_aux2,
-    i1 => na2_x1_2_sig,
-    i2 => aux8,
-    q => a3_x2_sig
-  );
-  na2_x1_2_ins : na2_x1
+  na3_x1_2_ins : na3_x1
   PORT MAP (
     i0 => not_count(3),
-    i1 => not_count(4),
-    nq => na2_x1_2_sig
+    i1 => not_count(1),
+    i2 => not_count(4),
+    nq => na3_x1_2_sig
   );
   count_1_ins : sff1_x4
   PORT MAP (
     ck => clk,
-    i => no2_x1_sig,
+    i => nao2o22_x1_sig,
     q => count(1)
   );
-  no2_x1_ins : no2_x1
+  nao2o22_x1_ins : nao2o22_x1
   PORT MAP (
-    i0 => xr2_x1_sig,
-    i1 => nao22_x1_sig,
-    nq => no2_x1_sig
-  );
-  xr2_x1_ins : xr2_x1
-  PORT MAP (
-    i0 => aux0,
-    i1 => count(1),
-    q => xr2_x1_sig
-  );
-  nao22_x1_ins : nao22_x1
-  PORT MAP (
-    i0 => count(4),
-    i1 => on12_x1_sig,
-    i2 => not_reset,
-    nq => nao22_x1_sig
+    i0 => on12_x1_sig,
+    i1 => a2_x2_sig,
+    i2 => not_aux0,
+    i3 => not_aux2,
+    nq => nao2o22_x1_sig
   );
   on12_x1_ins : on12_x1
   PORT MAP (
-    i0 => not_aux1,
-    i1 => aux6,
+    i0 => aux5,
+    i1 => count(1),
     q => on12_x1_sig
+  );
+  a2_x2_ins : a2_x2
+  PORT MAP (
+    i0 => not_aux1,
+    i1 => not_count(4),
+    q => a2_x2_sig
   );
   count_0_ins : sff1_x4
   PORT MAP (
@@ -478,30 +494,23 @@ BEGIN
     i1 => c_neuron_dec,
     nq => nxr2_x1_sig
   );
-  aux0_ins : na2_x1
+  aux0_ins : on12_x1
   PORT MAP (
     i0 => c_neuron_dec,
-    i1 => not_count(0),
-    nq => aux0
-  );
-  aux3_ins : na2_x1
-  PORT MAP (
-    i0 => not_aux2,
-    i1 => not_count(0),
-    nq => aux3
-  );
-  aux6_ins : na2_x1
-  PORT MAP (
-    i0 => not_count(2),
-    i1 => not_count(0),
-    nq => aux6
-  );
-  aux8_ins : no3_x1
-  PORT MAP (
-    i0 => count(2),
     i1 => count(0),
-    i2 => reset,
-    nq => aux8
+    q => aux0
+  );
+  aux5_ins : a2_x2
+  PORT MAP (
+    i0 => not_aux0,
+    i1 => not_reset,
+    q => aux5
+  );
+  aux6_ins : no2_x1
+  PORT MAP (
+    i0 => c_neuron_dec,
+    i1 => reset,
+    nq => aux6
   );
   not_c_neuron_dec_ins : inv_x2
   PORT MAP (
@@ -513,19 +522,35 @@ BEGIN
     i => reset,
     nq => not_reset
   );
-  not_count_0_ins : inv_x2
+  not_count_1_ins : inv_x2
   PORT MAP (
-    i => count(0),
-    nq => not_count(0)
+    i => count(1),
+    nq => not_count(1)
+  );
+  not_aux2_ins : o2_x2
+  PORT MAP (
+    i0 => reset,
+    i1 => not_count(1),
+    q => not_aux2
+  );
+  not_aux0_ins : inv_x2
+  PORT MAP (
+    i => aux0,
+    nq => not_aux0
   );
   not_count_3_ins : inv_x2
   PORT MAP (
     i => count(3),
     nq => not_count(3)
   );
+  not_count_2_ins : inv_x2
+  PORT MAP (
+    i => count(2),
+    nq => not_count(2)
+  );
   not_aux1_ins : a2_x2
   PORT MAP (
-    i0 => c_neuron_dec,
+    i0 => not_count(2),
     i1 => not_count(3),
     q => not_aux1
   );
@@ -534,23 +559,17 @@ BEGIN
     i => count(4),
     nq => not_count(4)
   );
-  not_count_2_ins : inv_x2
+  not_aux3_ins : o2_x2
   PORT MAP (
-    i => count(2),
-    nq => not_count(2)
+    i0 => reset,
+    i1 => not_count(2),
+    q => not_aux3
   );
-  not_aux2_ins : an12_x1
+  not_aux4_ins : na2_x1
   PORT MAP (
-    i0 => count(1),
-    i1 => c_neuron_dec,
-    q => not_aux2
-  );
-  not_aux5_ins : o3_x2
-  PORT MAP (
-    i0 => not_c_neuron_dec,
-    i1 => count(1),
-    i2 => count(3),
-    q => not_aux5
+    i0 => not_aux1,
+    i1 => not_count(1),
+    nq => not_aux4
   );
 END RTL;
 
@@ -564,21 +583,20 @@ configuration CFG_neurondec_boog of neurondec_boog is
   for RTL
     for all: buf_x2 use entity sxlib.buf_x2(vital); end for;
     for all: sff1_x4 use entity sxlib.sff1_x4(vital); end for;
-    for all: nao22_x1 use entity sxlib.nao22_x1(vital); end for;
-    for all: no2_x1 use entity sxlib.no2_x1(vital); end for;
-    for all: inv_x2 use entity sxlib.inv_x2(vital); end for;
-    for all: no3_x1 use entity sxlib.no3_x1(vital); end for;
-    for all: ao22_x2 use entity sxlib.ao22_x2(vital); end for;
-    for all: oa2a22_x2 use entity sxlib.oa2a22_x2(vital); end for;
-    for all: an12_x1 use entity sxlib.an12_x1(vital); end for;
+    for all: na3_x1 use entity sxlib.na3_x1(vital); end for;
     for all: na2_x1 use entity sxlib.na2_x1(vital); end for;
+    for all: nao2o22_x1 use entity sxlib.nao2o22_x1(vital); end for;
+    for all: inv_x2 use entity sxlib.inv_x2(vital); end for;
+    for all: oa22_x2 use entity sxlib.oa22_x2(vital); end for;
+    for all: no2_x1 use entity sxlib.no2_x1(vital); end for;
+    for all: no4_x1 use entity sxlib.no4_x1(vital); end for;
+    for all: ao22_x2 use entity sxlib.ao22_x2(vital); end for;
     for all: a2_x2 use entity sxlib.a2_x2(vital); end for;
     for all: sff2_x4 use entity sxlib.sff2_x4(vital); end for;
+    for all: o2_x2 use entity sxlib.o2_x2(vital); end for;
     for all: xr2_x1 use entity sxlib.xr2_x1(vital); end for;
-    for all: oa22_x2 use entity sxlib.oa22_x2(vital); end for;
-    for all: a3_x2 use entity sxlib.a3_x2(vital); end for;
-    for all: on12_x1 use entity sxlib.on12_x1(vital); end for;
+    for all: nao22_x1 use entity sxlib.nao22_x1(vital); end for;
     for all: nxr2_x1 use entity sxlib.nxr2_x1(vital); end for;
-    for all: o3_x2 use entity sxlib.o3_x2(vital); end for;
+    for all: on12_x1 use entity sxlib.on12_x1(vital); end for;
   end for;
 end CFG_neurondec_boog;

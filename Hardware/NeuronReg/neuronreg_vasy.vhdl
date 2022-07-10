@@ -32,7 +32,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((c_nreg AND (NOT(reset) AND NOT(c_reset_reg))) = '1')
+    IF ((reset OR c_reset_reg) = '1')
+    THEN rtlalc_1 <= (OTHERS => '0');
+    ELSIF ((NOT(reset) AND (NOT(c_reset_reg) AND c_nreg)) = '1')
     THEN rtlalc_1 <= sum;
     END IF;
     END IF;

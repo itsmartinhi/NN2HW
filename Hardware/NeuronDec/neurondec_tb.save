@@ -1,20 +1,20 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Thu Jun 30 06:53:19 2022
+[*] Tue Jul  5 10:34:37 2022
 [*]
 [dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronDec/neurondec_tb_wave.ghw"
-[dumpfile_mtime] "Thu Jun 30 06:52:20 2022"
-[dumpfile_size] 865
+[dumpfile_mtime] "Tue Jul  5 10:34:29 2022"
+[dumpfile_size] 8441
 [savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/NeuronDec/neurondec_tb.save"
 [timestart] 0
-[size] 1920 884
+[size] 1920 837
 [pos] 0 22
-*-20.801956 96000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-24.971552 96000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.neurondec_tb.
 [treeopen] top.neurondec_tb.spec.
 [sst_width] 212
-[signals_width] 198
+[signals_width] 206
 [sst_expanded] 1
 [sst_vpaned_height] 251
 @28
@@ -26,7 +26,9 @@ top.neurondec_tb.spec.clk
 @28
 top.neurondec_tb.spec_neuron_reset
 top.neurondec_tb.spec.out_neuron_reset
-@23
+@22
 #{top.neurondec_tb.spec.out_neuron_index[3:0]} top.neurondec_tb.spec.out_neuron_index[3] top.neurondec_tb.spec.out_neuron_index[2] top.neurondec_tb.spec.out_neuron_index[1] top.neurondec_tb.spec.out_neuron_index[0]
+@23
+#{top.neurondec_tb.impl_neuron_index[3:0]} top.neurondec_tb.impl_neuron_index[3] top.neurondec_tb.impl_neuron_index[2] top.neurondec_tb.impl_neuron_index[1] top.neurondec_tb.impl_neuron_index[0]
 [pattern_trace] 1
 [pattern_trace] 0

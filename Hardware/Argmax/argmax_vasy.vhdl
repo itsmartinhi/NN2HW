@@ -10,6 +10,7 @@ ENTITY argmax_vasy IS
 PORT(
   clk	: IN STD_LOGIC;
   c_argmax	: IN STD_LOGIC;
+  reset	: IN STD_LOGIC;
   in_argmax_val	: IN STD_LOGIC_VECTOR(20 DOWNTO 0);
   in_argmax_index	: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
   out_argmax_index	: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
@@ -25,16 +26,18 @@ ARCHITECTURE RTL OF argmax_vasy IS
   SIGNAL alcexts_1	: STD_LOGIC_VECTOR(21 DOWNTO 0);
   SIGNAL alcexts_0	: STD_LOGIC_VECTOR(21 DOWNTO 0);
   SIGNAL reg_argmax_val	: STD_LOGIC_VECTOR(20 DOWNTO 0);
-  SIGNAL p18_1_def_2	: STD_LOGIC;
+  SIGNAL p19_1_def_3	: STD_LOGIC;
 BEGIN
   rtl_std_logic_vector_1 <= ('0' & in_argmax_val);
   rtl_std_logic_vector_0 <= ('0' & reg_argmax_val);
-  p18_1_def_2 <= rtlltgt_2;
+  p19_1_def_3 <= rtlltgt_2;
   PROCESS ( clk )
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((p18_1_def_2 AND c_argmax) = '1')
+    IF (reset = '1')
+    THEN rtlalc_3 <= (OTHERS => '0');
+    ELSIF ((NOT(reset) AND (p19_1_def_3 AND c_argmax)) = '1')
     THEN rtlalc_3 <= in_argmax_index;
     END IF;
     END IF;
@@ -43,7 +46,9 @@ BEGIN
   BEGIN
     IF  ((clk = '1') AND clk'EVENT)
     THEN 
-    IF ((p18_1_def_2 AND c_argmax) = '1')
+    IF (reset = '1')
+    THEN reg_argmax_val <= (OTHERS => '0');
+    ELSIF ((NOT(reset) AND (p19_1_def_3 AND c_argmax)) = '1')
     THEN reg_argmax_val <= in_argmax_val;
     END IF;
     END IF;

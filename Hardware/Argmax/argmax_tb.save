@@ -1,28 +1,31 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Wed Jun 22 22:58:14 2022
+[*] Mon Jul  4 14:33:46 2022
 [*]
 [dumpfile] "/home/eeslabor/Dokumente/nnhardware/Hardware/Argmax/argmax_tb_wave.ghw"
-[dumpfile_mtime] "Wed Jun 22 22:57:06 2022"
-[dumpfile_size] 820
+[dumpfile_mtime] "Mon Jul  4 14:31:34 2022"
+[dumpfile_size] 14438
 [savefile] "/home/eeslabor/Dokumente/nnhardware/Hardware/Argmax/argmax_tb.save"
 [timestart] 0
 [size] 1000 600
-[pos] 120 95
-*-23.345324 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] 441 175
+*-26.240440 120700000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.argmax_tb.
 [sst_width] 212
-[signals_width] 182
+[signals_width] 190
 [sst_expanded] 1
 [sst_vpaned_height] 151
 @28
+top.argmax_tb.reset
 top.argmax_tb.c_argmax
-@29
 top.argmax_tb.spec.clk
-@22
-#{top.argmax_tb.in_argmax_indx[3:0]} top.argmax_tb.in_argmax_indx[3] top.argmax_tb.in_argmax_indx[2] top.argmax_tb.in_argmax_indx[1] top.argmax_tb.in_argmax_indx[0]
-#{top.argmax_tb.out_indx_spec[3:0]} top.argmax_tb.out_indx_spec[3] top.argmax_tb.out_indx_spec[2] top.argmax_tb.out_indx_spec[1] top.argmax_tb.out_indx_spec[0]
+@24
 #{top.argmax_tb.in_argmax_val[20:0]} top.argmax_tb.in_argmax_val[20] top.argmax_tb.in_argmax_val[19] top.argmax_tb.in_argmax_val[18] top.argmax_tb.in_argmax_val[17] top.argmax_tb.in_argmax_val[16] top.argmax_tb.in_argmax_val[15] top.argmax_tb.in_argmax_val[14] top.argmax_tb.in_argmax_val[13] top.argmax_tb.in_argmax_val[12] top.argmax_tb.in_argmax_val[11] top.argmax_tb.in_argmax_val[10] top.argmax_tb.in_argmax_val[9] top.argmax_tb.in_argmax_val[8] top.argmax_tb.in_argmax_val[7] top.argmax_tb.in_argmax_val[6] top.argmax_tb.in_argmax_val[5] top.argmax_tb.in_argmax_val[4] top.argmax_tb.in_argmax_val[3] top.argmax_tb.in_argmax_val[2] top.argmax_tb.in_argmax_val[1] top.argmax_tb.in_argmax_val[0]
+@23
+#{top.argmax_tb.in_argmax_index[3:0]} top.argmax_tb.in_argmax_index[3] top.argmax_tb.in_argmax_index[2] top.argmax_tb.in_argmax_index[1] top.argmax_tb.in_argmax_index[0]
+@22
+#{top.argmax_tb.out_index_spec[3:0]} top.argmax_tb.out_index_spec[3] top.argmax_tb.out_index_spec[2] top.argmax_tb.out_index_spec[1] top.argmax_tb.out_index_spec[0]
+#{top.argmax_tb.out_index_impl[3:0]} top.argmax_tb.out_index_impl[3] top.argmax_tb.out_index_impl[2] top.argmax_tb.out_index_impl[1] top.argmax_tb.out_index_impl[0]
 [pattern_trace] 1
 [pattern_trace] 0

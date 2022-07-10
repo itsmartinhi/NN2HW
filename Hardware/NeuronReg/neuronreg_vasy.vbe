@@ -38,7 +38,8 @@ AND rtlcarry_0(19 downto 0))) OR (rtlexts_0(19 downto 0) AND rtlcarry_0(19 downt
   END BLOCK LABEL0;
   LABEL1 : BLOCK  ((clk = '1') AND NOT(clk'STABLE) )
   BEGIN
-    rtlalc_1 <= GUARDED sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE rtlalc_1;
+    rtlalc_1 <= GUARDED "000000000000000000000" WHEN (c_reset_reg OR reset) ELSE
+     sum WHEN (NOT(c_reset_reg) AND NOT(reset) AND c_nreg) ELSE rtlalc_1;
   END BLOCK LABEL1;
   sum <= rtlsum_0;
 END VBE;

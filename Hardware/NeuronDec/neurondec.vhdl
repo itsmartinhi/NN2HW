@@ -21,6 +21,7 @@ begin
 			if reset = '1' then
 				count <= "01001";
 				out_neuron_index <= "1001";
+				out_neuron_reset <= '0';
 			elsif c_neuron_dec = '1' then
 				if count = "00000" then 
 					count <= "01001";

@@ -72,6 +72,7 @@ architecture RTL of NEURONALESNETZ is
     component ARGMAX is
         port (
             clk:			  in  std_logic;
+            reset: 			  in  std_logic;
 			c_argmax: 		  in  std_logic;						
 			in_argmax_val: 	  in  std_logic_vector(20 downto 0);	
 			in_argmax_index:  in  std_logic_vector(3 downto 0);
@@ -95,13 +96,14 @@ architecture RTL of NEURONALESNETZ is
 	end component;
 	
 
-    for all : CONTROLLER 		use entity WORK.CONTROLLER(RTL);
-    for all : INPUTDECREMENTER 	use entity WORK.INPDEC(RTL);
-    for all : NEURONDECREMENTER use entity WORK.NEURONDEC(RTL);
-    for all : NEURONREGISTER 	use entity WORK.NEURONREG(RTL);
-    for all : ARGMAX 			use entity WORK.ARGMAX(RTL);
-    for all : MULTBLOCK			use entity WORK.MULTBLOCK(RTL);
-
+    for all : CONTROLLER 		use configuration WORK.CFG_controller_final;
+    for all : INPUTDECREMENTER 	use configuration WORK.CFG_inpdec_final;
+    for all : NEURONDECREMENTER use configuration WORK.CFG_neurondec_final;
+    for all : NEURONREGISTER 	use configuration WORK.CFG_neuronreg_final;
+    for all : ARGMAX 		  	use configuration WORK.CFG_argmax_final;
+    for all : MULTBLOCK			use entity WORK.MULTBLOCK(RTL); -- did not work because of structure subcomponents
+	for all : ROM 				use entity WORK.ROM(RTL); -- for demo purposes off, because of too much signals
+	for all : RAM 				use entity WORK.RAM(RTL); -- just switch to cfg when demo is finished
 
     -- internal signals
     
@@ -186,6 +188,7 @@ begin
     
     U_ARGMAX : ARGMAX port map (
 		clk 			 => clk,
+		reset 			 => reset,
 		c_argmax 		 => c_argmax,
         in_argmax_val 	 => out_nreg_val,
         in_argmax_index  => out_neuron_index,
