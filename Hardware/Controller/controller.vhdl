@@ -80,7 +80,7 @@ begin
 					c_add_to_neuron  <= '0';
 					if in_ctrl_neuron_reset = '1' 
 						then next_state <= S_HALT;
-						else next_state <= S_MULT_A;
+						else next_state <= S_FIRST_LOAD;
 					end if;
 			when S_HALT =>
 					c_reset_register <= '0';
