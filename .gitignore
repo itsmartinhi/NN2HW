@@ -12,3 +12,6 @@ __pycache__/
 **/.ipynb_checkpoints
 
 **/*.png
+
+**/*.cf
+**/*.ghw
